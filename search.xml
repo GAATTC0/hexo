@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>TODO</title>
+      <link href="2020/11/16/todo/"/>
+      <url>2020/11/16/todo/</url>
+      
+        <content type="html"><![CDATA[<h1 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h1><h2 id="一、hexo相关"><a href="#一、hexo相关" class="headerlink" title="一、hexo相关"></a>一、hexo相关</h2><ul><li><input disabled="" type="checkbox"> 【bug】：hexo每日诗词无法显示</li><li><input disabled="" type="checkbox"> 【bug】：matery二级分类无效</li><li><input disabled="" type="checkbox"> 【bug】：代码高亮无效</li><li><input disabled="" type="checkbox"> 【bug】：$ hexo clean 后live2d被删除</li></ul><h2 id="二、"><a href="#二、" class="headerlink" title="二、"></a>二、</h2><ul><li><input disabled="" type="checkbox"> </li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 日常 </category>
+          
+          <category> todo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> todo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>algorithm</title>
       <link href="2020/11/16/algorithm/"/>
       <url>2020/11/16/algorithm/</url>
