@@ -32,8 +32,155 @@
 <link rel="alternate" href="/atom.xml" title="GAATTC的隐藏小窝" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
+
+    <style type="text/css" lang="css">
+    #loading-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        width: 100vw;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #FFF;
+        text-align: center;
+        /* loader页面消失采用渐隐的方式*/
+        -webkit-transition: opacity 1s ease;
+        -moz-transition: opacity 1s ease;
+        -o-transition: opacity 1s ease;
+        transition: opacity 1s ease;
+    }
+    .loading-image{
+        width: 120px;
+        height: 50px;
+        transform: translate(-50%);
+    }
+
+    .loading-image div:nth-child(2) {
+        -webkit-animation: pacman-balls 1s linear 0s infinite;
+        animation: pacman-balls 1s linear 0s infinite
+    }
+
+    .loading-image div:nth-child(3) {
+        -webkit-animation: pacman-balls 1s linear .33s infinite;
+        animation: pacman-balls 1s linear .33s infinite
+    }
+
+    .loading-image div:nth-child(4) {
+        -webkit-animation: pacman-balls 1s linear .66s infinite;
+        animation: pacman-balls 1s linear .66s infinite
+    }
+
+    .loading-image div:nth-child(5) {
+        -webkit-animation: pacman-balls 1s linear .99s infinite;
+        animation: pacman-balls 1s linear .99s infinite
+    }
+
+   .loading-image div:first-of-type {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
+        animation: rotate_pacman_half_up .5s 0s infinite;
+    }
+    .loading-image div:nth-child(2) {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
+        animation: rotate_pacman_half_down .5s 0s infinite;
+        margin-top: -50px;
+    }
+    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+
+    .loading-image div:nth-child(3),
+    .loading-image div:nth-child(4),
+    .loading-image div:nth-child(5),
+    .loading-image div:nth-child(6){
+        background-color: #49b1f5;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin: 2px;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        transform: translateY(-6.25px);
+        top: 25px;
+        left: 100px;
+    }
+    .loading-text{
+        margin-bottom: 20vh;
+        text-align: center;
+        color: #2c3e50;
+        font-size: 2rem;
+        box-sizing: border-box;
+        padding: 0 10px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    @media only screen and (max-width: 500px) {
+         .loading-text{
+            font-size: 1.5rem;
+         }
+    }
+    .fadeout {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    /* logo出现动画 */
+    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
+    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
+ </style>
+ <script>
+(function () {
+    const loaded = function(){
+       setTimeout(function(){
+            const loader = document.getElementById("loading-container");
+            loader.className="fadeout" ;//使用渐隐的方法淡出loading page
+            // document.getElementById("body-wrap").style.display="flex";
+            setTimeout(function(){
+                loader.style.display="none";
+            },2500); 
+        },1000);//强制显示loading page 1s  
+    };
+    loaded();
+})()
+</script>
+ 
+
 <body>
-    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
+	
+        <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="loading-container">
+             <p class="loading-text">正在搬运下一页::>_<:: . . . </p> 
+             <div class="loading-image">
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div> 
+                 <div></div>
+             </div>
+        </div>
+    
+
+    <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -362,21 +509,21 @@
                     <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
                         
 <div class="statis">
-    <span class="count"><a href="/">6</a></span>
+    <span class="count"><a href="/">7</a></span>
     <span class="name">文章</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">7</a></span>
+    <span class="count"><a href="/categories">8</a></span>
     <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">7</a></span>
+    <span class="count"><a href="/tags">8</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -392,28 +539,28 @@
                                 <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
                                     
 <div class="statis">
-    <span class="count"><a href="/">6</a></span>
+    <span class="count"><a href="/">7</a></span>
     <span class="name">文章</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">7</a></span>
+    <span class="count"><a href="/categories">8</a></span>
     <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">7</a></span>
+    <span class="count"><a href="/tags">8</a></span>
     <span class="name">标签</span>
 </div>
 
 
                                 </div>
                                 <div class="title">GAATTC</div>
-                                <div class="career">Software Engineer</div>
+                                <div class="career">Java Software Engineer</div>
                                 <div class="social-link hide-on-large-only" data-aos="zoom-in-left">
                                     
     <a href="https://github.com/GAATTC0" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
@@ -562,7 +709,7 @@
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,0,0,0,0,6],
+                data: [0,0,0,0,0,0,0,0,0,0,0,0,7],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -604,7 +751,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"日常","value":1},{"name":"学习","value":5},{"name":"todo","value":1},{"name":"hexo","value":2},{"name":"大学课程","value":1},{"name":"算法","value":1},{"name":"java","value":1}],
+                data: [{"name":"日常","value":2},{"name":"学习","value":5},{"name":"todo","value":1},{"name":"hexo","value":2},{"name":"大学课程","value":1},{"name":"算法","value":1},{"name":"java","value":1},{"name":"记录","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -628,7 +775,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["学习心得","hexo","todo","备份","算法","java","面试"]
+                data: ["学习心得","hexo","todo","备份","算法","java","面试","经历"]
             }
         ],
         yAxis: [
@@ -641,7 +788,7 @@
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [3,2,1,1,1,1,1],
+                data: [3,2,1,1,1,1,1,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
@@ -682,40 +829,40 @@
         
         <div class="col s12 m6 l4" data-aos="fade-up">
             <div class="info center-align">
-                <a href="http://github.com/GAATTC" class="icon"
+                <a href="https://gaattc.gitee.io" class="icon"
                    style="background: linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)" target="_blank">
                     <i class="fas fa-file-alt"></i>
                 </a>
                 <div class="info-title">
-                    <a href="http://github.com/GAATTC" target="_blank">hexo-theme-matery</a>
+                    <a href="https://gaattc.gitee.io" target="_blank">hexo-theme-matery-custom</a>
                 </div>
-                <div class="info-desc">Hello</div>
+                <div class="info-desc">Do you like it ? XD</div>
             </div>
         </div>
         
         <div class="col s12 m6 l4" data-aos="fade-up">
             <div class="info center-align">
-                <a href="https://github.com/blinkfox/fenix" class="icon"
+                <a href="https://github.com/GAATTC0/litemall" class="icon"
                    style="background: linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)" target="_blank">
                     <i class="fas fa-database"></i>
                 </a>
                 <div class="info-title">
-                    <a href="https://github.com/blinkfox/fenix" target="_blank">Fenix</a>
+                    <a href="https://github.com/GAATTC0/litemall" target="_blank">LiteMall</a>
                 </div>
-                <div class="info-desc">这是 Spring Data JPA 复杂或动态 SQL 查询的扩展库。</div>
+                <div class="info-desc">秋招写在简历上的项目就是它了</div>
             </div>
         </div>
         
         <div class="col s12 m6 l4" data-aos="fade-up">
             <div class="info center-align">
-                <a href="https://github.com/blinkfox/typora-vue-theme" class="icon"
+                <a href="https://gitee.com/GAATTC/SMall" class="icon"
                    style="background: linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)" target="_blank">
                     <i class="fas fa-file-alt"></i>
                 </a>
                 <div class="info-title">
-                    <a href="https://github.com/blinkfox/typora-vue-theme" target="_blank">typora-vue-theme</a>
+                    <a href="https://gitee.com/GAATTC/SMall" target="_blank">SMall</a>
                 </div>
-                <div class="info-desc">This is a typora theme inspired by Vue document style.</div>
+                <div class="info-desc">原生Servlet写的简单项目hhh</div>
             </div>
         </div>
         
@@ -849,6 +996,12 @@
             
             <a href="/tags/%E9%9D%A2%E8%AF%95/">
                 <span class="chip center-align waves-effect waves-light chip-default">面试</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E7%BB%8F%E5%8E%86/">
+                <span class="chip center-align waves-effect waves-light chip-default">经历</span>
             </a>
             
             
@@ -990,7 +1143,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">71.8k</span>&nbsp;字
+                class="white-color">75.4k</span>&nbsp;字
             
             
             

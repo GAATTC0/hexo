@@ -32,8 +32,155 @@
 <link rel="alternate" href="/atom.xml" title="GAATTC的隐藏小窝" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
+
+    <style type="text/css" lang="css">
+    #loading-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        width: 100vw;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #FFF;
+        text-align: center;
+        /* loader页面消失采用渐隐的方式*/
+        -webkit-transition: opacity 1s ease;
+        -moz-transition: opacity 1s ease;
+        -o-transition: opacity 1s ease;
+        transition: opacity 1s ease;
+    }
+    .loading-image{
+        width: 120px;
+        height: 50px;
+        transform: translate(-50%);
+    }
+
+    .loading-image div:nth-child(2) {
+        -webkit-animation: pacman-balls 1s linear 0s infinite;
+        animation: pacman-balls 1s linear 0s infinite
+    }
+
+    .loading-image div:nth-child(3) {
+        -webkit-animation: pacman-balls 1s linear .33s infinite;
+        animation: pacman-balls 1s linear .33s infinite
+    }
+
+    .loading-image div:nth-child(4) {
+        -webkit-animation: pacman-balls 1s linear .66s infinite;
+        animation: pacman-balls 1s linear .66s infinite
+    }
+
+    .loading-image div:nth-child(5) {
+        -webkit-animation: pacman-balls 1s linear .99s infinite;
+        animation: pacman-balls 1s linear .99s infinite
+    }
+
+   .loading-image div:first-of-type {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
+        animation: rotate_pacman_half_up .5s 0s infinite;
+    }
+    .loading-image div:nth-child(2) {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
+        animation: rotate_pacman_half_down .5s 0s infinite;
+        margin-top: -50px;
+    }
+    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+
+    .loading-image div:nth-child(3),
+    .loading-image div:nth-child(4),
+    .loading-image div:nth-child(5),
+    .loading-image div:nth-child(6){
+        background-color: #49b1f5;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin: 2px;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        transform: translateY(-6.25px);
+        top: 25px;
+        left: 100px;
+    }
+    .loading-text{
+        margin-bottom: 20vh;
+        text-align: center;
+        color: #2c3e50;
+        font-size: 2rem;
+        box-sizing: border-box;
+        padding: 0 10px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    @media only screen and (max-width: 500px) {
+         .loading-text{
+            font-size: 1.5rem;
+         }
+    }
+    .fadeout {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    /* logo出现动画 */
+    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
+    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
+ </style>
+ <script>
+(function () {
+    const loaded = function(){
+       setTimeout(function(){
+            const loader = document.getElementById("loading-container");
+            loader.className="fadeout" ;//使用渐隐的方法淡出loading page
+            // document.getElementById("body-wrap").style.display="flex";
+            setTimeout(function(){
+                loader.style.display="none";
+            },2500); 
+        },1000);//强制显示loading page 1s  
+    };
+    loaded();
+})()
+</script>
+ 
+
 <body>
-    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
+	
+        <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="loading-container">
+             <p class="loading-text">正在搬运下一页::>_<:: . . . </p> 
+             <div class="loading-image">
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div> 
+                 <div></div>
+             </div>
+        </div>
+    
+
+    <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -360,11 +507,11 @@
                 
                 
                 
-                <a href="/categories/%E6%97%A5%E5%B8%B8/" title="日常: 1">
+                <a href="/categories/%E6%97%A5%E5%B8%B8/" title="日常: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             style="background-color: #F9EBEA;">日常
-                        <span class="tag-length">1</span>
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
@@ -423,6 +570,15 @@
                 </a>
                 
                 
+                <a href="/categories/%E6%97%A5%E5%B8%B8/%E8%AE%B0%E5%BD%95/" title="记录: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #D7BDE2;">记录
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
             </div>
         </div>
     </div>
@@ -465,7 +621,7 @@
                     color: '#3C4858'
                 }
             },
-            indicator: [{"name":"日常","max":6},{"name":"学习","max":6},{"name":"todo","max":6},{"name":"hexo","max":6},{"name":"大学课程","max":6},{"name":"算法","max":6},{"name":"java","max":6}],
+            indicator: [{"name":"日常","max":6},{"name":"学习","max":6},{"name":"todo","max":6},{"name":"hexo","max":6},{"name":"大学课程","max":6},{"name":"算法","max":6},{"name":"java","max":6},{"name":"记录","max":6}],
             nameGap: 5,
             center: ['50%','55%'],
             radius: '66%'
@@ -476,7 +632,7 @@
             itemStyle: {normal: {areaStyle: {type: 'default'}}},
             data : [
                 {
-                    value : [1,5,1,2,1,1,1],
+                    value : [2,5,1,2,1,1,1,1],
                     name : '文章分类数量'
                 }
             ]
@@ -487,6 +643,541 @@
 </script>
 
     
+	
+	
+<style>
+
+/*
+.category:not(:last-child) {
+  margin-bottom: 1rem;
+}
+*/
+.category-item {
+  font-size: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.category-subitem {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.category-collapse {
+  margin-left: 1.25rem;
+  width: 100%;
+}
+.category-count {
+  font-size: 0.9rem;
+  font-weight: initial;
+  min-width: 1.3em;
+  line-height: 1.3em;
+  display: flex;
+  align-items: center;
+}
+.category-count i {
+  padding-right: 0.25rem;
+}
+.category-count span {
+  width: 2rem;
+}
+.category-item-action:not(.collapsed) > i {
+  transform: rotate(90deg);
+  transform-origin: center center;
+}
+.category-item-action i {
+  transition: transform 0.3s ease-out;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+.category-item-action:hover {
+  z-index: 1;
+  color: #38ACDF;
+  text-decoration: none;
+  background-color: #F8F9FA;
+}
+
+
+
+.list-group-item:first-child {
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+.category-item {
+    font-size: 1.25rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+.list-group-item {
+    background-color: transparent;
+    border: 0;
+}
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    background-color: #fff;
+    /* border: 1px solid rgba(0,0,0,.125); */
+}
+
+#card-list-zzy .list-group-item:hover {
+    color: #38ACDF;
+    background-color: #F8F9FA;
+    /*  border: 1px solid rgba(0,0,0,.125); */
+}
+
+.category-item-action i {
+    transition: transform .3s ease-out;
+    display: inline-block;
+    margin-left: .25rem;
+}
+
+.category-item-action a{
+      display: block;
+      padding: .75rem 1.25rem;
+}
+
+card-categories-list-spcail > div:hover{
+
+  color:#38ACDF;
+  background-color: #F8F9FA;
+}
+
+.fa {
+    font-size: 1rem;
+    line-height: 1;
+}
+.category-count {
+    font-size: .9rem;
+    font-weight: initial;
+    min-width: 1.3em;
+    line-height: 1.3em;
+    display: flex;
+    align-items: center;
+}
+
+
+.category-content{
+   border-left:0px;
+   padding: .75rem 1.25rem;
+}
+
+.category-content a{
+    color: black;
+}
+
+.category-content a:hover{
+    color:#38ACDF;
+    background-color: #F8F9FA;
+    box-shadow:none;
+ }
+.category-row {
+
+  border-color: #F8F9FA;;
+  border-bottom:none;
+  box-shadow: none;
+}
+
+#card-list-zzy{
+    position: relative;
+    /* margin-top: -2rem; */
+    transition: background-color .2s ease-in-out;
+    border-radius: .5rem;
+    z-index: 3;
+}
+.collapsible-header{
+
+    boder: none;
+}
+
+.collapsible{
+  box-shadow:none !important;
+  -webkit-box-shadow: none !important;
+  border-left:none !important;
+  border-right:none !important;
+  border-bottom:none !important;
+}
+
+.categories-title{
+    padding-top: 20px;
+    /* padding-bottom: 5px; */
+    margin-bottom: -10px;
+}
+</style>
+
+  
+
+
+
+
+
+
+<div class="container" data-aos="fade-up">
+    <div class="card  card-categories-list-spcail">
+        <div class="categories-title center-align">
+                <i class="fas fa-bookmark"></i>&nbsp;&nbsp; 文章多级分类
+        </div>
+
+        <div class="card-content col s12  m12">
+         <div  id="card-list-zzy" class="container ">
+        <ul class="category-list collapsible expandable"  data-collapsible="expandable">
+          
+          
+  
+
+  
+    
+    
+
+    
+	<li>
+    <div class="category-row  row collapsible-header">
+      <a
+        class=" category-item  list-group-item category-item-action col s11 m11"
+        id="heading-ckhlco96e000bd4dablmoehxp" 
+      >
+        学习
+        <i class="fas fa-chevron-right"></i>
+      </a>
+      <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="category-count col s1 m1">
+        <i class="fa fa-list"></i>
+        <span>5</span>
+      </a>
+
+    </div>
+
+        
+      <div class="category-content collapsible-body">
+          
+
+        <ul class="collapsible expandable category-row"  data-collapsible="expandable">
+            
+  
+
+  
+    
+    
+
+    
+	<li>
+    <div class="category-row category-sub  row collapsible-header">
+      <a
+        class=" category-subitem collapsed list-group-item category-item-action col s11 m11"
+        id="heading-ckhlco96k000nd4da16dl1uev" 
+      >
+        hexo
+        <i class="fas fa-chevron-right"></i>
+      </a>
+      <a href="/categories/%E5%AD%A6%E4%B9%A0/hexo/" class="category-count col s1 m1">
+        <i class="fa fa-list"></i>
+        <span>2</span>
+      </a>
+
+    </div>
+
+        
+          
+  <div id="collapse-ckhlco96k000nd4da16dl1uev" class="category-content collapsible-body" >
+    
+    
+    
+      
+      
+        <a href="/2020/11/16/hellohexo/" class=" list-group-item list-group-item-action">
+          <span class="category-post">HelloHexo</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2020/11/15/hello-world/" class=" list-group-item list-group-item-action">
+          <span class="category-post">Hello World</span>
+        </a>
+      
+    
+  </div>
+
+        
+
+    </li>
+  
+    
+    
+
+    
+	<li>
+    <div class="category-row category-sub  row collapsible-header">
+      <a
+        class=" category-subitem collapsed list-group-item category-item-action col s11 m11"
+        id="heading-ckhlco97f001ad4da8bmjbo2e" 
+      >
+        java
+        <i class="fas fa-chevron-right"></i>
+      </a>
+      <a href="/categories/%E5%AD%A6%E4%B9%A0/java/" class="category-count col s1 m1">
+        <i class="fa fa-list"></i>
+        <span>1</span>
+      </a>
+
+    </div>
+
+        
+          
+  <div id="collapse-ckhlco97f001ad4da8bmjbo2e" class="category-content collapsible-body" >
+    
+    
+    
+      
+      
+        <a href="/2020/11/16/ban-sui-wo-qiu-zhao-de-java-zhi-shi-dian-zong-jie/" class=" list-group-item list-group-item-action">
+          <span class="category-post">伴随我秋招的java知识点总结⭐⭐⭐</span>
+        </a>
+      
+    
+  </div>
+
+        
+
+    </li>
+  
+    
+    
+
+    
+	<li>
+    <div class="category-row category-sub  row collapsible-header">
+      <a
+        class=" category-subitem collapsed list-group-item category-item-action col s11 m11"
+        id="heading-ckhlco96l000vd4da0rqk24eo" 
+      >
+        大学课程
+        <i class="fas fa-chevron-right"></i>
+      </a>
+      <a href="/categories/%E5%AD%A6%E4%B9%A0/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B/" class="category-count col s1 m1">
+        <i class="fa fa-list"></i>
+        <span>1</span>
+      </a>
+
+    </div>
+
+        
+          
+  <div id="collapse-ckhlco96l000vd4da0rqk24eo" class="category-content collapsible-body" >
+    
+    
+    
+      
+      
+        <a href="/2020/11/16/shu-ju-cai-ji-zhi-shi-dian-zong-jie-bei-fen/" class=" list-group-item list-group-item-action">
+          <span class="category-post">数据采集知识点总结(备份)</span>
+        </a>
+      
+    
+  </div>
+
+        
+
+    </li>
+  
+    
+    
+
+    
+	<li>
+    <div class="category-row category-sub  row collapsible-header">
+      <a
+        class=" category-subitem collapsed list-group-item category-item-action col s11 m11"
+        id="heading-ckhlco96q0014d4da86vegpyy" 
+      >
+        算法
+        <i class="fas fa-chevron-right"></i>
+      </a>
+      <a href="/categories/%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95/" class="category-count col s1 m1">
+        <i class="fa fa-list"></i>
+        <span>1</span>
+      </a>
+
+    </div>
+
+        
+          
+  <div id="collapse-ckhlco96q0014d4da86vegpyy" class="category-content collapsible-body" >
+    
+    
+    
+      
+      
+        <a href="/2020/11/16/algorithm/" class=" list-group-item list-group-item-action">
+          <span class="category-post">algorithm</span>
+        </a>
+      
+    
+  </div>
+
+        
+
+    </li>
+  
+         </ul>
+
+
+
+       </div>
+
+        
+
+    </li>
+  
+    
+    
+
+    
+	<li>
+    <div class="category-row  row collapsible-header">
+      <a
+        class=" category-item  list-group-item category-item-action col s11 m11"
+        id="heading-ckhlco9680004d4dab9hwgcmx" 
+      >
+        日常
+        <i class="fas fa-chevron-right"></i>
+      </a>
+      <a href="/categories/%E6%97%A5%E5%B8%B8/" class="category-count col s1 m1">
+        <i class="fa fa-list"></i>
+        <span>2</span>
+      </a>
+
+    </div>
+
+        
+      <div class="category-content collapsible-body">
+          
+
+        <ul class="collapsible expandable category-row"  data-collapsible="expandable">
+            
+  
+
+  
+    
+    
+
+    
+	<li>
+    <div class="category-row category-sub  row collapsible-header">
+      <a
+        class=" category-subitem collapsed list-group-item category-item-action col s11 m11"
+        id="heading-ckhlco96j000kd4da3f6t4bxn" 
+      >
+        todo
+        <i class="fas fa-chevron-right"></i>
+      </a>
+      <a href="/categories/%E6%97%A5%E5%B8%B8/todo/" class="category-count col s1 m1">
+        <i class="fa fa-list"></i>
+        <span>1</span>
+      </a>
+
+    </div>
+
+        
+          
+  <div id="collapse-ckhlco96j000kd4da3f6t4bxn" class="category-content collapsible-body" >
+    
+    
+    
+      
+      
+        <a href="/2020/11/16/todo/" class=" list-group-item list-group-item-action">
+          <span class="category-post">TODO</span>
+        </a>
+      
+    
+  </div>
+
+        
+
+    </li>
+  
+    
+    
+
+    
+	<li>
+    <div class="category-row category-sub  row collapsible-header">
+      <a
+        class=" category-subitem collapsed list-group-item category-item-action col s11 m11"
+        id="heading-ckhlia5f00002gkda2w0b4z7y" 
+      >
+        记录
+        <i class="fas fa-chevron-right"></i>
+      </a>
+      <a href="/categories/%E6%97%A5%E5%B8%B8/%E8%AE%B0%E5%BD%95/" class="category-count col s1 m1">
+        <i class="fa fa-list"></i>
+        <span>1</span>
+      </a>
+
+    </div>
+
+        
+          
+  <div id="collapse-ckhlia5f00002gkda2w0b4z7y" class="category-content collapsible-body" >
+    
+    
+    
+      
+      
+        <a href="/2020/11/17/da-san-dao-xian-zai-de-jing-li-ji-lu/" class=" list-group-item list-group-item-action">
+          <span class="category-post">大三到现在的经历记录</span>
+        </a>
+      
+    
+  </div>
+
+        
+
+    </li>
+  
+         </ul>
+
+
+
+       </div>
+
+        
+
+    </li>
+  
+        </ul>
+       </div>
+    </div>
+</div>   
+</div>
+
+
+//<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+<script>
+
+
+$('.list-group-item').click(function(){
+
+  if($(this).hasClass('collapsed') ){
+      $(this).removeClass('collapsed');
+
+      $(this).parent().next().slideDown();
+  }else{
+      $(this).addClass('collapsed');
+      $(this).parent().next().slideUp();
+
+  }
+
+});
+
+
+var elem = document.querySelector('.collapsible .expandable');
+var instance = M.Collapsible.init(elem, {
+  accordion: false
+});
+
+</script>
 
 </main>
 
@@ -547,7 +1238,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">71.8k</span>&nbsp;字
+                class="white-color">75.4k</span>&nbsp;字
             
             
             

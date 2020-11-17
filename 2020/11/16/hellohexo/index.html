@@ -32,8 +32,155 @@
 <link rel="alternate" href="/atom.xml" title="GAATTC的隐藏小窝" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
+
+    <style type="text/css" lang="css">
+    #loading-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        width: 100vw;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #FFF;
+        text-align: center;
+        /* loader页面消失采用渐隐的方式*/
+        -webkit-transition: opacity 1s ease;
+        -moz-transition: opacity 1s ease;
+        -o-transition: opacity 1s ease;
+        transition: opacity 1s ease;
+    }
+    .loading-image{
+        width: 120px;
+        height: 50px;
+        transform: translate(-50%);
+    }
+
+    .loading-image div:nth-child(2) {
+        -webkit-animation: pacman-balls 1s linear 0s infinite;
+        animation: pacman-balls 1s linear 0s infinite
+    }
+
+    .loading-image div:nth-child(3) {
+        -webkit-animation: pacman-balls 1s linear .33s infinite;
+        animation: pacman-balls 1s linear .33s infinite
+    }
+
+    .loading-image div:nth-child(4) {
+        -webkit-animation: pacman-balls 1s linear .66s infinite;
+        animation: pacman-balls 1s linear .66s infinite
+    }
+
+    .loading-image div:nth-child(5) {
+        -webkit-animation: pacman-balls 1s linear .99s infinite;
+        animation: pacman-balls 1s linear .99s infinite
+    }
+
+   .loading-image div:first-of-type {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
+        animation: rotate_pacman_half_up .5s 0s infinite;
+    }
+    .loading-image div:nth-child(2) {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
+        animation: rotate_pacman_half_down .5s 0s infinite;
+        margin-top: -50px;
+    }
+    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+
+    .loading-image div:nth-child(3),
+    .loading-image div:nth-child(4),
+    .loading-image div:nth-child(5),
+    .loading-image div:nth-child(6){
+        background-color: #49b1f5;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin: 2px;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        transform: translateY(-6.25px);
+        top: 25px;
+        left: 100px;
+    }
+    .loading-text{
+        margin-bottom: 20vh;
+        text-align: center;
+        color: #2c3e50;
+        font-size: 2rem;
+        box-sizing: border-box;
+        padding: 0 10px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    @media only screen and (max-width: 500px) {
+         .loading-text{
+            font-size: 1.5rem;
+         }
+    }
+    .fadeout {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    /* logo出现动画 */
+    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
+    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
+ </style>
+ <script>
+(function () {
+    const loaded = function(){
+       setTimeout(function(){
+            const loader = document.getElementById("loading-container");
+            loader.className="fadeout" ;//使用渐隐的方法淡出loading page
+            // document.getElementById("body-wrap").style.display="flex";
+            setTimeout(function(){
+                loader.style.display="none";
+            },2500); 
+        },1000);//强制显示loading page 1s  
+    };
+    loaded();
+})()
+</script>
+ 
+
 <body>
-    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
+	
+        <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="loading-container">
+             <p class="loading-text">正在搬运下一页::>_<:: . . . </p> 
+             <div class="loading-image">
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div> 
+                 <div></div>
+             </div>
+        </div>
+    
+
+    <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -308,7 +455,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/yaoshuixiedaima.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/28128887.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -472,14 +619,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    250
+                    573
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -502,6 +649,16 @@
 <h3 id="6-代码高亮解决方案-star2"><a href="#6-代码高亮解决方案-star2" class="headerlink" title="6.代码高亮解决方案:star2:"></a>6.代码高亮解决方案<span class="github-emoji"><span>🌟</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f31f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h3><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/f395d92a1110">https://www.jianshu.com/p/f395d92a1110</a></p>
 <p>首先卸载之前的prism插件！！</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> uninstall -S hexo-prism-plugin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="7-valine配置"><a href="#7-valine配置" class="headerlink" title="7.valine配置"></a>7.valine配置</h3><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/205aaa14dff3">https://www.jianshu.com/p/205aaa14dff3</a></p>
+<h3 id="8-设置二级标题-star"><a href="#8-设置二级标题-star" class="headerlink" title="8.设置二级标题:star:"></a>8.设置二级标题<span class="github-emoji"><span>⭐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h3><p><a target="_blank" rel="noopener" href="https://zhangxiaocai.cn/posts/5a99eb4d.html#toc-heading-3">https://zhangxiaocai.cn/posts/5a99eb4d.html#toc-heading-3</a></p>
+<h3 id="9-很多有用的操作-star"><a href="#9-很多有用的操作-star" class="headerlink" title="9.很多有用的操作:star:"></a>9.很多有用的操作<span class="github-emoji"><span>⭐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h3><p><a target="_blank" rel="noopener" href="https://zhangxiaocai.cn/categories/Hexo/">https://zhangxiaocai.cn/categories/Hexo/</a></p>
+<h3 id="10-不蒜子与live2d冲突问题"><a href="#10-不蒜子与live2d冲突问题" class="headerlink" title="10.不蒜子与live2d冲突问题"></a>10.不蒜子与live2d冲突问题</h3><p><a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery/issues/458">https://github.com/blinkfox/hexo-theme-matery/issues/458</a></p>
+<img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/Snipaste_2020-11-17_19-03-50.jpg" style="zoom:67%;">
+
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> bszCaller<span class="token punctuation">,</span>bszTag<span class="token punctuation">;</span><span class="token operator">!</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">var</span> c<span class="token punctuation">,</span>d<span class="token punctuation">,</span>e<span class="token punctuation">,</span>a<span class="token operator">=</span><span class="token operator">!</span><span class="token number">1</span><span class="token punctuation">,</span>b<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token function-variable function">ready</span><span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">c</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">return</span> a<span class="token operator">||</span><span class="token string">"interactive"</span><span class="token operator">===</span>document<span class="token punctuation">.</span>readyState<span class="token operator">||</span><span class="token string">"complete"</span><span class="token operator">===</span>document<span class="token punctuation">.</span>readyState<span class="token operator">?</span><span class="token function">c</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token operator">:</span>b<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">return</span> <span class="token function">c</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token keyword">this</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token function-variable function">d</span><span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> a<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>c<span class="token operator">=</span>b<span class="token punctuation">.</span>length<span class="token punctuation">;</span>c<span class="token operator">&gt;</span>a<span class="token punctuation">;</span>a<span class="token operator">++</span><span class="token punctuation">)</span>b<span class="token punctuation">[</span>a<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">;</span>b<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token function-variable function">e</span><span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>a<span class="token operator">||</span><span class="token punctuation">(</span>a<span class="token operator">=</span><span class="token operator">!</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token function">d</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>window<span class="token punctuation">)</span><span class="token punctuation">,</span>document<span class="token punctuation">.</span>removeEventListener<span class="token operator">?</span>document<span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span><span class="token string">"DOMContentLoaded"</span><span class="token punctuation">,</span>e<span class="token punctuation">,</span><span class="token operator">!</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">:</span>document<span class="token punctuation">.</span>attachEvent<span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">detachEvent</span><span class="token punctuation">(</span><span class="token string">"onreadystatechange"</span><span class="token punctuation">,</span>e<span class="token punctuation">)</span><span class="token punctuation">,</span>window<span class="token operator">==</span>window<span class="token punctuation">.</span>top<span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span><span class="token function">clearInterval</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">,</span>c<span class="token operator">=</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">,</span>document<span class="token punctuation">.</span>addEventListener<span class="token operator">?</span>document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"DOMContentLoaded"</span><span class="token punctuation">,</span>e<span class="token punctuation">,</span><span class="token operator">!</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">:</span>document<span class="token punctuation">.</span>attachEvent<span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">attachEvent</span><span class="token punctuation">(</span><span class="token string">"onreadystatechange"</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">loaded|complete</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span>readyState<span class="token punctuation">)</span><span class="token operator">&amp;&amp;</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>window<span class="token operator">==</span>window<span class="token punctuation">.</span>top<span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>c<span class="token operator">=</span><span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">try</span><span class="token punctuation">{</span>a<span class="token operator">||</span>document<span class="token punctuation">.</span>documentElement<span class="token punctuation">.</span><span class="token function">doScroll</span><span class="token punctuation">(</span><span class="token string">"left"</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">return</span><span class="token punctuation">}</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>bszCaller<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function-variable function">fetch</span><span class="token operator">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span>b</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">var</span> c<span class="token operator">=</span><span class="token string">"BusuanziCallback_"</span><span class="token operator">+</span>Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token number">1099511627776</span><span class="token operator">*</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>window<span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token operator">=</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">evalCall</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">,</span>a<span class="token operator">=</span>a<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"=BusuanziCallback"</span><span class="token punctuation">,</span><span class="token string">"="</span><span class="token operator">+</span>c<span class="token punctuation">)</span><span class="token punctuation">,</span>scriptTag<span class="token operator">=</span>document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"SCRIPT"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>scriptTag<span class="token punctuation">.</span>type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token punctuation">,</span>scriptTag<span class="token punctuation">.</span>defer<span class="token operator">=</span><span class="token operator">!</span><span class="token number">0</span><span class="token punctuation">,</span>scriptTag<span class="token punctuation">.</span>src<span class="token operator">=</span>a<span class="token punctuation">,</span>document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">"HEAD"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>scriptTag<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token function-variable function">evalCall</span><span class="token operator">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">a</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">b</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">try</span><span class="token punctuation">{</span><span class="token function">a</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">,</span>scriptTag<span class="token punctuation">.</span>parentElement<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>scriptTag<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">{</span>bszTag<span class="token punctuation">.</span><span class="token function">hides</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">,</span>bszCaller<span class="token punctuation">.</span><span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">"//busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback"</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">a</span><span class="token punctuation">)</span><span class="token punctuation">{</span>bszTag<span class="token punctuation">.</span><span class="token function">texts</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">,</span>bszTag<span class="token punctuation">.</span><span class="token function">shows</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>bszTag<span class="token operator">=</span><span class="token punctuation">{</span>bszs<span class="token operator">:</span><span class="token punctuation">[</span><span class="token string">"site_pv"</span><span class="token punctuation">,</span><span class="token string">"page_pv"</span><span class="token punctuation">,</span><span class="token string">"site_uv"</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token function-variable function">texts</span><span class="token operator">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">a</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>bszs<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">b</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">var</span> c<span class="token operator">=</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"busuanzi_value_"</span><span class="token operator">+</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>c<span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>c<span class="token punctuation">.</span>innerHTML<span class="token operator">=</span>a<span class="token punctuation">[</span>b<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token function-variable function">hides</span><span class="token operator">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>bszs<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">a</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">var</span> b<span class="token operator">=</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"busuanzi_container_"</span><span class="token operator">+</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>b<span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>b<span class="token punctuation">.</span>style<span class="token punctuation">.</span>display<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token function-variable function">shows</span><span class="token operator">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>bszs<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">a</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">var</span> b<span class="token operator">=</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"busuanzi_container_"</span><span class="token operator">+</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>b<span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>b<span class="token punctuation">.</span>style<span class="token punctuation">.</span>display<span class="token operator">=</span><span class="token string">"inline"</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
 
 <h2 id="二、常用命令-star-star"><a href="#二、常用命令-star-star" class="headerlink" title="二、常用命令:star::star:"></a>二、常用命令<span class="github-emoji"><span>⭐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji"><span>⭐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h2><h3 id="1-Create-a-new-post"><a href="#1-Create-a-new-post" class="headerlink" title="1.Create a new post"></a>1.Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token operator">&lt;</span>POST_NAME<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -772,28 +929,269 @@ comments: true
     
 
     
-    <div class="livere-card card" data-aos="fade-up">
-    <!-- 来必力City版安装代码 -->
-    <div id="lv-container" class="card-content" data-id="city" data-uid="MTAyMC81MTk5NS8yODQ3Ng==">
-        <script type="text/javascript">
-            (function (d, s) {
-                let j, e = d.getElementsByTagName(s)[0];
-                if (typeof LivereTower === 'function') {
-                    return;
-                }
 
-                j = d.createElement(s);
-                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                j.async = true;
-
-                e.parentNode.insertBefore(j, e);
-            })(document, 'script');
-        </script>
-        <noscript>为正常使用来必力评论功能请激活JavaScript。</noscript>
-    </div>
-    <!-- City版安装代码已完成 -->
-</div>
     
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/bg.webp") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'z8S57ztWPp02MDKWi2KgIhl9-gzGzoHsz',
+        appKey: '7BlOj62IltCnsakCDEG4BJL3',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '有什么不懂的问题，可以问我们，我们会亲切地告诉你们：听不见！  ——森下下士'
+    });
+</script>
 
     
 
@@ -948,9 +1346,9 @@ Java 基础 40语言特性 12Q1：Java 语言的优点？① 平台无关性，�
 
         // we need a <pre> tag workaround.
         // otherwise the text inside "pre" loses all the line breaks!
-        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+        //if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
             newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
-        }
+        //}
 
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
@@ -1147,7 +1545,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">71.8k</span>&nbsp;字
+                class="white-color">75.4k</span>&nbsp;字
             
             
             
