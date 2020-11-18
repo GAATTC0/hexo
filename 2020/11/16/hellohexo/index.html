@@ -874,14 +874,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    6 分
                 </div>
                 
 
@@ -1012,6 +1012,39 @@ https<span class="token operator">:</span><span class="token comment">//cdn.jsde
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>其中cursor.ico就是指针图，比如：<img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/cursor.ico"></p>
+<h3 id="14-评论推送服务"><a href="#14-评论推送服务" class="headerlink" title="14.评论推送服务"></a>14.评论推送服务</h3><p><a target="_blank" rel="noopener" href="https://www.antmoe.com/posts/2380732b/index.html">https://www.antmoe.com/posts/2380732b/index.html</a></p>
+<p><span class="github-emoji"><span>⭐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>Server酱：<a target="_blank" rel="noopener" href="http://sc.ftqq.com/3.version%E3%80%81:star:https://www.antmoe.com/posts/2380732b/index.html">http://sc.ftqq.com/3.version、<span class="github-emoji"><span>⭐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>https://www.antmoe.com/posts/2380732b/index.html</a> ​、<span class="github-emoji"><span>⭐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><a target="_blank" rel="noopener" href="https://qinyuanpei.github.io/posts/369095810/">https://qinyuanpei.github.io/posts/369095810/</a> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/Snipaste_2020-11-18_22-33-15.jpg" alt="Snipaste_2020-11-18_22-33-15"></p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"request"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">var</span> obj <span class="token operator">=</span> request<span class="token punctuation">.</span>object<span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'收到一条新的评论：'</span> <span class="token operator">+</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">var</span> title <span class="token operator">=</span> <span class="token string">"收到一条新的评论"</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> url <span class="token operator">=</span> request<span class="token punctuation">.</span>object<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'url'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> nick <span class="token operator">=</span> obj<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'nick'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>nick <span class="token operator">==</span> <span class="token string">'Anonymous'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      nick <span class="token operator">=</span> <span class="token string">'陌生人'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">var</span> comment <span class="token operator">=</span> obj<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'comment'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">var</span> content <span class="token operator">=</span> nick <span class="token operator">+</span> <span class="token string">"给你留言：\n\n"</span> <span class="token operator">+</span> comment <span class="token operator">+</span> <span class="token string">"\n\n详情请访问：\n\n"</span> <span class="token operator">+</span> url<span class="token punctuation">;</span>
+  <span class="token keyword">var</span> options <span class="token operator">=</span> <span class="token punctuation">{</span> method<span class="token operator">:</span> <span class="token string">'GET'</span><span class="token punctuation">,</span>
+    url<span class="token operator">:</span> <span class="token string">'https://sc.ftqq.com/&lt;在这里输入你的token&gt;.send'</span><span class="token punctuation">,</span>
+    qs<span class="token operator">:</span> <span class="token punctuation">{</span> 
+        text<span class="token operator">:</span> title<span class="token punctuation">,</span>
+        desp<span class="token operator">:</span> content
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    headers<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span> 
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token function">http</span><span class="token punctuation">(</span>options<span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">error<span class="token punctuation">,</span> response<span class="token punctuation">,</span> body</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>body<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
 <h2 id="二、常用命令-star-star"><a href="#二、常用命令-star-star" class="headerlink" title="二、常用命令:star::star:"></a>二、常用命令<span class="github-emoji"><span>⭐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji"><span>⭐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h2><h3 id="1-Create-a-new-post"><a href="#1-Create-a-new-post" class="headerlink" title="1.Create a new post"></a>1.Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token operator">&lt;</span>POST_NAME<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
@@ -1909,7 +1942,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">77.2k</span>&nbsp;字
+                class="white-color">77.4k</span>&nbsp;字
             
             
             
@@ -2140,8 +2173,8 @@ $(function () {
     document.addEventListener("visibilitychange",function(){
         document.hidden?(document.title="o(*￣▽￣*)o欢迎来到神秘小窝~",clearTimeout(st)):(document.title="ヽ(✿ﾟ▽ﾟ)ノ爱学习爱生活~",st=setTimeout(function(){document.title=OriginTitile},3e3))
     })
-	</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+	</script>
 	
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
 
 </html>
