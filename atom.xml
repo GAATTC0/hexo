@@ -6,7 +6,7 @@
   <link href="http://gaattc.gitee.io/atom.xml" rel="self"/>
   
   <link href="http://gaattc.gitee.io/"/>
-  <updated>2020-11-18T11:10:27.649Z</updated>
+  <updated>2020-11-19T09:29:55.902Z</updated>
   <id>http://gaattc.gitee.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>计算机集成与柔性制造</title>
+    <link href="http://gaattc.gitee.io/2020/11/19/ji-suan-ji-ji-cheng-yu-rou-xing-zhi-zao/"/>
+    <id>http://gaattc.gitee.io/2020/11/19/ji-suan-ji-ji-cheng-yu-rou-xing-zhi-zao/</id>
+    <published>2020-11-19T08:48:56.000Z</published>
+    <updated>2020-11-19T09:29:55.902Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;计算机集成与柔性制造&quot;&gt;&lt;a href=&quot;#计算机集成与柔性制造&quot; class=&quot;headerlink&quot; title=&quot;计算机集成与柔性制造&quot;&gt;&lt;/a&gt;计算机集成与柔性制造&lt;/h1&gt;&lt;h2 id=&quot;一-绪论&quot;&gt;&lt;a href=&quot;#一-绪论&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="http://gaattc.gitee.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="大学课程" scheme="http://gaattc.gitee.io/categories/%E5%AD%A6%E4%B9%A0/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B/"/>
+    
+    
+    <category term="备份" scheme="http://gaattc.gitee.io/tags/%E5%A4%87%E4%BB%BD/"/>
+    
+  </entry>
+  
+  <entry>
     <title>英灵殿:从入门到熔化</title>
     <link href="http://gaattc.gitee.io/2020/11/18/ying-ling-dian-cong-ru-men-dao-rong-hua/"/>
     <id>http://gaattc.gitee.io/2020/11/18/ying-ling-dian-cong-ru-men-dao-rong-hua/</id>
     <published>2020-11-18T10:41:34.000Z</published>
-    <updated>2020-11-18T11:10:27.649Z</updated>
+    <updated>2020-11-19T01:29:05.672Z</updated>
     
     
       
@@ -48,7 +75,7 @@
     <link href="http://gaattc.gitee.io/2020/11/18/zou-chu-su-she-yong-bao-mei-hao/"/>
     <id>http://gaattc.gitee.io/2020/11/18/zou-chu-su-she-yong-bao-mei-hao/</id>
     <published>2020-11-18T02:55:06.000Z</published>
-    <updated>2020-11-18T04:23:14.550Z</updated>
+    <updated>2020-11-19T09:00:13.409Z</updated>
     
     
       
@@ -102,7 +129,7 @@
     <link href="http://gaattc.gitee.io/2020/11/16/todo/"/>
     <id>http://gaattc.gitee.io/2020/11/16/todo/</id>
     <published>2020-11-16T13:41:28.000Z</published>
-    <updated>2020-11-17T11:03:06.717Z</updated>
+    <updated>2020-11-19T09:32:04.379Z</updated>
     
     
       
@@ -214,7 +241,7 @@
     <link href="http://gaattc.gitee.io/2020/11/16/hellohexo/"/>
     <id>http://gaattc.gitee.io/2020/11/16/hellohexo/</id>
     <published>2020-11-16T03:32:56.000Z</published>
-    <updated>2020-11-18T13:19:20.000Z</updated>
+    <updated>2020-11-19T01:32:23.000Z</updated>
     
     
       
