@@ -6,7 +6,7 @@
   <link href="http://gaattc.gitee.io/atom.xml" rel="self"/>
   
   <link href="http://gaattc.gitee.io/"/>
-  <updated>2020-11-21T04:10:07.161Z</updated>
+  <updated>2020-11-21T05:29:00.338Z</updated>
   <id>http://gaattc.gitee.io/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Valine+HEXO全攻略</title>
+    <link href="http://gaattc.gitee.io/2020/11/21/valine-hexo-quan-gong-lue/"/>
+    <id>http://gaattc.gitee.io/2020/11/21/valine-hexo-quan-gong-lue/</id>
+    <published>2020-11-21T04:23:52.000Z</published>
+    <updated>2020-11-21T05:29:00.338Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Valine-HEXO全攻略&quot;&gt;&lt;a href=&quot;#Valine-HEXO全攻略&quot; class=&quot;headerlink&quot; title=&quot;Valine+HEXO全攻略&quot;&gt;&lt;/a&gt;Valine+HEXO全攻略&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;官方文档：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="http://gaattc.gitee.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="hexo" scheme="http://gaattc.gitee.io/categories/%E5%AD%A6%E4%B9%A0/hexo/"/>
+    
+    
+    <category term="学习心得" scheme="http://gaattc.gitee.io/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/"/>
+    
+    <category term="hexo" scheme="http://gaattc.gitee.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>matery下代码高亮插件解决方案</title>
     <link href="http://gaattc.gitee.io/2020/11/21/matery-xia-dai-ma-gao-liang-cha-jian-jie-jue-fang-an/"/>
     <id>http://gaattc.gitee.io/2020/11/21/matery-xia-dai-ma-gao-liang-cha-jian-jie-jue-fang-an/</id>
     <published>2020-11-21T03:33:23.000Z</published>
-    <updated>2020-11-21T04:10:07.161Z</updated>
+    <updated>2020-11-21T05:11:32.405Z</updated>
     
     
       
@@ -50,7 +80,7 @@
     <link href="http://gaattc.gitee.io/2020/11/21/hexo-zhi-live2d-cha-jian/"/>
     <id>http://gaattc.gitee.io/2020/11/21/hexo-zhi-live2d-cha-jian/</id>
     <published>2020-11-21T03:11:27.000Z</published>
-    <updated>2020-11-21T03:30:58.110Z</updated>
+    <updated>2020-11-21T05:12:37.074Z</updated>
     
     
       
