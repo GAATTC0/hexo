@@ -6,7 +6,7 @@
   <link href="http://gaattc.gitee.io/atom.xml" rel="self"/>
   
   <link href="http://gaattc.gitee.io/"/>
-  <updated>2020-11-21T05:29:00.338Z</updated>
+  <updated>2020-11-26T14:07:02.158Z</updated>
   <id>http://gaattc.gitee.io/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>matery下的二级分类使用方式</title>
+    <link href="http://gaattc.gitee.io/2020/11/26/matery-xia-de-er-ji-biao-ti-shi-yong-fang-shi/"/>
+    <id>http://gaattc.gitee.io/2020/11/26/matery-xia-de-er-ji-biao-ti-shi-yong-fang-shi/</id>
+    <published>2020-11-26T13:45:17.000Z</published>
+    <updated>2020-11-26T14:07:02.158Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;matery下的二级分类使用方式&quot;&gt;&lt;a href=&quot;#matery下的二级分类使用方式&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="http://gaattc.gitee.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="hexo" scheme="http://gaattc.gitee.io/categories/%E5%AD%A6%E4%B9%A0/hexo/"/>
+    
+    
+    <category term="学习心得" scheme="http://gaattc.gitee.io/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/"/>
+    
+    <category term="hexo" scheme="http://gaattc.gitee.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Valine+HEXO全攻略</title>
     <link href="http://gaattc.gitee.io/2020/11/21/valine-hexo-quan-gong-lue/"/>
     <id>http://gaattc.gitee.io/2020/11/21/valine-hexo-quan-gong-lue/</id>
     <published>2020-11-21T04:23:52.000Z</published>
-    <updated>2020-11-21T05:29:00.338Z</updated>
+    <updated>2020-11-26T14:14:26.993Z</updated>
     
     
       
@@ -51,7 +80,7 @@
     <link href="http://gaattc.gitee.io/2020/11/21/matery-xia-dai-ma-gao-liang-cha-jian-jie-jue-fang-an/"/>
     <id>http://gaattc.gitee.io/2020/11/21/matery-xia-dai-ma-gao-liang-cha-jian-jie-jue-fang-an/</id>
     <published>2020-11-21T03:33:23.000Z</published>
-    <updated>2020-11-21T05:11:32.405Z</updated>
+    <updated>2020-11-26T14:25:41.941Z</updated>
     
     
       
