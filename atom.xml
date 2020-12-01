@@ -6,7 +6,7 @@
   <link href="http://gaattc.gitee.io/atom.xml" rel="self"/>
   
   <link href="http://gaattc.gitee.io/"/>
-  <updated>2020-11-30T09:55:28.781Z</updated>
+  <updated>2020-12-01T15:54:08.802Z</updated>
   <id>http://gaattc.gitee.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>sql练习第一天</title>
+    <link href="http://gaattc.gitee.io/2020/12/01/sql-lian-xi-di-yi-tian/"/>
+    <id>http://gaattc.gitee.io/2020/12/01/sql-lian-xi-di-yi-tian/</id>
+    <published>2020-12-01T15:51:25.000Z</published>
+    <updated>2020-12-01T15:54:08.802Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第一天&quot;&gt;&lt;a href=&quot;#第一天&quot; class=&quot;headerlink&quot; title=&quot;第一天&quot;&gt;&lt;/a&gt;第一天&lt;/h1&gt;&lt;h2 id=&quot;单表查询&quot;&gt;&lt;a href=&quot;#单表查询&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="http://gaattc.gitee.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="数据库" scheme="http://gaattc.gitee.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="sql" scheme="http://gaattc.gitee.io/tags/sql/"/>
+    
+  </entry>
   
   <entry>
     <title>在分类中手动添加思维导图</title>

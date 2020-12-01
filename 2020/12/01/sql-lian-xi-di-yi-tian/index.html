@@ -3,7 +3,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="HEXO之live2d插件, GAATTC的隐藏小窝">
+    <meta name="keywords" content="sql练习第一天, GAATTC的隐藏小窝">
     <meta name="description" content="A simple blog maintained for recording the ordinary life...">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -15,7 +15,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>HEXO之live2d插件 | GAATTC的隐藏小窝</title>
+    <title>sql练习第一天 | GAATTC的隐藏小窝</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -803,12 +803,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/25.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">HEXO之live2d插件</h1>
+                    <h1 class="description center-align post-title">sql练习第一天</h1>
                 </div>
             </div>
         </div>
@@ -925,12 +925,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/">
-                                <span class="chip bg-color">学习心得</span>
-                            </a>
-                        
-                            <a href="/tags/hexo/">
-                                <span class="chip bg-color">hexo</span>
+                            <a href="/tags/sql/">
+                                <span class="chip bg-color">sql</span>
                             </a>
                         
                     </div>
@@ -945,8 +941,8 @@
                                 学习
                             </a>
                         
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/hexo/" class="post-category">
-                                hexo
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                数据库
                             </a>
                         
                     </div>
@@ -958,28 +954,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-11-21
+                    2020-12-01
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-11-21
+                    2020-12-01
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    527
+                    1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    4 分
                 </div>
                 
 
@@ -994,46 +990,81 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="HEXO之live2d插件"><a href="#HEXO之live2d插件" class="headerlink" title="HEXO之live2d插件"></a>HEXO之live2d插件</h1><h2 id="1-参考链接"><a href="#1-参考链接" class="headerlink" title="1.参考链接"></a>1.参考链接</h2><p>官方：<a target="_blank" rel="noopener" href="https://www.npmjs.com/package/hexo-helper-live2d">https://www.npmjs.com/package/hexo-helper-live2d</a></p>
-<p>参考：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/3a6342e16e57">https://www.jianshu.com/p/3a6342e16e57</a></p>
-<h2 id="2-安装插件"><a href="#2-安装插件" class="headerlink" title="2.安装插件"></a>2.安装插件</h2><p>首先检查博客主目录下面的  <code>package.json</code>里是否有<code>"hexo-helper-live2d": "^3.0.3",</code>依赖，有的话可以先卸载，使用命令：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> uninstall hexo-helper-live2d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h1 id="第一天"><a href="#第一天" class="headerlink" title="第一天"></a>第一天</h1><h2 id="单表查询"><a href="#单表查询" class="headerlink" title="单表查询"></a>单表查询</h2><p>–查询订购日期在1996年7月1日至1996年7月15日之间的订单的订购日期、订单ID、客户ID和雇员ID等字段的值</p>
+<img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20201201225039555.png" alt="image-20201201225039555" style="zoom: 67%;">
+--查询供应商的ID、公司名称、地区、城市和电话字段的值。条件是“地区等于华北”并且“联系人头衔等于销售代表”。 
 
-<p>之后再安装：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> --save hexo-helper-live2d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p> <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20201201225442095.png" alt="image-20201201225442095"></p>
+<p>–查询供应商的ID、公司名称、地区、城市和电话字段的值。其中的一些供应商位于华东或华南地区，另外一些供应商所在的城市是天津</p>
+<p> <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20201201225826327.png" alt="image-20201201225826327"></p>
+<p>–查询位于“华东”或“华南”地区的供应商的ID、公司名称、地区、城市和电话字段的值</p>
+<p> <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20201201230047686.png" alt="image-20201201230047686"></p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">#1</span>
+<span class="token keyword">select</span> 订购日期<span class="token punctuation">,</span>订单ID<span class="token punctuation">,</span>客户ID<span class="token punctuation">,</span>雇员ID
+<span class="token keyword">from</span> 订单
+<span class="token keyword">where</span> 订购日期<span class="token operator">&gt;</span><span class="token string">'1996-7-1'</span> <span class="token operator">and</span> 订购日期<span class="token operator">&lt;</span><span class="token string">'1996-7-15'</span><span class="token punctuation">;</span>
+<span class="token comment">#2</span>
+<span class="token keyword">select</span> 供应商ID<span class="token punctuation">,</span>公司名称<span class="token punctuation">,</span>地区<span class="token punctuation">,</span>城市<span class="token punctuation">,</span>电话
+<span class="token keyword">from</span> 供应商
+<span class="token keyword">where</span> 地区<span class="token operator">=</span><span class="token string">'华北'</span> <span class="token operator">and</span> 联系人职务<span class="token operator">=</span><span class="token string">'销售代表'</span><span class="token punctuation">;</span>
+<span class="token comment">#3</span>
+<span class="token keyword">select</span> 供应商ID<span class="token punctuation">,</span>公司名称<span class="token punctuation">,</span>地区<span class="token punctuation">,</span>城市<span class="token punctuation">,</span>电话
+<span class="token keyword">from</span> 供应商
+<span class="token keyword">where</span> 地区<span class="token operator">=</span><span class="token string">'华东'</span> <span class="token operator">or</span> 地区<span class="token operator">=</span><span class="token string">'华南'</span> <span class="token operator">or</span> 城市<span class="token operator">=</span><span class="token string">'天津'</span><span class="token punctuation">;</span>
+<span class="token comment">#4</span>
+<span class="token keyword">select</span> 供应商ID<span class="token punctuation">,</span>公司名称<span class="token punctuation">,</span>地区<span class="token punctuation">,</span>城市<span class="token punctuation">,</span>电话
+<span class="token keyword">from</span> 供应商
+<span class="token keyword">where</span> 地区<span class="token operator">=</span><span class="token string">'华东'</span> <span class="token operator">or</span> 地区<span class="token operator">=</span><span class="token string">'华南'</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="3-挑选模型"><a href="#3-挑选模型" class="headerlink" title="3.挑选模型"></a>3.挑选模型</h2><p><a target="_blank" rel="noopener" href="https://gaattc.lanzoui.com/i3lrbilvkej">模型下载</a></p>
-<p>解压后packages里每个文件夹是一个模型，挑选需要的复制到hexo根目录下<code>/node_modules</code>中。</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/wang_123_zy/article/details/87181892">模型预览</a></p>
-<h2 id="4-更改配置"><a href="#4-更改配置" class="headerlink" title="4.更改配置"></a>4.更改配置</h2><p>hexo根目录的_config.yml中配置live2d。</p>
-<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml">live2d:
-  enable: true
-  scriptFrom: local
-  pluginRootPath: live2dw/
-  pluginJsPath: lib/
-  pluginModelPath: assets/
-  tagMode: false
-  debug: false
-  model:
-    use: live2d-widget-model-tororo #改为自己需要的
-  display:
-    position: right
-    width: 150
-    height: 300
-  mobile:
-    show: true #移动端是否开启
-  react:
-    opacity: 0.7<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="5-live2d与不蒜子冲突的解决"><a href="#5-live2d与不蒜子冲突的解决" class="headerlink" title="5.live2d与不蒜子冲突的解决"></a>5.live2d与不蒜子冲突的解决</h2><p><strong>不解决将导致显示问题和hexo clean后live2d模型丢失问题！！</strong></p>
-<p>参考：<a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery/issues/458">https://github.com/blinkfox/hexo-theme-matery/issues/458</a></p>
-<p><left><img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/Snipaste_2020-11-17_19-03-50.jpg" style="zoom:67%;"></left></p>
-<p>不蒜子js文件目录：</p>
-<pre class="line-numbers language-none"><code class="language-none">hexo\themes\hexo-theme-matery-master\source\libs\others\busuanzi.pure.mini.js<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>大佬提供的代码：</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> bszCaller<span class="token punctuation">,</span>bszTag<span class="token punctuation">;</span><span class="token operator">!</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">var</span> c<span class="token punctuation">,</span>d<span class="token punctuation">,</span>e<span class="token punctuation">,</span>a<span class="token operator">=</span><span class="token operator">!</span><span class="token number">1</span><span class="token punctuation">,</span>b<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token function-variable function">ready</span><span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">c</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">return</span> a<span class="token operator">||</span><span class="token string">"interactive"</span><span class="token operator">===</span>document<span class="token punctuation">.</span>readyState<span class="token operator">||</span><span class="token string">"complete"</span><span class="token operator">===</span>document<span class="token punctuation">.</span>readyState<span class="token operator">?</span><span class="token function">c</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token operator">:</span>b<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">return</span> <span class="token function">c</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token keyword">this</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token function-variable function">d</span><span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> a<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>c<span class="token operator">=</span>b<span class="token punctuation">.</span>length<span class="token punctuation">;</span>c<span class="token operator">&gt;</span>a<span class="token punctuation">;</span>a<span class="token operator">++</span><span class="token punctuation">)</span>b<span class="token punctuation">[</span>a<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">;</span>b<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token function-variable function">e</span><span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>a<span class="token operator">||</span><span class="token punctuation">(</span>a<span class="token operator">=</span><span class="token operator">!</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token function">d</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>window<span class="token punctuation">)</span><span class="token punctuation">,</span>document<span class="token punctuation">.</span>removeEventListener<span class="token operator">?</span>document<span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span><span class="token string">"DOMContentLoaded"</span><span class="token punctuation">,</span>e<span class="token punctuation">,</span><span class="token operator">!</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">:</span>document<span class="token punctuation">.</span>attachEvent<span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">detachEvent</span><span class="token punctuation">(</span><span class="token string">"onreadystatechange"</span><span class="token punctuation">,</span>e<span class="token punctuation">)</span><span class="token punctuation">,</span>window<span class="token operator">==</span>window<span class="token punctuation">.</span>top<span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span><span class="token function">clearInterval</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">,</span>c<span class="token operator">=</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">,</span>document<span class="token punctuation">.</span>addEventListener<span class="token operator">?</span>document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"DOMContentLoaded"</span><span class="token punctuation">,</span>e<span class="token punctuation">,</span><span class="token operator">!</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">:</span>document<span class="token punctuation">.</span>attachEvent<span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">attachEvent</span><span class="token punctuation">(</span><span class="token string">"onreadystatechange"</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">loaded|complete</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span>readyState<span class="token punctuation">)</span><span class="token operator">&amp;&amp;</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>window<span class="token operator">==</span>window<span class="token punctuation">.</span>top<span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>c<span class="token operator">=</span><span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">try</span><span class="token punctuation">{</span>a<span class="token operator">||</span>document<span class="token punctuation">.</span>documentElement<span class="token punctuation">.</span><span class="token function">doScroll</span><span class="token punctuation">(</span><span class="token string">"left"</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">return</span><span class="token punctuation">}</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>bszCaller<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function-variable function">fetch</span><span class="token operator">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span>b</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">var</span> c<span class="token operator">=</span><span class="token string">"BusuanziCallback_"</span><span class="token operator">+</span>Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token number">1099511627776</span><span class="token operator">*</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>window<span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token operator">=</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">evalCall</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">,</span>a<span class="token operator">=</span>a<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"=BusuanziCallback"</span><span class="token punctuation">,</span><span class="token string">"="</span><span class="token operator">+</span>c<span class="token punctuation">)</span><span class="token punctuation">,</span>scriptTag<span class="token operator">=</span>document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"SCRIPT"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>scriptTag<span class="token punctuation">.</span>type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token punctuation">,</span>scriptTag<span class="token punctuation">.</span>defer<span class="token operator">=</span><span class="token operator">!</span><span class="token number">0</span><span class="token punctuation">,</span>scriptTag<span class="token punctuation">.</span>src<span class="token operator">=</span>a<span class="token punctuation">,</span>document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">"HEAD"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>scriptTag<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token function-variable function">evalCall</span><span class="token operator">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">a</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">b</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">try</span><span class="token punctuation">{</span><span class="token function">a</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">,</span>scriptTag<span class="token punctuation">.</span>parentElement<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>scriptTag<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">{</span>bszTag<span class="token punctuation">.</span><span class="token function">hides</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">,</span>bszCaller<span class="token punctuation">.</span><span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">"//busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback"</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">a</span><span class="token punctuation">)</span><span class="token punctuation">{</span>bszTag<span class="token punctuation">.</span><span class="token function">texts</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">,</span>bszTag<span class="token punctuation">.</span><span class="token function">shows</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>bszTag<span class="token operator">=</span><span class="token punctuation">{</span>bszs<span class="token operator">:</span><span class="token punctuation">[</span><span class="token string">"site_pv"</span><span class="token punctuation">,</span><span class="token string">"page_pv"</span><span class="token punctuation">,</span><span class="token string">"site_uv"</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token function-variable function">texts</span><span class="token operator">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">a</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>bszs<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">b</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">var</span> c<span class="token operator">=</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"busuanzi_value_"</span><span class="token operator">+</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>c<span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>c<span class="token punctuation">.</span>innerHTML<span class="token operator">=</span>a<span class="token punctuation">[</span>b<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token function-variable function">hides</span><span class="token operator">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>bszs<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">a</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">var</span> b<span class="token operator">=</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"busuanzi_container_"</span><span class="token operator">+</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>b<span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>b<span class="token punctuation">.</span>style<span class="token punctuation">.</span>display<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token function-variable function">shows</span><span class="token operator">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>bszs<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">a</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">var</span> b<span class="token operator">=</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"busuanzi_container_"</span><span class="token operator">+</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>b<span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>b<span class="token punctuation">.</span>style<span class="token punctuation">.</span>display<span class="token operator">=</span><span class="token string">"inline"</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="多表查询"><a href="#多表查询" class="headerlink" title="多表查询"></a>多表查询</h2><p>–查询订购日期在1996年7月1日至1996年7月15日之间的订单的订购日期、订单ID、相应订单的客户公司名称、负责订单的雇员的姓氏和名字等字段的值，并将查询结果按雇员的“姓氏”和“名字”字段的升序排列，“姓氏”和“名字”值相同的记录按“订单 ID”的降序排列</p>
+<p> <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20201201231615488.png" alt="image-20201201231615488"></p>
+<p>–查询“10248”和“10254”号订单的订单ID、运货商的公司名称、订单上所订购的产品的名称</p>
+<p> <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20201201233000266.png" alt="image-20201201233000266"></p>
+<p>–查询“10248”和“10254”号订单的订单ID、订单上所订购的产品的名称、数量、单价和折扣</p>
+<p> <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20201201233446848.png" alt="image-20201201233446848"></p>
+<p>–查询“10248”和“10254”号订单的订单ID、订单上所订购的产品的名称及其销售金额</p>
+<p> <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20201201234636085.png" alt="image-20201201234636085"></p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">#5</span>
+<span class="token keyword">select</span> o<span class="token punctuation">.</span>订购日期<span class="token punctuation">,</span>o<span class="token punctuation">.</span>订单ID<span class="token punctuation">,</span>c<span class="token punctuation">.</span>公司名称<span class="token punctuation">,</span>e<span class="token punctuation">.</span>姓氏<span class="token punctuation">,</span>e<span class="token punctuation">.</span>名字
+<span class="token keyword">from</span> 订单 o 
+<span class="token keyword">left</span> <span class="token keyword">join</span> 客户 c <span class="token keyword">on</span> o<span class="token punctuation">.</span>客户ID<span class="token operator">=</span>c<span class="token punctuation">.</span>客户ID
+<span class="token keyword">left</span> <span class="token keyword">join</span> 雇员 e <span class="token keyword">on</span> o<span class="token punctuation">.</span>雇员ID<span class="token operator">=</span>e<span class="token punctuation">.</span>雇员ID
+<span class="token keyword">where</span> o<span class="token punctuation">.</span>订购日期<span class="token operator">&gt;</span><span class="token string">'1996-7-1'</span> <span class="token operator">and</span> o<span class="token punctuation">.</span>订购日期<span class="token operator">&lt;</span><span class="token string">'1996-7-15'</span>
+<span class="token keyword">order</span> <span class="token keyword">by</span> e<span class="token punctuation">.</span>姓氏<span class="token punctuation">,</span>e<span class="token punctuation">.</span>名字<span class="token punctuation">,</span>o<span class="token punctuation">.</span>订单ID <span class="token keyword">desc</span><span class="token punctuation">;</span>
+<span class="token comment">#6</span>
+<span class="token keyword">select</span> o<span class="token punctuation">.</span>订单ID<span class="token punctuation">,</span>s<span class="token punctuation">.</span>公司名称<span class="token punctuation">,</span>p<span class="token punctuation">.</span><span class="token punctuation">`</span>产品名称<span class="token punctuation">`</span>
+<span class="token keyword">from</span> 订单 o
+<span class="token keyword">left</span> <span class="token keyword">join</span> 运货商 s <span class="token keyword">on</span> o<span class="token punctuation">.</span>运货商<span class="token operator">=</span>s<span class="token punctuation">.</span>运货商ID
+<span class="token keyword">left</span> <span class="token keyword">join</span> 订单明细 d <span class="token keyword">on</span> o<span class="token punctuation">.</span><span class="token punctuation">`</span>订单ID<span class="token punctuation">`</span><span class="token operator">=</span>d<span class="token punctuation">.</span><span class="token punctuation">`</span>订单ID<span class="token punctuation">`</span>
+<span class="token keyword">left</span> <span class="token keyword">join</span> 产品 p <span class="token keyword">on</span> d<span class="token punctuation">.</span><span class="token punctuation">`</span>产品ID<span class="token punctuation">`</span><span class="token operator">=</span>p<span class="token punctuation">.</span><span class="token punctuation">`</span>产品ID<span class="token punctuation">`</span>
+<span class="token keyword">where</span> o<span class="token punctuation">.</span><span class="token punctuation">`</span>订单ID<span class="token punctuation">`</span><span class="token operator">=</span><span class="token string">'10248'</span> <span class="token operator">or</span> o<span class="token punctuation">.</span><span class="token punctuation">`</span>订单ID<span class="token punctuation">`</span><span class="token operator">=</span><span class="token string">'10254'</span><span class="token punctuation">;</span>
+<span class="token comment">#7</span>
+<span class="token keyword">select</span> o<span class="token punctuation">.</span>订单ID<span class="token punctuation">,</span>p<span class="token punctuation">.</span><span class="token punctuation">`</span>产品名称<span class="token punctuation">`</span><span class="token punctuation">,</span>d<span class="token punctuation">.</span><span class="token punctuation">`</span>数量<span class="token punctuation">`</span><span class="token punctuation">,</span>d<span class="token punctuation">.</span><span class="token punctuation">`</span>单价<span class="token punctuation">`</span><span class="token punctuation">,</span>d<span class="token punctuation">.</span><span class="token punctuation">`</span>折扣<span class="token punctuation">`</span>
+<span class="token keyword">from</span> 订单 o
+<span class="token keyword">left</span> <span class="token keyword">join</span> 订单明细 d <span class="token keyword">on</span> o<span class="token punctuation">.</span><span class="token punctuation">`</span>订单ID<span class="token punctuation">`</span><span class="token operator">=</span>d<span class="token punctuation">.</span><span class="token punctuation">`</span>订单ID<span class="token punctuation">`</span>
+<span class="token keyword">left</span> <span class="token keyword">join</span> 产品 p <span class="token keyword">on</span> d<span class="token punctuation">.</span><span class="token punctuation">`</span>产品ID<span class="token punctuation">`</span><span class="token operator">=</span>p<span class="token punctuation">.</span><span class="token punctuation">`</span>产品ID<span class="token punctuation">`</span>
+<span class="token keyword">where</span> o<span class="token punctuation">.</span><span class="token punctuation">`</span>订单ID<span class="token punctuation">`</span><span class="token operator">=</span><span class="token string">'10248'</span> <span class="token operator">or</span> o<span class="token punctuation">.</span><span class="token punctuation">`</span>订单ID<span class="token punctuation">`</span><span class="token operator">=</span><span class="token string">'10254'</span><span class="token punctuation">;</span>
+<span class="token comment">#8</span>
+<span class="token keyword">select</span> o<span class="token punctuation">.</span><span class="token punctuation">`</span>订单ID<span class="token punctuation">`</span><span class="token punctuation">,</span>p<span class="token punctuation">.</span><span class="token punctuation">`</span>产品名称<span class="token punctuation">`</span><span class="token punctuation">,</span><span class="token function">round</span><span class="token punctuation">(</span>d<span class="token punctuation">.</span><span class="token punctuation">`</span>单价<span class="token punctuation">`</span><span class="token operator">*</span>d<span class="token punctuation">.</span><span class="token punctuation">`</span>数量<span class="token punctuation">`</span><span class="token operator">*</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">-</span>d<span class="token punctuation">.</span><span class="token punctuation">`</span>折扣<span class="token punctuation">`</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token string">'销售金额'</span>
+<span class="token keyword">from</span> 订单 o
+<span class="token keyword">left</span> <span class="token keyword">join</span> 订单明细 d <span class="token keyword">on</span> o<span class="token punctuation">.</span><span class="token punctuation">`</span>订单ID<span class="token punctuation">`</span><span class="token operator">=</span>d<span class="token punctuation">.</span><span class="token punctuation">`</span>订单ID<span class="token punctuation">`</span>
+<span class="token keyword">left</span> <span class="token keyword">join</span> 产品 p <span class="token keyword">on</span> d<span class="token punctuation">.</span><span class="token punctuation">`</span>产品ID<span class="token punctuation">`</span><span class="token operator">=</span>p<span class="token punctuation">.</span><span class="token punctuation">`</span>产品ID<span class="token punctuation">`</span>
+<span class="token keyword">where</span> o<span class="token punctuation">.</span><span class="token punctuation">`</span>订单ID<span class="token punctuation">`</span><span class="token operator">=</span><span class="token string">'10248'</span> <span class="token operator">or</span> o<span class="token punctuation">.</span><span class="token punctuation">`</span>订单ID<span class="token punctuation">`</span><span class="token operator">=</span><span class="token string">'10254'</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+
+
+<h2 id="综合查询"><a href="#综合查询" class="headerlink" title="综合查询"></a>综合查询</h2><p>–查询所有运货商的公司名称和电话</p>
+<p>–查询所有客户的公司名称、电话、传真、地址、联系人姓名和联系人头衔</p>
+<p>–查询单价介于10至30元的所有产品的产品ID、产品名称和库存量</p>
+<p>–查询单价大于20元的所有产品的产品名称、单价以及供应商的公司名称、电话</p>
+<p>–查询上海和北京的客户在1996年订购的所有订单的订单ID、所订购的产品名称和数量</p>
+<p>–查询华北客户的每份订单的订单ID、产品名称和销售金额</p>
+<p>–按运货商公司名称，统计1997年由各个运货商承运的订单的总数量</p>
+<p>–统计1997年上半年的每份订单上所订购的产品的总数量</p>
+<p>–统计各类产品的平均价格</p>
+<p>–统计各地区客户的总数量</p>
 
             </div>
             <hr/>
@@ -1059,7 +1090,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://gaattc.gitee.io/2020/11/21/hexo-zhi-live2d-cha-jian/">http://gaattc.gitee.io/2020/11/21/hexo-zhi-live2d-cha-jian/</a>
+                    <a href="http://gaattc.gitee.io/2020/12/01/sql-lian-xi-di-yi-tian/">http://gaattc.gitee.io/2020/12/01/sql-lian-xi-di-yi-tian/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1097,12 +1128,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/">
-                                    <span class="chip bg-color">学习心得</span>
-                                </a>
-                            
-                                <a href="/tags/hexo/">
-                                    <span class="chip bg-color">hexo</span>
+                                <a href="/tags/sql/">
+                                    <span class="chip bg-color">sql</span>
                                 </a>
                             
                         </div>
@@ -1910,32 +1937,88 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/11/21/matery-xia-dai-ma-gao-liang-cha-jian-jie-jue-fang-an/">
+                <a href="/2020/12/01/sql-lian-xi-di-yi-tian/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/86.jpg" class="responsive-img" alt="matery下代码高亮插件解决方案">
+                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/25.jpg" class="responsive-img" alt="sql练习第一天">
                         
-                        <span class="card-title">matery下代码高亮插件解决方案</span>
+                        <span class="card-title">sql练习第一天</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            matery下代码高亮插件解决方案
-我的prism_plugin插件装了有bug不显示，故使用prismjs方案。
+                            第一天单表查询–查询订购日期在1996年7月1日至1996年7月15日之间的订单的订购日期、订单ID、客户ID和雇员ID等字段的值
 
-1.首先检查冲突如果装了prism_plugin插件请卸载：
-npm uninstall -S hexo-prism-pl
+--查询供应商的ID、公司名称、地区、城市和电话字段的值。条件是“地区等于华北”并且“联系人头衔等于销售代
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-21
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    学习
+                                </a>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                    数据库
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/sql/">
+                        <span class="chip bg-color">sql</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/11/29/zai-fen-lei-zhong-shou-dong-tian-jia-si-wei-dao-tu/">
+                    <div class="card-image">
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/35095368.png" class="responsive-img" alt="在分类中手动添加思维导图">
+                        
+                        <span class="card-title">在分类中手动添加思维导图</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            在分类中手动添加思维导图
+不会js也不会ejs的我竟然摸索着弄出来了哈哈哈
+
+1.添加一个widget找到文件categories.ejs：
+hexo\themes\hexo-theme-matery-master\layout\categ
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1961,60 +2044,6 @@ npm uninstall -S hexo-prism-pl
                     
                     <a href="/tags/hexo/">
                         <span class="chip bg-color">hexo</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/11/19/ji-suan-ji-ji-cheng-yu-rou-xing-zhi-zao/">
-                    <div class="card-image">
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/28128872.png" class="responsive-img" alt="计算机集成与柔性制造">
-                        
-                        <span class="card-title">计算机集成与柔性制造</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            计算机集成与柔性制造一.绪论1.概念CIMS：计算机集成制造系统FMS：柔性制造系统
-2.中国制造2025
-二、数字化制造技术及装备1.数字化制造技术传统制造技术：以材料制备与零件制造相分离为主要特征，通过材料去除或塑性成型获得所需的零件，
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-19
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    学习
-                                </a>
-                            
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B/" class="post-category">
-                                    大学课程
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%A4%87%E4%BB%BD/">
-                        <span class="chip bg-color">备份</span>
                     </a>
                     
                 </div>
