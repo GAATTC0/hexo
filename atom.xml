@@ -6,7 +6,7 @@
   <link href="http://gaattc.gitee.io/atom.xml" rel="self"/>
   
   <link href="http://gaattc.gitee.io/"/>
-  <updated>2020-12-01T15:54:08.802Z</updated>
+  <updated>2020-12-02T09:26:09.886Z</updated>
   <id>http://gaattc.gitee.io/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>sql练习第二天</title>
+    <link href="http://gaattc.gitee.io/2020/12/02/sql-lian-xi-di-er-tian/"/>
+    <id>http://gaattc.gitee.io/2020/12/02/sql-lian-xi-di-er-tian/</id>
+    <published>2020-12-02T06:58:12.000Z</published>
+    <updated>2020-12-02T09:26:09.886Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;找出供应商名称，所在城市&lt;br&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="http://gaattc.gitee.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="数据库" scheme="http://gaattc.gitee.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="sql" scheme="http://gaattc.gitee.io/tags/sql/"/>
+    
+  </entry>
+  
+  <entry>
     <title>sql练习第一天</title>
     <link href="http://gaattc.gitee.io/2020/12/01/sql-lian-xi-di-yi-tian/"/>
     <id>http://gaattc.gitee.io/2020/12/01/sql-lian-xi-di-yi-tian/</id>
     <published>2020-12-01T15:51:25.000Z</published>
-    <updated>2020-12-01T15:54:08.802Z</updated>
+    <updated>2020-12-02T06:56:58.043Z</updated>
     
     
       
