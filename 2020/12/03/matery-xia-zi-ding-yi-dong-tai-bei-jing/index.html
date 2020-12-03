@@ -3,7 +3,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="matery下的二级分类使用方式, GAATTC的隐藏小窝">
+    <meta name="keywords" content="matery下自定义动态背景, GAATTC的隐藏小窝">
     <meta name="description" content="A simple blog maintained for recording the ordinary life...">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -15,7 +15,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>matery下的二级分类使用方式 | GAATTC的隐藏小窝</title>
+    <title>matery下自定义动态背景 | GAATTC的隐藏小窝</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="http://lib.baomitu.com/font-awesome/5.11.1/css/all.min.css">
@@ -809,12 +809,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/114.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/Snipaste_2020-12-03_20-45-25.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">matery下的二级分类使用方式</h1>
+                    <h1 class="description center-align post-title">matery下自定义动态背景</h1>
                 </div>
             </div>
         </div>
@@ -968,7 +968,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-11-26
+                    2020-12-03
                 </div>
                 
 
@@ -982,14 +982,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    350
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    2 分
                 </div>
                 
 
@@ -999,299 +999,91 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="matery下的二级分类使用方式"><a href="#matery下的二级分类使用方式" class="headerlink" title="matery下的二级分类使用方式"></a>matery下的二级分类使用方式</h1><blockquote>
-<p>ref：<a target="_blank" rel="noopener" href="https://zhangxiaocai.cn/posts/5a99eb4d.html#toc-heading-1">https://zhangxiaocai.cn/posts/5a99eb4d.html#toc-heading-1</a></p>
-</blockquote>
-<h2 id="1、新建category-list-ejs文件"><a href="#1、新建category-list-ejs文件" class="headerlink" title="1、新建category-list.ejs文件"></a>1、新建category-list.ejs文件</h2><p>文件路径：</p>
-<pre class="line-numbers language-none"><code class="language-none">hexo\themes\hexo-theme-matery-master\layout\_widget\category-list.ejs<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <p>matery下自定义动态背景</p>
+<h2 id="1-添加css样式"><a href="#1-添加css样式" class="headerlink" title="1.添加css样式"></a>1.添加css样式</h2><pre class="line-numbers language-none"><code class="language-none">hexo\themes\hexo-theme-matery-master\source\css\matery.css<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>内容如下：</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html">&lt;% var orderBy =  'name' ;  %&gt;
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+<p>修改：</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">body</span> <span class="token punctuation">{</span>
+	<span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">radial-gradient</span><span class="token punctuation">(</span>200% 100% at bottom center<span class="token punctuation">,</span> #f7f7b6<span class="token punctuation">,</span> #e96f92<span class="token punctuation">,</span> #75517d<span class="token punctuation">,</span> #1b2947<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">radial-gradient</span><span class="token punctuation">(</span>220% 105% at top center<span class="token punctuation">,</span> #1b2947 10%<span class="token punctuation">,</span> #75517d 40%<span class="token punctuation">,</span> #e96f92 65%<span class="token punctuation">,</span> #f7f7b6<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> #eaeaea<span class="token punctuation">;</span>
+	<span class="token property">background-attachment</span><span class="token punctuation">:</span> fixed<span class="token punctuation">;</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> #34495e<span class="token punctuation">;</span>
+    <span class="token property">overflow-x</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+    <span class="token property">overflow-y</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+	<span class="token property">cursor</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span>../medias/Arrow.cur<span class="token punctuation">)</span></span><span class="token punctuation">,</span>auto
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<span class="token comment">/*
-.category:not(:last-child) {
-  margin-bottom: 1rem;
-}
-*/</span>
-<span class="token selector">.category-item</span> <span class="token punctuation">{</span>
-  <span class="token property">font-size</span><span class="token punctuation">:</span> 1.25rem<span class="token punctuation">;</span>
-  <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
-  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
-  <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token selector">.category-subitem</span> <span class="token punctuation">{</span>
-  <span class="token property">font-size</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span>
-  <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token selector">.category-collapse</span> <span class="token punctuation">{</span>
-  <span class="token property">margin-left</span><span class="token punctuation">:</span> 1.25rem<span class="token punctuation">;</span>
-  <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token selector">.category-count</span> <span class="token punctuation">{</span>
-  <span class="token property">font-size</span><span class="token punctuation">:</span> 0.9rem<span class="token punctuation">;</span>
-  <span class="token property">font-weight</span><span class="token punctuation">:</span> initial<span class="token punctuation">;</span>
-  <span class="token property">min-width</span><span class="token punctuation">:</span> 1.3em<span class="token punctuation">;</span>
-  <span class="token property">line-height</span><span class="token punctuation">:</span> 1.3em<span class="token punctuation">;</span>
-  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
-  <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token selector">.category-count i</span> <span class="token punctuation">{</span>
-  <span class="token property">padding-right</span><span class="token punctuation">:</span> 0.25rem<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token selector">.category-count span</span> <span class="token punctuation">{</span>
-  <span class="token property">width</span><span class="token punctuation">:</span> 2rem<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token selector">.category-item-action:not(.collapsed) &gt; i</span> <span class="token punctuation">{</span>
-  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>90deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token property">transform-origin</span><span class="token punctuation">:</span> center center<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token selector">.category-item-action i</span> <span class="token punctuation">{</span>
-  <span class="token property">transition</span><span class="token punctuation">:</span> transform 0.3s ease-out<span class="token punctuation">;</span>
-  <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
-  <span class="token property">margin-left</span><span class="token punctuation">:</span> 0.25rem<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token selector">.category-item-action:hover</span> <span class="token punctuation">{</span>
-  <span class="token property">z-index</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
-  <span class="token property">color</span><span class="token punctuation">:</span> #38ACDF<span class="token punctuation">;</span>
-  <span class="token property">text-decoration</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
-  <span class="token property">background-color</span><span class="token punctuation">:</span> #F8F9FA<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-
-
-<span class="token selector">.list-group-item:first-child</span> <span class="token punctuation">{</span>
-    <span class="token property">border-top-left-radius</span><span class="token punctuation">:</span> .25rem<span class="token punctuation">;</span>
-    <span class="token property">border-top-right-radius</span><span class="token punctuation">:</span> .25rem<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token selector">.category-item</span> <span class="token punctuation">{</span>
-    <span class="token property">font-size</span><span class="token punctuation">:</span> 1.25rem<span class="token punctuation">;</span>
-    <span class="token property">font-weight</span><span class="token punctuation">:</span> 700<span class="token punctuation">;</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
-    <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token selector">.list-group-item</span> <span class="token punctuation">{</span>
-    <span class="token property">background-color</span><span class="token punctuation">:</span> transparent<span class="token punctuation">;</span>
-    <span class="token property">border</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token selector">.list-group-item</span> <span class="token punctuation">{</span>
-    <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
-    <span class="token property">padding</span><span class="token punctuation">:</span> .75rem 1.25rem<span class="token punctuation">;</span>
-    <span class="token property">background-color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
-    <span class="token comment">/* border: 1px solid rgba(0,0,0,.125); */</span>
-<span class="token punctuation">}</span>
-
-<span class="token selector">#card-list-zzy .list-group-item:hover</span> <span class="token punctuation">{</span>
-    <span class="token property">color</span><span class="token punctuation">:</span> #38ACDF<span class="token punctuation">;</span>
-    <span class="token property">background-color</span><span class="token punctuation">:</span> #F8F9FA<span class="token punctuation">;</span>
-    <span class="token comment">/*  border: 1px solid rgba(0,0,0,.125); */</span>
-<span class="token punctuation">}</span>
-
-<span class="token selector">.category-item-action i</span> <span class="token punctuation">{</span>
-    <span class="token property">transition</span><span class="token punctuation">:</span> transform .3s ease-out<span class="token punctuation">;</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
-    <span class="token property">margin-left</span><span class="token punctuation">:</span> .25rem<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token selector">.category-item-action a</span><span class="token punctuation">{</span>
-      <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
-      <span class="token property">padding</span><span class="token punctuation">:</span> .75rem 1.25rem<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token selector">card-categories-list-spcail &gt; div:hover</span><span class="token punctuation">{</span>
-
-  <span class="token property">color</span><span class="token punctuation">:</span>#38ACDF<span class="token punctuation">;</span>
-  <span class="token property">background-color</span><span class="token punctuation">:</span> #F8F9FA<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token selector">.fa</span> <span class="token punctuation">{</span>
-    <span class="token property">font-size</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span>
-    <span class="token property">line-height</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token selector">.category-count</span> <span class="token punctuation">{</span>
-    <span class="token property">font-size</span><span class="token punctuation">:</span> .9rem<span class="token punctuation">;</span>
-    <span class="token property">font-weight</span><span class="token punctuation">:</span> initial<span class="token punctuation">;</span>
-    <span class="token property">min-width</span><span class="token punctuation">:</span> 1.3em<span class="token punctuation">;</span>
-    <span class="token property">line-height</span><span class="token punctuation">:</span> 1.3em<span class="token punctuation">;</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
-    <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-
-<span class="token selector">.category-content</span><span class="token punctuation">{</span>
-   <span class="token property">border-left</span><span class="token punctuation">:</span>0px<span class="token punctuation">;</span>
-   <span class="token property">padding</span><span class="token punctuation">:</span> .75rem 1.25rem<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token selector">.category-content a</span><span class="token punctuation">{</span>
-    <span class="token property">color</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token selector">.category-content a:hover</span><span class="token punctuation">{</span>
-    <span class="token property">color</span><span class="token punctuation">:</span>#38ACDF<span class="token punctuation">;</span>
-    <span class="token property">background-color</span><span class="token punctuation">:</span> #F8F9FA<span class="token punctuation">;</span>
-    <span class="token property">box-shadow</span><span class="token punctuation">:</span>none<span class="token punctuation">;</span>
- <span class="token punctuation">}</span>
-<span class="token selector">.category-row</span> <span class="token punctuation">{</span>
-
-  <span class="token property">border-color</span><span class="token punctuation">:</span> #F8F9FA<span class="token punctuation">;</span><span class="token punctuation">;</span>
-  <span class="token property">border-bottom</span><span class="token punctuation">:</span>none<span class="token punctuation">;</span>
-  <span class="token property">box-shadow</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token selector">#card-list-zzy</span><span class="token punctuation">{</span>
-    <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
-    <span class="token comment">/* margin-top: -2rem; */</span>
-    <span class="token property">transition</span><span class="token punctuation">:</span> background-color .2s ease-in-out<span class="token punctuation">;</span>
-    <span class="token property">border-radius</span><span class="token punctuation">:</span> .5rem<span class="token punctuation">;</span>
-    <span class="token property">z-index</span><span class="token punctuation">:</span> 3<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token selector">.collapsible-header</span><span class="token punctuation">{</span>
-
-    <span class="token property">boder</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token selector">.collapsible</span><span class="token punctuation">{</span>
-  <span class="token property">box-shadow</span><span class="token punctuation">:</span>none <span class="token important">!important</span><span class="token punctuation">;</span>
-  <span class="token property">-webkit-box-shadow</span><span class="token punctuation">:</span> none <span class="token important">!important</span><span class="token punctuation">;</span>
-  <span class="token property">border-left</span><span class="token punctuation">:</span>none <span class="token important">!important</span><span class="token punctuation">;</span>
-  <span class="token property">border-right</span><span class="token punctuation">:</span>none <span class="token important">!important</span><span class="token punctuation">;</span>
-  <span class="token property">border-bottom</span><span class="token punctuation">:</span>none <span class="token important">!important</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token selector">.categories-title</span><span class="token punctuation">{</span>
-    <span class="token property">padding-top</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
-    <span class="token comment">/* padding-bottom: 5px; */</span>
-    <span class="token property">margin-bottom</span><span class="token punctuation">:</span> -10px<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-
-  &lt;% function render_categories(cats, depth) { %&gt;
-  &lt;% depth = depth || 0 %&gt;
-
-  &lt;% return cats.each(function(cat){ %&gt;
-    &lt;% var subCats = site.categories.find({parent: cat._id}).sort(orderBy).filter(cat =&gt; cat.length) %&gt;
-    &lt;% var collapsed = subCats.length === 0 %&gt;
-
-    
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>&lt;%= depth &lt;= 0 ? <span class="token punctuation">'</span>category-row<span class="token punctuation">'</span> : <span class="token punctuation">'</span>category-row category-sub<span class="token punctuation">'</span> %&gt;  row collapsible-header<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span>
-        <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span> &lt;%= depth &lt;= 0 ? <span class="token punctuation">'</span>category-item<span class="token punctuation">'</span> : <span class="token punctuation">'</span>category-subitem<span class="token punctuation">'</span> %&gt; &lt;%= subCats.length &gt; 0 ? <span class="token punctuation">'</span><span class="token punctuation">'</span> : <span class="token punctuation">'</span>collapsed<span class="token punctuation">'</span> %&gt; list-group-item category-item-action col s11 m11<span class="token punctuation">"</span></span>
-        <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>heading-&lt;%= cat._id %&gt;<span class="token punctuation">"</span></span> 
-      <span class="token punctuation">&gt;</span></span>
-        &lt;%= cat.name %&gt;
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fas fa-chevron-right<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>&lt;%= url_for(cat.path) %&gt;<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>category-count col s1 m1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fa fa-list<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>&lt;%= cat.posts.length %&gt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
-
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
-
-        &lt;% if (subCats.length &gt; 0) { %&gt;
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>category-content collapsible-body<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-          &lt;%- render_sub_categories(subCats, cat, depth + 1) %&gt;
-
-       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
-
-        &lt;% } else { %&gt;
-          &lt;%- render_posts(cat) %&gt;
-        &lt;% } %&gt;
-
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
-  &lt;% }) %&gt;
-&lt;% } %&gt;
-
-&lt;% function render_sub_categories(cats, parent, depth) { %&gt;
-
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>collapsible expandable category-row<span class="token punctuation">"</span></span>  <span class="token attr-name">data-collapsible</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>expandable<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-            &lt;%- render_categories(cats, depth) %&gt;
-         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
-
-&lt;% } %&gt;
-
-&lt;% function render_posts(cat) { %&gt;
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>collapse-&lt;%= cat._id %&gt;<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>category-content collapsible-body<span class="token punctuation">"</span></span> <span class="token punctuation">&gt;</span></span>
-    &lt;% var limit = theme.category.list || 10 ; %&gt;
-    &lt;% var posts = cat.posts.sort(config.index_generator.order_by || '-date') %&gt;
-    &lt;% for (var idx = 0; idx &lt; posts.length; idx++) { %&gt;
-      &lt;% var post = posts.data[idx] %&gt;
-      &lt;% if (idx &amp;&amp; limit &amp;&amp; idx &gt;= limit) { %&gt;
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>&lt;%- url_for(cat.path) %&gt;<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item list-group-item-action<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>category-post<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>More...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
-        &lt;% break %&gt;
-      &lt;% } else { %&gt;
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>&lt;%- url_for(post.path) %&gt;<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span> list-group-item list-group-item-action<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>category-post<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>&lt;%= post.title %&gt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
-      &lt;% } %&gt;
-    &lt;% } %&gt;
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
-&lt;% } %&gt;
-
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span> <span class="token attr-name">data-aos</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fade-up<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>card  card-categories-list-spcail<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>categories-title center-align<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fas fa-bookmark<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span><span class="token entity named-entity" title="&nbsp;">&amp;nbsp;</span><span class="token entity named-entity" title="&nbsp;">&amp;nbsp;</span> 文章多级分类
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
-
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>card-content col s12  m12<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span>  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>card-list-zzy<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container <span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>category-list collapsible expandable<span class="token punctuation">"</span></span>  <span class="token attr-name">data-collapsible</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>expandable<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-          &lt;% cats = site.categories.find({parent: {$exists: false}}).sort(orderBy).filter(cat =&gt; cat.length) %&gt;
-          &lt;%- render_categories(cats) %&gt;
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
-       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>   
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
-
-
-//<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
-
-
-<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.list-group-item'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-
-  <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">hasClass</span><span class="token punctuation">(</span><span class="token string">'collapsed'</span><span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">{</span>
-      <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeClass</span><span class="token punctuation">(</span><span class="token string">'collapsed'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-      <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">parent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">slideDown</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
-      <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addClass</span><span class="token punctuation">(</span><span class="token string">'collapsed'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">parent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">slideUp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
+<p>添加：</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token atrule"><span class="token rule">@keyframes</span> rotate</span> <span class="token punctuation">{</span>
+  <span class="token selector">0%</span> <span class="token punctuation">{</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">perspective</span><span class="token punctuation">(</span>400px<span class="token punctuation">)</span> <span class="token function">rotateZ</span><span class="token punctuation">(</span>20deg<span class="token punctuation">)</span> <span class="token function">rotateX</span><span class="token punctuation">(</span>-40deg<span class="token punctuation">)</span> <span class="token function">rotateY</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
+  <span class="token selector">100%</span> <span class="token punctuation">{</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">perspective</span><span class="token punctuation">(</span>400px<span class="token punctuation">)</span> <span class="token function">rotateZ</span><span class="token punctuation">(</span>20deg<span class="token punctuation">)</span> <span class="token function">rotateX</span><span class="token punctuation">(</span>-40deg<span class="token punctuation">)</span> <span class="token function">rotateY</span><span class="token punctuation">(</span>-360deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.stars</span> <span class="token punctuation">{</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">perspective</span><span class="token punctuation">(</span>500px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">transform-style</span><span class="token punctuation">:</span> preserve-3d<span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">perspective-origin</span><span class="token punctuation">:</span> 50% 100%<span class="token punctuation">;</span>
+  <span class="token property">left</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+  <span class="token property">animation</span><span class="token punctuation">:</span> rotate 90s infinite linear<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token selector">.star</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 4px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 4px<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> #F7F7B6<span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">transform-origin</span><span class="token punctuation">:</span> 0 0 -300px<span class="token punctuation">;</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translate3d</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> -300px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">backface-visibility</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.table</span><span class="token punctuation">{</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 400px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 350px<span class="token punctuation">;</span>
+	<span class="token property">margin</span><span class="token punctuation">:</span> 80px auto<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.table form</span><span class="token punctuation">{</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.table .name</span><span class="token punctuation">{</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 280px<span class="token punctuation">;</span>
+	<span class="token property">margin</span><span class="token punctuation">:</span> 20px auto 30px auto<span class="token punctuation">;</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+	<span class="token property">border-radius</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+	<span class="token property">border</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+	<span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>0.2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token property">text-indent</span><span class="token punctuation">:</span> 0.5em<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.table .btn</span><span class="token punctuation">{</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+	<span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>0.1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token property">border-radius</span><span class="token punctuation">:</span> 8px<span class="token punctuation">;</span>
+	<span class="token property">border</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+	<span class="token property">color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+	<span class="token property">margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h2 id="2-添加js"><a href="#2-添加js" class="headerlink" title="2.添加js"></a>2.添加js</h2><pre class="line-numbers language-none"><code class="language-none">hexo\themes\hexo-theme-matery-master\layout\layout.ejs<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<span class="token keyword">var</span> elem <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.collapsible .expandable'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">var</span> instance <span class="token operator">=</span> <span class="token constant">M</span><span class="token punctuation">.</span>Collapsible<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span>elem<span class="token punctuation">,</span> <span class="token punctuation">{</span>
-  accordion<span class="token operator">:</span> <span class="token boolean">false</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<p>在&lt;body&gt;标签中添加以下代码：</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stars<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+	<span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">var</span> stars<span class="token operator">=</span><span class="token number">800</span><span class="token punctuation">;</span><span class="token keyword">var</span> $stars<span class="token operator">=</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".stars"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">var</span> r<span class="token operator">=</span><span class="token number">800</span><span class="token punctuation">;</span><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>stars<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">var</span> $star<span class="token operator">=</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"&lt;div/&gt;"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addClass</span><span class="token punctuation">(</span><span class="token string">"star"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>$stars<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>$star<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".star"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">var</span> cur<span class="token operator">=</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">var</span> s<span class="token operator">=</span><span class="token number">0.2</span><span class="token operator">+</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">var</span> curR<span class="token operator">=</span>r<span class="token operator">+</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">300</span><span class="token punctuation">)</span><span class="token punctuation">;</span>cur<span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token punctuation">{</span>transformOrigin<span class="token operator">:</span><span class="token string">"0 0 "</span><span class="token operator">+</span>curR<span class="token operator">+</span><span class="token string">"px"</span><span class="token punctuation">,</span>transform<span class="token operator">:</span><span class="token string">" translate3d(0,0,-"</span><span class="token operator">+</span>curR<span class="token operator">+</span><span class="token string">"px) rotateY("</span><span class="token operator">+</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">360</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">"deg) rotateX("</span><span class="token operator">+</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token operator">-</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">"deg) scale("</span><span class="token operator">+</span>s<span class="token operator">+</span><span class="token string">","</span><span class="token operator">+</span>s<span class="token operator">+</span><span class="token string">")"</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="2、在matery中引入category-list-ejs"><a href="#2、在matery中引入category-list-ejs" class="headerlink" title="2、在matery中引入category-list.ejs"></a>2、在matery中引入category-list.ejs</h2><p>在文件</p>
-<pre class="line-numbers language-none"><code class="language-none">hexo\themes\hexo-theme-matery-master\layout\categories.ejs<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>中添加代码：</p>
-<pre class="line-numbers language-jsp" data-language="jsp"><code class="language-jsp">&lt;%- partial('_widget/category-list') %&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><left><img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20201126215205279.png" alt="" style="zoom: 67%;"></left></p>
-<h2 id="3、主题的config中添加配置"><a href="#3、主题的config中添加配置" class="headerlink" title="3、主题的config中添加配置"></a>3、主题的config中添加配置</h2><pre class="line-numbers language-yml" data-language="yml"><code class="language-yml">category:
-  list: 10  #每个分类下显示文章数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<h2 id="4、效果"><a href="#4、效果" class="headerlink" title="4、效果"></a>4、效果</h2><p><img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20201126220622877.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20201203204217012.png"></p>
+<h2 id="3-问题"><a href="#3-问题" class="headerlink" title="3.问题"></a>3.问题</h2><p>有点吃cpu，一打开就30%多占用，以后再换一换。</p>
 
             </div>
             <hr/>
@@ -1317,7 +1109,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://gaattc.gitee.io/2020/11/26/matery-xia-de-er-ji-biao-ti-shi-yong-fang-shi/">http://gaattc.gitee.io/2020/11/26/matery-xia-de-er-ji-biao-ti-shi-yong-fang-shi/</a>
+                    <a href="http://gaattc.gitee.io/2020/12/03/matery-xia-zi-ding-yi-dong-tai-bei-jing/">http://gaattc.gitee.io/2020/12/03/matery-xia-zi-ding-yi-dong-tai-bei-jing/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -2168,88 +1960,33 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/11/28/guan-yu-zuo-hao-mian-xiang-kao-he-xue-xi-de-zhun-bei-zhe-jian-shi/">
+                <a href="/2020/12/03/matery-xia-zi-ding-yi-dong-tai-bei-jing/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/sticker%20(44).png" class="responsive-img" alt="关于做好面向考核学习的准备这件事">
+                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/Snipaste_2020-12-03_20-45-25.jpg" class="responsive-img" alt="matery下自定义动态背景">
                         
-                        <span class="card-title">关于做好面向考核学习的准备这件事</span>
+                        <span class="card-title">matery下自定义动态背景</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            关于做好面向考核学习的准备这件事
+                            matery下自定义动态背景
+1.添加css样式hexo\themes\hexo-theme-matery-master\source\css\matery.css
 
-暂定12月下旬去帆软总部考核了，虽然之前已经做了计划，不过还是记录下来吧
-主要是finereport的学习
-
-1.参考
-参考官方计划：https://bbs.fanruan.com/thread-7714
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-28
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%B7%A5%E4%BD%9C/" class="post-category">
-                                    工作
-                                </a>
-                            
-                            <a href="/categories/%E5%B7%A5%E4%BD%9C/%E5%B8%86%E8%BD%AF/" class="post-category">
-                                    帆软
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/todo/">
-                        <span class="chip bg-color">todo</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/11/21/valine-matery-quan-gong-lue/">
-                    <div class="card-image">
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/97.jpg" class="responsive-img" alt="Valine+matery全攻略⭐⭐">
-                        
-                        <span class="card-title">Valine+matery全攻略⭐⭐</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Valine+matery全攻略
-官方文档：https://valine.js.orgref:https://www.jianshu.com/p/205aaa14dff3版本：v1.4.14
-
-1.LeanCloud注册&amp;创建应用l
+修改：
+body {
+	background: radial-gradi
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-03
                             </span>
                         <span class="publish-author">
                             
@@ -2267,6 +2004,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -2276,6 +2014,64 @@
                     
                     <a href="/tags/hexo/">
                         <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/12/01/sql-lian-xi/">
+                    <div class="card-image">
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/6658561_1592208013625_1111-1_%E7%94%BB%E6%9D%BF1%E5%89%AF%E6%9C%AC6.png" class="responsive-img" alt="sql练习">
+                        
+                        <span class="card-title">sql练习</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            SQL练习
+几十道简单的sql练习题，冬日暖手必备
+
+数据准备
+1.单表查询–查询订购日期在1996年7月1日至1996年7月15日之间的订单的订购日期、订单ID、客户ID和雇员ID等字段的值
+
+--查询供应商的ID、公司名称、地区、城市和
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    学习
+                                </a>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                    数据库
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/sql/">
+                        <span class="chip bg-color">sql</span>
                     </a>
                     
                 </div>
