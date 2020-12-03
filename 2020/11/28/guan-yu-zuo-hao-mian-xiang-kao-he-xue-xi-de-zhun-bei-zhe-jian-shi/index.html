@@ -169,10 +169,8 @@
 
 <body>
 	<!-- hexo-inject:begin --><!-- hexo-inject:end --><!--动态背景-->
-	<!--<div class="stars"></div>-->
-	<!--<script>-->
-	<!--$(document).ready(function(){var stars=300;var $stars=$(".stars");var r=800;for(var i=0;i<stars;i++){var $star=$("<div/>").addClass("star");$stars.append($star)}$(".star").each(function(){var cur=$(this);var s=0.2+(Math.random()*1);var curR=r+(Math.random()*300);cur.css({transformOrigin:"0 0 "+curR+"px",transform:" translate3d(0,0,-"+curR+"px) rotateY("+(Math.random()*360)+"deg) rotateX("+(Math.random()*-50)+"deg) scale("+s+","+s+")"})})});-->
-	<!--</script>-->
+	<div id="bg"><canvas></canvas><canvas></canvas><canvas></canvas></div>
+	<script src="/js/canva_moving_effect.js"></script>
 	
 	
         <div id="loading-container">
@@ -2242,7 +2240,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">92.8k</span>&nbsp;字
+                class="white-color">93.9k</span>&nbsp;字
             
             
             

@@ -169,10 +169,8 @@
 
 <body>
 	<!-- hexo-inject:begin --><!-- hexo-inject:end --><!--动态背景-->
-	<!--<div class="stars"></div>-->
-	<!--<script>-->
-	<!--$(document).ready(function(){var stars=300;var $stars=$(".stars");var r=800;for(var i=0;i<stars;i++){var $star=$("<div/>").addClass("star");$stars.append($star)}$(".star").each(function(){var cur=$(this);var s=0.2+(Math.random()*1);var curR=r+(Math.random()*300);cur.css({transformOrigin:"0 0 "+curR+"px",transform:" translate3d(0,0,-"+curR+"px) rotateY("+(Math.random()*360)+"deg) rotateX("+(Math.random()*-50)+"deg) scale("+s+","+s+")"})})});-->
-	<!--</script>-->
+	<div id="bg"><canvas></canvas><canvas></canvas><canvas></canvas></div>
+	<script src="/js/canva_moving_effect.js"></script>
 	
 	
         <div id="loading-container">
@@ -875,19 +873,19 @@
                 </a>
                 
                 
-                <a href="/categories/%E6%97%A5%E5%B8%B8/todo/" title="todo: 1">
+                <a href="/categories/%E5%B7%A5%E4%BD%9C/" title="工作: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #E8F8F5;">todo
+                            style="background-color: #E8F8F5;">工作
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/%E5%B7%A5%E4%BD%9C/" title="工作: 1">
+                <a href="/categories/%E6%97%A5%E5%B8%B8/todo/" title="todo: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #FEF9E7;">工作
+                            style="background-color: #FEF9E7;">todo
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -998,7 +996,7 @@
                     color: '#3C4858'
                 }
             },
-            indicator: [{"name":"学习","max":13},{"name":"日常","max":13},{"name":"hexo","max":13},{"name":"todo","max":13},{"name":"工作","max":13},{"name":"记录","max":13},{"name":"大学课程","max":13},{"name":"想法","max":13},{"name":"帆软","max":13},{"name":"算法","max":13},{"name":"数据库","max":13},{"name":"java","max":13}],
+            indicator: [{"name":"学习","max":13},{"name":"日常","max":13},{"name":"hexo","max":13},{"name":"工作","max":13},{"name":"todo","max":13},{"name":"记录","max":13},{"name":"大学课程","max":13},{"name":"想法","max":13},{"name":"帆软","max":13},{"name":"算法","max":13},{"name":"数据库","max":13},{"name":"java","max":13}],
             nameGap: 5,
             center: ['50%','55%'],
             radius: '66%'
@@ -1212,7 +1210,7 @@ card-categories-list-spcail > div:hover{
     <div class="category-row  row collapsible-header">
       <a
         class=" category-item  list-group-item category-item-action col s11 m11"
-        id="heading-cki8vn9dt0004ksda42yi6xl6" 
+        id="heading-cki8y4mov0004lwda7sjbf2om" 
       >
         学习
         <i class="fas fa-chevron-right"></i>
@@ -1241,7 +1239,7 @@ card-categories-list-spcail > div:hover{
     <div class="category-row category-sub  row collapsible-header">
       <a
         class=" category-subitem collapsed list-group-item category-item-action col s11 m11"
-        id="heading-cki8vn9e8000nksdadeok1vht" 
+        id="heading-cki8y4mp8000nlwda7c2xa6ma" 
       >
         hexo
         <i class="fas fa-chevron-right"></i>
@@ -1255,14 +1253,14 @@ card-categories-list-spcail > div:hover{
 
         
           
-  <div id="collapse-cki8vn9e8000nksdadeok1vht" class="category-content collapsible-body" >
+  <div id="collapse-cki8y4mp8000nlwda7c2xa6ma" class="category-content collapsible-body" >
     
     
     
       
       
         <a href="/2020/12/03/matery-xia-zi-ding-yi-dong-tai-bei-jing/" class=" list-group-item list-group-item-action">
-          <span class="category-post">matery下自定义动态背景</span>
+          <span class="category-post">matery下自定义动态背景⭐⭐⭐</span>
         </a>
       
     
@@ -1322,7 +1320,7 @@ card-categories-list-spcail > div:hover{
     <div class="category-row category-sub  row collapsible-header">
       <a
         class=" category-subitem collapsed list-group-item category-item-action col s11 m11"
-        id="heading-cki8vn9fm0033ksdaewqd1963" 
+        id="heading-cki8y4mql0033lwda08m610v8" 
       >
         java
         <i class="fas fa-chevron-right"></i>
@@ -1336,7 +1334,7 @@ card-categories-list-spcail > div:hover{
 
         
           
-  <div id="collapse-cki8vn9fm0033ksdaewqd1963" class="category-content collapsible-body" >
+  <div id="collapse-cki8y4mql0033lwda08m610v8" class="category-content collapsible-body" >
     
     
     
@@ -1361,7 +1359,7 @@ card-categories-list-spcail > div:hover{
     <div class="category-row category-sub  row collapsible-header">
       <a
         class=" category-subitem collapsed list-group-item category-item-action col s11 m11"
-        id="heading-cki8vn9ev0027ksdaecyy50d5" 
+        id="heading-cki8y4mpr0025lwdagfe40q2d" 
       >
         大学课程
         <i class="fas fa-chevron-right"></i>
@@ -1375,7 +1373,7 @@ card-categories-list-spcail > div:hover{
 
         
           
-  <div id="collapse-cki8vn9ev0027ksdaecyy50d5" class="category-content collapsible-body" >
+  <div id="collapse-cki8y4mpr0025lwdagfe40q2d" class="category-content collapsible-body" >
     
     
     
@@ -1407,7 +1405,7 @@ card-categories-list-spcail > div:hover{
     <div class="category-row category-sub  row collapsible-header">
       <a
         class=" category-subitem collapsed list-group-item category-item-action col s11 m11"
-        id="heading-cki8vn9f3002sksda2hgq4ypl" 
+        id="heading-cki8y4mq3002slwdabmnrcz9w" 
       >
         数据库
         <i class="fas fa-chevron-right"></i>
@@ -1421,7 +1419,7 @@ card-categories-list-spcail > div:hover{
 
         
           
-  <div id="collapse-cki8vn9f3002sksda2hgq4ypl" class="category-content collapsible-body" >
+  <div id="collapse-cki8y4mq3002slwdabmnrcz9w" class="category-content collapsible-body" >
     
     
     
@@ -1446,7 +1444,7 @@ card-categories-list-spcail > div:hover{
     <div class="category-row category-sub  row collapsible-header">
       <a
         class=" category-subitem collapsed list-group-item category-item-action col s11 m11"
-        id="heading-cki8vn9f3002pksdaafu56x0b" 
+        id="heading-cki8y4mq2002plwda98kt15ul" 
       >
         算法
         <i class="fas fa-chevron-right"></i>
@@ -1460,7 +1458,7 @@ card-categories-list-spcail > div:hover{
 
         
           
-  <div id="collapse-cki8vn9f3002pksdaafu56x0b" class="category-content collapsible-body" >
+  <div id="collapse-cki8y4mq2002plwda98kt15ul" class="category-content collapsible-body" >
     
     
     
@@ -1495,7 +1493,7 @@ card-categories-list-spcail > div:hover{
     <div class="category-row  row collapsible-header">
       <a
         class=" category-item  list-group-item category-item-action col s11 m11"
-        id="heading-cki8vn9et0020ksdacati2qm0" 
+        id="heading-cki8y4mpo001olwdabvskburq" 
       >
         工作
         <i class="fas fa-chevron-right"></i>
@@ -1524,7 +1522,7 @@ card-categories-list-spcail > div:hover{
     <div class="category-row category-sub  row collapsible-header">
       <a
         class=" category-subitem collapsed list-group-item category-item-action col s11 m11"
-        id="heading-cki8vn9ex002fksdae5frhons" 
+        id="heading-cki8y4mps002flwdafmfr8fgn" 
       >
         帆软
         <i class="fas fa-chevron-right"></i>
@@ -1538,7 +1536,7 @@ card-categories-list-spcail > div:hover{
 
         
           
-  <div id="collapse-cki8vn9ex002fksdae5frhons" class="category-content collapsible-body" >
+  <div id="collapse-cki8y4mps002flwdafmfr8fgn" class="category-content collapsible-body" >
     
     
     
@@ -1573,7 +1571,7 @@ card-categories-list-spcail > div:hover{
     <div class="category-row  row collapsible-header">
       <a
         class=" category-item  list-group-item category-item-action col s11 m11"
-        id="heading-cki8vn9e0000cksda1f1k32uj" 
+        id="heading-cki8y4mp5000hlwda9mvy88v8" 
       >
         日常
         <i class="fas fa-chevron-right"></i>
@@ -1602,7 +1600,7 @@ card-categories-list-spcail > div:hover{
     <div class="category-row category-sub  row collapsible-header">
       <a
         class=" category-subitem collapsed list-group-item category-item-action col s11 m11"
-        id="heading-cki8vn9ek001bksdadm6k29b8" 
+        id="heading-cki8y4mpp001vlwdahgq65pkt" 
       >
         todo
         <i class="fas fa-chevron-right"></i>
@@ -1616,7 +1614,7 @@ card-categories-list-spcail > div:hover{
 
         
           
-  <div id="collapse-cki8vn9ek001bksdadm6k29b8" class="category-content collapsible-body" >
+  <div id="collapse-cki8y4mpp001vlwdahgq65pkt" class="category-content collapsible-body" >
     
     
     
@@ -1641,7 +1639,7 @@ card-categories-list-spcail > div:hover{
     <div class="category-row category-sub  row collapsible-header">
       <a
         class=" category-subitem collapsed list-group-item category-item-action col s11 m11"
-        id="heading-cki8vn9ew002bksdah96mhw2r" 
+        id="heading-cki8y4mps002blwdahmg2770u" 
       >
         想法
         <i class="fas fa-chevron-right"></i>
@@ -1655,7 +1653,7 @@ card-categories-list-spcail > div:hover{
 
         
           
-  <div id="collapse-cki8vn9ew002bksdah96mhw2r" class="category-content collapsible-body" >
+  <div id="collapse-cki8y4mps002blwdahmg2770u" class="category-content collapsible-body" >
     
     
     
@@ -1680,7 +1678,7 @@ card-categories-list-spcail > div:hover{
     <div class="category-row category-sub  row collapsible-header">
       <a
         class=" category-subitem collapsed list-group-item category-item-action col s11 m11"
-        id="heading-cki8vn9eu0025ksdaarwp4rvl" 
+        id="heading-cki8y4mpq0020lwdaak3k5sfq" 
       >
         记录
         <i class="fas fa-chevron-right"></i>
@@ -1694,7 +1692,7 @@ card-categories-list-spcail > div:hover{
 
         
           
-  <div id="collapse-cki8vn9eu0025ksdaarwp4rvl" class="category-content collapsible-body" >
+  <div id="collapse-cki8y4mpq0020lwdaak3k5sfq" class="category-content collapsible-body" >
     
     
     
@@ -1833,7 +1831,7 @@ var instance = M.Collapsible.init(elem, {
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">92.8k</span>&nbsp;字
+                class="white-color">93.9k</span>&nbsp;字
             
             
             
