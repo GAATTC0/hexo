@@ -209,7 +209,7 @@
       
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
-      <span>回首页</span>
+      <span>首页</span>
     </a>
     
   </li>
@@ -221,7 +221,7 @@
       
       <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
       
-      <span>文分类</span>
+      <span>分类</span>
       <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
     </a>
     <ul class="sub-nav menus_item_child ">
@@ -281,7 +281,7 @@
       
       <i class="fas fa-archive" style="zoom: 0.6;"></i>
       
-      <span>章归档</span>
+      <span>归档</span>
     </a>
     
   </li>
@@ -374,7 +374,7 @@
       
       <i class="fas fa-address-book" style="zoom: 0.6;"></i>
       
-      <span>好友们</span>
+      <span>邻居们</span>
       <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
     </a>
     <ul class="sub-nav menus_item_child ">
@@ -384,7 +384,7 @@
           
           <i class="fa fa-users fa-spin" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>全部好友</span>
+          <span>全部邻居</span>
         </a>
       </li>
       
@@ -503,7 +503,7 @@
 			
 			    <i class="fa-fw fas fa-home"></i>
 			
-			回首页
+			首页
 		</a>
           
         </li>
@@ -514,7 +514,7 @@
 			
 				<i class="fa-fw fas fa-bookmark"></i>
 			
-			文分类
+			分类
 			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
 		</a>
             <ul  style="background:  ;" >
@@ -579,7 +579,7 @@
 			
 			    <i class="fa-fw fas fa-archive"></i>
 			
-			章归档
+			归档
 		</a>
           
         </li>
@@ -676,7 +676,7 @@
 			
 				<i class="fa-fw fas fa-address-book"></i>
 			
-			好友们
+			邻居们
 			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
 		</a>
             <ul  style="background:  ;" >
@@ -687,7 +687,7 @@
 				  
 				   <i class="fa fa fa-users fa-spin" style="position: absolute;left:50px" ></i>
 			      
-		          <span>全部好友</span>
+		          <span>全部邻居</span>
                   </a>
                 </li>
               
@@ -1182,6 +1182,16 @@ $(function () {
 
     <!-- Baidu Analytics -->
 
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?b003af5e49c414fc6a670f6dcef0d1c1";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
     <!-- Baidu Push -->
 
 <script>
@@ -1198,8 +1208,6 @@ $(function () {
     })();
 </script>
 
-    
-    <script src="/libs/others/clicklove.js" async="async"></script>
     
     
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
@@ -1245,18 +1253,9 @@ $(function () {
 	}
 	</script>
 	<script src="https://apip.weatherdt.com/simple/static/js/weather-simple-common.js?v=2.0"></script>
-	
-	<!--动态线条背景-->
-	<!--<script type="text/javascript"-->
-	<!--color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">-->
-	<!--</script>-->
-	
-	<!--樱花-->
-	<!--<script type="text/javascript">-->
-	<!--var windowWidth = $(window).width();-->
-	<!--if (windowWidth > 768) {-->
-    <!--document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');}-->
-	<!--</script>-->
+
+    <!--鼠标礼花-->
+    <script src="/js/lihua.js"></script>
 	
 	<!--snow-->
 	<script src="/js/snow.js"></script>
@@ -1267,11 +1266,11 @@ $(function () {
     document.addEventListener("visibilitychange",function(){
         document.hidden?(document.title="o(*￣▽￣*)o欢迎来到神秘小窝~",clearTimeout(st)):(document.title="ヽ(✿ﾟ▽ﾟ)ノ爱学习爱生活~",st=setTimeout(function(){document.title=OriginTitile},3e3))
     })
-	</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-<script>
+	</script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight+200||document.documentElement.clientHeight+200)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 </html>
