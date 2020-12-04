@@ -190,10 +190,12 @@
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
-                    
-                    <img src="/medias/96212297.png" class="logo-img" alt="LOGO">
-                    
+					<div>
+						
+						<img src="/medias/loading.gif" data-original="/medias/96212297.png" class="logo-img" alt="LOGO">
+						
                     <span class="logo-span">GAATTC的隐藏小窝</span>
+					</div>
                 </a>
             </div>
             
@@ -207,7 +209,7 @@
       
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
-      <span>首页</span>
+      <span>回首页</span>
     </a>
     
   </li>
@@ -219,7 +221,7 @@
       
       <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
       
-      <span>分类</span>
+      <span>文分类</span>
       <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
     </a>
     <ul class="sub-nav menus_item_child ">
@@ -279,7 +281,7 @@
       
       <i class="fas fa-archive" style="zoom: 0.6;"></i>
       
-      <span>归档</span>
+      <span>章归档</span>
     </a>
     
   </li>
@@ -291,7 +293,7 @@
       
       <i class="fa fa-user" style="zoom: 0.6;"></i>
       
-      <span>关于</span>
+      <span>关于我</span>
       <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
     </a>
     <ul class="sub-nav menus_item_child ">
@@ -372,7 +374,7 @@
       
       <i class="fas fa-address-book" style="zoom: 0.6;"></i>
       
-      <span>友情链接</span>
+      <span>好友们</span>
       <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
     </a>
     <ul class="sub-nav menus_item_child ">
@@ -406,7 +408,7 @@
       
       <i class="fa fa-wrench" style="zoom: 0.6;"></i>
       
-      <span>Tools</span>
+      <span>小工具</span>
       <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
     </a>
     <ul class="sub-nav menus_item_child ">
@@ -481,7 +483,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/96212297.png" class="logo-img circle responsive-img">
+        <img src="/medias/loading.gif" data-original="/medias/96212297.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">GAATTC的隐藏小窝</div>
         <div class="logo-desc">
@@ -501,7 +503,7 @@
 			
 			    <i class="fa-fw fas fa-home"></i>
 			
-			首页
+			回首页
 		</a>
           
         </li>
@@ -512,7 +514,7 @@
 			
 				<i class="fa-fw fas fa-bookmark"></i>
 			
-			分类
+			文分类
 			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
 		</a>
             <ul  style="background:  ;" >
@@ -577,7 +579,7 @@
 			
 			    <i class="fa-fw fas fa-archive"></i>
 			
-			归档
+			章归档
 		</a>
           
         </li>
@@ -588,7 +590,7 @@
 			
 				<i class="fa-fw fa fa-user"></i>
 			
-			关于
+			关于我
 			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
 		</a>
             <ul  style="background:  ;" >
@@ -674,7 +676,7 @@
 			
 				<i class="fa-fw fas fa-address-book"></i>
 			
-			友情链接
+			好友们
 			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
 		</a>
             <ul  style="background:  ;" >
@@ -709,7 +711,7 @@
 			
 				<i class="fa-fw fa fa-wrench"></i>
 			
-			Tools
+			小工具
 			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
 		</a>
             <ul  style="background:  ;" >
@@ -1082,8 +1084,8 @@
 	<span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">var</span> stars<span class="token operator">=</span><span class="token number">800</span><span class="token punctuation">;</span><span class="token keyword">var</span> $stars<span class="token operator">=</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".stars"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">var</span> r<span class="token operator">=</span><span class="token number">800</span><span class="token punctuation">;</span><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>stars<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">var</span> $star<span class="token operator">=</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"&lt;div/&gt;"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addClass</span><span class="token punctuation">(</span><span class="token string">"star"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>$stars<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>$star<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".star"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">var</span> cur<span class="token operator">=</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">var</span> s<span class="token operator">=</span><span class="token number">0.2</span><span class="token operator">+</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">var</span> curR<span class="token operator">=</span>r<span class="token operator">+</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">300</span><span class="token punctuation">)</span><span class="token punctuation">;</span>cur<span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token punctuation">{</span>transformOrigin<span class="token operator">:</span><span class="token string">"0 0 "</span><span class="token operator">+</span>curR<span class="token operator">+</span><span class="token string">"px"</span><span class="token punctuation">,</span>transform<span class="token operator">:</span><span class="token string">" translate3d(0,0,-"</span><span class="token operator">+</span>curR<span class="token operator">+</span><span class="token string">"px) rotateY("</span><span class="token operator">+</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">360</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">"deg) rotateX("</span><span class="token operator">+</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token operator">-</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">"deg) scale("</span><span class="token operator">+</span>s<span class="token operator">+</span><span class="token string">","</span><span class="token operator">+</span>s<span class="token operator">+</span><span class="token string">")"</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20201203204217012.png"></p>
-<h3 id="3-效果-假装星星在动…"><a href="#3-效果-假装星星在动…" class="headerlink" title="3.效果(假装星星在动…)"></a>3.效果(假装星星在动…)</h3><p><img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/Snipaste_2020-12-03_20-45-25.jpg"></p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20201203204217012.png"></p>
+<h3 id="3-效果-假装星星在动…"><a href="#3-效果-假装星星在动…" class="headerlink" title="3.效果(假装星星在动…)"></a>3.效果(假装星星在动…)</h3><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/Snipaste_2020-12-03_20-45-25.jpg"></p>
 <h3 id="4-问题"><a href="#4-问题" class="headerlink" title="4.问题"></a>4.问题</h3><p>有点吃cpu，一打开就30%多占用，以后再换一换。</p>
 <h2 id="第二版-目前在用"><a href="#第二版-目前在用" class="headerlink" title="第二版(目前在用)"></a>第二版(目前在用)</h2><blockquote>
 <p>ref：<a target="_blank" rel="noopener" href="https://www.jq22.com/jquery-info22305">https://www.jq22.com/jquery-info22305</a></p>
@@ -1114,7 +1116,7 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bg<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>canvas</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>canvas</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>canvas</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>canvas</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>canvas</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>canvas</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/js/canva_moving_effect.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
- <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20201203223146002.png" style="zoom: 67%;">
+ <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20201203223146002.png" style="zoom: 67%;">
 
 <h3 id="3-单独引入js文件，因为太多了放body里不好看"><a href="#3-单独引入js文件，因为太多了放body里不好看" class="headerlink" title="3.单独引入js文件，因为太多了放body里不好看"></a>3.单独引入js文件，因为太多了放body里不好看</h3><pre class="line-numbers language-dir" data-language="dir"><code class="language-dir">hexo\themes\hexo-theme-matery-master\source\js<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -1355,7 +1357,7 @@
 	<span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>jQuery<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="4-大功告成-附效果图-脑补圈圈在动"><a href="#4-大功告成-附效果图-脑补圈圈在动" class="headerlink" title="4.大功告成,附效果图(脑补圈圈在动~)"></a>4.大功告成,附效果图(脑补圈圈在动~)</h3><p><img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/Snipaste_2020-12-03_22-26-45.jpg"></p>
+<h3 id="4-大功告成-附效果图-脑补圈圈在动"><a href="#4-大功告成-附效果图-脑补圈圈在动" class="headerlink" title="4.大功告成,附效果图(脑补圈圈在动~)"></a>4.大功告成,附效果图(脑补圈圈在动~)</h3><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/Snipaste_2020-12-03_22-26-45.jpg"></p>
 
             </div>
             <hr/>
@@ -1554,10 +1556,10 @@
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/medias/loading.gif" data-original="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                        <img src="/medias/loading.gif" data-original="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -2232,32 +2234,28 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/12/03/matery-xia-zi-ding-yi-dong-tai-bei-jing/">
+                <a href="/2020/12/04/sql-cha-xun-yu-fa-zong-jie/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/Snipaste_2020-12-03_22-26-45.jpg" class="responsive-img" alt="matery下自定义动态背景⭐⭐⭐">
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/ac6eddc451da81cb037c289d5366d016082431c3.jpg" class="responsive-img" alt="sql查询语法总结">
                         
-                        <span class="card-title">matery下自定义动态背景⭐⭐⭐</span>
+                        <span class="card-title">sql查询语法总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            matery下自定义动态背景第一版(不建议，cpu占用太高)
-ref：https://www.jq22.com/jquery-info22256
-
-1.添加css样式hexo\themes\hexo-theme-matery-master\
+                            sql查询语法总结1.SELECT语句的执行顺序(6) SELECT column_name, …(1) FROM table_name, …(2) [WHERE …](3) [GROUP BY …](4) [HAVING …](5) [O
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-03
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-04
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -2266,24 +2264,19 @@ ref：https://www.jq22.com/jquery-info22256
                                     学习
                                 </a>
                             
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/hexo/" class="post-category">
-                                    hexo
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                    数据库
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/">
-                        <span class="chip bg-color">学习心得</span>
-                    </a>
-                    
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/sql/">
+                        <span class="chip bg-color">sql</span>
                     </a>
                     
                 </div>
@@ -2300,7 +2293,7 @@ ref：https://www.jq22.com/jquery-info22256
                 <a href="/2020/12/01/sql-lian-xi/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/6658561_1592208013625_1111-1_%E7%94%BB%E6%9D%BF1%E5%89%AF%E6%9C%AC6.png" class="responsive-img" alt="sql练习">
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/6658561_1592208013625_1111-1_%E7%94%BB%E6%9D%BF1%E5%89%AF%E6%9C%AC6.png" class="responsive-img" alt="sql练习">
                         
                         <span class="card-title">sql练习</span>
                     </div>
@@ -2575,7 +2568,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">93.9k</span>&nbsp;字
+                class="white-color">96.5k</span>&nbsp;字
             
             
             
@@ -2807,6 +2800,11 @@ $(function () {
     document.addEventListener("visibilitychange",function(){
         document.hidden?(document.title="o(*￣▽￣*)o欢迎来到神秘小窝~",clearTimeout(st)):(document.title="ヽ(✿ﾟ▽ﾟ)ノ爱学习爱生活~",st=setTimeout(function(){document.title=OriginTitile},3e3))
     })
-	</script>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+	</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
 </html>

@@ -169,4 +169,10 @@ $(function () {
 
     // 初始化加载 tooltipped.
     $('.tooltipped').tooltip();
+	
+	//解决懒加载大图看不了的问题
+	$(document).find('img[data-original]').each(function(){
+    $(this).parent().attr("href", $(this).attr("data-original"));
+	});
 });
+
