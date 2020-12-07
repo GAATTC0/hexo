@@ -1,0 +1,2743 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta name="keywords" content="sql查询语法总结, GAATTC的隐藏小窝">
+    <meta name="description" content="A simple blog maintained for recording the ordinary life...">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>sql查询语法总结 | GAATTC的隐藏小窝</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+	<link rel="stylesheet" href="/js/prism/prism.css">
+    <script src="/libs/jquery/jquery.min.js"></script>
+	<script src="https://v1.hitokoto.cn/?c=d&encode=js&select=%23hitokoto" defer></script>
+<meta name="generator" content="Hexo 5.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="GAATTC的隐藏小窝" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+
+    <style type="text/css" lang="css">
+    #loading-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        width: 100vw;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #2c3561;
+        text-align: center;
+        /* loader页面消失采用渐隐的方式*/
+        -webkit-transition: opacity 1s ease;
+        -moz-transition: opacity 1s ease;
+        -o-transition: opacity 1s ease;
+        transition: opacity 1s ease;
+    }
+    .loading-image{
+        width: 120px;
+        height: 50px;
+        transform: translate(-50%);
+    }
+
+    .loading-image div:nth-child(2) {
+        -webkit-animation: pacman-balls 1s linear 0s infinite;
+        animation: pacman-balls 1s linear 0s infinite
+    }
+
+    .loading-image div:nth-child(3) {
+        -webkit-animation: pacman-balls 1s linear .33s infinite;
+        animation: pacman-balls 1s linear .33s infinite
+    }
+
+    .loading-image div:nth-child(4) {
+        -webkit-animation: pacman-balls 1s linear .66s infinite;
+        animation: pacman-balls 1s linear .66s infinite
+    }
+
+    .loading-image div:nth-child(5) {
+        -webkit-animation: pacman-balls 1s linear .99s infinite;
+        animation: pacman-balls 1s linear .99s infinite
+    }
+
+   .loading-image div:first-of-type {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
+        animation: rotate_pacman_half_up .5s 0s infinite;
+    }
+    .loading-image div:nth-child(2) {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
+        animation: rotate_pacman_half_down .5s 0s infinite;
+        margin-top: -50px;
+    }
+    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+
+    .loading-image div:nth-child(3),
+    .loading-image div:nth-child(4),
+    .loading-image div:nth-child(5),
+    .loading-image div:nth-child(6){
+        background-color: #49b1f5;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin: 2px;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        transform: translateY(-6.25px);
+        top: 25px;
+        left: 100px;
+    }
+    .loading-text{
+        margin-bottom: 20vh;
+        text-align: center;
+        color: #f8c471;
+        font-size: 2rem;
+        box-sizing: border-box;
+        padding: 0 10px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    @media only screen and (max-width: 500px) {
+         .loading-text{
+            font-size: 1.5rem;
+         }
+    }
+    .fadeout {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    /* logo出现动画 */
+    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
+    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
+ </style>
+ <script>
+(function () {
+    const loaded = function(){
+       setTimeout(function(){
+            const loader = document.getElementById("loading-container");
+            loader.className="fadeout" ;//使用渐隐的方法淡出loading page
+            // document.getElementById("body-wrap").style.display="flex";
+            setTimeout(function(){
+                loader.style.display="none";
+            },2500); 
+        },750);//强制显示loading page 0.75s  
+    };
+    loaded();
+})()
+</script>
+ 
+
+<body>
+	<!-- hexo-inject:begin --><!-- hexo-inject:end --><!--动态背景-->
+	<div id="bg"><canvas></canvas><canvas></canvas><canvas></canvas></div>
+	<script src="/js/canva_moving_effect.js"></script>
+	
+	
+        <div id="loading-container">
+             <p class="loading-text">正在搬运下一页::>_<:: . . . </p>
+             <div class="loading-image">
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div> 
+                 <div></div>
+             </div>
+        </div>
+    
+
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+					<div>
+						
+						<img src="/medias/96212297.png" class="logo-img" alt="LOGO">
+						
+                    <span class="logo-span">GAATTC的隐藏小窝</span>
+					</div>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="http://gaattc.gitee.io/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/categories">
+          
+          <i class="fas fa-cubes fa-spin" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>全部分类</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E6%97%A5%E5%B8%B8">
+          
+          <i class="fas fa-sun" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>日常</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E5%AD%A6%E4%B9%A0">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>学习</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/bug">
+          
+          <i class="fas fa-bug" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>bug</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E5%B7%A5%E4%BD%9C">
+          
+          <i class="fas fa-swimmer" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>工作</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-user" style="zoom: 0.6;"></i>
+      
+      <span>关于我</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/about">
+          
+          <i class="fas fa-user-circle fa-spin" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的个人简介</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://www.nowcoder.com/profile/114433629">
+          
+          <i class="fas fa-code" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的牛客主页</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://github.com/GAATTC0">
+          
+          <i class="fab fa-github-alt" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的GitHub</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://www.steamcommunity.com/id/GAATTC000/">
+          
+          <i class="fab fa-steam-square" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的steam</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://space.bilibili.com/109208828">
+          
+          <i class="fas fa-tv" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的bilibili</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://music.163.com/#/user/home?id=1367975193">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的网抑云</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://twitter.com/gaattc0">
+          
+          <i class="fab fa-twitter" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的twitter</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>邻居们</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/friends">
+          
+          <i class="fas fa-users fa-spin" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>全部邻居</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="http://sadc1ty.cn">
+          
+          <i class="fas fa-user" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>sadc1ty</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-wrench" style="zoom: 0.6;"></i>
+      
+      <span>小工具</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://fa5.dashgame.com/#/%E5%9B%BE%E6%A0%87">
+          
+          <i class="fas fa-file-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>fontawsome库</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://music.163.com/#/playlist?id=5337749378">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>本页歌单</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://wallhaven.cc/">
+          
+          <i class="fas fa-images" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>抱图圣地</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://github.com/GAATTC0/Valine-Magic">
+          
+          <i class="fas fa-laugh-wink" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>表情仓库</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://gaattc.lanzoui.com/b015d3vhg">
+          
+          <i class="fas fa-folder" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>软件收藏</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="http://lackar.com/aa/">
+          
+          <i class="fas fa-compass" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>导航小站</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://stats.uptimerobot.com/MNQ8Qi5l3B">
+          
+          <i class="fas fa-wifi" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>友链检测</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/96212297.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">GAATTC的隐藏小窝</div>
+        <div class="logo-desc">
+            
+            A simple blog maintained for recording the ordinary life...
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="http://gaattc.gitee.io/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/categories " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-cubes fa-spin" style="position: absolute;left:50px" ></i>
+			      
+		          <span>全部分类</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E6%97%A5%E5%B8%B8 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-sun" style="position: absolute;left:50px" ></i>
+			      
+		          <span>日常</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>学习</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/bug " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-bug" style="position: absolute;left:50px" ></i>
+			      
+		          <span>bug</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E5%B7%A5%E4%BD%9C " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-swimmer" style="position: absolute;left:50px" ></i>
+			      
+		          <span>工作</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-user"></i>
+			
+			关于我
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/about " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-user-circle fa-spin" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的个人简介</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://www.nowcoder.com/profile/114433629 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-code" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的牛客主页</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://github.com/GAATTC0 " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-github-alt" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的GitHub</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://www.steamcommunity.com/id/GAATTC000/ " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-steam-square" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的steam</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://space.bilibili.com/109208828 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-tv" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的bilibili</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://music.163.com/#/user/home?id=1367975193 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的网抑云</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://twitter.com/gaattc0 " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-twitter" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的twitter</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-address-book"></i>
+			
+			邻居们
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/friends " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-users fa-spin" style="position: absolute;left:50px" ></i>
+			      
+		          <span>全部邻居</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="http://sadc1ty.cn " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-user" style="position: absolute;left:50px" ></i>
+			      
+		          <span>sadc1ty</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-wrench"></i>
+			
+			小工具
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://fa5.dashgame.com/#/%E5%9B%BE%E6%A0%87 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-file-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>fontawsome库</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://music.163.com/#/playlist?id=5337749378 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>本页歌单</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://wallhaven.cc/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-images" style="position: absolute;left:50px" ></i>
+			      
+		          <span>抱图圣地</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://github.com/GAATTC0/Valine-Magic " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-laugh-wink" style="position: absolute;left:50px" ></i>
+			      
+		          <span>表情仓库</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://gaattc.lanzoui.com/b015d3vhg " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-folder" style="position: absolute;left:50px" ></i>
+			      
+		          <span>软件收藏</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="http://lackar.com/aa/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-compass" style="position: absolute;left:50px" ></i>
+			      
+		          <span>导航小站</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://stats.uptimerobot.com/MNQ8Qi5l3B " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-wifi" style="position: absolute;left:50px" ></i>
+			      
+		          <span>友链检测</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('哇哦，你发现了一篇SHA256加密文章，猜猜密码是什么~')).toString(CryptoJS.enc.Hex)) {
+                alert('猜错啦，带你回到主页去~');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/ac6eddc451da81cb037c289d5366d016082431c3.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">sql查询语法总结</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+	.toc-widget {
+        width: 345px;
+        padding-left: 20px;
+        background-color: rgb(255, 255, 255,0.7);
+        border-radius: 10px;
+        box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
+    }
+
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #1aa2bf;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #1aa2bf;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/sql/">
+                                <span class="chip bg-color">sql</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                学习
+                            </a>
+                        
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                数据库
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-12-04
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2020-12-07
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.7k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    11 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="sql查询语法总结"><a href="#sql查询语法总结" class="headerlink" title="sql查询语法总结"></a>sql查询语法总结</h1><blockquote>
+<p>环境：mysql5.7</p>
+</blockquote>
+<h2 id="1-SELECT语句的执行顺序"><a href="#1-SELECT语句的执行顺序" class="headerlink" title="1.SELECT语句的执行顺序"></a>1.SELECT语句的执行顺序</h2><p>(6) SELECT column_name, …<br>(1) FROM table_name, …<br>(2) [WHERE …]<br>(3) [GROUP BY …]<br>(4) [HAVING …]<br>(5) [ORDER BY …];<br>(7) LIMIT<br>即：</p>
+<blockquote>
+<p>1.关键字的顺序<br>   SELECT…FROM…WHERE…GROUP BY…HAVING…ORDER BY…LIMIT;<br>2.底层执行的顺序<br>   FROM &gt; WHERE &gt; GROUP BY &gt; HAVING &gt; SELECT字段 &gt; DISCTINCT &gt; ORDER BY &gt; LIMIT;</p>
+</blockquote>
+<h2 id="2-简单查询"><a href="#2-简单查询" class="headerlink" title="2.简单查询"></a>2.简单查询</h2><p><a target="_blank" rel="noopener" href="https://gaattc.lanzoui.com/ii65ej1cz1i">演示用数据准备1</a></p>
+<h3 id="计算表达式和函数的值"><a href="#计算表达式和函数的值" class="headerlink" title="计算表达式和函数的值"></a>计算表达式和函数的值</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">select 2 * 3;
+select now();
+select concat('a','b','c','d');
+select sqrt(9);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="查询表中的字段"><a href="#查询表中的字段" class="headerlink" title="查询表中的字段"></a>查询表中的字段</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">select name from heros;
+select name,hp_max,mp_max,role_main from heros;
+select * from heros;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="使用-WHERE-子句过滤记录（where）"><a href="#使用-WHERE-子句过滤记录（where）" class="headerlink" title="使用 WHERE 子句过滤记录（where）"></a>使用 WHERE 子句过滤记录（where）</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"># 查询主要角色定位为'法师'的英雄有哪些?
+select name,role_main from heros where role_main='法师';<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="给字段起别名（as）"><a href="#给字段起别名（as）" class="headerlink" title="给字段起别名（as）"></a>给字段起别名（as）</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">select name, hp_max as hp, mp_max as mp from heros;
+select name, hp_max hp, mp_max mp from heros;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>AS 关键字可以省略，但是不推荐这样做。 AS 关键字不仅仅可以给字段起别名，还可以给表起别名。</p>
+<h3 id="去除重复行（distinct）"><a href="#去除重复行（distinct）" class="headerlink" title="去除重复行（distinct）"></a>去除重复行（distinct）</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"># 查询主要角色定义有哪些？ 
+# select role_main from heros;
+select distinct role_main from heros;
+# 查询不同的主要角色定位和辅助角色定位。 
+select distinct role_main, role_assist from heros;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>注意：<br>a.DISTINCT 是对所有查询字段的组合进行去重，也就是说每个字段都相同，才认为两条记录是相同的。<br>b. DISTINCT 关键字必须放在所有查询字段的前面.</p>
+<h3 id="排序（order-by）"><a href="#排序（order-by）" class="headerlink" title="排序（order by）"></a>排序（order by）</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">select name,hp_max from heros order by hp_max; # 升序
+select name,hp_max from heros order by hp_max asc; # 升序
+select name,hp_max from heros order by hp_max desc; # 降序 
+# 按照多个字段排序 
+select name,hp_max,mp_max from heros order by hp_max, mp_max;
+select name,hp_max,mp_max from heros order by hp_max, mp_max desc;
+select name,hp_max,mp_max from heros order by hp_max asc, mp_max desc;
+# 对非选择字段进行排序 
+select name,hp_max from heros order by hp_max asc, mp_max desc;
+# 对计算字段排序 
+select name,hp_max,mp_max from heros order by (hp_max + mp_max);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="限制结果集的数量"><a href="#限制结果集的数量" class="headerlink" title="限制结果集的数量"></a>限制结果集的数量</h3><p>语法：①LIMIT offset, nums;      ② LIMIT nums OFFSET offset;</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"># 练习：我们想查询最大生命值最高的5名英雄。
+select name, hp_max from heros order by hp_max desc limit 0, 5;
+select name, hp_max from heros order by hp_max desc limit 5 offset 0;
+# 当偏移量为0时,我们可以省略offset
+select name, hp_max from heros order by hp_max desc limit 5;
+# 分页查询(page, rows)
+# limit rows offset (page-1)*rows<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>注意：</strong></p>
+<p>不同的 DBMS 用来限制结果集的关键字是不一样的，比如Microsoft SQL Server 和 Access  使用的是 TOP 关键字。<br>offset是指偏移量，从第1行查起，偏移量自然为0。此时，可以写成 LIMIT n;<br>可以使用 LIMIT 关键字实现分页查询。 LIMIT (page_num – 1) * page_size, page_size;</p>
+<h3 id="计算字段"><a href="#计算字段" class="headerlink" title="计算字段"></a>计算字段</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">select name, hp_max + mp_max from heros;
+select name, hp_max + mp_max as total from heros;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">count(), sum(), avg(), max(), min()<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"># COUNT(*) 计算表中的总行数; 
+create table t_count(
+    a int,
+    b int
+);
+insert into t_count values (null, null), (1, null),(null, 2),(3, 3);
+select * from t_count;
+select count(*) as nums from t_count;
+# COUNT() 作用于某个具体的字段，可以统计这个字段的非 `NULL` 值的个数。
+select count(a) from t_count;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>以下均忽略null值的行  ：</p>
+<p>sum()</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">select sum(hp_max) from heros;
+select sum(distinct hp_max) from heros;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>avg()</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">select avg(hp_max) from heros;
+select round(avg(hp_max), 2) as avg from heros;  #指定小数点后多少位<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>max()，min()</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">select max(hp_max) from heros;
+select min(hp_max) from heros;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h3><p> a.搭配聚合函数使用</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"># 练习：按照主要角色定位进行分组，并统计每一组的英雄数目。
+select role_main, count(*) from heros group by role_main;
+# 练习：按照次要角色定位进行分组，并统计每一组的英雄数目。
+select role_assist, count(*) from heros group by role_assist;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>b.group_concat</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"># 练习：我们想查询每种角色的英雄都有哪些？
+select role_main, group_concat(name) from heros group by role_main;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/snipaste_2020-07-02_22-42-08.png"></p>
+<p>c.多字段分组</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">select count(*) as num, role_main, role_assist from heros 
+group by role_main, role_assist 
+order by num desc;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p> d. having过滤分组</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"># 练习：我们想要按照英雄的主要角色定位，次要角色定位进行分组，
+# 并且筛选分组中英雄数目大于 5 的组，最后根据每组的英雄数目从高到低进行排序。
+SELECT COUNT(*) AS num, role_main, role_assist 
+FROM heros 
+GROUP BY role_main, role_assist 
+HAVING num &gt; 5
+ORDER BY num DESC;
+# 练习：筛选最大生命值大于 6000 的英雄，按照主要角色定位，次要角色定位分组，
+# 并且筛选英雄数目大于 5 的分组，最后按照英雄数目从高到低进行排序。
+SELECT COUNT(*) AS num, role_main, role_assist 
+FROM heros 
+WHERE hp_max &gt; 6000
+GROUP BY role_main, role_assist 
+HAVING num &gt; 5
+ORDER BY num DESC;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="时间-datetime-相关"><a href="#时间-datetime-相关" class="headerlink" title="时间(datetime)相关"></a>时间(datetime)相关</h3><p>①时间转换</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">#时间之间转换
+year(date)
+month(date)
+day(date)，to_days(date)
+hour(date)
+minute(date)
+second(date),time_to_sec(time)
+#字符串与时间转换
+date_format(date,format)
+time_format(time,format)
+str_to_date(str,format)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>②获取当前时间</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">#获得当前日期+时间（date + time）
+now()
+sysdate()
+#获得当前时间戳
+current_timestamp
+current_timestamp()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>不同之处在于：now() 在执行开始时值就得到了， sysdate() 在函数执行时动态得到值</p>
+<p>③时间计算</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">#加减法
+date_add()
+date_sub()
+#算差值
+datediff(date1,date2)
+timediff(time1,time2)
+#加减法
+date_add()
+date_sub()
+#算差值
+datediff(date1,date2)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>④timestamp的函数</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">timestamp(date) # date to timestamp
+timestamp(dt,time) # dt + time
+timestampadd(unit,interval,datetime_expr)
+timestampdiff(unit,datetime_expr1,datetime_expr2)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>⑤时区（timezone）转换函数</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">convert_tz(dt,from_tz,to_tz)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="小数类型转换"><a href="#小数类型转换" class="headerlink" title="小数类型转换"></a>小数类型转换</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">#取整
+round(num,n) #num是小数，n为取小数点后位数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h2 id="3-复杂查询"><a href="#3-复杂查询" class="headerlink" title="3.复杂查询"></a>3.复杂查询</h2><p><a target="_blank" rel="noopener" href="https://gaattc.lanzoui.com/ifjqnj1l5yf">演示用数据准备2</a></p>
+<h3 id="1-交叉连接"><a href="#1-交叉连接" class="headerlink" title="1 .交叉连接"></a>1 .交叉连接</h3><p>交叉连接也叫笛卡尔乘积</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">select * from player cross join team;
+select * from player,team;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="2-等值连接"><a href="#2-等值连接" class="headerlink" title="2 .等值连接"></a>2 .等值连接</h3><p>等值连接就是对多张表中相同的字段进行等值判断</p>
+<p><strong>自然连接</strong></p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">SELECT player_id, team_id, player_name, height, team_name FROM player NATURAL JOIN team;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>USING 连接</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">SELECT player_id, team_id, player_name, height, team_name FROM player JOIN team USING(team_id);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>ON 连接</strong></p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">SELECT player_id, player.team_id, player_name, height, team_name FROM player JOIN team ON player.team_id = team.team_id;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="3-非等值连接"><a href="#3-非等值连接" class="headerlink" title="3.非等值连接"></a>3.非等值连接</h3><p>连接两张表的条件如果是相等判断，那就是等值连接，否则就是非等值连接。<br>比如说，查询每个球员的身高级别：</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">SELECT player_name, height, height_level FROM player JOIN height_grades AS h ON player.height BETWEEN h.height_lowest AND h.height_highest;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="4-外连接"><a href="#4-外连接" class="headerlink" title="4.外连接"></a>4.外连接</h3><p>外连接除了查询满足条件的记录以外，还可以查询某一方不满足条件的记录。两张表做外连接，会有一张表是主表，另一张表是从表。</p>
+<p><strong>左外连接</strong><br>左外连接，就是左边的表是主表，需要显示左边表的全部行。右边表是从表，只显示满足条件的行。关键字为 LEFT OUTER JOIN 。</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">select girls.gid, gname, bname from girls left join boys on girls.bid = boys.bid;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>右外连接</strong><br>右外连接，就是右边的表是主表，需要显示右边表的全部行。左边表是从表，只显示满足条件的行。关键字为 RIGHT OUTER JOIN 。</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">select boys.bid, bname, gname from girls right join boys using (gid);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>全外连接</strong><br>两张表都是主表，都需要显示全部行。但是MySQL不支持全外连接。关键字为 FULL OUTER JOIN 。</p>
+<h3 id="5-自连接"><a href="#5-自连接" class="headerlink" title="5.自连接"></a>5.自连接</h3><p>对同一张表进行连接</p>
+<p>比如我们想要查看比布雷克-格里芬高的球员都有谁：</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">SELECT b.player_name, b.height FROM player as a JOIN player as b ON a.player_name = '布雷克-格里芬' and a.height &lt; b.height;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="4-联合查询"><a href="#4-联合查询" class="headerlink" title="4.联合查询"></a>4.联合查询</h2><p>可以用 <code>UNION</code> 关键字，将多个结果集合并成一个结果集，这样的查询我们叫联合查询。<br>应用场景： 要查询的结果来自多个表，且多个表没有直接的连接关系，但查询的信息一致时。<br><strong>注意事项:</strong> a. 列数一致 b. 对应的数据最好一致 c. UNION会去重, <code>UNION ALL</code>不会去重。</p>
+<h2 id="5-子查询"><a href="#5-子查询" class="headerlink" title="5.子查询"></a>5.子查询</h2><p>子查询可以分为<code>关联子查询</code>和<code>非关联子查询</code>。</p>
+<p>①如果子查询只执行一次，然后子查询的结果集会作为外部查询的条件进行判断，那么这样的子查询叫做<strong>非关联子查询</strong><br>比如：我们想要查询哪个球员的身高最高，最高身高是多少？</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">SELECT player_name, height FROM player WHERE height = (SELECT max(height) FROM player);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>②如果子查询依赖于外部查询，通常情况下是因为子查询用到了外部查询的某些字段。因此，每执行一次外部查询，子查询都要重新执行一次，这样的子查询叫做<strong>关联子查询</strong>。<br>比如：我们想要查询每个球队中大于平均身高的球员有哪些，并显示球员姓名，身高以及所在球队 ID。</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">SELECT player_name, height, team_id FROM player AS a WHERE height &gt; (
+SELECT AVG(height) FROM player AS b WHERE a.team_id = b.team_id
+);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="1-EXISTS-子查询"><a href="#1-EXISTS-子查询" class="headerlink" title="1. EXISTS 子查询"></a>1. EXISTS 子查询</h3><p>关联子查询可能会搭配 <code>EXISTS</code> 关键字一起使用。 <code>EXISTS</code> 用来判断子查询的结果集是否为空集。如果不为空集返回 True ，如果为空集返回 False 。<br>eg:查询出过场的球员都有哪些，并显示他们的球员ID，球员姓名，球队ID。</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">select player_id, player_name, team_id
+from player
+where exists (
+select player_id from player_score where player_score.player_id =
+player.player_id
+);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>同理，<code>NOT EXISTS</code> 自然就是不存在的意思。</p>
+<h3 id="2-集合比较子查询"><a href="#2-集合比较子查询" class="headerlink" title="2.集合比较子查询"></a>2.集合比较子查询</h3><p>集合比较子查询的作用是与外部查询的结果集进行比较。主要有以下几个关键字：IN, SOME (ANY),<br>ALL。他们的含义如下：</p>
+<table>
+<thead>
+<tr>
+<th align="left">关键字</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">IN</td>
+<td>判断是否在子查询的结果集中</td>
+</tr>
+<tr>
+<td align="left">SOME(ANY)</td>
+<td>需要与比较操作符一起使用，与子查询结果集中的某个值进行比较</td>
+</tr>
+<tr>
+<td align="left">ALL</td>
+<td>需要与比较操作符一起使用，与子查询结果集中的所有值进行比较</td>
+</tr>
+</tbody></table>
+<p>还是上面那个例子：查询出过场的球员都有哪些，并显示他们的球员ID，球员姓名，球队ID。我们可以<br>采用 <code>IN </code>来进行操作：</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">select player_id, player_name, team_id
+from player
+where player_id in (
+select distinct player_id from player_score
+)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><code>SOME</code> 和 <code>ALL</code> 都需要和比较操作符一起使用，这些比较操作符包括： &gt; , = , &lt; , &gt;= , &lt;= , 和 &lt;&gt; 。</p>
+<p>eg：我们要查询比印第安纳步行者 (team_id=1002) 中某个球员身高高的球员有哪些，显示它们的球员ID，球员姓名和球员身高。</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">select player_id, player_name, height
+from player
+where height &gt; some(
+select height from player where team_id = 1002
+);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>同样，如果我们想查询比印第安纳步行者 (team_id=1002) 中所有球员身高都高的球员有哪些，显示它们的球员ID，球员姓名和球员身高。</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">select player_id, player_name, height
+from player
+where height &gt; all(
+select height from player where team_id = 1002
+);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="3-子查询作为计算字段"><a href="#3-子查询作为计算字段" class="headerlink" title="3.子查询作为计算字段"></a>3.子查询作为计算字段</h3><p>子查询甚至可以作为计算字段存在。举个例子：查询每个球队的名称，和它们的球员数。</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">select team_name, (select count(*) from player where player.team_id = team.team_id) AS player_num from team;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>通常会给这个计算字段起个别名表达更明确。</p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">GAATTC</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://gaattc.gitee.io/posts/23d9d6c0/">http://gaattc.gitee.io/posts/23d9d6c0/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">GAATTC</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/sql/">
+                                    <span class="chip bg-color">sql</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,wechat,weibo,twitter" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力(开玩笑的不要打赏)</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/bg.webp") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+    / / max-width: 100 %;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .v[data-class=v] .vinput {
+        padding: 0px 0px;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #1aa2bf;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling"
+         style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>畅所欲言</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'DTaMYIusFNyO7gYlAv1agzrG-MdYXbMMI',
+        appKey: 'A5T3JpETlxljrqOf1R9MFm2O',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'wavatar',
+        metaPlaceholder: {"nick": "(必填)你的QQ号或昵称o(*￣▽￣*)o", "mail": "(必填)你的邮箱( ‵▽′)ψ", "link": "(可选)你的网站url(/▽＼)"},
+        pageSize: '15',
+        lang: 'zh-cn',
+        placeholder: '有什么不懂的问题，可以问我们，我们会亲切地告诉你们：听不见！  ——森下下士',
+        master: 'b576507dc8ba83a09ecfdfd257c7e9f9',
+        friends: ["103fa56afdf5169533b296368ce31d84"],
+        enableQQ: true,
+        requiredFields: ['nick', 'mail'],
+        // 设置表情包cdn地址
+        emojiCDN: 'https://cdn.jsdelivr.net/gh/GAATTC0/ValineCDN@master/',
+        // 表情title和图片映射
+        emojiMaps: {
+            "weibo6": "weibo/d_bingbujiandan.png",
+            "weibo14": "weibo/d_ding.png",
+            "weibo15": "weibo/d_doge.png",
+            "weibo40": "weibo/d_miao.png",
+            "box1": "box/1.png",
+            "box2": "box/2.png",
+            "box3": "box/3.png",
+            "box4": "box/4.png",
+            "box5": "box/5.png",
+            "box6": "box/6.png",
+            "box7": "box/7.png",
+            "box8": "box/8.png",
+            "box9": "box/9.png",
+            "box10": "box/10.png",
+            "box11": "box/11.png",
+            "box12": "box/12.png",
+            "box13": "box/13.png",
+            "box14": "box/14.png",
+            "box15": "box/15.png",
+            "box16": "box/16.png",
+            "box17": "box/17.png",
+            "box18": "box/18.png",
+            "box19": "box/19.png",
+            "box20": "box/20.png",
+            "box21": "box/21.png",
+            "box22": "box/22.png",
+            "box23": "box/23.png",
+            "box24": "box/24.png",
+            "box25": "box/25.png",
+            "box26": "box/26.png",
+            "box27": "box/27.png",
+            "box28": "box/28.png",
+            "box29": "box/29.png",
+            "box30": "box/30.png",
+            "box31": "box/31.png",
+            "box32": "box/32.png",
+            "box33": "box/33.png",
+            "box34": "box/34.png",
+            "box35": "box/35.png",
+            "bilibilitv2": "bilibilitv/[tv_doge].png",
+            "bilibilitv3": "bilibilitv/[tv_亲亲].png",
+            "bilibilitv4": "bilibilitv/[tv_偷笑].png",
+            "bilibilitv5": "bilibilitv/[tv_再见].png",
+            "bilibilitv6": "bilibilitv/[tv_冷漠].png",
+            "bilibilitv7": "bilibilitv/[tv_发怒].png",
+            "bilibilitv8": "bilibilitv/[tv_发财].png",
+            "bilibilitv9": "bilibilitv/[tv_可爱].png",
+            "bilibilitv10": "bilibilitv/[tv_吐血].png",
+            "bilibilitv11": "bilibilitv/[tv_呆].png",
+            "bilibilitv12": "bilibilitv/[tv_呕吐].png",
+            "bilibilitv13": "bilibilitv/[tv_困].png",
+            "bilibilitv14": "bilibilitv/[tv_坏笑].png",
+            "bilibilitv15": "bilibilitv/[tv_大佬].png",
+            "bilibilitv16": "bilibilitv/[tv_大哭].png",
+            "bilibilitv17": "bilibilitv/[tv_委屈].png",
+            "bilibilitv18": "bilibilitv/[tv_害羞].png",
+            "bilibilitv19": "bilibilitv/[tv_尴尬].png",
+            "bilibilitv20": "bilibilitv/[tv_微笑].png",
+            "bilibilitv21": "bilibilitv/[tv_思考].png",
+            "bilibilitv22": "bilibilitv/[tv_惊吓].png",
+            "bilibilitv23": "bilibilitv/[tv_打脸].png",
+            "bilibilitv24": "bilibilitv/[tv_抓狂].png",
+            "bilibilitv25": "bilibilitv/[tv_抠鼻].png",
+            "bilibilitv26": "bilibilitv/[tv_斜眼笑].png",
+            "bilibilitv27": "bilibilitv/[tv_无奈].png",
+            "bilibilitv28": "bilibilitv/[tv_晕].png",
+            "bilibilitv29": "bilibilitv/[tv_流汗].png",
+            "bilibilitv30": "bilibilitv/[tv_流泪].png",
+            "bilibilitv31": "bilibilitv/[tv_流鼻血].png",
+            "bilibilitv32": "bilibilitv/[tv_点赞].png",
+            "bilibilitv33": "bilibilitv/[tv_生气].png",
+            "bilibilitv34": "bilibilitv/[tv_生病].png",
+            "bilibilitv35": "bilibilitv/[tv_疑问].png",
+            "bilibilitv36": "bilibilitv/[tv_白眼].png",
+            "bilibilitv37": "bilibilitv/[tv_皱眉].png",
+            "bilibilitv38": "bilibilitv/[tv_目瞪口呆].png",
+            "bilibilitv39": "bilibilitv/[tv_睡着].png",
+            "bilibilitv40": "bilibilitv/[tv_笑哭].png",
+            "bilibilitv41": "bilibilitv/[tv_腼腆].png",
+            "bilibilitv42": "bilibilitv/[tv_色].png",
+            "bilibilitv43": "bilibilitv/[tv_调侃].png",
+            "bilibilitv44": "bilibilitv/[tv_调皮].png",
+            "bilibilitv45": "bilibilitv/[tv_鄙视].png",
+            "bilibilitv46": "bilibilitv/[tv_闭嘴].png",
+            "bilibilitv47": "bilibilitv/[tv_难过].png",
+            "bilibilitv48": "bilibilitv/[tv_馋].png",
+            "bilibilitv49": "bilibilitv/[tv_鬼脸].png",
+            "bilibilitv50": "bilibilitv/[tv_黑人问号].png",
+            "bilibilitv51": "bilibilitv/[tv_鼓掌].png",
+            "bilibiliHotKey1": "bilibiliHotKey/1.jpg",
+            "bilibiliHotKey2": "bilibiliHotKey/10.jpg",
+            "bilibiliHotKey3": "bilibiliHotKey/11.jpg",
+            "bilibiliHotKey4": "bilibiliHotKey/12.jpg",
+            "bilibiliHotKey5": "bilibiliHotKey/13.jpg",
+            "bilibiliHotKey6": "bilibiliHotKey/14.jpg",
+            "bilibiliHotKey7": "bilibiliHotKey/15.jpg",
+            "bilibiliHotKey8": "bilibiliHotKey/16.jpg",
+            "bilibiliHotKey9": "bilibiliHotKey/17.jpg",
+            "bilibiliHotKey10": "bilibiliHotKey/18.jpg",
+            "bilibiliHotKey11": "bilibiliHotKey/19.jpg",
+            "bilibiliHotKey12": "bilibiliHotKey/2.jpg",
+            "bilibiliHotKey13": "bilibiliHotKey/20.jpg",
+            "bilibiliHotKey14": "bilibiliHotKey/21.jpg",
+            "bilibiliHotKey15": "bilibiliHotKey/22.jpg",
+            "bilibiliHotKey16": "bilibiliHotKey/23.jpg",
+            "bilibiliHotKey17": "bilibiliHotKey/24.jpg",
+            "bilibiliHotKey18": "bilibiliHotKey/25.jpg",
+            "bilibiliHotKey19": "bilibiliHotKey/26.jpg",
+            "bilibiliHotKey20": "bilibiliHotKey/27.jpg",
+            "bilibiliHotKey21": "bilibiliHotKey/28.jpg",
+            "bilibiliHotKey22": "bilibiliHotKey/29.jpg",
+            "bilibiliHotKey23": "bilibiliHotKey/3.jpg",
+            "bilibiliHotKey24": "bilibiliHotKey/30.jpg",
+            "bilibiliHotKey25": "bilibiliHotKey/31.jpg",
+            "bilibiliHotKey26": "bilibiliHotKey/32.jpg",
+            "bilibiliHotKey27": "bilibiliHotKey/4.jpg",
+            "bilibiliHotKey28": "bilibiliHotKey/5.jpg",
+            "bilibiliHotKey29": "bilibiliHotKey/6.jpg",
+            "bilibiliHotKey30": "bilibiliHotKey/7.jpg",
+            "bilibiliHotKey31": "bilibiliHotKey/8.jpg",
+            "bilibiliHotKey32": "bilibiliHotKey/9.jpg",
+            "Tieba-New2": "Tieba-New/image_emoticon.png",
+            "Tieba-New3": "Tieba-New/image_emoticon10.png",
+            "Tieba-New4": "Tieba-New/image_emoticon100.png",
+            "Tieba-New14": "Tieba-New/image_emoticon11.png",
+            "Tieba-New25": "Tieba-New/image_emoticon12.png",
+            "Tieba-New31": "Tieba-New/image_emoticon13.png",
+            "Tieba-New32": "Tieba-New/image_emoticon14.png",
+            "Tieba-New33": "Tieba-New/image_emoticon15.png",
+            "Tieba-New34": "Tieba-New/image_emoticon16.png",
+            "Tieba-New35": "Tieba-New/image_emoticon17.png",
+            "Tieba-New36": "Tieba-New/image_emoticon18.png",
+            "Tieba-New37": "Tieba-New/image_emoticon19.png",
+            "Tieba-New38": "Tieba-New/image_emoticon2.png",
+            "Tieba-New39": "Tieba-New/image_emoticon20.png",
+            "Tieba-New40": "Tieba-New/image_emoticon21.png",
+            "Tieba-New41": "Tieba-New/image_emoticon22.png",
+            "Tieba-New42": "Tieba-New/image_emoticon23.png",
+            "Tieba-New43": "Tieba-New/image_emoticon24.png",
+            "Tieba-New44": "Tieba-New/image_emoticon25.png",
+            "Tieba-New45": "Tieba-New/image_emoticon26.png",
+            "Tieba-New46": "Tieba-New/image_emoticon27.png",
+            "Tieba-New47": "Tieba-New/image_emoticon28.png",
+            "Tieba-New48": "Tieba-New/image_emoticon29.png",
+            "Tieba-New49": "Tieba-New/image_emoticon3.png",
+            "Tieba-New50": "Tieba-New/image_emoticon30.png",
+            "Tieba-New51": "Tieba-New/image_emoticon31.png",
+            "Tieba-New52": "Tieba-New/image_emoticon32.png",
+            "Tieba-New53": "Tieba-New/image_emoticon33.png",
+            "Tieba-New54": "Tieba-New/image_emoticon34.png",
+            "Tieba-New55": "Tieba-New/image_emoticon35.png",
+            "Tieba-New56": "Tieba-New/image_emoticon36.png",
+            "Tieba-New57": "Tieba-New/image_emoticon37.png",
+            "Tieba-New58": "Tieba-New/image_emoticon38.png",
+            "Tieba-New59": "Tieba-New/image_emoticon39.png",
+            "Tieba-New60": "Tieba-New/image_emoticon4.png",
+            "Tieba-New61": "Tieba-New/image_emoticon40.png",
+            "Tieba-New62": "Tieba-New/image_emoticon41.png",
+            "Tieba-New63": "Tieba-New/image_emoticon42.png",
+            "Tieba-New64": "Tieba-New/image_emoticon43.png",
+            "Tieba-New65": "Tieba-New/image_emoticon44.png",
+            "Tieba-New66": "Tieba-New/image_emoticon45.png",
+            "Tieba-New67": "Tieba-New/image_emoticon46.png",
+            "Tieba-New68": "Tieba-New/image_emoticon47.png",
+            "Tieba-New69": "Tieba-New/image_emoticon48.png",
+            "Tieba-New70": "Tieba-New/image_emoticon49.png",
+            "Tieba-New71": "Tieba-New/image_emoticon5.png",
+            "Tieba-New72": "Tieba-New/image_emoticon50.png",
+            "Tieba-New73": "Tieba-New/image_emoticon6.png",
+            "Tieba-New74": "Tieba-New/image_emoticon66.png",
+            "Tieba-New75": "Tieba-New/image_emoticon67.png",
+            "Tieba-New76": "Tieba-New/image_emoticon68.png",
+            "Tieba-New77": "Tieba-New/image_emoticon69.png",
+            "Tieba-New78": "Tieba-New/image_emoticon7.png",
+            "Tieba-New79": "Tieba-New/image_emoticon70.png",
+            "Tieba-New80": "Tieba-New/image_emoticon71.png",
+            "Tieba-New81": "Tieba-New/image_emoticon72.png",
+            "Tieba-New82": "Tieba-New/image_emoticon73.png",
+            "Tieba-New83": "Tieba-New/image_emoticon74.png",
+            "Tieba-New84": "Tieba-New/image_emoticon75.png",
+            "Tieba-New85": "Tieba-New/image_emoticon76.png",
+            "Tieba-New86": "Tieba-New/image_emoticon77.png",
+            "Tieba-New95": "Tieba-New/image_emoticon85.png",
+            "Tieba-New96": "Tieba-New/image_emoticon86.png",
+            "Tieba-New97": "Tieba-New/image_emoticon87.png",
+            "Tieba-New98": "Tieba-New/image_emoticon88.png",
+            "Tieba-New99": "Tieba-New/image_emoticon89.png",
+            "Tieba-New100": "Tieba-New/image_emoticon9.png",
+            "Tieba-New101": "Tieba-New/image_emoticon90.png",
+            "Tieba-New102": "Tieba-New/image_emoticon91.png",
+            "Tieba-New103": "Tieba-New/image_emoticon92.png",
+            "Tieba-New104": "Tieba-New/image_emoticon93.png",
+            "Tieba-New105": "Tieba-New/image_emoticon94.png",
+            "Tieba-New106": "Tieba-New/image_emoticon95.png",
+            "Tieba-New107": "Tieba-New/image_emoticon96.png",
+            "Tieba-New108": "Tieba-New/image_emoticon97.png",
+            "Tieba-New109": "Tieba-New/image_emoticon98.png",
+            "Tieba-New110": "Tieba-New/image_emoticon99.png",
+            "aodamiao1": "aodamiao/01.gif",
+            "aodamiao2": "aodamiao/02.gif",
+            "aodamiao3": "aodamiao/03.gif",
+            "aodamiao4": "aodamiao/04.gif",
+            "aodamiao5": "aodamiao/05.gif",
+            "aodamiao6": "aodamiao/06.gif",
+            "aodamiao7": "aodamiao/07.gif",
+            "aodamiao8": "aodamiao/08.gif",
+            "aodamiao9": "aodamiao/09.gif",
+            "aodamiao10": "aodamiao/10.gif",
+            "aodamiao11": "aodamiao/11.gif",
+            "aodamiao12": "aodamiao/12.gif",
+            "aodamiao13": "aodamiao/13.gif",
+            "aodamiao14": "aodamiao/14.gif",
+            "aodamiao15": "aodamiao/15.gif",
+            "aodamiao16": "aodamiao/16.gif",
+            "aodamiao17": "aodamiao/17.gif",
+            "aodamiao18": "aodamiao/18.gif",
+            "aodamiao19": "aodamiao/19.gif",
+            "aodamiao20": "aodamiao/20.gif",
+            "aodamiao21": "aodamiao/21.gif",
+            "aodamiao22": "aodamiao/22.gif",
+            "aodamiao23": "aodamiao/23.gif",
+            "aodamiao24": "aodamiao/24.gif",
+            "aodamiao25": "aodamiao/25.gif",
+            "aodamiao26": "aodamiao/26.gif",
+            "aodamiao27": "aodamiao/27.gif",
+            "aodamiao28": "aodamiao/28.gif",
+            "aodamiao29": "aodamiao/29.gif",
+            "aodamiao30": "aodamiao/30.gif",
+            "aodamiao31": "aodamiao/31.gif",
+            "aodamiao32": "aodamiao/32.gif",
+            "aodamiao33": "aodamiao/33.gif",
+            "aodamiao34": "aodamiao/34.gif",
+            "aodamiao35": "aodamiao/35.gif",
+            "aodamiao36": "aodamiao/36.gif",
+            "aodamiao37": "aodamiao/37.gif",
+            "aodamiao38": "aodamiao/38.gif",
+            "aodamiao39": "aodamiao/39.gif",
+            "aodamiao40": "aodamiao/40.gif",
+            "Menhera-chan1": "Menhera-chan/1.jpg",
+            "Menhera-chan2": "Menhera-chan/10.jpg",
+            "Menhera-chan3": "Menhera-chan/100.jpg",
+            "Menhera-chan4": "Menhera-chan/101.jpg",
+            "Menhera-chan5": "Menhera-chan/102.jpg",
+            "Menhera-chan6": "Menhera-chan/103.jpg",
+            "Menhera-chan7": "Menhera-chan/104.jpg",
+            "Menhera-chan8": "Menhera-chan/105.jpg",
+            "Menhera-chan9": "Menhera-chan/106.jpg",
+            "Menhera-chan10": "Menhera-chan/107.jpg",
+            "Menhera-chan11": "Menhera-chan/108.jpg",
+            "Menhera-chan12": "Menhera-chan/109.jpg",
+            "Menhera-chan13": "Menhera-chan/11.jpg",
+            "Menhera-chan14": "Menhera-chan/110.jpg",
+            "Menhera-chan15": "Menhera-chan/111.jpg",
+            "Menhera-chan16": "Menhera-chan/112.jpg",
+            "Menhera-chan17": "Menhera-chan/113.jpg",
+            "Menhera-chan18": "Menhera-chan/114.jpg",
+            "Menhera-chan19": "Menhera-chan/115.jpg",
+            "Menhera-chan20": "Menhera-chan/116.jpg",
+            "Menhera-chan21": "Menhera-chan/117.jpg",
+            "Menhera-chan22": "Menhera-chan/118.jpg",
+            "Menhera-chan23": "Menhera-chan/119.jpg",
+            "Menhera-chan24": "Menhera-chan/12.jpg",
+            "Menhera-chan25": "Menhera-chan/120.jpg",
+            "Menhera-chan26": "Menhera-chan/13.jpg",
+            "Menhera-chan27": "Menhera-chan/14.jpg",
+            "Menhera-chan28": "Menhera-chan/15.jpg",
+            "Menhera-chan29": "Menhera-chan/16.jpg",
+            "Menhera-chan30": "Menhera-chan/17.jpg",
+            "Menhera-chan31": "Menhera-chan/18.jpg",
+            "Menhera-chan32": "Menhera-chan/19.jpg",
+            "Menhera-chan33": "Menhera-chan/2.jpg",
+            "Menhera-chan34": "Menhera-chan/20.jpg",
+            "Menhera-chan35": "Menhera-chan/21.jpg",
+            "Menhera-chan36": "Menhera-chan/22.jpg",
+            "Menhera-chan37": "Menhera-chan/23.jpg",
+            "Menhera-chan38": "Menhera-chan/24.jpg",
+            "Menhera-chan39": "Menhera-chan/25.jpg",
+            "Menhera-chan40": "Menhera-chan/26.jpg",
+            "Menhera-chan41": "Menhera-chan/27.jpg",
+            "Menhera-chan42": "Menhera-chan/28.jpg",
+            "Menhera-chan43": "Menhera-chan/29.jpg",
+            "Menhera-chan44": "Menhera-chan/3.jpg",
+            "Menhera-chan45": "Menhera-chan/30.jpg",
+            "Menhera-chan46": "Menhera-chan/31.jpg",
+            "Menhera-chan47": "Menhera-chan/32.jpg",
+            "Menhera-chan48": "Menhera-chan/33.jpg",
+            "Menhera-chan49": "Menhera-chan/34.jpg",
+            "Menhera-chan50": "Menhera-chan/35.jpg",
+            "Menhera-chan51": "Menhera-chan/36.jpg",
+            "Menhera-chan52": "Menhera-chan/37.jpg",
+            "Menhera-chan53": "Menhera-chan/38.jpg",
+            "Menhera-chan54": "Menhera-chan/39.jpg",
+            "Menhera-chan55": "Menhera-chan/4.jpg",
+            "Menhera-chan56": "Menhera-chan/40.jpg",
+            "Menhera-chan57": "Menhera-chan/41.jpg",
+            "Menhera-chan58": "Menhera-chan/42.jpg",
+            "Menhera-chan59": "Menhera-chan/43.jpg",
+            "Menhera-chan60": "Menhera-chan/44.jpg",
+            "Menhera-chan61": "Menhera-chan/45.jpg",
+            "Menhera-chan62": "Menhera-chan/46.jpg",
+            "Menhera-chan63": "Menhera-chan/47.jpg",
+            "Menhera-chan64": "Menhera-chan/48.jpg",
+            "Menhera-chan65": "Menhera-chan/49.jpg",
+            "Menhera-chan66": "Menhera-chan/5.jpg",
+            "Menhera-chan67": "Menhera-chan/50.jpg",
+            "Menhera-chan68": "Menhera-chan/51.jpg",
+            "Menhera-chan69": "Menhera-chan/52.jpg",
+            "Menhera-chan70": "Menhera-chan/53(1).jpg",
+            "Menhera-chan71": "Menhera-chan/53.jpg",
+            "Menhera-chan72": "Menhera-chan/54.jpg",
+            "Menhera-chan73": "Menhera-chan/55.jpg",
+            "Menhera-chan74": "Menhera-chan/56.jpg",
+            "Menhera-chan75": "Menhera-chan/57.jpg",
+            "Menhera-chan76": "Menhera-chan/58.jpg",
+            "Menhera-chan77": "Menhera-chan/59.jpg",
+            "Menhera-chan78": "Menhera-chan/6.jpg",
+            "Menhera-chan79": "Menhera-chan/60.jpg",
+            "Menhera-chan80": "Menhera-chan/61.jpg",
+            "Menhera-chan81": "Menhera-chan/62.jpg",
+            "Menhera-chan82": "Menhera-chan/63.jpg",
+            "Menhera-chan83": "Menhera-chan/64.jpg",
+            "Menhera-chan84": "Menhera-chan/65.jpg",
+            "Menhera-chan85": "Menhera-chan/66.jpg",
+            "Menhera-chan86": "Menhera-chan/67.jpg",
+            "Menhera-chan87": "Menhera-chan/68.jpg",
+            "Menhera-chan88": "Menhera-chan/69.jpg",
+            "Menhera-chan89": "Menhera-chan/7.jpg",
+            "Menhera-chan90": "Menhera-chan/70.jpg",
+            "Menhera-chan91": "Menhera-chan/71.jpg",
+            "Menhera-chan92": "Menhera-chan/72.jpg",
+            "Menhera-chan93": "Menhera-chan/73.jpg",
+            "Menhera-chan94": "Menhera-chan/74.jpg",
+            "Menhera-chan95": "Menhera-chan/75.jpg",
+            "Menhera-chan96": "Menhera-chan/76.jpg",
+            "Menhera-chan97": "Menhera-chan/77.jpg",
+            "Menhera-chan98": "Menhera-chan/78.jpg",
+            "Menhera-chan99": "Menhera-chan/79.jpg",
+            "Menhera-chan100": "Menhera-chan/8.jpg",
+            "Menhera-chan105": "Menhera-chan/84.jpg",
+            "Menhera-chan106": "Menhera-chan/85.jpg",
+            "Menhera-chan107": "Menhera-chan/86.jpg",
+            "Menhera-chan108": "Menhera-chan/87.jpg",
+            "Menhera-chan109": "Menhera-chan/88.jpg",
+            "Menhera-chan110": "Menhera-chan/89.jpg",
+            "Menhera-chan111": "Menhera-chan/9.jpg",
+            "Menhera-chan112": "Menhera-chan/90.jpg",
+            "Menhera-chan113": "Menhera-chan/91.jpg",
+            "Menhera-chan114": "Menhera-chan/92.jpg",
+            "Menhera-chan115": "Menhera-chan/93.jpg",
+            "Menhera-chan116": "Menhera-chan/94.jpg",
+            "Menhera-chan117": "Menhera-chan/95.jpg",
+            "Menhera-chan118": "Menhera-chan/96.jpg",
+            "Menhera-chan119": "Menhera-chan/97.jpg",
+            "Menhera-chan120": "Menhera-chan/98.jpg",
+            "Menhera-chan121": "Menhera-chan/99.jpg"
+        }
+    });
+</script>
+<!-- 直达评论 -->
+<div id="to_comment" class="comment-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#vcomments" title="直达评论">
+        <i class="fas fa-comments"></i>
+    </a>
+</div>
+
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/posts/23d9d6c0/">
+                    <div class="card-image">
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/ac6eddc451da81cb037c289d5366d016082431c3.jpg" class="responsive-img" alt="sql查询语法总结">
+                        
+                        <span class="card-title">sql查询语法总结</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            sql查询语法总结
+环境：mysql5.7
+
+1.SELECT语句的执行顺序(6) SELECT column_name, …(1) FROM table_name, …(2) [WHERE …](3) [GROUP BY …](4) [H
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-04
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    学习
+                                </a>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                    数据库
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/sql/">
+                        <span class="chip bg-color">sql</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/e95bf6a/">
+                    <div class="card-image">
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/Snipaste_2020-12-03_22-26-45.jpg" class="responsive-img" alt="matery下自定义动态背景⭐⭐⭐">
+                        
+                        <span class="card-title">matery下自定义动态背景⭐⭐⭐</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            matery下自定义动态背景第一版(不建议，cpu占用太高)
+ref：https://www.jq22.com/jquery-info22256
+
+1.添加css样式hexo\themes\hexo-theme-matery-master\
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-03
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    学习
+                                </a>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/">
+                        <span class="chip bg-color">学习心得</span>
+                    </a>
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        //if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        //}
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: GAATTC的隐藏小窝<br />'
+            + '文章作者: GAATTC<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color" title="展开/关闭TOC">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="5337749378"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.3'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="https://gitee.com/GAATTC" target="_blank">GAATTC</a>
+            |&nbsp;Powered by&nbsp;<a href="https://gitee.com/GAATTC" target="_blank">GAATTC</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">97.8k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "11";
+                    var startDate = "15";
+                    var startHour = "19";
+                    var startMinute = "30";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "现在是小窝建成的第 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "现在是小窝建成的第 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/GAATTC0" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:gaattc@nuaa.edu.cn" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=416569605" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 416569605" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+
+
+    <a href="https://www.nowcoder.com/profile/114433629" class="tooltipped" target="_blank" data-tooltip="我的牛客主页" data-position="top" data-delay="50">
+        <i class="fa fa-code"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+<script src="/js/prism/prism.js" async></script>
+<div class="progress-bar"></div>
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!" title="返回顶部">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?b003af5e49c414fc6a670f6dcef0d1c1";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+	
+	<!--天气-->
+	<div id="weather-v2-plugin-simple"></div>
+	<script>
+	WIDGET = {
+	CONFIG: {
+    "modules": "01234",
+    "background": 1,
+    "tmpColor": "FFFFFF",
+    "tmpSize": 16,
+    "cityColor": "FFFFFF",
+    "citySize": 16,
+    "aqiSize": 16,
+    "weatherIconSize": 24,
+    "alertIconSize": 18,
+    "padding": "10px 10px 10px 10px",
+    "shadow": "1",
+    "language": "auto",
+    "borderRadius": "3",
+    "fixed": "false",
+    "vertical": "middle",
+    "horizontal": "center",
+    "key": "rbqraTCH2c"
+		}
+	}
+	</script>
+	<script src="https://apip.weatherdt.com/simple/static/js/weather-simple-common.js?v=2.0"></script>
+
+    <!--鼠标礼花-->
+    <script src="/js/lihua.js"></script>
+	
+	<!--snow-->
+	<script src="/js/snow.js"></script>
+	
+	<!--动态标题-->
+	<script type="text/javascript">
+    var OriginTitile=document.title,st;
+    document.addEventListener("visibilitychange",function(){
+        document.hidden?(document.title="o(*￣▽￣*)o欢迎回来~",clearTimeout(st)):(document.title="ヽ(✿ﾟ▽ﾟ)ノ爱学习爱生活~",st=setTimeout(function(){document.title=OriginTitile},3e3))
+    })
+	</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-tororo"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+</html>
