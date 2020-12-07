@@ -12,7 +12,7 @@
 	options	= $.extend({}, defaults, options);
 	var interval= setInterval( function(){
 	var startPositionLeft = Math.random() * documentWidth - 100,
-	startOpacity = 0.5 + Math.random(),
+	startOpacity = 0.3 + Math.random(),
 	sizeFlake = options.minSize + Math.random() * options.maxSize,
 	endPositionTop = documentHeight - 200,
 	endPositionLeft = startPositionLeft - 500 + Math.random() * 500,
@@ -34,8 +34,8 @@
 })(jQuery);
 $(function(){
     $.fn.snow({ 
-	    minSize: 5, /* 定义雪花最小尺寸 */
-	    maxSize: 25,/* 定义雪花最大尺寸 */
-	    newOn: 800  /* 定义密集程度，数字越小越密集 */
+	    minSize: 15, /* 定义雪花最小尺寸 */
+	    maxSize: 30,/* 定义雪花最大尺寸 */
+	    newOn: 900  /* 定义密集程度，数字越小越密集 */
     });
 });
