@@ -494,8 +494,10 @@
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
     </a>
   </li>
+  </i></a></li>
+  <li id="fullscreen_li" class="fullscreen"><a href="javascript:void(0);" class="modal-trigger waves-effect waves-light">
+      <i id="fullscreen" class="fas fa-expand-arrows-alt" title="全屏" style="zoom: 0.65;"></i></a></li>
 </ul>
-
 
 <div id="mobile-nav" class="side-nav sidenav">
 
@@ -822,7 +824,6 @@
     </ul>
 </div>
 
-
         </div>
 
         
@@ -1013,14 +1014,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-12-07
+                    2020-12-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    280
+                    328
                 </div>
                 
 
@@ -1037,7 +1038,8 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="在分类中手动添加思维导图"><a href="#在分类中手动添加思维导图" class="headerlink" title="在分类中手动添加思维导图"></a>在分类中手动添加思维导图</h1><blockquote>
+                <h1 id="在分类中手动添加思维导图"><a href="#在分类中手动添加思维导图" class="headerlink" title="在分类中手动添加思维导图"></a>在分类中手动添加思维导图</h1><p><strong><font color="red" size="5">本文最后面有重要更新</font></strong></p>
+<blockquote>
 <p>不会js也不会ejs的我竟然摸索着弄出来了哈哈哈</p>
 </blockquote>
 <h2 id="1-添加一个widget"><a href="#1-添加一个widget" class="headerlink" title="1.添加一个widget"></a>1.添加一个widget</h2><p>找到文件categories.ejs：</p>
@@ -1071,6 +1073,10 @@
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>xxx<span class="token punctuation">"</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">zoom</span><span class="token punctuation">:</span> 60%<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h2 id="4-效果"><a href="#4-效果" class="headerlink" title="4.效果"></a>4.效果</h2><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20201129125553047.png" alt="image-20201129125553047"></p>
+<hr>
+
+<h2 id="更新：导图渲染插件"><a href="#更新：导图渲染插件" class="headerlink" title="更新：导图渲染插件"></a>更新：导图渲染插件</h2><p>虽然没xmind的主题好看不过还是很不错的，参考：</p>
+<p><a target="_blank" rel="noopener" href="https://zhangxiaocai.cn/posts/5a2c12e2.html">Hexo 博客添加思维导图渲染</a></p>
 
             </div>
             <hr/>
@@ -1331,7 +1337,7 @@
     }
 
     #vcomments img {
-    / / max-width: 100 %;
+        /*max-width: 100%;*/
         height: auto;
         cursor: pointer;
     }
@@ -2286,7 +2292,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">97.3k</span>&nbsp;字
+                class="white-color">97.5k</span>&nbsp;字
             
             
             
@@ -2516,8 +2522,10 @@ $(function () {
     document.addEventListener("visibilitychange",function(){
         document.hidden?(document.title="ヽ(✿ﾟ▽ﾟ)ノ切出去了哦",clearTimeout(st)):(document.title="o(*￣▽￣*)o欢迎回来~",st=setTimeout(function(){document.title=OriginTitile},3e3))
     })
-	</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+	</script>
 
+    <!--全屏-->
+    <script src="/js/fullscreen.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
