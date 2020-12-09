@@ -1014,7 +1014,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-12-07
+                    2020-12-09
                 </div>
                 
 
@@ -1041,7 +1041,7 @@
                 <h1 id="Valine-matery全攻略"><a href="#Valine-matery全攻略" class="headerlink" title="Valine+matery全攻略"></a>Valine+matery全攻略</h1><blockquote>
 <p>官方文档：<a target="_blank" rel="noopener" href="https://valine.js.org/">https://valine.js.org</a><br>ref:<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/205aaa14dff3">https://www.jianshu.com/p/205aaa14dff3</a><br><a target="_blank" rel="noopener" href="https://zhangxiaocai.cn/posts/358175a6.html">https://zhangxiaocai.cn/posts/358175a6.html</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/guoxinyu/p/12660236.html">https://www.cnblogs.com/guoxinyu/p/12660236.html</a><br>版本：v1.4.14</p>
 </blockquote>
-<p><font color="red"><strong>注意：本文有重要更新，更新内容单独写在最后面</strong></font></p>
+<p><font color="red" size="4"><strong>注意：本文有重要更新，更新内容单独写在最后面</strong></font></p>
 <h2 id="1-LeanCloud注册-amp-创建应用"><a href="#1-LeanCloud注册-amp-创建应用" class="headerlink" title="1.LeanCloud注册&amp;创建应用"></a>1.LeanCloud注册&amp;创建应用</h2><p><a target="_blank" rel="noopener" href="https://www.leancloud.cn/">leancloud官网</a></p>
 <p>创建应用：</p>
 <p><left><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20201121123052704.png" alt="image-20201121123052704" style="zoom: 60%;"></left></p>
@@ -1092,7 +1092,7 @@
 
 <h2 id="4-鼠标over时头像旋转-这个海星"><a href="#4-鼠标over时头像旋转-这个海星" class="headerlink" title="4.鼠标over时头像旋转(这个海星)"></a>4.鼠标over时头像旋转(这个海星)</h2><p>同样是上面的css文件中添加：</p>
 <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">img.vimg</span> <span class="token punctuation">{</span>
-     <span class="token property">transition</span><span class="token punctuation">:</span> all 1s   <span class="token comment">/* 旋转时间为 1s */</span>
+     <span class="token property">transition</span><span class="token punctuation">:</span> all 2s   <span class="token comment">/* 旋转时间为 2s */</span>
 <span class="token punctuation">}</span>
 
 <span class="token selector">img.vimg:hover</span> <span class="token punctuation">{</span>
@@ -1232,7 +1232,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h2 id="8-添加表情包⭐"><a href="#8-添加表情包⭐" class="headerlink" title="8.添加表情包⭐"></a>8.添加表情包⭐</h2><blockquote>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/cungudafa/article/details/106218905">https://blog.csdn.net/cungudafa/article/details/106218905</a><br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/205aaa14dff3">https://www.jianshu.com/p/205aaa14dff3</a></p>
 </blockquote>
-<p>表情包源(fork来的)：</p>
+<p>我的表情包源(fork来的+自己添加了一点)：</p>
 <blockquote>
 <p><a target="_blank" rel="noopener" href="https://github.com/GAATTC0/Valine-Magic">https://github.com/GAATTC0/Valine-Magic</a></p>
 </blockquote>
@@ -1372,9 +1372,28 @@ emojiMaps<span class="token operator">:</span> <span class="token punctuation">{
 
 <h3 id="法二：在js中添加"><a href="#法二：在js中添加" class="headerlink" title="法二：在js中添加"></a>法二：在js中添加</h3><p>看链接吧233，虽然我还没看，不过第一种方法还能用hhh</p>
 <hr>
+**更新：**
 
-<p><strong>更新：</strong></p>
 <h2 id="9-MiniValine"><a href="#9-MiniValine" class="headerlink" title="9.MiniValine"></a>9.MiniValine</h2><p>​    才发现matery竟然自带了另一个那就是MiniValine，只需要在主题配置中打开即可，配置相当简单而且不需要改源码，支持表情包分类拓展，真好用~</p>
+<hr>
+### 10.表情过大的适配方式
+
+<p>在valine.ejs文件中删掉<code>max-width：100%</code>属性:</p>
+<pre class="line-numbers language-dir" data-language="dir"><code class="language-dir">hexo\themes\hexo-theme-matery-master\layout\_partial\valine.ejs<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">#vcomments img</span> <span class="token punctuation">{</span>
+        <span class="token comment">/*max-width: 100%;*/</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+        <span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>再增加一个内边距0属性(虽然不知道有什么用)：</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.v[data-class=v] .vinput</span> <span class="token punctuation">{</span>
+     <span class="token property">padding</span><span class="token punctuation">:</span> 0px 0px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+
+
 <hr>
 
 <h1 id="重要更新：valine-admin的使用⭐⭐⭐"><a href="#重要更新：valine-admin的使用⭐⭐⭐" class="headerlink" title="重要更新：valine-admin的使用⭐⭐⭐"></a>重要更新：valine-admin的使用⭐⭐⭐</h1><h2 id="1-部署和配置"><a href="#1-部署和配置" class="headerlink" title="1.部署和配置"></a>1.部署和配置</h2><p>官方文档：<a target="_blank" rel="noopener" href="https://github.com/DesertsP/Valine-Admin">https://github.com/DesertsP/Valine-Admin</a></p>
@@ -2563,7 +2582,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
     <footer class="page-footer bg-color">
     
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+    <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
 <style>
     .aplayer .aplayer-lrc p {
         
@@ -2579,7 +2598,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         display: none;
         
         font-size: 15px;
-        color: #42b983;
+        color: #1aa2bf;
     }
 
     
@@ -2593,7 +2612,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
                    id="5337749378"
                    fixed='true'
                    autoplay='false'
-                   theme='#42b983'
+                   theme='#1aa2bf'
                    loop='all'
                    order='random'
                    preload='auto'
@@ -2608,16 +2627,19 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 
     
-    <div class="container row center-align" style="margin-bottom: 15px !important;">
+    <div class="container row center-align"
+        style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             <span id="year">2020</span>
             <a href="https://gitee.com/GAATTC" target="_blank">GAATTC</a>
-            |&nbsp;Powered by&nbsp;<a href="https://gitee.com/GAATTC" target="_blank">GAATTC</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/zh-cn/" target="_blank">Hexo</a>
+            |&nbsp;Deployed on&nbsp;<a href="https://gitee.com/" target="_blank">Gitee</a>
             <br>
+
             
-            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">98.5k</span>&nbsp;字
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
+                class="white-color">98.7k</span>&nbsp;字
             
             
             
@@ -2625,19 +2647,19 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             
             
             <span id="busuanzi_container_site_pv">
-                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
-                    class="white-color"></span>&nbsp;次
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;这是被访问的第:<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>次
             </span>
             
             
             <span id="busuanzi_container_site_uv">
-                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
-                    class="white-color"></span>&nbsp;人
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总计有来客:<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>人
             </span>
             
             <br>
             
-            <span id="sitetime">载入运行时间...</span>
+            <span id="sitetime">正在载入运行时间...</span>
             <script>
                 function siteTime() {
                     var seconds = 1000;
@@ -2670,12 +2692,12 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
                         diffMinutes * minutes) / seconds);
                     if (startYear == todayYear) {
                         document.getElementById("year").innerHTML = todayYear;
-                        document.getElementById("sitetime").innerHTML = "现在是小窝建成的第 " + diffDays + " 天 " + diffHours +
-                            " 小时 " + diffMinutes + " 分 " + diffSeconds + " 秒";
+                        document.getElementById("sitetime").innerHTML = "现在是小窝建成的第" + diffDays + "天" + diffHours +
+                            "小时" + diffMinutes + "分" + diffSeconds + "秒";
                     } else {
                         document.getElementById("year").innerHTML = startYear + " - " + todayYear;
-                        document.getElementById("sitetime").innerHTML = "现在是小窝建成的第 " + diffYears + " 年 " + diffDays +
-                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分 " + diffSeconds + " 秒";
+                        document.getElementById("sitetime").innerHTML = "现在是小窝建成的第" + diffYears + "年" + diffDays +
+                            "天" + diffHours + "小时" + diffMinutes + "分" + diffSeconds + "秒";
                     }
                 }
                 setInterval(siteTime, 1000);
@@ -2726,7 +2748,6 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 </footer>
 <script src="/js/prism/prism.js" async></script>
 <div class="progress-bar"></div>
-
     <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
