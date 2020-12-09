@@ -3,7 +3,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="contact, GAATTC的隐藏小窝">
+    <meta name="keywords" content="markdown语法总结, GAATTC的隐藏小窝">
     <meta name="description" content="A simple blog maintained for recording the ordinary life...">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -15,7 +15,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>contact | GAATTC的隐藏小窝</title>
+    <title>markdown语法总结 | GAATTC的隐藏小窝</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -831,69 +831,599 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                做一个无聊生活中发现色彩的记录者~
-                
-            </div>
-
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['Welcome to my hidden nest!','A simple blog maintained for recording the ordinary life','I&#39;m glad to share some interesting daily things and some simple technologies','It&#39;s so lucky to meet you here','Let&#39;s see see what&#39;s new in my nest! XD'],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('哇哦，你发现了一篇SHA256加密文章，猜猜密码是什么~')).toString(CryptoJS.enc.Hex)) {
+                alert('猜错啦，带你回到主页去~');
+                location.href = '/';
+            }
+        }
+    })();
 </script>
 
 
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/iconfinder_markdown_298823.png')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">markdown语法总结</h1>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<main class="content">
-    <div id="contact" class="container chip-container">
-        <div class="card">
-            <div class="card-content">
-                <div class="tag-title center-align">
-                    <i class="fas fa-comments"></i>&nbsp;&nbsp;留言板
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+	.toc-widget {
+        width: 345px;
+        padding-left: 20px;
+        background-color: rgb(255, 255, 255,0.7);
+        border-radius: 10px;
+        box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
+    }
+
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #1aa2bf;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #1aa2bf;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/markdown/">
+                                <span class="chip bg-color">markdown</span>
+                            </a>
+                        
+                    </div>
+                    
                 </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                学习
+                            </a>
+                        
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/markdown/" class="post-category">
+                                markdown
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-12-09
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2020-12-09
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    995
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    4 分
+                </div>
+                
+
                 
             </div>
         </div>
-        <div class="card">
-            
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="markdown语法总结"><a href="#markdown语法总结" class="headerlink" title="markdown语法总结"></a>markdown语法总结</h1><h2 id="1-基本语法"><a href="#1-基本语法" class="headerlink" title="1.基本语法"></a>1.基本语法</h2><h3 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h3><p>使用 <code>#号+空格</code>可表示 1-6 级标题。</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"># 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-换行"><a href="#2-换行" class="headerlink" title="2.换行"></a>2.换行</h3><p>①使用<code>两个空格+回车</code>换行</p>
+<p>②使用<code>&lt;br&gt;</code>标签换行</p>
+<p>③使用一个空行表示一个新的段落</p>
+<h3 id="3-字体变化"><a href="#3-字体变化" class="headerlink" title="3.字体变化"></a>3.字体变化</h3><p>斜体：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">*斜体文本*
+_斜体文本_<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>粗体：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">**粗体文本**
+__粗体文本__<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>粗斜体：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">***粗斜体文本***
+___粗斜体文本___<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>删除体：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">~~删除体文本~~<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>下划线：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&lt;u&gt;下划线&lt;/u&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>小代码片：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">`代码`<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>注释：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&lt;!--注释--&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="4-分隔线"><a href="#4-分隔线" class="headerlink" title="4.分隔线"></a>4.分隔线</h3><p>可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&lt;hr&gt;
+
+***
+
+* * *
+
+*****
+
+- - -
+
+----------<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="5-脚注"><a href="#5-脚注" class="headerlink" title="5.脚注"></a>5.脚注</h3><p>创建脚注格式：</p>
+<p> [^演示]<br>[^演示]: 我是脚注</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"> [^演示]
+[^演示]: 我是脚注<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="6-无序列表"><a href="#6-无序列表" class="headerlink" title="6.无序列表"></a>6.无序列表</h3><p>无序列表使用<code>星号(*)、加号(+)或减号(-)</code> + <code>空格</code> 来表示,如：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">- 第一项
+- 第二项
+- 第三项<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="7-有序列表"><a href="#7-有序列表" class="headerlink" title="7.有序列表"></a>7.有序列表</h3><p>有序列表使用<code>数字</code>+<code>.</code>来表示，如：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">1. 第一项
+2. 第二项
+3. 第三项<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="8-列表嵌套"><a href="#8-列表嵌套" class="headerlink" title="8.列表嵌套"></a>8.列表嵌套</h3><p>在子列表中的选项前面添加四个空格即可。</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">1. 第一项：
+    - 第一项嵌套的第一个元素
+    - 第一项嵌套的第二个元素
+2. 第二项：
+    - 第二项嵌套的第一个元素
+    - 第二项嵌套的第二个元素<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="9-引用块"><a href="#9-引用块" class="headerlink" title="9.引用块"></a>9.引用块</h3><p><code>&gt;</code>+<code>空格</code>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&gt; 111
+&gt; 222<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>111<br>222</p>
+</blockquote>
+<p>嵌套引用块：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&gt; 最外层
+&gt; &gt; 第一层嵌套
+&gt; &gt; &gt; 第二层嵌套<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>最外层</p>
+<blockquote>
+<p>第一层嵌套</p>
+<blockquote>
+<p>第二层嵌套</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>也可以和有序/无序列表搭配使用。</p>
+<h3 id="10-代码块"><a href="#10-代码块" class="headerlink" title="10.代码块"></a>10.代码块</h3><p>①<code>```</code>包裹起来：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">```java
+public static void main(String args[]){
+	System.out.print("HelloMarkdown");
+}
+```<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>②前面加四个空格或一个tab</p>
+<h3 id="11-链接"><a href="#11-链接" class="headerlink" title="11.链接"></a>11.链接</h3><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">[链接名称](链接地址)
+或
+&lt;链接地址&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>也可以类似脚注的写法：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">[GAATTC][123]
+[123]: https://gaattc.gitee.io<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="12-图片"><a href="#12-图片" class="headerlink" title="12.图片"></a>12.图片</h3><p>类似链接，前面加一个感叹号</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">![alt](http://#)
+或
+![alt](http://# "title")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>也可以类似脚注写法。</p>
+<p>也可以使用html写法：</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;img src="http://#" width="50%"&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="13-表格"><a href="#13-表格" class="headerlink" title="13.表格"></a>13.表格</h3><p>使用 <code>|</code> 来分隔不同的单元格，使用 <code>-</code> 来分隔表头和其他行。</p>
+<p>表格的对齐方式：</p>
+<ul>
+<li><strong>-:</strong> 设置内容和标题栏居右对齐。</li>
+<li><strong>:-</strong> 设置内容和标题栏居左对齐。</li>
+<li><strong>:-:</strong> 设置内容和标题栏居中对齐。</li>
+</ul>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">| 左对齐 | 右对齐 | 居中对齐|
+| :-----| ----: | :----:|
+| 单元格 | 单元格 | 单元格 |
+| 单元格 | 单元格 | 单元格 |<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="2-高级用法"><a href="#2-高级用法" class="headerlink" title="2.高级用法"></a>2.高级用法</h2><h3 id="1-文字大小变"><a href="#1-文字大小变" class="headerlink" title="1.文字大小变"></a>1.文字大小变</h3><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>font</span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span>4</span><span class="token punctuation">&gt;</span></span>我是变大的字<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>font</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>small</span><span class="token punctuation">&gt;</span></span>字体变小<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>small</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>big</span><span class="token punctuation">&gt;</span></span>字体变大<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>big</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><font size="4">我是变大的字</font><br><small>字体变小</small><br><big>字体变大</big></p>
+<h3 id="2-文字颜色和字体标签"><a href="#2-文字颜色和字体标签" class="headerlink" title="2.文字颜色和字体标签"></a>2.文字颜色和字体标签</h3><p>可以使用font标签：</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>font</span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span>red</span> <span class="token attr-name">face</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span>Consolas</span><span class="token punctuation">&gt;</span></span>文字<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>font</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><font color="red" face="Consolas">文字</font></p>
+<h3 id="3-其他支持的标签："><a href="#3-其他支持的标签：" class="headerlink" title="3.其他支持的标签："></a>3.其他支持的标签：</h3><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>kbd</span><span class="token punctuation">&gt;</span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">&gt;</span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span><span class="token punctuation">&gt;</span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>em</span><span class="token punctuation">&gt;</span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sup</span><span class="token punctuation">&gt;</span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sub</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="4-转义字符"><a href="#4-转义字符" class="headerlink" title="4.转义字符"></a>4.转义字符</h3><p>如果需要显示特定的符号则需要使用转义字符，可以使用反斜杠转义特殊字符：</p>
+<pre class="line-numbers language-none"><code class="language-none">\   反斜线
+`   反引号
+*   星号
+_   下划线
+{}  花括号
+[]  方括号
+()  小括号
+#   井字号
++   加号
+-   减号
+.   英文句点
+!   感叹号<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="5-数学公式-需要mathjax"><a href="#5-数学公式-需要mathjax" class="headerlink" title="5.数学公式(需要mathjax)"></a>5.数学公式(需要mathjax)</h3><p>可以使用两个美元符 $$ 包裹 TeX 或 LaTeX 格式的数学公式来实现：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">$$
+\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix} 
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+\frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \\
+\frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0 \\
+\end{vmatrix}
+${$tep1}{\style{visibility:hidden}{(x+1)(x+1)}}
+$$<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>$$<br>\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix}<br>\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \<br>\frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \<br>\frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0 \<br>\end{vmatrix}<br>${$tep1}{\style{visibility:hidden}{(x+1)(x+1)}}<br>$$</p>
+<h3 id="6-流程图"><a href="#6-流程图" class="headerlink" title="6.流程图"></a>6.流程图</h3><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/b421cc723da5">参考</a></p>
+
+            </div>
+            <hr/>
 
             
 
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">GAATTC</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://gaattc.gitee.io/posts/5417bea/">http://gaattc.gitee.io/posts/5417bea/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">GAATTC</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/markdown/">
+                                    <span class="chip bg-color">markdown</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,wechat,weibo,twitter" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
             
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力(开玩笑的不要打赏)</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
 
             
+        </div>
+    </div>
 
-            
-            <style>
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
     .valine-card {
         margin: 1.5rem auto;
     }
@@ -1532,12 +2062,300 @@
 </div>
 
 
-            
-			
-			
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/posts/5417bea/">
+                    <div class="card-image">
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/iconfinder_markdown_298823.png" class="responsive-img" alt="markdown语法总结">
+                        
+                        <span class="card-title">markdown语法总结</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            markdown语法总结1.基本语法1.标题使用 #号+空格可表示 1-6 级标题。
+# 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题
+
+2.换行①使用两个空格+回车换行
+②使
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    学习
+                                </a>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/markdown/" class="post-category">
+                                    markdown
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/markdown/">
+                        <span class="chip bg-color">markdown</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/23d9d6c0/">
+                    <div class="card-image">
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/ac6eddc451da81cb037c289d5366d016082431c3.jpg" class="responsive-img" alt="sql查询语法总结">
+                        
+                        <span class="card-title">sql查询语法总结</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            sql查询语法总结mybatis用到很多基础都忘了，复习一下…
+
+环境：mysql5.7
+
+1.SELECT语句的执行顺序(6) SELECT column_name, …(1) FROM table_name, …(2) [WHERE …
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-04
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    学习
+                                </a>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                    数据库
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/sql/">
+                        <span class="chip bg-color">sql</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        //if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        //}
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: GAATTC的隐藏小窝<br />'
+            + '文章作者: GAATTC<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
         </div>
     </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color" title="展开/关闭TOC">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
 </main>
+
+
 
     <footer class="page-footer bg-color">
     
