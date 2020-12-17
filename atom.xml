@@ -6,7 +6,7 @@
   <link href="http://gaattc.gitee.io/atom.xml" rel="self"/>
   
   <link href="http://gaattc.gitee.io/"/>
-  <updated>2020-12-09T07:22:24.809Z</updated>
+  <updated>2020-12-17T13:13:14.635Z</updated>
   <id>http://gaattc.gitee.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>matery添加夜晚模式</title>
+    <link href="http://gaattc.gitee.io/posts/de48a9ab/"/>
+    <id>http://gaattc.gitee.io/posts/de48a9ab/</id>
+    <published>2020-12-17T12:46:08.000Z</published>
+    <updated>2020-12-17T13:13:14.635Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;matery添加夜晚模式&quot;&gt;&lt;a href=&quot;#matery添加夜晚模式&quot; class=&quot;headerlink&quot; title=&quot;matery添加夜晚模式&quot;&gt;&lt;/a&gt;matery添加夜晚模式&lt;/h1&gt;&lt;h2 id=&quot;1-在layout-ejs中添加按钮&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="http://gaattc.gitee.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="hexo" scheme="http://gaattc.gitee.io/categories/%E5%AD%A6%E4%B9%A0/hexo/"/>
+    
+    
+    <category term="学习心得" scheme="http://gaattc.gitee.io/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/"/>
+    
+    <category term="hexo" scheme="http://gaattc.gitee.io/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>markdown语法总结</title>

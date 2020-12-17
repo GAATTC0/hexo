@@ -171,7 +171,7 @@
 	<!-- hexo-inject:begin --><!-- hexo-inject:end --><!--动态背景-->
 	<div id="bg"><canvas></canvas><canvas></canvas><canvas></canvas></div>
 	<script src="/js/canva_moving_effect.js"></script>
-	
+	<!--加载动画-->
 	
         <div id="loading-container">
              <p class="loading-text">正在搬运下一页::>_<:: . . . </p>
@@ -482,6 +482,15 @@
           <i class="fas fa-wifi" style="margin-top: -20px; zoom: 0.6;"></i>
           
           <span>友链检测</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="http://ping.chinaz.com/">
+          
+          <i class="fas fa-broadcast-tower" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>HOST测速</span>
         </a>
       </li>
       
@@ -816,6 +825,16 @@
                   </a>
                 </li>
               
+                <li>
+
+                  <a target="_blank" rel="noopener" href="http://ping.chinaz.com/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-broadcast-tower" style="position: absolute;left:50px" ></i>
+			      
+		          <span>HOST测速</span>
+                  </a>
+                </li>
+              
             </ul>
           
         </li>
@@ -884,6 +903,61 @@
     <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
         <div class="row article-row">
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/6c9b5b14/">
+                        <div class="card-image">
+                            
+                            <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/20201116215058.png" class="responsive-img" alt="TODO">
+                            
+                            <span class="card-title">TODO</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                TODO一、hexo相关
+ 【bug】：hexo每日诗词无法显示
+ 【bug】：matery二级分类无效
+ 【bug】：代码高亮无效
+ 【bug】：$ hexo clean 后live2d被删除(不知道怎么就好了)
+ 【bug】文章阅读次数
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-16
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    日常
+                                </a>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/todo/" class="post-category">
+                                    todo
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/todo/">
+                            <span class="chip bg-color">todo</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
@@ -1199,7 +1273,7 @@ Java 基础 40语言特性 12Q1：Java 语言的优点？① 平台无关性，�
 
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
-                class="white-color">99.3k</span>&nbsp;字
+                class="white-color">99.8k</span>&nbsp;字
             
             
             
@@ -1428,7 +1502,23 @@ $(function () {
 
     <!--全屏-->
     <script src="/js/fullscreen.js" type="module"></script>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
+    
+    <!--夜晚模式-->
+    <script>
+        if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark');
+        }
+        else if (new Date().getHours() >= 22 || new Date().getHours() < 7) {
+        document.body.classList.add('dark');
+        } 
+        else if (matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+        }
+    </script>
+    <a onclick="switchNightMode()" id="sma">
+        <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
+    </a><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 processImages: null,

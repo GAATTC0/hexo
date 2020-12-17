@@ -1966,9 +1966,8 @@ footer .copy-right {
 }
 
 /*二级菜单*/
-
-.nav-menu {
-}
+/*.nav-menu {
+}*/
 
 .nav-menu li .sub-nav {
     position: absolute;
@@ -2084,6 +2083,63 @@ footer .copy-right {
     padding: 0px;
     margin: 0px;
 }
+
+/* 深色模式按钮设置 */
+#sma {
+    background: #000;
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: fixed;
+    border-radius: 50%;
+    right: 15px;
+    bottom: 670px;
+    padding-top: 15px;
+    margin-bottom: 0;
+    z-index: 998;
+    cursor: pointer;
+}
+
+#sma .fa-moon-o {
+    position: absolute;
+    right: 8px;
+    bottom: 6px;
+    font-size: 1.3rem!important;
+}
+#sma .fa-lightbulb  {
+    position: absolute;
+    right: 8px;
+    bottom: 6px;
+    font-size: 1.35rem!important;
+}
+
+.fa-moon-o:before {
+    content: "\f186";
+}
+.fa-comments:before {
+    content: "\f086";
+}
+/* 深色模式设置 */
+    body.dark .bg-cover .post-title,body.dark .card .card-content p,body.dark .card .card-image .card-title,body.dark .chip-container .tag-title,body.dark .fa-lightbulb:before,body.dark .fa-moon-o:before,body.dark .fas,body.dark .friends-container .tag-title,body.dark .frind-ship .title h1,body.dark .row .text,body.dark .title,body.dark .v[data-class=v] .vcount,body.dark .v[data-class=v] .vcount .vnum,body.dark a,body.dark article .article-content .summary,body.dark article .article-tags .chip,body.dark div.jqcloud a,body.dark h1,body.dark h2,body.dark h3,body.dark h4,body.dark h5,body.dark h6,body.dark header .side-nav .menu-list a,body.dark header .side-nav .mobile-head .logo-desc,body.dark header .side-nav .mobile-head .logo-name,body.dark li,body.dark p,body.dark pre code {
+        color: rgba(255,255,255,.6)
+    }
+    
+    body.dark .block-with-text:after,body.dark .card {
+        background-color: #282c34
+    }
+    
+    body.dark,body.dark #rewardModal .modal-content,body.dark .modal,body.dark .v[data-class=v] .vcount,body.dark header .side-nav,body.dark header .side-nav .menu-list .m-nav-show {
+        background-color: #12121c
+    }
+    
+    body.dark .aplayer {
+        background: #2f3742!important
+    }
+    
+    body.dark img,body.dark strong {
+        filter: brightness(.7)
+    }
+
 /*头像旋转*/
 img.vimg {
      transition: all 2s   /* 旋转时间为 1s */

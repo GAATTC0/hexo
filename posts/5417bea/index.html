@@ -171,7 +171,7 @@
 	<!-- hexo-inject:begin --><!-- hexo-inject:end --><!--动态背景-->
 	<div id="bg"><canvas></canvas><canvas></canvas><canvas></canvas></div>
 	<script src="/js/canva_moving_effect.js"></script>
-	
+	<!--加载动画-->
 	
         <div id="loading-container">
              <p class="loading-text">正在搬运下一页::>_<:: . . . </p>
@@ -482,6 +482,15 @@
           <i class="fas fa-wifi" style="margin-top: -20px; zoom: 0.6;"></i>
           
           <span>友链检测</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="http://ping.chinaz.com/">
+          
+          <i class="fas fa-broadcast-tower" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>HOST测速</span>
         </a>
       </li>
       
@@ -813,6 +822,16 @@
 				   <i class="fa fas fa-wifi" style="position: absolute;left:50px" ></i>
 			      
 		          <span>友链检测</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="http://ping.chinaz.com/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-broadcast-tower" style="position: absolute;left:50px" ></i>
+			      
+		          <span>HOST测速</span>
                   </a>
                 </li>
               
@@ -2071,38 +2090,29 @@ $$<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/5417bea/">
+                <a href="/posts/de48a9ab/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/iconfinder_markdown_298823.png" class="responsive-img" alt="markdown语法总结">
+                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/moon1217.jpg" class="responsive-img" alt="matery添加夜晚模式">
                         
-                        <span class="card-title">markdown语法总结</span>
+                        <span class="card-title">matery添加夜晚模式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            markdown语法总结1.基本语法1.标题使用 #号+空格可表示 1-6 级标题。
-# 一级标题
-## 二级标题
-### 三级标题
-#### 四级标题
-##### 五级标题
-###### 六级标题
-
-2.换行①使用两个空格+回车换行
-②使
+                            matery添加夜晚模式1.在layout.ejs中添加按钮在layout的body标签中添加代码。按惯例还是加在最后面尽量让页面主体先加载。
+hexo\themes\hexo-theme-matery-master\layout\layo
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-09
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-17
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -2111,20 +2121,23 @@ $$<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><
                                     学习
                                 </a>
                             
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/markdown/" class="post-category">
-                                    markdown
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/hexo/" class="post-category">
+                                    hexo
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/markdown/">
-                        <span class="chip bg-color">markdown</span>
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/">
+                        <span class="chip bg-color">学习心得</span>
+                    </a>
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
                     </a>
                     
                 </div>
@@ -2416,7 +2429,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
-                class="white-color">99.3k</span>&nbsp;字
+                class="white-color">99.8k</span>&nbsp;字
             
             
             
@@ -2645,7 +2658,23 @@ $(function () {
 
     <!--全屏-->
     <script src="/js/fullscreen.js" type="module"></script>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
+    
+    <!--夜晚模式-->
+    <script>
+        if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark');
+        }
+        else if (new Date().getHours() >= 22 || new Date().getHours() < 7) {
+        document.body.classList.add('dark');
+        } 
+        else if (matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+        }
+    </script>
+    <a onclick="switchNightMode()" id="sma">
+        <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
+    </a><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 processImages: null,
