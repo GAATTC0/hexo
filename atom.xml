@@ -6,7 +6,7 @@
   <link href="http://gaattc.gitee.io/atom.xml" rel="self"/>
   
   <link href="http://gaattc.gitee.io/"/>
-  <updated>2021-01-01T04:05:40.679Z</updated>
+  <updated>2021-01-14T01:56:09.785Z</updated>
   <id>http://gaattc.gitee.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>秒速五厘米</title>
+    <link href="http://gaattc.gitee.io/posts/8526d39f/"/>
+    <id>http://gaattc.gitee.io/posts/8526d39f/</id>
+    <published>2021-01-14T01:38:53.000Z</published>
+    <updated>2021-01-14T01:56:09.785Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;秒速五厘米&quot;&gt;&lt;a href=&quot;#秒速五厘米&quot; class=&quot;headerlink&quot; title=&quot;秒速五厘米&quot;&gt;&lt;/a&gt;秒速五厘米&lt;/h2&gt;&lt;iframe</summary>
+        
+      
+    
+    
+    
+    <category term="日常" scheme="http://gaattc.gitee.io/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    <category term="记录" scheme="http://gaattc.gitee.io/categories/%E6%97%A5%E5%B8%B8/%E8%AE%B0%E5%BD%95/"/>
+    
+    
+    <category term="观影" scheme="http://gaattc.gitee.io/tags/%E8%A7%82%E5%BD%B1/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello MongoDB</title>
     <link href="http://gaattc.gitee.io/posts/a0735a7e/"/>
     <id>http://gaattc.gitee.io/posts/a0735a7e/</id>
     <published>2020-12-31T02:22:52.000Z</published>
-    <updated>2021-01-01T04:05:40.679Z</updated>
+    <updated>2021-01-14T01:34:23.653Z</updated>
     
     
       
@@ -534,7 +561,7 @@
     <link href="http://gaattc.gitee.io/posts/6c9b5b14/"/>
     <id>http://gaattc.gitee.io/posts/6c9b5b14/</id>
     <published>2020-11-16T13:41:28.000Z</published>
-    <updated>2020-12-11T13:37:21.781Z</updated>
+    <updated>2021-01-01T04:15:49.421Z</updated>
     
     
       
@@ -553,33 +580,6 @@
     
     
     <category term="todo" scheme="http://gaattc.gitee.io/tags/todo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>algorithm</title>
-    <link href="http://gaattc.gitee.io/posts/9505ccb9/"/>
-    <id>http://gaattc.gitee.io/posts/9505ccb9/</id>
-    <published>2020-11-16T11:28:42.000Z</published>
-    <updated>2020-12-07T09:25:03.613Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;algorithm&quot;&gt;&lt;a href=&quot;#algorithm&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="学习" scheme="http://gaattc.gitee.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="算法" scheme="http://gaattc.gitee.io/categories/%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="算法" scheme="http://gaattc.gitee.io/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   

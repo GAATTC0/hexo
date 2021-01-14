@@ -454,7 +454,7 @@
           
           <i class="fas fa-file-image" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>fontawsome库</span>
+          <span>fontawesome库</span>
         </a>
       </li>
       
@@ -818,7 +818,7 @@
 				  
 				   <i class="fa fas fa-file-image" style="position: absolute;left:50px" ></i>
 			      
-		          <span>fontawsome库</span>
+		          <span>fontawesome库</span>
                   </a>
                 </li>
               
@@ -1088,21 +1088,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-01-01
+                    2021-01-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    719
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    4 分
                 </div>
                 
 
@@ -1175,7 +1175,72 @@ db.auth("admin","password")<span aria-hidden="true" class="line-numbers-rows"><s
 <h3 id="4-操作"><a href="#4-操作" class="headerlink" title="4.操作"></a>4.操作</h3><p>图形界面很方便明了。</p>
 <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20201231113242418.png" alt="image-20201231113242418" style="zoom:67%;">
 
-<h2 id="四-MongoDb语法"><a href="#四-MongoDb语法" class="headerlink" title="四.MongoDb语法"></a>四.MongoDb语法</h2><p>待更…</p>
+<h2 id="四-MongoDB语法"><a href="#四-MongoDB语法" class="headerlink" title="四.MongoDB语法"></a>四.MongoDB语法</h2><h3 id="1-查看所有数据库"><a href="#1-查看所有数据库" class="headerlink" title="1.查看所有数据库"></a>1.查看所有数据库</h3><pre class="line-numbers language-mongo" data-language="mongo"><code class="language-mongo">show dbs<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="2-进入数据库"><a href="#2-进入数据库" class="headerlink" title="2.进入数据库"></a>2.进入数据库</h3><pre class="line-numbers language-mongo" data-language="mongo"><code class="language-mongo">use {dbname}<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="3-查询数据"><a href="#3-查询数据" class="headerlink" title="3.查询数据"></a>3.查询数据</h3><pre class="line-numbers language-mongo" data-language="mongo"><code class="language-mongo">db.{collection}.find({query}, {projection})<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li><strong>query</strong> ：可选，使用查询操作符指定查询条件。</li>
+<li><strong>projection</strong> ：可选，使用投影操作符指定返回的键。查询时返回文档中所有键值， 只需省略该参数即可（默认省略）。</li>
+</ul>
+<p>可以在后面再加一个格式化方便阅读，语法如下：</p>
+<pre class="line-numbers language-mongo" data-language="mongo"><code class="language-mongo">db.{collection}.find({query}, {projection}).pretty() <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="4-查询条件语法"><a href="#4-查询条件语法" class="headerlink" title="4.查询条件语法"></a>4.查询条件语法</h3><pre class="line-numbers language-mongo" data-language="mongo"><code class="language-mongo">等于：find({"key":"value"})
+小于：find({"key":{$lt:100}})
+小于等于：find({"key":{$lte:100}})
+大于：find({"key":{$gt:100}})
+大于等于：find({"key":{$gte:100}})
+不大于：find({"key":{$ne:100}})<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>and条件：</p>
+<pre class="line-numbers language-mongo" data-language="mongo"><code class="language-mongo">find({key1:value1, key2:value2})<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>or条件：</p>
+<pre class="line-numbers language-mongo" data-language="mongo"><code class="language-mongo">find({$or: [{key1: value1}, {key2:value2}]})<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>两者结合：</p>
+<pre class="line-numbers language-mongo" data-language="mongo"><code class="language-mongo">find({"key1": {$gt:100}, $or: [{"key2": "10"},{"key3": "20"}]})<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="五-java中使用"><a href="#五-java中使用" class="headerlink" title="五.java中使用"></a>五.java中使用</h2><h3 id="1-准备"><a href="#1-准备" class="headerlink" title="1.准备"></a>1.准备</h3><p>使用<code>mongo-java-driver-3.12.7</code>为例，配置依赖。</p>
+<h3 id="2-数据库连接"><a href="#2-数据库连接" class="headerlink" title="2.数据库连接"></a>2.数据库连接</h3><p>可以使用lambda表达式创建mongo client：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">MongoClient client = MongoClients.create(
+                MongoClientSettings.builder()
+                        .applyToClusterSettings(builder -&gt; builder.hosts(Collections.singletonList(new ServerAddress({host}, {port}))))
+                        .credential(MongoCredential.createCredential({{username}, {authDB}, {pwd}.toCharArray()))
+                        .build()
+        );<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="3-获取数据库"><a href="#3-获取数据库" class="headerlink" title="3.获取数据库"></a>3.获取数据库</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java">MongoDatabase db = client.getDatabase({db});<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="4-获取文档集合"><a href="#4-获取文档集合" class="headerlink" title="4.获取文档集合"></a>4.获取文档集合</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java">MongoCollection&lt;Document&gt; col = db.getCollection({collection});<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="5-创建过滤条件-可选"><a href="#5-创建过滤条件-可选" class="headerlink" title="5.创建过滤条件(可选)"></a>5.创建过滤条件(可选)</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java">List&lt;Bson&gt; filter = new LinkedList&lt;&gt;();
+filter.add(eq({key}, {value}));<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="6-按条件查询出文档"><a href="#6-按条件查询出文档" class="headerlink" title="6.按条件查询出文档"></a>6.按条件查询出文档</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java">FindIterable&lt;Document&gt; documents = coll.find(and(filter)).projection(new BasicDBObject("_id", 0));<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<blockquote>
+<p>这里的projection后面值为0表示不查询<code>_id</code>字段</p>
+</blockquote>
+<h3 id="7-对文档遍历"><a href="#7-对文档遍历" class="headerlink" title="7.对文档遍历"></a>7.对文档遍历</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java">MongoCursor&lt;Document&gt; cursor = documents.iterator();
+while (cursor.hasNext()) {
+            Document next = cursor.next();
+            Set&lt;String&gt; keys = next.keySet();
+            for (String key : keys) {
+                Object o = next.get(key);
+                //dosomething...
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="8-关闭客户端防止内存泄漏"><a href="#8-关闭客户端防止内存泄漏" class="headerlink" title="8.关闭客户端防止内存泄漏"></a>8.关闭客户端防止内存泄漏</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java">client.close();<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<hr>
+
+<p>待更新…</p>
 
             </div>
             <hr/>
@@ -2048,55 +2113,52 @@ db.auth("admin","password")<span aria-hidden="true" class="line-numbers-rows"><s
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/a0735a7e/">
+                <a href="/posts/8526d39f/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/mongodb-img.jpg" class="responsive-img" alt="Hello MongoDB">
+                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/5cm_img.jpg" class="responsive-img" alt="秒速五厘米">
                         
-                        <span class="card-title">Hello MongoDB</span>
+                        <span class="card-title">秒速五厘米</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            HelloMongoDB - MongoDB的学习之路(还很长)
-官网：https://www.mongodb.com/try
+                            秒速五厘米 
 
-一.安装和使用进入官网，一般本地使用的话还是选择On-Premises，学习的话下载社区版就够用了。
-我使用的
+鼓起勇气抱着可能会哭出来的决心看了一直不敢碰的《秒速五厘米》，每一话完都以为是铺垫，后面才是正片，可是当ed响起的时候才回过神来。这就完了？心里想到。
+这不是一部像《你的名字》那样直击心灵的剧，不是将遗憾和惋惜直接摆在眼前。
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-31
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-14
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    学习
+                            <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    日常
                                 </a>
                             
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
-                                    数据库
+                            <a href="/categories/%E6%97%A5%E5%B8%B8/%E8%AE%B0%E5%BD%95/" class="post-category">
+                                    记录
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/mongodb/">
-                        <span class="chip bg-color">mongodb</span>
+                    <a href="/tags/%E8%A7%82%E5%BD%B1/">
+                        <span class="chip bg-color">观影</span>
                     </a>
                     
                 </div>
@@ -2393,7 +2455,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
-                class="white-color">101.3k</span>&nbsp;字
+                class="white-color">103.7k</span>&nbsp;字
             
             
             
