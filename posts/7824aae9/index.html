@@ -3,7 +3,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="matery添加夜晚模式, GAATTC的隐藏小窝">
+    <meta name="keywords" content="我的电脑换届仪式, GAATTC的隐藏小窝">
     <meta name="description" content="A simple blog maintained for recording the ordinary life...">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -15,7 +15,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>matery添加夜晚模式 | GAATTC的隐藏小窝</title>
+    <title>我的电脑换届仪式 | GAATTC的隐藏小窝</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -1000,12 +1000,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/moon1217.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/20210218190419.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">matery添加夜晚模式</h1>
+                    <h1 class="description center-align post-title">我的电脑换届仪式</h1>
                 </div>
             </div>
         </div>
@@ -1128,12 +1128,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/">
-                                <span class="chip bg-color">学习心得</span>
-                            </a>
-                        
-                            <a href="/tags/hexo/">
-                                <span class="chip bg-color">hexo</span>
+                            <a href="/tags/%E8%AE%B0%E5%BD%95/">
+                                <span class="chip bg-color">记录</span>
                             </a>
                         
                     </div>
@@ -1144,12 +1140,12 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                学习
+                            <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
+                                日常
                             </a>
                         
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/hexo/" class="post-category">
-                                hexo
+                            <a href="/categories/%E6%97%A5%E5%B8%B8/%E8%AE%B0%E5%BD%95/" class="post-category">
+                                记录
                             </a>
                         
                     </div>
@@ -1161,21 +1157,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-17
+                    2021-02-18
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-12-18
+                    2021-02-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    615
+                    947
                 </div>
                 
 
@@ -1192,126 +1188,43 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="matery添加夜晚模式"><a href="#matery添加夜晚模式" class="headerlink" title="matery添加夜晚模式"></a>matery添加夜晚模式</h1><h2 id="1-在layout-ejs中添加按钮"><a href="#1-在layout-ejs中添加按钮" class="headerlink" title="1.在layout.ejs中添加按钮"></a>1.在layout.ejs中添加按钮</h2><p>在layout的body标签中添加代码。按惯例还是加在最后面尽量让页面主体先加载。</p>
-<pre class="line-numbers language-dir" data-language="dir"><code class="language-dir">hexo\themes\hexo-theme-matery-master\layout\layout.ejs<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!--夜晚模式--&gt;</span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">'dark'</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">'1'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">'dark'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getHours</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&gt;=</span> <span class="token number">22</span> <span class="token operator">||</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getHours</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">7</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">'dark'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span> 
-    <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">matchMedia</span><span class="token punctuation">(</span><span class="token string">'(prefers-color-scheme: dark)'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>matches<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">'dark'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>switchNightMode()<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sma<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fa fa-moon-o<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nightMode<span class="token punctuation">"</span></span> <span class="token attr-name">aria-hidden</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="2-添加css样式"><a href="#2-添加css样式" class="headerlink" title="2.添加css样式"></a>2.添加css样式</h2><pre class="line-numbers language-dir" data-language="dir"><code class="language-dir">hexo\themes\hexo-theme-matery-master\source\css\matery.css<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>精心适配的css：</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/* 深色模式按钮设置 */</span>
-<span class="token selector">#sma</span> <span class="token punctuation">{</span>
-    <span class="token property">background</span><span class="token punctuation">:</span> #000<span class="token punctuation">;</span>
-    <span class="token property">width</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
-    <span class="token property">height</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
-    <span class="token property">position</span><span class="token punctuation">:</span> fixed<span class="token punctuation">;</span>
-    <span class="token property">border-radius</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
-    <span class="token property">right</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
-    <span class="token property">bottom</span><span class="token punctuation">:</span> 670px<span class="token punctuation">;</span>
-    <span class="token property">padding-top</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
-    <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
-    <span class="token property">z-index</span><span class="token punctuation">:</span> 998<span class="token punctuation">;</span>
-    <span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token selector">#sma .fa-moon-o</span> <span class="token punctuation">{</span>
-    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-    <span class="token property">right</span><span class="token punctuation">:</span> 8px<span class="token punctuation">;</span>
-    <span class="token property">bottom</span><span class="token punctuation">:</span> 6px<span class="token punctuation">;</span>
-    <span class="token property">font-size</span><span class="token punctuation">:</span> 1.3rem<span class="token important">!important</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token selector">#sma .fa-lightbulb</span>  <span class="token punctuation">{</span>
-    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-    <span class="token property">right</span><span class="token punctuation">:</span> 8px<span class="token punctuation">;</span>
-    <span class="token property">bottom</span><span class="token punctuation">:</span> 6px<span class="token punctuation">;</span>
-    <span class="token property">font-size</span><span class="token punctuation">:</span> 1.35rem<span class="token important">!important</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token selector">.fa-moon-o:before</span> <span class="token punctuation">{</span>
-    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">"\f186"</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token selector">.fa-comments:before</span> <span class="token punctuation">{</span>
-    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">"\f086"</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token comment">/* 深色模式设置 */</span>
-    <span class="token selector">body.dark .bg-cover .post-title,body.dark .card .card-content p,body.dark .card .card-image .card-title,body.dark .chip-container .tag-title,body.dark .fa-lightbulb:before,body.dark .fa-moon-o:before,body.dark .fas,body.dark .friends-container .tag-title,body.dark .frind-ship .title h1,body.dark .row .text,body.dark .title,body.dark .v[data-class=v] .vcount,body.dark .v[data-class=v] .vcount .vnum,body.dark a,body.dark article .article-content .summary,body.dark article .article-tags .chip,body.dark div.jqcloud a,body.dark h1,body.dark h2,body.dark h3,body.dark h4,body.dark h5,body.dark h6,body.dark header .side-nav .menu-list a,body.dark header .side-nav .mobile-head .logo-desc,body.dark header .side-nav .mobile-head .logo-name,body.dark li,body.dark p,body.dark pre code</span> <span class="token punctuation">{</span>
-        <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>255<span class="token punctuation">,</span>255<span class="token punctuation">,</span>255<span class="token punctuation">,</span>.6<span class="token punctuation">)</span>
-    <span class="token punctuation">}</span>
-    
-    <span class="token selector">body.dark .block-with-text:after,body.dark .card</span> <span class="token punctuation">{</span>
-        <span class="token property">background-color</span><span class="token punctuation">:</span> #282c34
-    <span class="token punctuation">}</span>
-    
-    <span class="token selector">body.dark,body.dark #rewardModal .modal-content,body.dark .modal,body.dark .v[data-class=v] .vcount,body.dark header .side-nav,body.dark header .side-nav .menu-list .m-nav-show</span> <span class="token punctuation">{</span>
-        <span class="token property">background-color</span><span class="token punctuation">:</span> #12121c
-    <span class="token punctuation">}</span>
-    
-    <span class="token selector">body.dark .aplayer</span> <span class="token punctuation">{</span>
-        <span class="token property">background</span><span class="token punctuation">:</span> #2f3742<span class="token important">!important</span>
-    <span class="token punctuation">}</span>
-    
-    <span class="token selector">body.dark img,body.dark strong</span> <span class="token punctuation">{</span>
-        <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">brightness</span><span class="token punctuation">(</span>.7<span class="token punctuation">)</span>
-    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<blockquote>
-<p>右下角东西太多了不好看，就把按钮放右上角了。。。<br>想调整就改改#sma的bottom。</p>
+                <h1 id="我的电脑换届仪式"><a href="#我的电脑换届仪式" class="headerlink" title="我的电脑换届仪式"></a>我的电脑换届仪式</h1><blockquote>
+<p>一点点仪式感吧哈哈</p>
 </blockquote>
-<p><font color="red" size="5">更新：移动端按钮和全屏按钮冲突了，还是改到下面吧。。。</font></p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">#sma</span> <span class="token punctuation">{</span>
-    <span class="token property">background</span><span class="token punctuation">:</span> #000<span class="token punctuation">;</span>
-    <span class="token property">width</span><span class="token punctuation">:</span> 35px<span class="token punctuation">;</span>
-    <span class="token property">height</span><span class="token punctuation">:</span> 35px<span class="token punctuation">;</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
-    <span class="token property">position</span><span class="token punctuation">:</span> fixed<span class="token punctuation">;</span>
-    <span class="token property">border-radius</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
-    <span class="token property">right</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
-    <span class="token property">bottom</span><span class="token punctuation">:</span> 190px<span class="token punctuation">;</span>
-    <span class="token property">padding-top</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
-    <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
-    <span class="token property">z-index</span><span class="token punctuation">:</span> 998<span class="token punctuation">;</span>
-    <span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="3-添加按钮js"><a href="#3-添加按钮js" class="headerlink" title="3.添加按钮js"></a>3.添加按钮js</h2><p>找到文件：</p>
-<pre class="line-numbers language-dir" data-language="dir"><code class="language-dir">hexo\themes\hexo-theme-matery-master\source\js\matery.js<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>在文件末尾添加代码：</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 深色模式设置</span>
-<span class="token keyword">function</span> <span class="token function">switchNightMode</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">var</span> body <span class="token operator">=</span> document<span class="token punctuation">.</span>body<span class="token punctuation">;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>body<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">'dark'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token string">'dark'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">'dark'</span><span class="token punctuation">,</span> <span class="token string">'0'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#nightMode'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeClass</span><span class="token punctuation">(</span><span class="token string">"fa-lightbulb"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addClass</span><span class="token punctuation">(</span><span class="token string">"fa-moon-o"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-        document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">'dark'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">'dark'</span><span class="token punctuation">,</span> <span class="token string">'1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#nightMode'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeClass</span><span class="token punctuation">(</span><span class="token string">"fa-moon-o"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addClass</span><span class="token punctuation">(</span><span class="token string">"fa-lightbulb"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="4-效果"><a href="#4-效果" class="headerlink" title="4.效果"></a>4.效果</h2><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20201217210126248.png"></p>
+<h2 id="1-回顾"><a href="#1-回顾" class="headerlink" title="1.回顾"></a>1.回顾</h2><p>2018年3月7日，也就是大一下学期刚开学不久，在<del>处心积虑</del> 深思熟虑和反复比较了很久之后最终选择了性价比最高的之一、神船的兄弟——炫龙kp2。在当时半导体产能缺乏物价居高不下的时候终于还是狠心剁手了这台8100+1060+8G*2400MHz+128G+1t。后来为了<del>游戏</del> 学习在大二又自己加了一根240G固态和8G内存，至此出满神装。</p>
+<p>它伴随了我的大部分大学时光，每逢新的3a大作问世、计算思维导论 c++ cad creo的学习、课设的绘图深夜、听歌看视频的享受时刻、疫情期间的网课、翘课学习java、秋招的刷题评测笔试面试等等。。每个点点滴滴都有它的辛勤工作和陪伴，机器上装的软件也可以说是colorful了，在此，必须说一句：</p>
+<p><font size="5" color="#2c96e8">辛苦了！</font></p>
+<p>可能是从小就对计算机的兴趣，一直电脑遇到问题喜欢自己解决，进而对电脑的理解要比一般人深很多，久而久之和电脑磨合地非常完美，在陪伴的2年11个月里没有出过问题，不过就在这个寒假，两周没开机看毕设的我受到了惩罚——无法开机，常规解决方案试了都无果而只能去修，结果是主板电路出了问题。</p>
+<p>马上要毕业了，也是时候换一台强劲的生产力面对今后新的征程了，在最后的一学期完成kp2最后的使命，光荣退休吧。</p>
+<h2 id="2-前瞻"><a href="#2-前瞻" class="headerlink" title="2.前瞻"></a>2.前瞻</h2><p>果然我可能还是没法完全放弃游戏啊，1月份充实地学习一年秋招上岸功课修齐后在学校等回家，突然慢下来的生活节奏让我竟然有些空虚，心情也好不起来了，要知道一年前的那个时候我可是天天在玩命运2(也许玩游戏也是一种心灵上的寄托，至少不会察觉无聊了)。所以在mbp和rog的艰难抉择下最终放弃了前者，理由是不用说出来的理由。。</p>
+<p>然后电子产品买新不买旧是不会错的，但是30系刚问世不久，市场极度缺货，rog搭载30系的系列魔霸、幻都基本抢不到，要买只能from黄牛手里了(可恶啊)。于是乎，我最终没做等等党，而是选择了华硕家的另一个系列——天选，幸运地抢到了3060版的首发，针布戳。</p>
+<p>价格比当年的kp2贵了1k左右，但是不得不说性能迭代的速度是真的快：</p>
+<p>100%sRGB*1080p<em>240Hz+5800H+3060<font color="red">mq</font>+16G\</em>3200MHz+512G</p>
+<p>提升还是很大的(这下终于不用开全低画质玩3a了，✌清洁)。</p>
+<blockquote>
+<p>虽然说天选2作为一个为了给自家rog做背景板的“低配”产品，存在一些缺点：</p>
+<ul>
+<li>5800h在l3缓存存在bug影响性能还没完全解决</li>
+<li>显卡3060是80w的残血版(为了不换模具散热狠压功耗华硕真有你的)</li>
+<li>没有独显直连！</li>
+<li>内存是新工艺2bg的，性能比4bg低好多<span class="github-emoji"><span>😢</span><img src="/medias/loading.gif" data-original="https://github.githubassets.com/images/icons/emoji/unicode/1f622.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></li>
+<li>可惜没上2k屏</li>
+</ul>
+<p>不过我可以强行瑕不掩瑜，对我来说写代码、看视频、中画质玩玩游戏还是足够的。</p>
+</blockquote>
+<h2 id="3-软件统计"><a href="#3-软件统计" class="headerlink" title="3.软件统计"></a>3.软件统计</h2><blockquote>
+<p>近两年来学习和捣鼓使用装了很多软件，要换电脑了在此统计一下，方便查阅，以后有时间再详细写一个软件推荐文章</p>
+</blockquote>
+<p><a href="https://gaattc.gitee.io/posts/d905b657">我的电脑</a></p>
+<h2 id="4-留念图："><a href="#4-留念图：" class="headerlink" title="4.留念图："></a>4.留念图：</h2><p>快三年了，手机里就这么点照片，惭愧。</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/%E5%8A%A0%E5%9B%BA%E6%80%81%E6%97%B6%E5%88%BB0.jpg" alt="加固态时刻0"></p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/%E5%8A%A0%E5%9B%BA%E6%80%81%E6%97%B6%E5%88%BB.jpg" alt="加固态时刻"></p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/%E6%8D%A2%E7%A1%85%E8%84%82%E6%97%B6%E5%88%BB(7921yyds).jpg" alt="换硅脂时刻(7921yyds)"></p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/%E7%8C%AB%E5%92%8C%E6%9C%AC%E6%9C%AC.jpg" alt="猫和本本"></p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/%E7%8C%AB%E5%92%8C%E6%8E%92%E5%BA%8F.jpg" alt="猫和排序"></p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/%E6%97%A0%E9%94%A1%E5%85%AC%E5%AF%93.jpg" alt="无锡公寓"></p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/start1.jpg" alt="满满的开始菜单"></p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/20210218190419.png" alt="美丽的桌面"></p>
 
             </div>
             <hr/>
@@ -1337,7 +1250,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://gaattc.gitee.io/posts/de48a9ab/">http://gaattc.gitee.io/posts/de48a9ab/</a>
+                    <a href="http://gaattc.gitee.io/posts/7824aae9/">http://gaattc.gitee.io/posts/7824aae9/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1375,12 +1288,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/">
-                                    <span class="chip bg-color">学习心得</span>
-                                </a>
-                            
-                                <a href="/tags/hexo/">
-                                    <span class="chip bg-color">hexo</span>
+                                <a href="/tags/%E8%AE%B0%E5%BD%95/">
+                                    <span class="chip bg-color">记录</span>
                                 </a>
                             
                         </div>
@@ -2192,37 +2101,48 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/e38270af/">
+                <a href="/posts/d905b657/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/code1217.jpg" class="responsive-img" alt="评论、TOC、顶部按钮样式适配">
+                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/start1.jpg" class="responsive-img" alt="电脑上的软件们">
                         
-                        <span class="card-title">评论、TOC、顶部按钮样式适配</span>
+                        <span class="card-title">电脑上的软件们</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            评论、TOC、顶部按钮样式适配1.修改按钮背景CSS样式hexo\themes\hexo-theme-matery-master\source\css\matery.css
+                            电脑上的软件们正在更新中。。。
 
-在matery.css文件中找到并修改四个样式：
-.top-sc
+要换电脑了，梳理一下用了3年的电脑上的软件们，这份总结既是备忘，又是分享。
+
+先上图，我五彩斑斓的开始菜单的一部分
+
+1.基本装机必备(建议跳过)
+QQ
+微信
+火绒
+Chrome
+腾讯会议
+企业微信
+
+2.
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-17
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-18
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    学习
+                            <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    日常
                                 </a>
                             
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/hexo/" class="post-category">
-                                    hexo
+                            <a href="/categories/%E6%97%A5%E5%B8%B8/%E5%88%86%E4%BA%AB/" class="post-category">
+                                    分享
                                 </a>
                             
                             
@@ -2232,12 +2152,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/">
-                        <span class="chip bg-color">学习心得</span>
-                    </a>
-                    
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/%E5%88%86%E4%BA%AB/">
+                        <span class="chip bg-color">分享</span>
                     </a>
                     
                 </div>
@@ -2251,43 +2167,45 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/5417bea/">
+                <a href="/posts/84faa128/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/iconfinder_markdown_298823.png" class="responsive-img" alt="markdown语法总结">
+                        <img src="https://y.gtimg.cn/music/photo_new/T002R300x300M000002Iiyus4Q1Wzw_1.jpg?max_age=2592000" class="responsive-img" alt="Sunflower">
                         
-                        <span class="card-title">markdown语法总结</span>
+                        <span class="card-title">Sunflower</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            markdown语法总结1.基本语法1.标题使用 #号+空格可表示 1-6 级标题。
-# 一级标题
-## 二级标题
-### 三级标题
-#### 四级标题
-##### 五级标题
-###### 六级标题
+                            《Sunflower》指弹 - Paddy Sun1.演示
 
-2.换行①使用两个空格+回车换行
-②使
+作者远古时期视频(这就是青春啊)：
+ 
+
+
+这个视频油管播放千万，并深深影响了越南指弹(吧)哈哈
+
+2.附谱(from 大树)
+
+
+3.进度已经练了快一周，学起来比无题简单也快，
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-30
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    学习
+                            <a href="/categories/%E5%85%B4%E8%B6%A3/" class="post-category">
+                                    兴趣
                                 </a>
                             
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/markdown/" class="post-category">
-                                    markdown
+                            <a href="/categories/%E5%85%B4%E8%B6%A3/%E5%90%89%E4%BB%96/" class="post-category">
+                                    吉他
                                 </a>
                             
                             
@@ -2297,8 +2215,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/markdown/">
-                        <span class="chip bg-color">markdown</span>
+                    <a href="/tags/%E6%8C%87%E5%BC%B9/">
+                        <span class="chip bg-color">指弹</span>
                     </a>
                     
                 </div>
