@@ -6,7 +6,7 @@
   <link href="http://gaattc.gitee.io/atom.xml" rel="self"/>
   
   <link href="http://gaattc.gitee.io/"/>
-  <updated>2021-03-11T06:00:44.511Z</updated>
+  <updated>2021-03-16T11:13:15.076Z</updated>
   <id>http://gaattc.gitee.io/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>南京最后的时光</title>
+    <link href="http://gaattc.gitee.io/posts/56effdf6/"/>
+    <id>http://gaattc.gitee.io/posts/56effdf6/</id>
+    <published>2021-03-16T10:05:17.000Z</published>
+    <updated>2021-03-16T11:13:15.076Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;南京最后的时光&quot;&gt;&lt;a href=&quot;#南京最后的时光&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="日常" scheme="http://gaattc.gitee.io/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    <category term="记录" scheme="http://gaattc.gitee.io/categories/%E6%97%A5%E5%B8%B8/%E8%AE%B0%E5%BD%95/"/>
+    
+    
+    <category term="记录" scheme="http://gaattc.gitee.io/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我的愿望</title>
+    <link href="http://gaattc.gitee.io/posts/75544e59/"/>
+    <id>http://gaattc.gitee.io/posts/75544e59/</id>
+    <published>2021-03-16T10:01:01.000Z</published>
+    <updated>2021-03-16T11:11:33.447Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;我的愿望&quot;&gt;&lt;a href=&quot;#我的愿望&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="日常" scheme="http://gaattc.gitee.io/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    <category term="想法" scheme="http://gaattc.gitee.io/categories/%E6%97%A5%E5%B8%B8/%E6%83%B3%E6%B3%95/"/>
+    
+    
+    <category term="记录" scheme="http://gaattc.gitee.io/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
   
   <entry>
     <title>audition+premiere视频后期处理记录</title>
@@ -529,62 +583,6 @@
     <category term="学习心得" scheme="http://gaattc.gitee.io/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/"/>
     
     <category term="hexo" scheme="http://gaattc.gitee.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HEXO之live2d插件</title>
-    <link href="http://gaattc.gitee.io/posts/b7997eb8/"/>
-    <id>http://gaattc.gitee.io/posts/b7997eb8/</id>
-    <published>2020-11-21T03:11:27.000Z</published>
-    <updated>2020-12-07T09:25:03.564Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;HEXO之live2d插件&quot;&gt;&lt;a href=&quot;#HEXO之live2d插件&quot; class=&quot;headerlink&quot; title=&quot;HEXO之live2d插件&quot;&gt;&lt;/a&gt;HEXO之live2d插件&lt;/h1&gt;&lt;h2 id=&quot;1-参考链接&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="学习" scheme="http://gaattc.gitee.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="hexo" scheme="http://gaattc.gitee.io/categories/%E5%AD%A6%E4%B9%A0/hexo/"/>
-    
-    
-    <category term="学习心得" scheme="http://gaattc.gitee.io/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/"/>
-    
-    <category term="hexo" scheme="http://gaattc.gitee.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算机集成与柔性制造</title>
-    <link href="http://gaattc.gitee.io/posts/2b7212ab/"/>
-    <id>http://gaattc.gitee.io/posts/2b7212ab/</id>
-    <published>2020-11-19T08:48:56.000Z</published>
-    <updated>2020-11-19T11:42:02.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;计算机集成与柔性制造&quot;&gt;&lt;a href=&quot;#计算机集成与柔性制造&quot; class=&quot;headerlink&quot; title=&quot;计算机集成与柔性制造&quot;&gt;&lt;/a&gt;计算机集成与柔性制造&lt;/h1&gt;&lt;h2 id=&quot;一-绪论&quot;&gt;&lt;a href=&quot;#一-绪论&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="学习" scheme="http://gaattc.gitee.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="大学课程" scheme="http://gaattc.gitee.io/categories/%E5%AD%A6%E4%B9%A0/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B/"/>
-    
-    
-    <category term="备份" scheme="http://gaattc.gitee.io/tags/%E5%A4%87%E4%BB%BD/"/>
     
   </entry>
   
