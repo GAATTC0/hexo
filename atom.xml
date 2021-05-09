@@ -6,7 +6,7 @@
   <link href="http://gaattc.gitee.io/atom.xml" rel="self"/>
   
   <link href="http://gaattc.gitee.io/"/>
-  <updated>2021-05-09T11:00:30.175Z</updated>
+  <updated>2021-05-09T14:37:59.110Z</updated>
   <id>http://gaattc.gitee.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在Vercel上部署hexo，再见了gitee</title>
+    <link href="http://gaattc.gitee.io/posts/ee92e53c/"/>
+    <id>http://gaattc.gitee.io/posts/ee92e53c/</id>
+    <published>2021-05-09T14:01:27.000Z</published>
+    <updated>2021-05-09T14:37:59.110Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;在Vercel上部署hexo，再见了gitee&quot;&gt;&lt;a href=&quot;#在Vercel上部署hexo，再见了gitee&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Teamviewer已达设备数量上限的解决方法</title>
@@ -553,35 +574,6 @@
     
     
     <category term="todo" scheme="http://gaattc.gitee.io/tags/todo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>matery下的二级分类使用方式</title>
-    <link href="http://gaattc.gitee.io/posts/c35239f4/"/>
-    <id>http://gaattc.gitee.io/posts/c35239f4/</id>
-    <published>2020-11-26T13:45:17.000Z</published>
-    <updated>2021-02-10T08:40:02.689Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;matery下的二级分类使用方式&quot;&gt;&lt;a href=&quot;#matery下的二级分类使用方式&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="学习" scheme="http://gaattc.gitee.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="hexo" scheme="http://gaattc.gitee.io/categories/%E5%AD%A6%E4%B9%A0/hexo/"/>
-    
-    
-    <category term="学习心得" scheme="http://gaattc.gitee.io/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/"/>
-    
-    <category term="hexo" scheme="http://gaattc.gitee.io/tags/hexo/"/>
     
   </entry>
   
