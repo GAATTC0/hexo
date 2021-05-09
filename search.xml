@@ -11,6 +11,22 @@
         <content type="html"><![CDATA[<h1 id="在Vercel上部署hexo，再见了gitee"><a href="#在Vercel上部署hexo，再见了gitee" class="headerlink" title="在Vercel上部署hexo，再见了gitee"></a>在Vercel上部署hexo，再见了gitee</h1><blockquote><p>由于gitee的pages服务维护三个月，三个月后不知道会不会又出来些收费限流之类的，所以决定迁移到vercel了~</p></blockquote><h2 id="1-注册vercel"><a href="#1-注册vercel" class="headerlink" title="1.注册vercel"></a>1.注册vercel</h2><p>直接使用github关联注册就可以了，很方便并且推荐用这种方式。</p><h2 id="2-上传部署目录到github仓库"><a href="#2-上传部署目录到github仓库" class="headerlink" title="2.上传部署目录到github仓库"></a>2.上传部署目录到github仓库</h2><p>这一步不用多说，如果是之前就使用github的pages服务那就更方便了。不过还是写一下吧😅</p><p>①建一个公共仓库(<del>好像也可以是私有的？</del>)</p><p>②修改<strong>根目录</strong>下的_config.yml配置文件中deploy项：</p><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210509221039752.png"></p><p>repo改成仓库地址，注意一下分支是master还是main哦。</p><p>③在根目录的<code>package.json</code>文件添加脚本，很重要，否则部署后404</p><pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">{</span>  <span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>    <span class="token property">"build"</span><span class="token operator">:</span> <span class="token string">"hexo generate"</span>  <span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210509221424840.png"></p><p>④执行三连</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo clhexo ghexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>部署成功的话就好了。</p><h2 id="3-进入vercel控制台进行部署"><a href="#3-进入vercel控制台进行部署" class="headerlink" title="3.进入vercel控制台进行部署"></a>3.进入vercel控制台进行部署</h2><p>在dashboard中选择<code>new project</code>,</p><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210509221614721.png"></p><p>选择<code>Import Git Repository</code>，再选择关联自己的github账号并授权，这里直接授权所有仓库即可；</p><p>等读取到仓库列表后选择hexo所在仓库，选择<code>import</code>；</p><p>选择Select Vercel Scope这里使用下面的<code>PERSONAL ACCOUNT</code>然后<code>select</code>；</p><p>目录默认就是根目录root，直接下一步即可；</p><p>最后可以修改项目名，框架可以不用管，然后选择<code>deploy</code>即可部署完成。</p><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210509222022160.png"></p><h2 id="4-自定义域名"><a href="#4-自定义域名" class="headerlink" title="4.自定义域名"></a>4.自定义域名</h2><blockquote><p><a href="https://snow.js.org/hexo-vercel/">参考链接</a></p></blockquote><p>①点击项目卡片进入详情</p><p>②选择<code>view domains</code></p><p>③可以使用vercel提供的二级域名，直接添加即可(前提是没被占用)</p><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210509222852367.png"></p><p>格式有两种：</p><pre class="line-numbers language-url" data-language="url"><code class="language-url">xxx.now.shxxx.vercel.app<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><font color="red">④添加自定义域名</font></p><p>在输入框中输入域名，点击右侧 <code>Add </code>，下方会提示“Invalid Config”，然后根据情况：</p><ul><li><p>如果是根域名，请在你的 DNS 解析处添加 A 记录，指向 <code>76.76.21.21</code></p></li><li><p>如果是子域名，请在你的 DNS 解析处添加 CNAME 记录，指向 <code>cname.vercel-dns.com</code></p></li></ul><p>添加记录后等待片刻再刷新，下面显示两个蓝色对号即表明验证成功。</p>]]></content>
       
       
+      <categories>
+          
+          <category> 学习 </category>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习心得 </tag>
+            
+            <tag> hexo </tag>
+            
+        </tags>
       
     </entry>
     
