@@ -6,7 +6,7 @@
   <link href="http://gaattc.top/atom.xml" rel="self"/>
   
   <link href="http://gaattc.top/"/>
-  <updated>2021-05-09T15:16:28.349Z</updated>
+  <updated>2021-05-10T06:48:44.260Z</updated>
   <id>http://gaattc.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git在push时出现”fatal: unable to access &#39;https://github.com/...“的解决方案</title>
+    <link href="http://gaattc.top/posts/8135c12a/"/>
+    <id>http://gaattc.top/posts/8135c12a/</id>
+    <published>2021-05-10T06:15:34.000Z</published>
+    <updated>2021-05-10T06:48:44.260Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;git在push时出现”fatal-unable-to-access’-https-github-com-39-“的解决方案&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="bug" scheme="http://gaattc.top/categories/bug/"/>
+    
+    <category term="git" scheme="http://gaattc.top/categories/bug/git/"/>
+    
+    
+    <category term="bug" scheme="http://gaattc.top/tags/bug/"/>
+    
+  </entry>
   
   <entry>
     <title>在Vercel上部署hexo，再见了gitee</title>
@@ -550,38 +577,6 @@
     <category term="学习心得" scheme="http://gaattc.top/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/"/>
     
     <category term="hexo" scheme="http://gaattc.top/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于做好面向考核学习的准备这件事</title>
-    <link href="http://gaattc.top/posts/3888dc59/"/>
-    <id>http://gaattc.top/posts/3888dc59/</id>
-    <published>2020-11-28T15:14:46.000Z</published>
-    <updated>2020-12-07T09:25:03.580Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;关于做好面向考核学习的准备这件事&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;暂定12月下旬去帆软总部考核了，虽然之前已经做了计划，不过还是记录下来吧&lt;/p&gt;
-&lt;p&gt;主要是finereport的学习&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;1-参考&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="工作" scheme="http://gaattc.top/categories/%E5%B7%A5%E4%BD%9C/"/>
-    
-    <category term="帆软" scheme="http://gaattc.top/categories/%E5%B7%A5%E4%BD%9C/%E5%B8%86%E8%BD%AF/"/>
-    
-    
-    <category term="todo" scheme="http://gaattc.top/tags/todo/"/>
     
   </entry>
   
