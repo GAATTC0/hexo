@@ -410,7 +410,7 @@
       
       <i class="fas fa-address-book" style="zoom: 0.6;"></i>
       
-      <span>邻居们</span>
+      <span>友人帐</span>
       <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
     </a>
     <ul class="sub-nav menus_item_child ">
@@ -835,7 +835,7 @@
 			
 				<i class="fa-fw fas fa-address-book"></i>
 			
-			邻居们
+			友人帐
 			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
 		</a>
             <ul  style="background:  ;" >
@@ -1234,7 +1234,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    6 分
                 </div>
                 
 
@@ -1272,21 +1272,19 @@
 <p>注释掉原来的然后加上自己的东西：</p>
 <p><left><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20201117224030065.png" alt="image-20201117224030065" style="zoom:67%;"></left></p>
 <h3 id="12-自定义valine-star-第七条的补充"><a href="#12-自定义valine-star-第七条的补充" class="headerlink" title="12.自定义valine:star:(第七条的补充)"></a>12.自定义valine<span class="github-emoji"><span>⭐</span><img src="/medias/loading.gif" data-original="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>(第七条的补充)</h3><p><a target="_blank" rel="noopener" href="https://gaattc.gitee.io/posts/708ac940/">https://gaattc.gitee.io/posts/708ac940/</a></p>
-<h3 id="13-更改鼠标指针-star-star"><a href="#13-更改鼠标指针-star-star" class="headerlink" title="13.更改鼠标指针:star::star:"></a>13.更改鼠标指针<span class="github-emoji"><span>⭐</span><img src="/medias/loading.gif" data-original="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji"><span>⭐</span><img src="/medias/loading.gif" data-original="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h3><h4 id="法一："><a href="#法一：" class="headerlink" title="法一："></a>法一：</h4><blockquote>
+<h3 id="13-更改鼠标指针-star-star"><a href="#13-更改鼠标指针-star-star" class="headerlink" title="13.更改鼠标指针:star::star:"></a>13.更改鼠标指针<span class="github-emoji"><span>⭐</span><img src="/medias/loading.gif" data-original="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji"><span>⭐</span><img src="/medias/loading.gif" data-original="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h3><h4 id="法一："><a href="#法一：" class="headerlink" title="法一："></a><del>法一：</del></h4><blockquote>
 <p>ref:<a target="_blank" rel="noopener" href="https://yafine-blog.cn/posts/8c84.html">https://yafine-blog.cn/posts/8c84.html</a></p>
 </blockquote>
-<h4 id="法二："><a href="#法二：" class="headerlink" title="法二："></a>法二：</h4><p>找到文件：</p>
-<pre class="line-numbers language-none"><code class="language-none">hexo\themes\hexo-theme-matery-master\source\css\matery.css<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="推荐-法二："><a href="#推荐-法二：" class="headerlink" title="(推荐)法二："></a>(推荐)法二：</h4><p>找到文件：</p>
+<pre class="line-numbers language-none"><code class="language-none">hexo\themes\hexo-theme-matery-master\source\css\my.css<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>body下增加属性：</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">body</span> <span class="token punctuation">{</span>
-    <span class="token property">background-color</span><span class="token punctuation">:</span> #eaeaea<span class="token punctuation">;</span>
-    <span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
-    <span class="token property">color</span><span class="token punctuation">:</span> #34495e<span class="token punctuation">;</span>
-    <span class="token property">overflow-x</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
-    <span class="token property">overflow-y</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
-	<span class="token property">cursor</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span>../medias/cursor.ico<span class="token punctuation">)</span></span><span class="token punctuation">,</span>auto
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>增加样式：</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">*</span><span class="token punctuation">{</span>
+    <span class="token property">cursor</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">"/medias/Arrow.cur"</span><span class="token punctuation">)</span></span><span class="token punctuation">,</span>auto<span class="token important">!important</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">a,button,img</span><span class="token punctuation">{</span>
+    <span class="token property">cursor</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">"/medias/pointer.cur"</span><span class="token punctuation">)</span></span><span class="token punctuation">,</span>auto<span class="token important">!important</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>其中cursor.ico就是指针图，比如：<img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/cursor.ico">或<img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/cursor.cur">或<img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/Arrow.cur">或<img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/normal.cur"></p>
 <h3 id="14-评论推送服务"><a href="#14-评论推送服务" class="headerlink" title="14.评论推送服务"></a>14.评论推送服务</h3><p>详见<a target="_blank" rel="noopener" href="https://gaattc.gitee.io/posts/708ac940/">另一篇文章</a></p>
@@ -1897,7 +1895,7 @@ img: https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/yaoshuixiedaima.jpg
         metaPlaceholder: {"nick": "(必填)你的QQ号或昵称o(*￣▽￣*)o", "mail": "(必填)你的邮箱( ‵▽′)ψ", "link": "(可选)你的网站url(/▽＼)"},
         pageSize: '10',
         lang: 'zh-cn',
-        placeholder: '有什么不懂的问题，可以问我们，我们会亲切地告诉你们：听不见！  ——森下下士',
+        placeholder: '支持markdown格式以及丰富的小表情，快来畅所欲言吧~',
         master: '5c01f7ad04a6b2ed0246d3c35ca89c9e',
         friends: ["103fa56afdf5169533b296368ce31d84","674d7cd30cea1f4f0caaa6e0e8a8b653"],
         enableQQ: true,
