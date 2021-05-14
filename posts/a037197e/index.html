@@ -3,7 +3,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="评论、TOC、顶部按钮样式适配, GAATTC的隐藏小窝">
+    <meta name="keywords" content="在CloudflarePages上部署hexo，再见了vercel, GAATTC的隐藏小窝">
     <meta name="description" content="A simple blog maintained for recording the ordinary life...">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -15,7 +15,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>评论、TOC、顶部按钮样式适配 | GAATTC的隐藏小窝</title>
+    <title>在CloudflarePages上部署hexo，再见了vercel | GAATTC的隐藏小窝</title>
     <link rel="icon" type="image/png" href="/medias/18.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -1161,12 +1161,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/code1217.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">评论、TOC、顶部按钮样式适配</h1>
+                    <h1 class="description center-align post-title">在CloudflarePages上部署hexo，再见了vercel</h1>
                 </div>
             </div>
         </div>
@@ -1322,7 +1322,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-17
+                    2021-05-14
                 </div>
                 
 
@@ -1331,14 +1331,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    384
+                    285
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -1348,75 +1348,34 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="评论、TOC、顶部按钮样式适配"><a href="#评论、TOC、顶部按钮样式适配" class="headerlink" title="评论、TOC、顶部按钮样式适配"></a>评论、TOC、顶部按钮样式适配</h1><h2 id="1-修改按钮背景CSS样式"><a href="#1-修改按钮背景CSS样式" class="headerlink" title="1.修改按钮背景CSS样式"></a>1.修改按钮背景CSS样式</h2><pre class="line-numbers language-dir" data-language="dir"><code class="language-dir">hexo\themes\hexo-theme-matery-master\source\css\matery.css<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h1 id="在CloudflarePages上部署hexo，再见了vercel"><a href="#在CloudflarePages上部署hexo，再见了vercel" class="headerlink" title="在CloudflarePages上部署hexo，再见了vercel"></a>在CloudflarePages上部署hexo，再见了vercel</h1><blockquote>
+<p>刚把网站搬到vercel上，几天后vercel就被墙了ORZ</p>
+<p>希望cloudflare依然坚挺</p>
+</blockquote>
+<h2 id="1-注册CloudFlare"><a href="#1-注册CloudFlare" class="headerlink" title="1.注册CloudFlare"></a>1.注册CloudFlare</h2><p><a target="_blank" rel="noopener" href="https://pages.cloudflare.com/">传送门</a></p>
+<h2 id="2-常规操作：静态文件上传到github"><a href="#2-常规操作：静态文件上传到github" class="headerlink" title="2.常规操作：静态文件上传到github"></a>2.常规操作：静态文件上传到github</h2><p>不用多说了，参考部署到vercel的<a href="https://gaattc.top/posts/ee92e53c">第二步</a></p>
+<h2 id="3-关联github账号"><a href="#3-关联github账号" class="headerlink" title="3.关联github账号"></a>3.关联github账号</h2><p>同样的操作，见vercel部署</p>
+<h2 id="4-创建项目"><a href="#4-创建项目" class="headerlink" title="4.创建项目"></a>4.创建项目</h2><p>选择<code>创建项目</code>：</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210514184620061.png" alt="image-20210514184620061"></p>
+<p>选择仓库，即第二步的仓库，选择<code>开始设置</code>。</p>
+<p>选择项目名称和生产分支，然后构建设置这里无需操作：</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210514184838962.png"></p>
+<p>选择<code>保存并部署</code>。</p>
+<h2 id="5-自定义域名"><a href="#5-自定义域名" class="headerlink" title="5.自定义域名"></a>5.自定义域名</h2><p>直接设置域名会提示：添加到您的 Pages 项目之前，您需要将 DNS 转移到 Cloudflare。</p>
+<p>需要将dns服务器设为cloud flare的。</p>
+<h2 id="6-DNS转移到cloudflare"><a href="#6-DNS转移到cloudflare" class="headerlink" title="6.DNS转移到cloudflare"></a>6.DNS转移到cloudflare</h2><p>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43153854/article/details/109779984">https://blog.csdn.net/weixin_43153854/article/details/109779984</a></p>
+<p>比如我是腾讯云的域名，有两个NS记录如下：</p>
+<pre class="line-numbers language-url" data-language="url"><code class="language-url">goddard.dnspod.net.
+heptagon.dnspod.net.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p>在matery.css文件中找到并修改四个样式：</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.top-scroll .btn-floating</span> <span class="token punctuation">{</span>
-    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to bottom right<span class="token punctuation">,</span> #a8cbe2 0%<span class="token punctuation">,</span> #05c6f1 100%<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token property">width</span><span class="token punctuation">:</span> 35px<span class="token punctuation">;</span>
-    <span class="token property">height</span><span class="token punctuation">:</span> 35px<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+<p>将其改为：</p>
+<pre class="line-numbers language-url" data-language="url"><code class="language-url">elliott.ns.cloudflare.com
+wren.ns.cloudflare.com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<span class="token selector">.top-scroll .btn-floating i</span> <span class="token punctuation">{</span>
-    <span class="token property">line-height</span><span class="token punctuation">:</span> 35px<span class="token punctuation">;</span>
-    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-    <span class="token property">right</span><span class="token punctuation">:</span> 0px<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token selector">.comment-scroll .btn-floating</span> <span class="token punctuation">{</span>
-    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to bottom right<span class="token punctuation">,</span> #a8cbe2 0%<span class="token punctuation">,</span> #05c6f1 100%<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token property">width</span><span class="token punctuation">:</span> 35px<span class="token punctuation">;</span>
-    <span class="token property">height</span><span class="token punctuation">:</span> 35px<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token selector">.comment-scroll .btn-floating i</span> <span class="token punctuation">{</span>
-    <span class="token property">line-height</span><span class="token punctuation">:</span> 35px<span class="token punctuation">;</span>
-    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-    <span class="token property">right</span><span class="token punctuation">:</span> 0px<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="2-修改图标CSS样式"><a href="#2-修改图标CSS样式" class="headerlink" title="2.修改图标CSS样式"></a>2.修改图标CSS样式</h2><pre class="line-numbers language-dir" data-language="dir"><code class="language-dir">hexo\themes\hexo-theme-matery-master\layout\_partial\back-comment.ejs
-hexo\themes\hexo-theme-matery-master\layout\_partial\post-detail-toc.ejs
-hexo\themes\hexo-theme-matery-master\layout\_partial\back-top.ejs<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>在以上三个文件中找到并修改：</p>
-<p>back-comment.ejs：</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!-- 直达评论 --&gt;</span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>to_comment<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>comment-scroll<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn-floating btn-large waves-effect waves-light<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#vcomments<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>直达评论<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fas fa-comments<span class="token punctuation">"</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">zoom</span><span class="token punctuation">:</span> 0.88<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>post-detail-toc.ejs：</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html">#floating-toc-btn .btn-floating {
-    background: linear-gradient(to bottom right, #a8cbe2 0%, #05c6f1 100%);
-    width: 35px;
-    height: 35px;
-}
-
-#floating-toc-btn .btn-floating i {
-    line-height: 35px;
-    position: absolute;
-    right: 0px;
-}
-
-<span class="token comment">&lt;!-- TOC 悬浮按钮. --&gt;</span>
-&lt;% if (theme.toc.enable &amp;&amp; theme.toc.showToggleBtn) { %&gt;
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>floating-toc-btn<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>hide-on-med-and-down<span class="token punctuation">"</span></span> <span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn-floating btn-large waves-effect waves-light<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>展开/关闭TOC<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fas fa-list-ul<span class="token punctuation">"</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">zoom</span><span class="token punctuation">:</span> 0.88<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
-&lt;% } %&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>back-top.ejs：</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!-- 回到顶部按钮 --&gt;</span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>backTop<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>top-scroll<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn-floating btn-large waves-effect waves-light<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#!<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>返回顶部<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fas fa-arrow-up<span class="token punctuation">"</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">zoom</span><span class="token punctuation">:</span> 0.88<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="3-效果"><a href="#3-效果" class="headerlink" title="3.效果"></a>3.效果</h2><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20201217233634866.png"></p>
+<p>然后比较慢，等等等~</p>
+<blockquote>
+<p>注册机构可能需要 24 小时来处理名称服务器更新。当您的站点在 Cloudflare 上激活时，您会收到一封电子邮件。</p>
+</blockquote>
 
             </div>
             <hr/>
@@ -1442,7 +1401,7 @@ hexo\themes\hexo-theme-matery-master\layout\_partial\back-top.ejs<span aria-hidd
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://gaattc.top/posts/e38270af/">http://gaattc.top/posts/e38270af/</a>
+                    <a href="http://gaattc.top/posts/a037197e/">http://gaattc.top/posts/a037197e/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -2293,33 +2252,35 @@ hexo\themes\hexo-theme-matery-master\layout\_partial\back-top.ejs<span aria-hidd
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/80a0aeb/">
+                <a href="/posts/a037197e/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/jprofilter10.0.jpg" class="responsive-img" alt="用JProfiler进行dump分析记">
                         
-                        <span class="card-title">用JProfiler进行dump分析记</span>
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="在CloudflarePages上部署hexo，再见了vercel">
+                        
+                        <span class="card-title">在CloudflarePages上部署hexo，再见了vercel</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            dump分析
-工具：JProfilter10.0
-激活码：L-qOQRsFcEcF-LqVM1lqxQm#1437
+                            在CloudflarePages上部署hexo，再见了vercel
+刚把网站搬到vercel上，几天后vercel就被墙了ORZ
+希望cloudflare依然坚挺
 
-0.使用工具JProfiler载入dump.hprof文件
-1.首先打开Biggest Objects，看到一个6G的Ar
+1.注册CloudFlare传送门
+2.常规操作：静态文件上传到githu
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-30
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -2328,14 +2289,15 @@ hexo\themes\hexo-theme-matery-master\layout\_partial\back-top.ejs<span aria-hidd
                                     学习
                                 </a>
                             
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/java/" class="post-category">
-                                    java
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/hexo/" class="post-category">
+                                    hexo
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -2343,8 +2305,8 @@ hexo\themes\hexo-theme-matery-master\layout\_partial\back-top.ejs<span aria-hidd
                         <span class="chip bg-color">学习心得</span>
                     </a>
                     
-                    <a href="/tags/java/">
-                        <span class="chip bg-color">java</span>
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
                     </a>
                     
                 </div>
@@ -2358,24 +2320,31 @@ hexo\themes\hexo-theme-matery-master\layout\_partial\back-top.ejs<span aria-hidd
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/de48a9ab/">
+                <a href="/posts/289a5094/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/moon1217.jpg" class="responsive-img" alt="matery添加夜晚模式">
+                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/wallhaven-z8mq8y.jpg" class="responsive-img" alt="matery自定义banner图片更换频率">
                         
-                        <span class="card-title">matery添加夜晚模式</span>
+                        <span class="card-title">matery自定义banner图片更换频率</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            matery添加夜晚模式1.在layout.ejs中添加按钮在layout的body标签中添加代码。按惯例还是加在最后面尽量让页面主体先加载。
-hexo\themes\hexo-theme-matery-master\layout\layo
+                            matery自定义banner图片更换频率
+主题默认是根据星期数一天一换的，但是随之而来存在一些问题：
+
+比如参与轮换的图片上限只能是7张，我想多放一些
+比如我想每小时一更换，亦或每分钟更换呢
+
+让我们来自定义一下吧
+
+1.首先找到静态资源
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-11
                             </span>
                         <span class="publish-author">
                             

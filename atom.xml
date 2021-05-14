@@ -6,7 +6,7 @@
   <link href="http://gaattc.top/atom.xml" rel="self"/>
   
   <link href="http://gaattc.top/"/>
-  <updated>2021-05-11T06:25:04.208Z</updated>
+  <updated>2021-05-14T12:15:31.134Z</updated>
   <id>http://gaattc.top/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在CloudflarePages上部署hexo，再见了vercel</title>
+    <link href="http://gaattc.top/posts/a037197e/"/>
+    <id>http://gaattc.top/posts/a037197e/</id>
+    <published>2021-05-14T10:39:21.000Z</published>
+    <updated>2021-05-14T12:15:31.134Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;在CloudflarePages上部署hexo，再见了vercel&quot;&gt;&lt;a href=&quot;#在CloudflarePages上部署hexo，再见了vercel&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="http://gaattc.top/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="hexo" scheme="http://gaattc.top/categories/%E5%AD%A6%E4%B9%A0/hexo/"/>
+    
+    
+    <category term="学习心得" scheme="http://gaattc.top/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/"/>
+    
+    <category term="hexo" scheme="http://gaattc.top/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>matery自定义banner图片更换频率</title>
@@ -547,36 +576,6 @@
     <category term="学习心得" scheme="http://gaattc.top/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/"/>
     
     <category term="hexo" scheme="http://gaattc.top/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>sql练习</title>
-    <link href="http://gaattc.top/posts/dd4b99ae/"/>
-    <id>http://gaattc.top/posts/dd4b99ae/</id>
-    <published>2020-12-01T15:51:25.000Z</published>
-    <updated>2020-12-07T10:18:18.853Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;SQL练习&quot;&gt;&lt;a href=&quot;#SQL练习&quot; class=&quot;headerlink&quot; title=&quot;SQL练习&quot;&gt;&lt;/a&gt;SQL练习&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;几十道简单的sql练习题，冬日暖手必备&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="学习" scheme="http://gaattc.top/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="数据库" scheme="http://gaattc.top/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-    <category term="sql" scheme="http://gaattc.top/tags/sql/"/>
     
   </entry>
   

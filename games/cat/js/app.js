@@ -256,7 +256,7 @@ function victory(num){
 
 function paybgm(name) {
   var audio = document.getElementById('audio');
-  audio.src = "https://gaattc.top/games/cat/sound/"+ name +".mp3";
+  audio.src = "/games/cat/sound/"+ name +".mp3";
   audio.play();
 }
 
