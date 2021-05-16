@@ -29,8 +29,8 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 	<script src="https://v1.hitokoto.cn/?c=d&encode=js&select=%23hitokoto" defer></script>
 <meta name="generator" content="Hexo 5.2.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-<link rel="alternate" href="/atom.xml" title="GAATTC的隐藏小窝" type="application/atom+xml">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="GAATTC的隐藏小窝" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
@@ -1346,14 +1346,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    334
+                    522
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -1379,7 +1379,7 @@
 
 <p>找到<code>id_rsa.pub</code>文件，使用记事本或文本编辑器打开，然后复制内容。</p>
 <p>打开github，在设置里找到并添加SSH key即可.</p>
-<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210510143241801.png" alt="image-20210510143241801"></p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210510143241801.png"></p>
 <hr>
 
 <p>这个问题也可以通过第二种问题的方式解决。</p>
@@ -1397,6 +1397,23 @@
 <p>这个问题禁用自动转换即可：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config --global core.autocrlf <span class="token boolean">false</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
+
+
+<hr>
+
+<h2 id="7-更新ssh协议解决https网络问题"><a href="#7-更新ssh协议解决https网络问题" class="headerlink" title="7.更新ssh协议解决https网络问题"></a><font color="red">7.更新ssh协议解决https网络问题</font></h2><blockquote>
+<p>最近发现push经常失败，原因可能是github.com的dns污染，虽然可以手动测速换host，但是太麻烦而且时断时续的，解决：</p>
+<p><strong>网页端访问github.com</strong>：安装《github加速》插件，完美解决；</p>
+<p><strong>命令行操作</strong>：换ssh协议push就没问题了</p>
+</blockquote>
+<p>首先执行上面的方法1，生成并配置ssh key，</p>
+<p>确保没有禁用ssl证书，如果禁用，执行方法2，其中false改为true即可，</p>
+<p>git bash下验证是否配置成功：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ssh</span> -T git@github.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>显示”Hi &lt;yourname&gt;! You’ve successfully authenticated, but GitHub does not provide shell access.”即代表成功。</p>
+<p>最后，在根目录配置中修改仓库地址为ssh协议即可：</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210516121448458.png"></p>
 
             </div>
             <hr/>
@@ -1885,7 +1902,7 @@
         metaPlaceholder: {"nick": "(必填)你的QQ号或昵称o(*￣▽￣*)o", "mail": "(必填)你的邮箱( ‵▽′)ψ", "link": "(可选)你的网站url(/▽＼)"},
         pageSize: '10',
         lang: 'zh-cn',
-        placeholder: '支持markdown格式以及丰富的小表情，快来畅所欲言吧~',
+        placeholder: '支持markdown格式以及丰富的小表情，快来留下些记忆吧~',
         master: '5c01f7ad04a6b2ed0246d3c35ca89c9e',
         friends: ["103fa56afdf5169533b296368ce31d84","674d7cd30cea1f4f0caaa6e0e8a8b653"],
         enableQQ: true,
@@ -2628,7 +2645,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;我竟然已经产出&nbsp;<span
-                class="white-color">114.4k</span>&nbsp;字了!
+                class="white-color">114.6k</span>&nbsp;字了!
             
             
             
