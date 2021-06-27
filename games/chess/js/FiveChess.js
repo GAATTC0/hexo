@@ -165,7 +165,7 @@ FiveChesscanvas.onclick = function(e) {
 				mythiswin[k]++;
 				pcthiswin[k] = 50;
 				if(mythiswin[k] == 5) {
-					alert("恭喜你，你赢了！");
+					alert("恭喜你，你赢得了GAATTC的赞赏！");
 					over = true;
 				}
 			}
@@ -254,7 +254,7 @@ function AI() {
 			pcthiswin[k]++;
 			mythiswin[k] = 60;
 			if(pcthiswin[k] == 5) {
-				alert("很遗憾，电脑赢！");
+				alert("很遗憾，再接再厉就会赢的！");
 				over = true;
 			}
 		}

@@ -6,7 +6,7 @@
   <link href="http://gaattc.top/atom.xml" rel="self"/>
   
   <link href="http://gaattc.top/"/>
-  <updated>2021-05-16T12:00:14.954Z</updated>
+  <updated>2021-06-27T03:08:48.224Z</updated>
   <id>http://gaattc.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>🔒无题 | 南航，大学，人生，铭记，感恩</title>
+    <link href="http://gaattc.top/posts/7106602/"/>
+    <id>http://gaattc.top/posts/7106602/</id>
+    <published>2021-06-24T11:30:00.000Z</published>
+    <updated>2021-06-27T03:08:48.224Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;无题-南航，大学，人生，铭记，感恩&quot;&gt;&lt;a href=&quot;#无题-南航，大学，人生，铭记，感恩&quot; class=&quot;headerlink&quot; title=&quot;无题 | 南航，大学，人生，铭记，感恩&quot;&gt;&lt;/a&gt;无题 | 南航，大学，人生，铭记，感恩&lt;/h1&gt;&lt;iframe</summary>
+        
+      
+    
+    
+    
+    <category term="日常" scheme="http://gaattc.top/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    <category term="记录" scheme="http://gaattc.top/categories/%E6%97%A5%E5%B8%B8/%E8%AE%B0%E5%BD%95/"/>
+    
+    
+    <category term="记录" scheme="http://gaattc.top/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
   
   <entry>
     <title>通过shields.io制作好看的网站徽标</title>
@@ -246,7 +273,7 @@
     <link href="http://gaattc.top/posts/75544e59/"/>
     <id>http://gaattc.top/posts/75544e59/</id>
     <published>2021-03-16T10:01:01.000Z</published>
-    <updated>2021-05-17T05:03:43.150Z</updated>
+    <updated>2021-06-24T11:32:25.101Z</updated>
     
     
       
@@ -547,33 +574,6 @@
     
     
     <category term="markdown" scheme="http://gaattc.top/tags/markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>sql查询语法总结</title>
-    <link href="http://gaattc.top/posts/23d9d6c0/"/>
-    <id>http://gaattc.top/posts/23d9d6c0/</id>
-    <published>2020-12-04T03:10:45.000Z</published>
-    <updated>2021-01-01T04:02:55.736Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;sql查询语法总结&quot;&gt;&lt;a href=&quot;#sql查询语法总结&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="学习" scheme="http://gaattc.top/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="数据库" scheme="http://gaattc.top/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-    <category term="sql" scheme="http://gaattc.top/tags/sql/"/>
     
   </entry>
   
