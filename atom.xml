@@ -6,7 +6,7 @@
   <link href="http://gaattc.top/atom.xml" rel="self"/>
   
   <link href="http://gaattc.top/"/>
-  <updated>2021-06-27T03:08:48.224Z</updated>
+  <updated>2021-07-06T06:07:49.258Z</updated>
   <id>http://gaattc.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>IDEA修改本地maven仓库路径自动恢复默认的解决方法</title>
+    <link href="http://gaattc.top/posts/f8b898cb/"/>
+    <id>http://gaattc.top/posts/f8b898cb/</id>
+    <published>2021-07-06T05:52:20.000Z</published>
+    <updated>2021-07-06T06:07:49.258Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;IDEA修改本地maven仓库路径自动恢复默认的解决方法&quot;&gt;&lt;a href=&quot;#IDEA修改本地maven仓库路径自动恢复默认的解决方法&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="bug" scheme="http://gaattc.top/categories/bug/"/>
+    
+    <category term="maven" scheme="http://gaattc.top/categories/bug/maven/"/>
+    
+    
+    <category term="bug" scheme="http://gaattc.top/tags/bug/"/>
+    
+  </entry>
   
   <entry>
     <title>🔒无题 | 南航，大学，人生，铭记，感恩</title>
@@ -547,33 +574,6 @@
     <category term="学习心得" scheme="http://gaattc.top/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/"/>
     
     <category term="hexo" scheme="http://gaattc.top/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>markdown语法总结</title>
-    <link href="http://gaattc.top/posts/5417bea/"/>
-    <id>http://gaattc.top/posts/5417bea/</id>
-    <published>2020-12-09T06:20:10.000Z</published>
-    <updated>2021-01-17T04:24:40.328Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;markdown语法总结&quot;&gt;&lt;a href=&quot;#markdown语法总结&quot; class=&quot;headerlink&quot; title=&quot;markdown语法总结&quot;&gt;&lt;/a&gt;markdown语法总结&lt;/h1&gt;&lt;h2 id=&quot;1-基本语法&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="学习" scheme="http://gaattc.top/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="markdown" scheme="http://gaattc.top/categories/%E5%AD%A6%E4%B9%A0/markdown/"/>
-    
-    
-    <category term="markdown" scheme="http://gaattc.top/tags/markdown/"/>
     
   </entry>
   

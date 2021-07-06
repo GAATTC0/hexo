@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>IDEA修改本地maven仓库路径自动恢复默认的解决方法</title>
+      <link href="posts/f8b898cb/"/>
+      <url>posts/f8b898cb/</url>
+      
+        <content type="html"><![CDATA[<h1 id="IDEA修改本地maven仓库路径自动恢复默认的解决方法"><a href="#IDEA修改本地maven仓库路径自动恢复默认的解决方法" class="headerlink" title="IDEA修改本地maven仓库路径自动恢复默认的解决方法"></a>IDEA修改本地maven仓库路径自动恢复默认的解决方法</h1><blockquote><p>idea中手动修改maven配置文件和本地仓库路径后，再次刷新maven后又会自动恢复为默认的<code>user/.m2</code>这个路径，如下图。</p><p>经过百度以及多次尝试找到了解决办法~</p></blockquote><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210706135543843.png"></p><h2 id="1-首先指定一个配置文件"><a href="#1-首先指定一个配置文件" class="headerlink" title="1.首先指定一个配置文件"></a>1.首先指定一个配置文件</h2><p>使用默认.m2这个路径也可以，或者在其他路径的也可以。</p><h2 id="2-修改配置文件中的localRepository标签属性"><a href="#2-修改配置文件中的localRepository标签属性" class="headerlink" title="2.修改配置文件中的localRepository标签属性"></a>2.修改配置文件中的<code>localRepository</code>标签属性</h2><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210706135941585.png"></p><p>如图，改为本地的仓库路径即可</p><h2 id="3-重启idea"><a href="#3-重启idea" class="headerlink" title="3.重启idea"></a>3.重启idea</h2><p>不需要再修改idea的设置，也不用点<code>override</code>,重启</p><p>会发现设置中的本地仓库路径已经变为了配置文件中添加的新路径。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> bug </category>
+          
+          <category> maven </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> bug </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>🔒无题 | 南航，大学，人生，铭记，感恩</title>
       <link href="posts/7106602/"/>
       <url>posts/7106602/</url>
