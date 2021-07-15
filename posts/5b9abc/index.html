@@ -1426,14 +1426,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.2k
+                    2.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    10 分
                 </div>
                 
 
@@ -1491,7 +1491,7 @@
    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugins</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>也可以在 IntelliJ IDEA 或 Eclipse 的“运行/调试配置”中指定。 <code>-javaagent:&lt;proper path&gt;/jmockit.1.x.jar</code>。</p>
+<p>也可以在 IntelliJ IDEA 或 Eclipse 的“运行/调试配置”中指定 <code>-javaagent:&lt;proper path&gt;/jmockit.1.x.jar</code>。</p>
 <h2 id="3-Mocking"><a href="#3-Mocking" class="headerlink" title="3.Mocking"></a>3.Mocking</h2><p>先定义一个App类和一个hello方法 ：</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token punctuation">{</span>
 
@@ -1509,7 +1509,7 @@
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="几个注解-Mocked、-Tested、-Injectable和-Capturing"><a href="#几个注解-Mocked、-Tested、-Injectable和-Capturing" class="headerlink" title="几个注解@Mocked、@Tested、@Injectable和@Capturing"></a>几个注解@Mocked、@Tested、@Injectable和@Capturing</h3><p><code>@Mocked</code>，mock整个对象，自动实例化对象，对象的方法（包括静态方法）均返回默认值（在使用它的测试期间）；</p>
-<p><code>@Tested</code>修饰的类，表示是我们要测试对象,如果该对象没有赋值，JMockit会去实例化它。通常和@Injectable搭配使用；</p>
+<p><code>@Tested</code>，修饰类，表示是我们要测试对象,如果该对象没有赋值，JMockit会去实例化它。通常和@Injectable搭配使用；</p>
 <p><code>@Injectable</code>, 只影响被加上注解的当前实例，并且不影响静态方法；</p>
 <p><code>@Capturing</code>，它将模拟扩展到实现模拟接口的类，或扩展模拟类的子类。</p>
 <h3 id="三个代码块"><a href="#三个代码块" class="headerlink" title="三个代码块"></a>三个代码块</h3><p>每个测试单元的结构可以与上面提到的测试三步走结构对应：<strong>record、replay、verify</strong>。</p>
@@ -1607,6 +1607,44 @@
 
 <blockquote>
 <p>结果是：<br>hello mock<br>hello 1</p>
+</blockquote>
+<p><strong>③在Expectations中传入实例对象作为参数，实现部分方法的模拟</strong></p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Test</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testPartialMock</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">App</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">new</span> <span class="token class-name">Expectations</span><span class="token punctuation">(</span>app<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>
+        app<span class="token punctuation">.</span><span class="token function">hello</span><span class="token punctuation">(</span>anyString<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        result <span class="token operator">=</span> <span class="token string">"hello000 "</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>app<span class="token punctuation">.</span><span class="token function">hello</span><span class="token punctuation">(</span><span class="token string">"1"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>app<span class="token punctuation">.</span><span class="token function">hello_1</span><span class="token punctuation">(</span><span class="token string">"1"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>结果是：</p>
+<p>hello000<br>hello 1</p>
+</blockquote>
+<p><strong>④将测试类中的对象加上@Tested和@Mocked两个注解，来实现部分方法的模拟</strong></p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AppTest</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Tested</span>
+    <span class="token annotation punctuation">@Mocked</span>
+    <span class="token class-name">App</span> app<span class="token punctuation">;</span>
+    
+    <span class="token annotation punctuation">@Test</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testAnotherWayPartialMock</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">new</span> <span class="token class-name">Expectations</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>
+            app<span class="token punctuation">.</span><span class="token function">hello</span><span class="token punctuation">(</span>anyString<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            result <span class="token operator">=</span> <span class="token string">"hello2333 "</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>app<span class="token punctuation">.</span><span class="token function">hello</span><span class="token punctuation">(</span><span class="token string">"1"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>app<span class="token punctuation">.</span><span class="token function">hello_1</span><span class="token punctuation">(</span><span class="token string">"1"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>结果是：</p>
+<p>hello2333<br>hello 1</p>
 </blockquote>
 <h3 id="Injectable作用于参数对象示例"><a href="#Injectable作用于参数对象示例" class="headerlink" title="Injectable作用于参数对象示例"></a>Injectable作用于参数对象示例</h3><p>可以给参数对象自定义值(这个方法支持原始数据类型和数组类型)：</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AppTest</span> <span class="token punctuation">{</span>
@@ -1812,7 +1850,7 @@
 </blockquote>
 <p>③在Expectations中录制私有方法</p>
 <p><font color="red" size="8">不行！</font></p>
-<h3 id="其他-1"><a href="#其他-1" class="headerlink" title="其他"></a>其他</h3><p><font color="#dd001b" size="5">更多功能待更新。。。(如果有的话)</font></p>
+<h3 id="其他-1"><a href="#其他-1" class="headerlink" title="其他"></a>其他</h3><p><font color="#dd001b" size="5">更多功能待更新。。。(如果有</font><font size="1"><del>时间</del></font><font color="#dd001b" size="5">的话)</font></p>
 <hr>
 
 
@@ -3054,7 +3092,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;不知不觉竟有&nbsp;<span
-                class="white-color">121.2k</span>&nbsp;字了!
+                class="white-color">121.4k</span>&nbsp;字了!
             
             
             
@@ -3285,10 +3323,10 @@ $(function () {
     <a onclick="switchNightMode()" id="sma">
         <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
     </a>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight+240||document.documentElement.clientHeight+240)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight+240||document.documentElement.clientHeight+240)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
 </html>
