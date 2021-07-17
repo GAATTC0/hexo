@@ -28,9 +28,9 @@
 	<link rel="stylesheet" href="/js/prism/prism.css">
     <script src="/libs/jquery/jquery.min.js"></script>
 	<script src="https://v1.hitokoto.cn/?c=d&encode=js&select=%23hitokoto" defer></script>
-<meta name="generator" content="Hexo 5.2.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="GAATTC的隐藏小窝" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="GAATTC的隐藏小窝" type="application/atom+xml">
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
@@ -1426,7 +1426,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.3k
+                    2.5k
                 </div>
                 
 
@@ -1682,6 +1682,15 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<blockquote>
+<p>【补充】any字段的万能用法：强转。可以匹配任何已有类型。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">new</span> <span class="token class-name">Expectations</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>
+     app<span class="token punctuation">.</span><span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">)</span> any<span class="token punctuation">)</span><span class="token punctuation">;</span>
+     result <span class="token operator">=</span> <span class="token string">"hello mock"</span><span class="token punctuation">;</span>
+     app<span class="token punctuation">.</span><span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token class-name">App</span><span class="token punctuation">)</span> any<span class="token punctuation">)</span><span class="token punctuation">;</span>
+     result <span class="token operator">=</span> <span class="token string">"hello mock"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</blockquote>
 <p>②”with”字段</p>
 <p>在记录或验证代码块中，<code>withXxx(...)</code>可以对参数的任何子集调用方法：</p>
 <p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210714152627843.png"></p>
@@ -1710,6 +1719,26 @@
 <blockquote>
 <p>结果是：</p>
 <p>hello mock</p>
+</blockquote>
+<h3 id="多种情况返回不同结果"><a href="#多种情况返回不同结果" class="headerlink" title="多种情况返回不同结果"></a>多种情况返回不同结果</h3><p>通过在Expectations中定义result = new Delegate(){}，其中定义与被mock的方法参数和返回值相同的任意名称方法，内部逻辑可以自定来达到根据参数返回结果的效果。例如：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Test</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testDelegate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">new</span> <span class="token class-name">Expectations</span><span class="token punctuation">(</span><span class="token class-name">App</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>
+        app<span class="token punctuation">.</span><span class="token function">hello</span><span class="token punctuation">(</span>anyString<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        result <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Delegate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">String</span> <span class="token function">anyMethodName</span><span class="token punctuation">(</span><span class="token class-name">String</span> str<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>str<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">return</span> <span class="token string">"hello short"</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">return</span> <span class="token string">"hello long"</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>结果是：</p>
+<p>hello short<br>hello long</p>
 </blockquote>
 <h3 id="调用计数约束"><a href="#调用计数约束" class="headerlink" title="调用计数约束"></a>调用计数约束</h3><p>times，minTimes，和 maxTimes。值可以为任何非负整数。</p>
 <p>用于Expectations代码块中，相应方法的后面。如果调用次数低于或高于预期下限或上限，或与指定次数不相等，则测试失败。</p>
@@ -1782,6 +1811,7 @@
 </blockquote>
 <h2 id="5-一些特殊的情况和用法"><a href="#5-一些特殊的情况和用法" class="headerlink" title="5.一些特殊的情况和用法"></a>5.一些特殊的情况和用法</h2><h3 id="通过new-MockUp-lt-T-gt-对象覆盖方法的复用"><a href="#通过new-MockUp-lt-T-gt-对象覆盖方法的复用" class="headerlink" title="通过new MockUp<T>对象覆盖方法的复用"></a>通过new MockUp&lt;T&gt;对象覆盖方法的复用</h3><p>将覆盖的定义写在@Before中即可，整个测试类都可以使用修改的方法，但是注意的是它的作用范围：</p>
 <p><code>@Before中定义</code>—&gt;<code>@After执行结束</code>期间都生效。</p>
+<p>（或者是@BeforeClass和@AfterClass）</p>
 <h3 id="Mock时调用原方法"><a href="#Mock时调用原方法" class="headerlink" title="Mock时调用原方法"></a>Mock时调用原方法</h3><p>在待Mock的方法的参数列表中加入invocation参数，通过invocation.procee()调用原方法。</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Test</span>
 <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testProceed</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -1859,6 +1889,7 @@
 <blockquote>
 <p><a target="_blank" rel="noopener" href="http://jmockit.github.io/tutorial">JMockit官方文档</a></p>
 <p><a target="_blank" rel="noopener" href="http://www.jmockit.cn/">JMockit中文网</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/guanhang89/article/details/78703945">csdn原创：Jmockit使用详解之Mocking</a></p>
 <p><a target="_blank" rel="noopener" href="https://wenku.baidu.com/view/15cb5965dd3383c4ba4cd270.html">百度文库：JMockit中文版入门指南</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/b859f59d2634">简书：Jmockit（一）： 入门</a></p>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/106117486">知乎：一文带你玩转JMockit</a></p>
@@ -2740,56 +2771,51 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/5b9abc/">
+                <a href="/posts/97f18157/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210714092448487.png" class="responsive-img" alt="Hello_JMockit">
+                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/d45efa512b17eac53afde55569ba3e24.jpg" class="responsive-img" alt="无锡的好吃的(长期更新)">
                         
-                        <span class="card-title">Hello_JMockit</span>
+                        <span class="card-title">无锡的好吃的(长期更新)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Hello JMockit1.Mock介绍什么是mockmock的字面意思是”模拟的，仿制的”,在测试中是指对于某些不容易获取的对象或不容易执行的过程，用一个虚拟的对象或过程来作为替代品使测试程序得以正常运行。
-为什么要mock因为单元测试
+                            无锡的好吃的
+为什么要写这个呢，记录生活，并且，munin给我分享了他们当时探店无数后的宝藏清单让我很羡慕，如果有一天我也能和别人分享这些的话，真好。
+分为两个部分，第一部分是我自己去过的，第二部分就是这份宝藏清单了，如果有机会，我当然也要
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-14
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-17
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    学习
+                            <a href="/categories/%E5%85%B4%E8%B6%A3/" class="post-category">
+                                    兴趣
                                 </a>
                             
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/java/" class="post-category">
-                                    java
+                            <a href="/categories/%E5%85%B4%E8%B6%A3/%E5%B9%B2%E9%A5%AD/" class="post-category">
+                                    干饭
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/">
-                        <span class="chip bg-color">学习心得</span>
-                    </a>
-                    
-                    <a href="/tags/jmockit/">
-                        <span class="chip bg-color">jmockit</span>
+                    <a href="/tags/%E5%90%83%E5%90%83%E5%90%83/">
+                        <span class="chip bg-color">吃吃吃</span>
                     </a>
                     
                 </div>
@@ -3091,8 +3117,8 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
 
             
-            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;不知不觉竟有&nbsp;<span
-                class="white-color">121.4k</span>&nbsp;字了!
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;不知不觉已生产了&nbsp;<span
+                class="white-color">122.3k</span>&nbsp;字!
             
             
             
