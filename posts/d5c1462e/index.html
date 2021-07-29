@@ -3,7 +3,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="TODO, GAATTC的隐藏小窝">
+    <meta name="keywords" content="java8特性之Optional, GAATTC的隐藏小窝">
     <meta name="description" content="A simple blog maintained for recording the ordinary life...">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -15,7 +15,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>TODO | GAATTC的隐藏小窝</title>
+    <title>java8特性之Optional | GAATTC的隐藏小窝</title>
     <link rel="icon" type="image/png" href="/medias/18.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -1256,12 +1256,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/20201116215058.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/wallhaven-x8z9yo.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">TODO</h1>
+                    <h1 class="description center-align post-title">java8特性之Optional</h1>
                 </div>
             </div>
         </div>
@@ -1384,8 +1384,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/todo/">
-                                <span class="chip bg-color">todo</span>
+                            <a href="/tags/java/">
+                                <span class="chip bg-color">java</span>
                             </a>
                         
                     </div>
@@ -1396,12 +1396,12 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
-                                日常
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                学习
                             </a>
                         
-                            <a href="/categories/%E6%97%A5%E5%B8%B8/todo/" class="post-category">
-                                todo
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/java/" class="post-category">
+                                java
                             </a>
                         
                     </div>
@@ -1413,7 +1413,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-11-16
+                    2021-07-28
                 </div>
                 
 
@@ -1422,14 +1422,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    120
+                    678
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -1439,26 +1439,73 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h1><h2 id="一、hexo相关"><a href="#一、hexo相关" class="headerlink" title="一、hexo相关"></a>一、hexo相关</h2><ul>
-<li><input checked="" disabled="" type="checkbox"> 【bug】：hexo每日诗词无法显示</li>
-<li><input checked="" disabled="" type="checkbox"> <del>【bug】：matery二级分类无效</del></li>
-<li><input checked="" disabled="" type="checkbox"> <del>【bug】：代码高亮无效</del></li>
-<li><input checked="" disabled="" type="checkbox"> <del>【bug】：$ hexo clean 后live2d被删除(不知道怎么就好了)</del></li>
-<li><input checked="" disabled="" type="checkbox"> <del>【bug】文章阅读次数不显示</del></li>
-<li><input checked="" disabled="" type="checkbox"> <del>文章背景透明度</del></li>
-<li><input disabled="" type="checkbox"> js异步加载优化</li>
-<li><input disabled="" type="checkbox"> fontawesome的fab图标移动端不显示</li>
-</ul>
-<h2 id="二、乱学点东西"><a href="#二、乱学点东西" class="headerlink" title="二、乱学点东西"></a>二、乱学点东西</h2><ul>
-<li><input checked="" disabled="" type="checkbox"> <del>fontawesome基本用法(v5.1)</del></li>
-<li><input checked="" disabled="" type="checkbox"> <del>markdown高级用法</del></li>
-</ul>
-<h2 id="三、日程安排"><a href="#三、日程安排" class="headerlink" title="三、日程安排"></a>三、日程安排</h2><ul>
-<li><input disabled="" type="checkbox"> 看毕设</li>
-</ul>
-<h2 id="四、优化"><a href="#四、优化" class="headerlink" title="四、优化"></a>四、优化</h2><ul>
-<li><input disabled="" type="checkbox"> 找到彻底禁用chrome的SoftwareReportTool的办法！！！</li>
-</ul>
+                <p>java8特性之Optional</p>
+<blockquote>
+<p>Optional类主要是为了解决空指针异常，不需要在代码中显示地进行判空等</p>
+</blockquote>
+<h2 id="1-Optional的创建"><a href="#1-Optional的创建" class="headerlink" title="1.Optional的创建"></a>1.Optional的创建</h2><p>Optional类提供了三种静态方法：</p>
+<h3 id="1-empty"><a href="#1-empty" class="headerlink" title="1.empty()"></a>1.empty()</h3><p>创建一个空的Optional：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Optional</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> empty <span class="token operator">=</span> <span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="2-of"><a href="#2-of" class="headerlink" title="2.of()"></a>2.of()</h3><p>为非null的值创建一个Optional,特殊地，参数为null时会抛出NullPointerException:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Optional</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> optional <span class="token operator">=</span> <span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token string">"1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 将造成空指针异常</span>
+<span class="token class-name">Optional</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> exception <span class="token operator">=</span> <span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="3-ofNullable"><a href="#3-ofNullable" class="headerlink" title="3.ofNullable()"></a>3.ofNullable()</h3><p>创建一个可为null的Optional:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 将返回一个empty的Optional对象</span>
+<span class="token class-name">Optional</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> optional <span class="token operator">=</span> <span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">ofNullable</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h2 id="2-Optional的判空"><a href="#2-Optional的判空" class="headerlink" title="2.Optional的判空"></a>2.Optional的判空</h2><p>isPresent()方法，optional有值则返回true，为空则返回false：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Optional</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> optional <span class="token operator">=</span> <span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token string">"1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Optional</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> optional1 <span class="token operator">=</span> <span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">ofNullable</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>optional<span class="token punctuation">.</span><span class="token function">isPresent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>optional1<span class="token punctuation">.</span><span class="token function">isPresent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>结果是：true false</p>
+<h2 id="3-Optional的转换"><a href="#3-Optional的转换" class="headerlink" title="3.Optional的转换"></a>3.Optional的转换</h2><h3 id="1-filter-Predicate-lt-super-T-gt-predicate"><a href="#1-filter-Predicate-lt-super-T-gt-predicate" class="headerlink" title="1.filter(Predicate<? super T> predicate)"></a>1.filter(Predicate&lt;? super T&gt; predicate)</h3><p>传入一个predicate条件，如果原optional的值为空或者满足predicate条件，则返回原optional，非空且不满足predicate则返回空optional，例如：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Optional</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> o <span class="token operator">=</span> <span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">ofNullable</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">)</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>s <span class="token operator">-&gt;</span> s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Optional</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> o1 <span class="token operator">=</span> <span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token string">"1"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>s <span class="token operator">-&gt;</span> s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Optional</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> o2 <span class="token operator">=</span> <span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token string">"111"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>s <span class="token operator">-&gt;</span> s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>o<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>o1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>o2<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>结果是：<br>Optional.empty<br>Optional.empty<br>Optional[111]</p>
+<h3 id="2-map-Function-lt-super-T-extends-U-gt-mapper"><a href="#2-map-Function-lt-super-T-extends-U-gt-mapper" class="headerlink" title="2. map(Function<? super T, ? extends U> mapper)"></a>2. map(Function&lt;? super T, ? extends U&gt; mapper)</h3><p>传入一个操作函数，若原optional为空，则直接返回一个空optional，否则返回一个Optional.ofNullable(mapper.apply(value))，即对值进行操作之后的新optional并且允许为空：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>a <span class="token operator">-&gt;</span> a<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>a <span class="token operator">-&gt;</span> a <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>a <span class="token operator">-&gt;</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>结果是：<br>Optional.empty<br>Optional[2]<br>Optional.empty</p>
+<h3 id="3-flatMap-Function-lt-super-T-Optional-lt-U-gt-gt-mapper"><a href="#3-flatMap-Function-lt-super-T-Optional-lt-U-gt-gt-mapper" class="headerlink" title="3.flatMap(Function<? super T, Optional<U>> mapper)"></a>3.flatMap(Function&lt;? super T, Optional&lt;U&gt;&gt; mapper)</h3><p>与map的区别是flatMap的参数mapper的返回值必须是optional，例如：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">flatMap</span><span class="token punctuation">(</span>a <span class="token operator">-&gt;</span> <span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>a <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>结果是：Optional[2]</p>
+<h3 id="4-ifPresent-Consumer-lt-super-T-gt-consumer"><a href="#4-ifPresent-Consumer-lt-super-T-gt-consumer" class="headerlink" title="4.ifPresent(Consumer<? super T> consumer)"></a>4.ifPresent(Consumer&lt;? super T&gt; consumer)</h3><p>传入一个Consumer参数，如果值存在，则执行之，无返回值，例如:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ifPresent</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token operator">::</span><span class="token function">println</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ifPresent</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token operator">::</span><span class="token function">println</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>结果是：1</p>
+<h2 id="4-Optional值的获取"><a href="#4-Optional值的获取" class="headerlink" title="4.Optional值的获取"></a>4.Optional值的获取</h2><h3 id="1-get"><a href="#1-get" class="headerlink" title="1.get()"></a>1.get()</h3><p>如果optional有值则返回值，为空则抛出NoSuchElementException</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Integer</span> i <span class="token operator">=</span> <span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 此方法将抛出异常</span>
+<span class="token class-name">Object</span> exception <span class="token operator">=</span> <span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-orElse-T-other"><a href="#2-orElse-T-other" class="headerlink" title="2.orElse(T other)"></a>2.orElse(T other)</h3><p>如果optional有值则返回值，为空则返回传入的参数，例如：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">orElse</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">orElse</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>结果是：12</p>
+<h3 id="3-orElseGet-Supplier-lt-extends-T-gt-other"><a href="#3-orElseGet-Supplier-lt-extends-T-gt-other" class="headerlink" title="3.orElseGet(Supplier<? extends T> other)"></a>3.orElseGet(Supplier&lt;? extends T&gt; other)</h3><p>与orElse的区别是传入的参数为一个Supplier接口的实现来生成一个值，例如：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token number">1.0</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">orElseGet</span><span class="token punctuation">(</span><span class="token class-name">Math</span><span class="token operator">::</span><span class="token function">random</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">orElseGet</span><span class="token punctuation">(</span><span class="token class-name">Math</span><span class="token operator">::</span><span class="token function">random</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>结果是:1.0 0.832628831775226(随机数)</p>
+<h3 id="4-orElseThrow-Supplier-lt-extends-X-gt-exceptionSupplier"><a href="#4-orElseThrow-Supplier-lt-extends-X-gt-exceptionSupplier" class="headerlink" title="4.orElseThrow(Supplier<? extends X> exceptionSupplier)"></a>4.orElseThrow(Supplier&lt;? extends X&gt; exceptionSupplier)</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">orElseThrow</span><span class="token punctuation">(</span><span class="token class-name">RuntimeException</span><span class="token operator">::</span><span class="token keyword">new</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 此方法将抛出异常</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">orElseThrow</span><span class="token punctuation">(</span><span class="token class-name">RuntimeException</span><span class="token operator">::</span><span class="token keyword">new</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 
             </div>
             <hr/>
@@ -1484,7 +1531,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://gaattc.top/posts/6c9b5b14/">http://gaattc.top/posts/6c9b5b14/</a>
+                    <a href="http://gaattc.top/posts/d5c1462e/">http://gaattc.top/posts/d5c1462e/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1522,8 +1569,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/todo/">
-                                    <span class="chip bg-color">todo</span>
+                                <a href="/tags/java/">
+                                    <span class="chip bg-color">java</span>
                                 </a>
                             
                         </div>
@@ -2331,53 +2378,57 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/2a470550/">
+                <a href="/posts/d5c1462e/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/wallhaven-9mxz8k.jpg" class="responsive-img" alt="大三到现在的经历记录">
+                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/wallhaven-x8z9yo.jpg" class="responsive-img" alt="java8特性之Optional">
                         
-                        <span class="card-title">大三到现在的经历记录</span>
+                        <span class="card-title">java8特性之Optional</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            记录一下大三到现在的经历从机械到IT，重拾自我之路…
+                            java8特性之Optional
 
-记录我的提桶跑路全过程，希望每个人都能从事自己喜欢的工作🏃
+Optional类主要是为了解决空指针异常，不需要在代码中显示地进行判空等
 
-前情提要​    高考后的贪玩和消息闭塞使我误入了机械专业，不过想想主要原因还是因为航空航天的字眼令人景仰，航空报国的情
+1.Optional的创建Optional类提供了三种静态方法：
+1.empty()创建一个空的Optional：
+Optio
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
-                                    日常
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    学习
                                 </a>
                             
-                            <a href="/categories/%E6%97%A5%E5%B8%B8/%E8%AE%B0%E5%BD%95/" class="post-category">
-                                    记录
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/java/" class="post-category">
+                                    java
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%BB%8F%E5%8E%86/">
-                        <span class="chip bg-color">经历</span>
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
                     </a>
                     
                 </div>
@@ -2391,27 +2442,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/9505ccb9/">
+                <a href="/posts/1e79e935/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/43109579.png" class="responsive-img" alt="algorithm">
+                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/wallhaven-g75r7d.jpg" class="responsive-img" alt="java8特性之Stream">
                         
-                        <span class="card-title">algorithm</span>
+                        <span class="card-title">java8特性之Stream</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            algorithm
-过去半年中做的屈指可数的easy题hhh
-
-1.二维数组中的查找(数组)题目描述
-在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这
+                            java8特性之stream
+Stream 是用函数式编程方式在集合类上进行复杂操作的工具，其集成了Java 8中的众多新特性之一的聚合操作，开发者可以更容易地使用Lambda表达式，并且更方便地实现对集合的查找、遍历、过滤以及常见计算等操
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-28
                             </span>
                         <span class="publish-author">
                             
@@ -2421,8 +2469,8 @@
                                     学习
                                 </a>
                             
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95/" class="post-category">
-                                    算法
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/java/" class="post-category">
+                                    java
                                 </a>
                             
                             
@@ -2432,8 +2480,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">算法</span>
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
                     </a>
                     
                 </div>
