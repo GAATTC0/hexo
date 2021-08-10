@@ -6,7 +6,7 @@
   <link href="http://gaattc.top/atom.xml" rel="self"/>
   
   <link href="http://gaattc.top/"/>
-  <updated>2021-07-29T02:15:01.287Z</updated>
+  <updated>2021-08-10T08:30:32.044Z</updated>
   <id>http://gaattc.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git在日常工作中的操作:stash、reset、reverse、rebase、patch</title>
+    <link href="http://gaattc.top/posts/44ee9398/"/>
+    <id>http://gaattc.top/posts/44ee9398/</id>
+    <published>2021-08-10T01:53:20.000Z</published>
+    <updated>2021-08-10T08:30:32.044Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;git在日常工作中的操作-stash、reset、reverse、rebase、patch&quot;&gt;&lt;a href=&quot;#git在日常工作中的操作-stash、reset、reverse、rebase、patch&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="http://gaattc.top/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="git" scheme="http://gaattc.top/categories/%E5%AD%A6%E4%B9%A0/git/"/>
+    
+    
+    <category term="git" scheme="http://gaattc.top/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>java8特性之Optional</title>
@@ -547,33 +574,6 @@
     
     
     <category term="记录" scheme="http://gaattc.top/tags/%E8%AE%B0%E5%BD%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sunflower</title>
-    <link href="http://gaattc.top/posts/84faa128/"/>
-    <id>http://gaattc.top/posts/84faa128/</id>
-    <published>2021-01-30T02:19:49.000Z</published>
-    <updated>2021-03-17T12:50:39.912Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;《Sunflower》指弹-Paddy-Sun&quot;&gt;&lt;a href=&quot;#《Sunflower》指弹-Paddy-Sun&quot; class=&quot;headerlink&quot; title=&quot;《Sunflower》指弹 - Paddy Sun&quot;&gt;&lt;/a&gt;《Sunflower》指弹</summary>
-        
-      
-    
-    
-    
-    <category term="兴趣" scheme="http://gaattc.top/categories/%E5%85%B4%E8%B6%A3/"/>
-    
-    <category term="吉他" scheme="http://gaattc.top/categories/%E5%85%B4%E8%B6%A3/%E5%90%89%E4%BB%96/"/>
-    
-    
-    <category term="指弹" scheme="http://gaattc.top/tags/%E6%8C%87%E5%BC%B9/"/>
     
   </entry>
   
