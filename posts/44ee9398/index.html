@@ -1256,7 +1256,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/111git.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -1440,14 +1440,14 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="git在日常工作中的操作-stash、reset、reverse、rebase、patch"><a href="#git在日常工作中的操作-stash、reset、reverse、rebase、patch" class="headerlink" title="git在日常工作中的操作:stash、reset、reverse、rebase、patch"></a>git在日常工作中的操作:stash、reset、reverse、rebase、patch</h1><blockquote>
-<p>到现在已经实际工作了一个月了，虽然说提交的代码量和pr屈指可数，但还是发现曾经学的git的基本clone、add、commit、pull、push操作不够用了。<br>因为涉及到分支、多任务代码混乱、错误提交回滚等，现学现用不是长久之计，将它们总结整合和记录下来吧~</p>
+<p>到现在已经工作了一个月了，虽然说提交的代码量和pr屈指可数，但还是发现曾经学的git的基本clone、add、commit、pull、push操作不够用了。<br>因为涉及到分支、多任务代码混乱、错误提交回滚等，现学现用不是长久之计，将它们总结整合和记录下来吧~</p>
 </blockquote>
-<p>其实还是有很多git的强大功能的，比如<code>charry pick</code>等，我还没有用到过，以后有机会补上。</p>
+<p>其实git还是有很多其他功能的，比如<code>charry pick</code>、<code>rebase</code>等，我还没有用到过，以后有机会补上。</p>
 <h2 id="stash"><a href="#stash" class="headerlink" title="stash"></a>stash</h2><blockquote>
 <p>使用场景：在一个开发任务还没有完成的时候，突然来了一个紧急bug任务要改代码。此时就会有两份修改，若要提交修改bug的代码，开发的未完成代码也会一起提交上去，那么怎么才能备份之前的半成品修改，恢复到一个干净状态来改bug呢？</p>
 </blockquote>
 <p>这种情况就可以使用到git的功能stash(储藏)了。<font color="red">前提是要储藏的修改还没有被commit，</font>也就是说储藏是针对于本地工作目录(working dir)和暂存区(index)的修改的。</p>
-<h3 id="1-储存"><a href="#1-储存" class="headerlink" title="1.储存"></a>1.储存</h3><p><strong>命令行操作：</strong></p>
+<h3 id="1-储藏"><a href="#1-储藏" class="headerlink" title="1.储藏"></a>1.储藏</h3><p><strong>命令行操作：</strong></p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> stash<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>建议stash的时候加上类似commit时的message用于记录信息，所以一般使用可以是这样：</p>
@@ -1508,7 +1508,7 @@ stash@<span class="token punctuation">{</span><span class="token number">2</span
 <p><strong>命令行操作：</strong></p>
 <p>idea太好用了，所以命令行还没看过，以后有需要补上。</p>
 <h2 id="reverse"><a href="#reverse" class="headerlink" title="reverse"></a>reverse</h2><blockquote>
-<p>使用场景：commit有问题或者commit错了，需要撤回(虽然不是真的撤回)</p>
+<p>使用场景：commit有问题或者commit错了，需要撤回(虽然不一定是真的撤回了)</p>
 </blockquote>
 <p>在IDEA或者sourcetree都可以很方便地查看和执行撤回操作。在IDEA的git log界面或者sourcetree的history界面，选择一个commit，右键选择<code>reverse commit</code>或者<code>revert commit</code>名字不一样其实是一样的。</p>
 <p>这个操作的原理是提交一次新的commit来将需要reverse的那个commit里的修改恢复掉。比较适合于已经不小心push了的commit，当然多提交一次不好看。</p>
@@ -1522,7 +1522,7 @@ stash@<span class="token punctuation">{</span><span class="token number">2</span
 <h2 id="patch"><a href="#patch" class="headerlink" title="patch"></a>patch</h2><blockquote>
 <p>应用场景：生成一个patch补丁文件，记录了一些修改信息，可以用于给别人方便使用或者自己备份。</p>
 </blockquote>
-<h3 id="生成patch"><a href="#生成patch" class="headerlink" title="生成patch"></a>生成patch</h3><p>命令行：</p>
+<h3 id="生成patch"><a href="#生成patch" class="headerlink" title="生成patch"></a>生成patch</h3><p><strong>命令行：</strong></p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 生成从当前commit往前n个commit的patch文件，有几个commit就会生成几个.patch文件，并且默认文件名从最早提交的commit 0001编号</span>
 <span class="token function">git</span> format-patch -n
 <span class="token comment"># 生成从指定commit_id(包含该commit)往前n个commit的patch文件</span>
@@ -1530,7 +1530,7 @@ stash@<span class="token punctuation">{</span><span class="token number">2</span
 <span class="token comment"># 单独生成某个commit的patch</span>
 <span class="token function">git</span> format-patch commit_id -1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>IDEA或者sourcetree：</p>
+<p><strong>IDEA或者sourcetree：</strong></p>
 <p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210810162347763.png"></p>
 <h3 id="使用patch"><a href="#使用patch" class="headerlink" title="使用patch"></a>使用patch</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 检查patch文件</span>
 <span class="token function">git</span> apply --stat xxx.patch
@@ -2417,8 +2417,7 @@ stash@<span class="token punctuation">{</span><span class="token number">2</span
                 <a href="/posts/44ee9398/">
                     <div class="card-image">
                         
-                        
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="git在日常工作中的操作:stash、reset、reverse、rebase、patch">
+                        <img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/111git.jpg" class="responsive-img" alt="git在日常工作中的操作:stash、reset、reverse、rebase、patch">
                         
                         <span class="card-title">git在日常工作中的操作:stash、reset、reverse、rebase、patch</span>
                     </div>
@@ -2427,7 +2426,7 @@ stash@<span class="token punctuation">{</span><span class="token number">2</span
                     <div class="summary block-with-text">
                         
                             git在日常工作中的操作:stash、reset、reverse、rebase、patch
-到现在已经实际工作了一个月了，虽然说提交的代码量和pr屈指可数，但还是发现曾经学的git的基本clone、add、commit、pull、push操
+到现在已经工作了一个月了，虽然说提交的代码量和pr屈指可数，但还是发现曾经学的git的基本clone、add、commit、pull、push操作不
                         
                     </div>
                     <div class="publish-info">
@@ -2759,7 +2758,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;不知不觉已生产了&nbsp;<span
-                class="white-color">129.1k</span>&nbsp;字!
+                class="white-color">129.4k</span>&nbsp;字!
             
             
             
