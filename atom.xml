@@ -6,7 +6,7 @@
   <link href="http://gaattc.top/atom.xml" rel="self"/>
   
   <link href="http://gaattc.top/"/>
-  <updated>2021-08-11T01:51:19.983Z</updated>
+  <updated>2021-09-01T11:14:15.237Z</updated>
   <id>http://gaattc.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>IDEA编译找不到符号的常见解决方法</title>
+    <link href="http://gaattc.top/posts/e9adbdf0/"/>
+    <id>http://gaattc.top/posts/e9adbdf0/</id>
+    <published>2021-09-01T10:56:56.000Z</published>
+    <updated>2021-09-01T11:14:15.237Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;IDEA编译找不到符号的常见解决方法&quot;&gt;&lt;a href=&quot;#IDEA编译找不到符号的常见解决方法&quot; class=&quot;headerlink&quot; title=&quot;IDEA编译找不到符号的常见解决方法&quot;&gt;&lt;/a&gt;IDEA编译找不到符号的常见解决方法&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="bug" scheme="http://gaattc.top/categories/bug/"/>
+    
+    <category term="git" scheme="http://gaattc.top/categories/bug/git/"/>
+    
+    
+    <category term="bug" scheme="http://gaattc.top/tags/bug/"/>
+    
+  </entry>
   
   <entry>
     <title>git在日常工作中的操作:stash、reset、reverse、rebase、patch</title>
@@ -79,7 +106,7 @@
     <link href="http://gaattc.top/posts/1e79e935/"/>
     <id>http://gaattc.top/posts/1e79e935/</id>
     <published>2021-07-28T01:56:09.000Z</published>
-    <updated>2021-07-29T06:32:33.578Z</updated>
+    <updated>2021-09-01T06:23:57.622Z</updated>
     
     
       
@@ -544,36 +571,6 @@
     
     
     <category term="分享" scheme="http://gaattc.top/tags/%E5%88%86%E4%BA%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我的电脑换届仪式</title>
-    <link href="http://gaattc.top/posts/7824aae9/"/>
-    <id>http://gaattc.top/posts/7824aae9/</id>
-    <published>2021-02-18T08:54:52.000Z</published>
-    <updated>2021-05-15T13:50:45.130Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;我的电脑换届仪式&quot;&gt;&lt;a href=&quot;#我的电脑换届仪式&quot; class=&quot;headerlink&quot; title=&quot;我的电脑换届仪式&quot;&gt;&lt;/a&gt;我的电脑换届仪式&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;一点点仪式感吧哈哈&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2</summary>
-        
-      
-    
-    
-    
-    <category term="日常" scheme="http://gaattc.top/categories/%E6%97%A5%E5%B8%B8/"/>
-    
-    <category term="记录" scheme="http://gaattc.top/categories/%E6%97%A5%E5%B8%B8/%E8%AE%B0%E5%BD%95/"/>
-    
-    
-    <category term="记录" scheme="http://gaattc.top/tags/%E8%AE%B0%E5%BD%95/"/>
     
   </entry>
   
