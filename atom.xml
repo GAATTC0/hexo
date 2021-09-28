@@ -6,7 +6,7 @@
   <link href="http://gaattc.top/atom.xml" rel="self"/>
   
   <link href="http://gaattc.top/"/>
-  <updated>2021-09-01T11:15:06.546Z</updated>
+  <updated>2021-09-28T04:19:33.371Z</updated>
   <id>http://gaattc.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>让IDEA更好用(毕生所学的小技巧)</title>
+    <link href="http://gaattc.top/posts/42dd4c/"/>
+    <id>http://gaattc.top/posts/42dd4c/</id>
+    <published>2021-09-28T01:25:24.000Z</published>
+    <updated>2021-09-28T04:19:33.371Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;让IDEA更好用-毕生所学的小技巧&quot;&gt;&lt;a href=&quot;#让IDEA更好用-毕生所学的小技巧&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="日常" scheme="http://gaattc.top/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    <category term="分享" scheme="http://gaattc.top/categories/%E6%97%A5%E5%B8%B8/%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="分享" scheme="http://gaattc.top/tags/%E5%88%86%E4%BA%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>IDEA编译找不到符号的常见解决方法</title>
@@ -544,33 +571,6 @@
     <category term="au" scheme="http://gaattc.top/tags/au/"/>
     
     <category term="pr" scheme="http://gaattc.top/tags/pr/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>电脑上的软件们</title>
-    <link href="http://gaattc.top/posts/d905b657/"/>
-    <id>http://gaattc.top/posts/d905b657/</id>
-    <published>2021-02-18T11:45:46.000Z</published>
-    <updated>2021-02-21T02:29:20.832Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;电脑上的软件们&quot;&gt;&lt;a href=&quot;#电脑上的软件们&quot; class=&quot;headerlink&quot; title=&quot;电脑上的软件们&quot;&gt;&lt;/a&gt;电脑上的软件们&lt;/h1&gt;&lt;p&gt;&lt;font color=&quot;red&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="日常" scheme="http://gaattc.top/categories/%E6%97%A5%E5%B8%B8/"/>
-    
-    <category term="分享" scheme="http://gaattc.top/categories/%E6%97%A5%E5%B8%B8/%E5%88%86%E4%BA%AB/"/>
-    
-    
-    <category term="分享" scheme="http://gaattc.top/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   

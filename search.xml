@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>让IDEA更好用(毕生所学的小技巧)</title>
+      <link href="posts/42dd4c/"/>
+      <url>posts/42dd4c/</url>
+      
+        <content type="html"><![CDATA[<h1 id="让IDEA更好用-毕生所学的小技巧"><a href="#让IDEA更好用-毕生所学的小技巧" class="headerlink" title="让IDEA更好用(毕生所学的小技巧)"></a>让IDEA更好用(毕生所学的小技巧)</h1><blockquote><p>还在更新中…</p></blockquote><h2 id="一、常规篇"><a href="#一、常规篇" class="headerlink" title="一、常规篇"></a>一、常规篇</h2><h3 id="1-字体布局"><a href="#1-字体布局" class="headerlink" title="1.字体布局"></a>1.字体布局</h3><h4 id="①编译器字体"><a href="#①编译器字体" class="headerlink" title="①编译器字体"></a>①编译器字体</h4><p><code>Settings -&gt; Appearance&amp;Behavior -&gt; Appearance</code>:</p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928102636561.png" style="zoom: 67%;"><h4 id="②代码字体"><a href="#②代码字体" class="headerlink" title="②代码字体"></a>②代码字体</h4><p><code>Settings -&gt; Editor -&gt; Font</code>:</p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928102941315.png" style="zoom:67%;"><p>consolas, yyds.</p><h3 id="2-折叠中间包"><a href="#2-折叠中间包" class="headerlink" title="2.折叠中间包"></a>2.折叠中间包</h3><p>当包路径很多时，中间可能会有很多的空包，这样要手动点开每一个就很麻烦，compact可让这些空的包一次性展开为一个包的样子，报名之间用”.”分隔，既方便又美观：</p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928103454360.png" style="zoom:67%;"><h3 id="3-Tab数量控制"><a href="#3-Tab数量控制" class="headerlink" title="3.Tab数量控制"></a>3.Tab数量控制</h3><p>idea的默认tab数量是有限制的，一行显示满了再打开新的tab就会折叠，超过数量限制还会关闭旧的tab，这样非常不便于调试和查看，所偶一将其修改为多行显示：</p><p><code>Settings -&gt; Editor -&gt; General -&gt; Editor Tabs</code>:</p><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928110635358.png"></p><p>先关闭Show tabs in one row,然后下面有一个关闭策略：</p><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928110758987.png"></p><p>把这个Tab limit的数值调大亿点即可，这样以来就可以多行显示了。</p><h3 id="4-防止自动将多个import替换为import"><a href="#4-防止自动将多个import替换为import" class="headerlink" title="4.防止自动将多个import替换为import *"></a>4.防止自动将多个import替换为import *</h3><p>idea在一些情况下会将同一个包中的多个import语句合为一条<code>import *</code>，但是在很多代码规范里这是不允许的，将其设置一下不去自动替换import，</p><p><code>Settings -&gt; Editor -&gt; Code Style -&gt; Java</code>：</p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928111349638.png" style="zoom:67%;"><p>将下面这两个替换策略的值调大亿点即可。</p><h3 id="5-File-Header"><a href="#5-File-Header" class="headerlink" title="5.File Header"></a>5.File Header</h3><p>// todo</p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928113902841.png" style="zoom:50%;"><h2 id="二、插件篇"><a href="#二、插件篇" class="headerlink" title="二、插件篇"></a>二、插件篇</h2><h3 id="1-Translation"><a href="#1-Translation" class="headerlink" title="1.Translation"></a>1.Translation</h3><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928104018440.png"></p><h3 id="2-Rainbow-Brackets"><a href="#2-Rainbow-Brackets" class="headerlink" title="2.Rainbow  Brackets"></a>2.Rainbow  Brackets</h3><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928105851220.png"></p><h3 id="3-Nyan-Progress-Bar"><a href="#3-Nyan-Progress-Bar" class="headerlink" title="3.Nyan Progress Bar"></a>3.Nyan Progress Bar</h3><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928105905553.png"></p><h3 id="4-IDE-Eval-Reset"><a href="#4-IDE-Eval-Reset" class="headerlink" title="4.IDE Eval Reset"></a>4.IDE Eval Reset</h3><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928105918726.png"></p><h2 id="三、VCS篇"><a href="#三、VCS篇" class="headerlink" title="三、VCS篇"></a>三、VCS篇</h2><h3 id="1-IDEA使用git操作缓慢的解决方法"><a href="#1-IDEA使用git操作缓慢的解决方法" class="headerlink" title="1.IDEA使用git操作缓慢的解决方法"></a>1.IDEA使用git操作缓慢的解决方法</h3><p>有时候idea使用git的一些操作变得非常慢，比如Update Project、Annotate with Git Blame、commit、查看本地的change list等。</p><p>但是有时候这不是网络问题，因为此时此刻使用命令行或者其他的客户端都很快，虽然这个问题原因还不明，但是解决方法很简单，</p><p>找到idea的安装目录下的bin目录：</p><pre class="line-numbers language-dir" data-language="dir"><code class="language-dir">%IDEA_HOME%\bin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>有一个<strong>runnerw.exe</strong>文件，将其删除即可。并且对于idea的正常使用没有任何影响。</p><h3 id="2-commit设置"><a href="#2-commit设置" class="headerlink" title="2.commit设置"></a>2.commit设置</h3><p>在idea已经enable VCS后，左侧边栏会有一个commit工具栏，这里是我们经常用来提交代码的地方，在comment输入框的上方有一个commit设置：</p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928112721237.png" style="zoom:67%;"><h4 id="①Reformat-code"><a href="#①Reformat-code" class="headerlink" title="①Reformat code"></a>①Reformat code</h4><p>格式化代码，这个建议勾选上，在提交时自动将代码格式化，防止平时的遗漏。</p><h4 id="②Rearrange-code"><a href="#②Rearrange-code" class="headerlink" title="②Rearrange code"></a>②Rearrange code</h4><p>// todo</p><h4 id="③Optimize-imports"><a href="#③Optimize-imports" class="headerlink" title="③Optimize imports"></a>③Optimize imports</h4><h4 id="④Analyze-code"><a href="#④Analyze-code" class="headerlink" title="④Analyze code"></a>④Analyze code</h4><h4 id="⑤CheckTODO"><a href="#⑤CheckTODO" class="headerlink" title="⑤CheckTODO"></a>⑤CheckTODO</h4><h4 id="⑥Cleanup"><a href="#⑥Cleanup" class="headerlink" title="⑥Cleanup"></a>⑥Cleanup</h4><h4 id="⑦RunTests"><a href="#⑦RunTests" class="headerlink" title="⑦RunTests"></a>⑦RunTests</h4><h4 id="⑧Update-copyright"><a href="#⑧Update-copyright" class="headerlink" title="⑧Update copyright"></a>⑧Update copyright</h4><h2 id="四、MVN篇"><a href="#四、MVN篇" class="headerlink" title="四、MVN篇"></a>四、MVN篇</h2><h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3><h2 id="五、调试标记篇"><a href="#五、调试标记篇" class="headerlink" title="五、调试标记篇"></a>五、调试标记篇</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 日常 </category>
+          
+          <category> 分享 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 分享 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>IDEA编译找不到符号的常见解决方法</title>
       <link href="posts/e9adbdf0/"/>
       <url>posts/e9adbdf0/</url>
