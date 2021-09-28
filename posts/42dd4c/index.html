@@ -1527,12 +1527,12 @@
 <h4 id="⑥Cleanup"><a href="#⑥Cleanup" class="headerlink" title="⑥Cleanup"></a>⑥Cleanup</h4><p>// 未知功能，但是根据一些<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_48910529/article/details/119171822">别人的经验</a>来看，还是别用为好。。。</p>
 <h4 id="⑦RunTests"><a href="#⑦RunTests" class="headerlink" title="⑦RunTests"></a>⑦RunTests</h4><p>运行测试，浪费时间，建议关闭。</p>
 <h4 id="⑧Update-copyright"><a href="#⑧Update-copyright" class="headerlink" title="⑧Update copyright"></a>⑧Update copyright</h4><p>// 未知功能</p>
-<h3 id="3-新建文件自动add"><a href="#3-新建文件自动add" class="headerlink" title="3.新建文件自动add"></a>3.新建文件自动add</h3><p>`Settings -&gt; Version Control-&gt; Confirmation：</p>
+<h3 id="3-新建文件自动add"><a href="#3-新建文件自动add" class="headerlink" title="3.新建文件自动add"></a>3.新建文件自动add</h3><p><code>Settings -&gt; Version Control-&gt; Confirmation</code>：</p>
 <p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928135302888.png"></p>
 <p>选择Add silently即可在新建文件时自动add了。</p>
 <h3 id="4-shelve"><a href="#4-shelve" class="headerlink" title="4.shelve"></a>4.shelve</h3><p>在idea左侧的commit栏中，有一个shelve选项，可以在changelist中选择任意数量的文件，然后选择shelve silently，</p>
 <p>就可以将这些改变储存起来，类似于stash操作，然年在右侧的shelf栏中就会多出来你储存的更改，可以随时选择unshelve进行恢复(这里的恢复相当于stash的apply操作而不是pop，也就是说不会因为恢复而删除这个存储)，也可以重命名和删除等操作，总体来说比stash方便很多。</p>
-<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928150918644.png" alt="image-20210928150918644"></p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928150918644.png"></p>
 <h2 id="四、MVN篇"><a href="#四、MVN篇" class="headerlink" title="四、MVN篇"></a>四、MVN篇</h2><h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3><h2 id="五、调试标记篇"><a href="#五、调试标记篇" class="headerlink" title="五、调试标记篇"></a>五、调试标记篇</h2>
             </div>
             <hr/>
@@ -2972,10 +2972,10 @@ $(function () {
     <a onclick="switchNightMode()" id="sma">
         <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
     </a>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight+600||document.documentElement.clientHeight+600)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight+600||document.documentElement.clientHeight+600)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
 </html>
