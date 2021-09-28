@@ -1441,14 +1441,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    602
+                    1.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    5 分
                 </div>
                 
 
@@ -1482,27 +1482,58 @@
 <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928111349638.png" style="zoom:67%;">
 
 <p>将下面这两个替换策略的值调大亿点即可。</p>
-<h3 id="5-File-Header"><a href="#5-File-Header" class="headerlink" title="5.File Header"></a>5.File Header</h3><p>// todo</p>
+<h3 id="5-File-Header"><a href="#5-File-Header" class="headerlink" title="5.File Header"></a>5.File Header</h3><p><code>Settings -&gt; Editor -&gt; File and Code Templates</code>：</p>
+<p>右侧添加一个File Header，这样新建一个类的时候会自动根据配置在类的上方添加注释信息，其中还可以定义一些环境变量，如：</p>
+<p>{DATE}、{TIME}、{USER}、{PACKEGE_NAME}等。</p>
 <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928113902841.png" style="zoom:50%;">
 
 
 
 <h2 id="二、插件篇"><a href="#二、插件篇" class="headerlink" title="二、插件篇"></a>二、插件篇</h2><h3 id="1-Translation"><a href="#1-Translation" class="headerlink" title="1.Translation"></a>1.Translation</h3><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928104018440.png"></p>
+<p>划线翻译、文档翻译、翻译并替换，还是很好用的。支持google、有道、百度翻译，但是综合来看还是google更准确一些，就是时常会有一些网络问题，可以在设置里勾选使用tanslate.google.com，</p>
+<p><code>Settings -&gt; Tools -&gt; Translation</code>：</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928141415379.png"></p>
 <h3 id="2-Rainbow-Brackets"><a href="#2-Rainbow-Brackets" class="headerlink" title="2.Rainbow  Brackets"></a>2.Rainbow  Brackets</h3><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928105851220.png"></p>
+<p>对比了无数主题，发现还是idea自带的darcula主题看着舒服，但是缺点是高亮的太少了，一大堆代码大部分都是灰色的，看起来很费劲，所以包括括号什么的，使用这个彩虹括号插件就可以让界面更美观、代码结构更清晰，就不上图了，体验过的都说好。</p>
 <h3 id="3-Nyan-Progress-Bar"><a href="#3-Nyan-Progress-Bar" class="headerlink" title="3.Nyan Progress Bar"></a>3.Nyan Progress Bar</h3><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928105905553.png"></p>
+<p>让进度条变成彩虹猫，本来枯燥缓慢的进度条好像变得更快了呢！</p>
 <h3 id="4-IDE-Eval-Reset"><a href="#4-IDE-Eval-Reset" class="headerlink" title="4.IDE Eval Reset"></a>4.IDE Eval Reset</h3><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928105918726.png"></p>
+<p><a target="_blank" rel="noopener" href="https://gaattc.lanzoui.com/iMkxyulpvda">下载传送门</a></p>
+<p>这是一个无限试用idea的破解插件，之前一直是用的lookdiv的激活码，但是现在jetbrains查的严不好用了，建议还是用这个一劳永逸。</p>
+<p><strong>使用方法：</strong></p>
+<ol>
+<li>首先，下载破解插件压缩包，将其放在一个安全的路径，<font color="red">此后不要移动和删除</font>，否则破解插件会失效；</li>
+<li>新建一个项目，将压缩包直接拖进编译器，然后重启编译器；</li>
+<li>重新启动后在顶部的导航栏<code>help</code>中，最后一行会出现一个<code>Eval Reset</code>选项，打开后右下角有一个<img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928140810450.png">选项，勾选之，这样就会在每次重启前自动重置试用期限了。</li>
+</ol>
+<blockquote>
+<p>code with me功能还不能试用，查看会发现没有激活，但是令人惊喜的是没激活也可以直接使用233</p>
+</blockquote>
 <h2 id="三、VCS篇"><a href="#三、VCS篇" class="headerlink" title="三、VCS篇"></a>三、VCS篇</h2><h3 id="1-IDEA使用git操作缓慢的解决方法"><a href="#1-IDEA使用git操作缓慢的解决方法" class="headerlink" title="1.IDEA使用git操作缓慢的解决方法"></a>1.IDEA使用git操作缓慢的解决方法</h3><p>有时候idea使用git的一些操作变得非常慢，比如Update Project、Annotate with Git Blame、commit、查看本地的change list等。</p>
 <p>但是有时候这不是网络问题，因为此时此刻使用命令行或者其他的客户端都很快，虽然这个问题原因还不明，但是解决方法很简单，</p>
 <p>找到idea的安装目录下的bin目录：</p>
 <pre class="line-numbers language-dir" data-language="dir"><code class="language-dir">%IDEA_HOME%\bin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>有一个<strong>runnerw.exe</strong>文件，将其删除即可。并且对于idea的正常使用没有任何影响。</p>
-<h3 id="2-commit设置"><a href="#2-commit设置" class="headerlink" title="2.commit设置"></a>2.commit设置</h3><p>在idea已经enable VCS后，左侧边栏会有一个commit工具栏，这里是我们经常用来提交代码的地方，在comment输入框的上方有一个commit设置：</p>
+<h3 id="2-commit设置"><a href="#2-commit设置" class="headerlink" title="2.commit设置"></a>2.commit设置</h3><p>在idea已经enable VCS后，左侧边栏会有一个commit工具栏，这里是我们经常用来提交代码的地方，在comment输入框的上方有一个commit设置，或者在设置里进入，</p>
+<p><code>Settings -&gt; Version Control-&gt; Commit</code>：</p>
 <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928112721237.png" style="zoom:67%;">
 
 <h4 id="①Reformat-code"><a href="#①Reformat-code" class="headerlink" title="①Reformat code"></a>①Reformat code</h4><p>格式化代码，这个建议勾选上，在提交时自动将代码格式化，防止平时的遗漏。</p>
-<h4 id="②Rearrange-code"><a href="#②Rearrange-code" class="headerlink" title="②Rearrange code"></a>②Rearrange code</h4><p>// todo</p>
-<h4 id="③Optimize-imports"><a href="#③Optimize-imports" class="headerlink" title="③Optimize imports"></a>③Optimize imports</h4><h4 id="④Analyze-code"><a href="#④Analyze-code" class="headerlink" title="④Analyze code"></a>④Analyze code</h4><h4 id="⑤CheckTODO"><a href="#⑤CheckTODO" class="headerlink" title="⑤CheckTODO"></a>⑤CheckTODO</h4><h4 id="⑥Cleanup"><a href="#⑥Cleanup" class="headerlink" title="⑥Cleanup"></a>⑥Cleanup</h4><h4 id="⑦RunTests"><a href="#⑦RunTests" class="headerlink" title="⑦RunTests"></a>⑦RunTests</h4><h4 id="⑧Update-copyright"><a href="#⑧Update-copyright" class="headerlink" title="⑧Update copyright"></a>⑧Update copyright</h4><h2 id="四、MVN篇"><a href="#四、MVN篇" class="headerlink" title="四、MVN篇"></a>四、MVN篇</h2><h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3><h2 id="五、调试标记篇"><a href="#五、调试标记篇" class="headerlink" title="五、调试标记篇"></a>五、调试标记篇</h2>
+<h4 id="②Rearrange-code"><a href="#②Rearrange-code" class="headerlink" title="②Rearrange code"></a>②Rearrange code</h4><p>这个选项的功能是在提交时将代码结构规范，将类中的成员变量定义移动到方法的上方去，当然一般来说是用不到的，这个是比较基本的规范。</p>
+<h4 id="③Optimize-imports"><a href="#③Optimize-imports" class="headerlink" title="③Optimize imports"></a>③Optimize imports</h4><p>去掉没有用到的import，建议勾选。</p>
+<h4 id="④Analyze-code"><a href="#④Analyze-code" class="headerlink" title="④Analyze code"></a>④Analyze code</h4><p>检查代码中的warning和error，也没啥用，比较费时间，如果有把握提交的代码没有编译问题就可以去掉了(不过我为了保险起见还是打开了这个选项</p>
+<h4 id="⑤CheckTODO"><a href="#⑤CheckTODO" class="headerlink" title="⑤CheckTODO"></a>⑤CheckTODO</h4><p>检查todo标记，没啥用还占用时间，建议关闭。</p>
+<h4 id="⑥Cleanup"><a href="#⑥Cleanup" class="headerlink" title="⑥Cleanup"></a>⑥Cleanup</h4><p>// 未知功能，但是根据一些<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_48910529/article/details/119171822">别人的经验</a>来看，还是别用为好。。。</p>
+<h4 id="⑦RunTests"><a href="#⑦RunTests" class="headerlink" title="⑦RunTests"></a>⑦RunTests</h4><p>运行测试，浪费时间，建议关闭。</p>
+<h4 id="⑧Update-copyright"><a href="#⑧Update-copyright" class="headerlink" title="⑧Update copyright"></a>⑧Update copyright</h4><p>// 未知功能</p>
+<h3 id="3-新建文件自动add"><a href="#3-新建文件自动add" class="headerlink" title="3.新建文件自动add"></a>3.新建文件自动add</h3><p>`Settings -&gt; Version Control-&gt; Confirmation：</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928135302888.png"></p>
+<p>选择Add silently即可在新建文件时自动add了。</p>
+<h3 id="4-shelve"><a href="#4-shelve" class="headerlink" title="4.shelve"></a>4.shelve</h3><p>在idea左侧的commit栏中，有一个shelve选项，可以在changelist中选择任意数量的文件，然后选择shelve silently，</p>
+<p>就可以将这些改变储存起来，类似于stash操作，然年在右侧的shelf栏中就会多出来你储存的更改，可以随时选择unshelve进行恢复(这里的恢复相当于stash的apply操作而不是pop，也就是说不会因为恢复而删除这个存储)，也可以重命名和删除等操作，总体来说比stash方便很多。</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928150918644.png" alt="image-20210928150918644"></p>
+<h2 id="四、MVN篇"><a href="#四、MVN篇" class="headerlink" title="四、MVN篇"></a>四、MVN篇</h2><h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3><h2 id="五、调试标记篇"><a href="#五、调试标记篇" class="headerlink" title="五、调试标记篇"></a>五、调试标记篇</h2>
             </div>
             <hr/>
 
@@ -2724,7 +2755,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;不知不觉已生产了&nbsp;<span
-                class="white-color">137.9k</span>&nbsp;字!
+                class="white-color">138.7k</span>&nbsp;字!
             
             
             
