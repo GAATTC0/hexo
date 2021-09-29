@@ -1441,14 +1441,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    7 分
                 </div>
                 
 
@@ -1487,8 +1487,9 @@
 <p>{DATE}、{TIME}、{USER}、{PACKEGE_NAME}等。</p>
 <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928113902841.png" style="zoom:50%;">
 
-
-
+<h4 id="6-比较不同"><a href="#6-比较不同" class="headerlink" title="6.比较不同"></a>6.比较不同</h4><p>这个文档比较功能比word那些的好用多了，可以直接在某个文件的任意位置右键选择<code>Compare With Clipboard</code>，就可以将其和剪贴板中的文字进行比较了，并且非常详细和美观，当然前提时要先复制一份要比较的代码，另外，还可以选中一段代码进行比较，这个也很方便：</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210929141513924.png"></p>
+<p>还有一个是不用复制的比较方法，对整个文件进行对比，在某个文件右键选择<code>Compare With</code>然后选择另一个文件即可。</p>
 <h2 id="二、插件篇"><a href="#二、插件篇" class="headerlink" title="二、插件篇"></a>二、插件篇</h2><h3 id="1-Translation"><a href="#1-Translation" class="headerlink" title="1.Translation"></a>1.Translation</h3><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928104018440.png"></p>
 <p>划线翻译、文档翻译、翻译并替换，还是很好用的。支持google、有道、百度翻译，但是综合来看还是google更准确一些，就是时常会有一些网络问题，可以在设置里勾选使用tanslate.google.com，</p>
 <p><code>Settings -&gt; Tools -&gt; Translation</code>：</p>
@@ -1533,8 +1534,21 @@
 <h3 id="4-shelve"><a href="#4-shelve" class="headerlink" title="4.shelve"></a>4.shelve</h3><p>在idea左侧的commit栏中，有一个shelve选项，可以在changelist中选择任意数量的文件，然后选择shelve silently，</p>
 <p>就可以将这些改变储存起来，类似于stash操作，然年在右侧的shelf栏中就会多出来你储存的更改，可以随时选择unshelve进行恢复(这里的恢复相当于stash的apply操作而不是pop，也就是说不会因为恢复而删除这个存储)，也可以重命名和删除等操作，总体来说比stash方便很多。</p>
 <p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928150918644.png"></p>
-<h3 id="5-Change-List"><a href="#5-Change-List" class="headerlink" title="5.Change List"></a>5.Change List</h3><p>// todo</p>
-<h2 id="四、MVN篇"><a href="#四、MVN篇" class="headerlink" title="四、MVN篇"></a>四、MVN篇</h2><h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3><h2 id="五、调试标记篇"><a href="#五、调试标记篇" class="headerlink" title="五、调试标记篇"></a>五、调试标记篇</h2><h3 id="1-各种断点"><a href="#1-各种断点" class="headerlink" title="1.各种断点"></a>1.各种断点</h3><h3 id="2-Favorites"><a href="#2-Favorites" class="headerlink" title="2.Favorites"></a>2.Favorites</h3>
+<h3 id="5-Change-List"><a href="#5-Change-List" class="headerlink" title="5.Change List"></a>5.Change List</h3><p>其实有时候使用stash或者使用shelve来贮存更改，还是有时候不够实用，因为没法细腻精确地控制更改，尤其是在同一个文件中需要区分的情况。此时，changelist的功能就显得非常实用了。</p>
+<p>在修改了的地方点击即可看到代码的变化，这里就能看到changelist，可以手动将这处更改添加到一个新的changelist中，所有的修改默认是在一个默认的changelist中的，即Default Changelist。</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210929135603293.png"></p>
+<p>另一个要用到的地方是在左侧导航栏的commit中：</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210929140143223.png"></p>
+<p>这里就可以看到所有的changelist了，还有一个小用处就是可以把不想提交的change隔离掉，比如这里我修改了很多pom配置，但是不能提交它们，就把它们都放到了一个changelist中，改名为ignore，顾名思义，又很方便。</p>
+<p>右键某一个changelist中的文件时，还可以选择将其回滚或者移动到其他的changelist中。</p>
+<p>提交代码的时候直接点击对应的changelist即可全选其中的所有的修改，不会影响其他的changelist，并且提交之后对应的changelist就会消失。</p>
+<blockquote>
+<p>养成使用changelist的习惯，再也不用担心同时做好几个任务了~</p>
+</blockquote>
+<h4 id="5-annotate-with-git-blame"><a href="#5-annotate-with-git-blame" class="headerlink" title="5.annotate with git blame"></a>5.annotate with git blame</h4><p>在文件内右键选择git或者在行号栏右键都可以找到这个选项，打开后，在行号栏会展示每一行最后的修改者，<del>可以用来确认是谁的bug</del>，还有对应的日期，很方便：</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210929150837634.png"></p>
+<h2 id="四、MVN篇"><a href="#四、MVN篇" class="headerlink" title="四、MVN篇"></a>四、MVN篇</h2><h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3><p>// todo</p>
+<h2 id="五、调试标记篇"><a href="#五、调试标记篇" class="headerlink" title="五、调试标记篇"></a>五、调试标记篇</h2><h3 id="1-各种断点"><a href="#1-各种断点" class="headerlink" title="1.各种断点"></a>1.各种断点</h3><h3 id="2-Favorites"><a href="#2-Favorites" class="headerlink" title="2.Favorites"></a>2.Favorites</h3><h4 id="3-Bookmark和Mnemonic-Bookmark"><a href="#3-Bookmark和Mnemonic-Bookmark" class="headerlink" title="3.Bookmark和Mnemonic Bookmark"></a>3.Bookmark和Mnemonic Bookmark</h4>
             </div>
             <hr/>
 
@@ -2421,12 +2435,11 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            window查看端口占用的进程
-情景在启动tomcat时，默认绑定的JMX port端口是1099，但是有时候这个端口会被其他进程占用，导致启动失败，
+                            window查看端口占用的进程情景在启动tomcat时，默认绑定的JMX port端口是1099，但是有时候这个端口会被其他进程占用，导致启动失败，
 
 看看异常信息：
 
-端口1099被占用，现在的任务就是找出这个占用端口的罪魁祸首，将其消
+端口1099被占用，现在的任务就是找出这个占用端口的罪魁祸首，将其消灭
                         
                     </div>
                     <div class="publish-info">
@@ -2753,7 +2766,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;不知不觉已生产了&nbsp;<span
-                class="white-color">139.1k</span>&nbsp;字!
+                class="white-color">139.6k</span>&nbsp;字!
             
             
             
