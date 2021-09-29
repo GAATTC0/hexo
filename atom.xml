@@ -6,7 +6,7 @@
   <link href="http://gaattc.top/atom.xml" rel="self"/>
   
   <link href="http://gaattc.top/"/>
-  <updated>2021-09-28T07:21:41.741Z</updated>
+  <updated>2021-09-29T03:08:27.027Z</updated>
   <id>http://gaattc.top/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>window查看端口占用的进程</title>
+    <link href="http://gaattc.top/posts/ab7da29b/"/>
+    <id>http://gaattc.top/posts/ab7da29b/</id>
+    <published>2021-09-29T02:36:15.000Z</published>
+    <updated>2021-09-29T03:08:27.027Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;window查看端口占用的进程&lt;/p&gt;
+&lt;h2 id=&quot;情景&quot;&gt;&lt;a href=&quot;#情景&quot; class=&quot;headerlink&quot; title=&quot;情景&quot;&gt;&lt;/a&gt;情景&lt;/h2&gt;&lt;p&gt;在启动tomcat时，默认绑定的JMX</summary>
+        
+      
+    
+    
+    
+    <category term="bug" scheme="http://gaattc.top/categories/bug/"/>
+    
+    <category term="git" scheme="http://gaattc.top/categories/bug/git/"/>
+    
+    
+    <category term="bug" scheme="http://gaattc.top/tags/bug/"/>
+    
+  </entry>
+  
+  <entry>
     <title>让IDEA更好用(毕生所学的小技巧)</title>
     <link href="http://gaattc.top/posts/42dd4c/"/>
     <id>http://gaattc.top/posts/42dd4c/</id>
     <published>2021-09-28T01:25:24.000Z</published>
-    <updated>2021-09-28T07:21:41.741Z</updated>
+    <updated>2021-09-29T01:55:31.481Z</updated>
     
     
       
@@ -542,35 +570,6 @@
     
     
     <category term="记录" scheme="http://gaattc.top/tags/%E8%AE%B0%E5%BD%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>audition+premiere视频后期处理记录</title>
-    <link href="http://gaattc.top/posts/315fc756/"/>
-    <id>http://gaattc.top/posts/315fc756/</id>
-    <published>2021-03-11T04:58:10.000Z</published>
-    <updated>2021-03-11T06:00:44.511Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Audition-Premiere视频后期处理记录&quot;&gt;&lt;a href=&quot;#Audition-Premiere视频后期处理记录&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="兴趣" scheme="http://gaattc.top/categories/%E5%85%B4%E8%B6%A3/"/>
-    
-    <category term="UP" scheme="http://gaattc.top/categories/%E5%85%B4%E8%B6%A3/UP/"/>
-    
-    
-    <category term="au" scheme="http://gaattc.top/tags/au/"/>
-    
-    <category term="pr" scheme="http://gaattc.top/tags/pr/"/>
     
   </entry>
   
