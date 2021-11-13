@@ -1402,9 +1402,9 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="windows查看端口占用的进程"><a href="#windows查看端口占用的进程" class="headerlink" title="windows查看端口占用的进程"></a>windows查看端口占用的进程</h1><h2 id="情景"><a href="#情景" class="headerlink" title="情景"></a>情景</h2><p>在启动tomcat时，默认绑定的JMX port端口是1099，但是有时候这个端口会被其他进程占用，导致启动失败，</p>
-<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16328820144688.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16328820144688.png"></p>
 <p>看看异常信息：</p>
-<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16328820765842.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16328820765842.png"></p>
 <p>端口1099被占用，现在的任务就是找出这个占用端口的罪魁祸首，将其消灭。</p>
 <h2 id="查看端口"><a href="#查看端口" class="headerlink" title="查看端口"></a>查看端口</h2><p>首先打开windows的命令行，这个命令可以查看当前的所有端口使用情况以及进程id信息：</p>
 <pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">netstat -ano<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -1412,16 +1412,16 @@
 <p>但是这样还是很不方便，因为太多了，还有一个精准查找的方法：</p>
 <pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">netstat -ano|findstr "&lt;端口号&gt;"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16328824758791.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16328824758791.png"></p>
 <p>这样以来，就可以找出占用了1099这个端口的进程id是<code>17180</code>。</p>
 <h2 id="查找进程"><a href="#查找进程" class="headerlink" title="查找进程"></a>查找进程</h2><p>打开windows的资源管理器，详细信息，按进程id排序然后手动查找即可：</p>
-<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16328825646822.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16328825646822.png"></p>
 <p>这样就找到了进程，<font color="#91501c">雷蛇，原来是你小子</font>😅！</p>
 <h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><h3 id="1-唯我独尊"><a href="#1-唯我独尊" class="headerlink" title="1.唯我独尊"></a>1.唯我独尊</h3><p>接着上一步，直接在任务管理器和中杀掉这个进程即可，为什么要在资源管理器中先看看呢，因为不敢乱杀~</p>
 <h3 id="2-斩草除根"><a href="#2-斩草除根" class="headerlink" title="2.斩草除根"></a>2.斩草除根</h3><p>雷蛇驱动而已，不要也罢，不如直接——：</p>
-<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210929105627879.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210929105627879.png"></p>
 <h3 id="3-以退为进"><a href="#3-以退为进" class="headerlink" title="3.以退为进"></a>3.以退为进</h3><p>还有一个友好型的方法，就是修改一下tomcat的启动端口，字啊这里改成一个不会被占用的即可(虽然是这么说，但是还是可能被占用233)：</p>
-<img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210929110713074.png" style="zoom:67%;">
+<img src="https://cdn.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210929110713074.png" style="zoom:67%;">
             </div>
             <hr/>
 
@@ -2641,7 +2641,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;不知不觉已生产了&nbsp;<span
-                class="white-color">146.7k</span>&nbsp;字!
+                class="white-color">147.2k</span>&nbsp;字!
             
             
             
@@ -2854,10 +2854,5 @@ $(function () {
     <a onclick="switchNightMode()" id="sma">
         <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
     </a>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight+600||document.documentElement.clientHeight+600)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
 </html>
