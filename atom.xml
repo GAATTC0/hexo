@@ -6,7 +6,7 @@
   <link href="http://gaattc.top/atom.xml" rel="self"/>
   
   <link href="http://gaattc.top/"/>
-  <updated>2022-03-13T08:34:37.187Z</updated>
+  <updated>2022-04-23T12:56:28.608Z</updated>
   <id>http://gaattc.top/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>零碎的想法</title>
+    <link href="http://gaattc.top/posts/2af7e1fb/"/>
+    <id>http://gaattc.top/posts/2af7e1fb/</id>
+    <published>2022-04-23T12:46:25.000Z</published>
+    <updated>2022-04-23T12:56:28.608Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;零碎的想法&quot;&gt;&lt;a href=&quot;#零碎的想法&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="日常" scheme="http://gaattc.top/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    <category term="想法" scheme="http://gaattc.top/categories/%E6%97%A5%E5%B8%B8/%E6%83%B3%E6%B3%95/"/>
+    
+    
+    <category term="记录" scheme="http://gaattc.top/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>《花束般的恋爱》</title>
     <link href="http://gaattc.top/posts/ca27f386/"/>
     <id>http://gaattc.top/posts/ca27f386/</id>
     <published>2022-03-13T05:28:55.000Z</published>
-    <updated>2022-03-13T08:34:37.187Z</updated>
+    <updated>2022-03-13T08:35:06.584Z</updated>
     
     
       
@@ -132,7 +159,7 @@
     <link href="http://gaattc.top/posts/eba7cb24/"/>
     <id>http://gaattc.top/posts/eba7cb24/</id>
     <published>2021-10-02T12:09:27.000Z</published>
-    <updated>2021-10-02T14:34:58.865Z</updated>
+    <updated>2022-04-16T12:28:16.776Z</updated>
     
     
       
@@ -186,7 +213,7 @@
     <link href="http://gaattc.top/posts/42dd4c/"/>
     <id>http://gaattc.top/posts/42dd4c/</id>
     <published>2021-09-28T01:25:24.000Z</published>
-    <updated>2022-03-03T12:02:48.512Z</updated>
+    <updated>2022-04-22T02:13:48.714Z</updated>
     
     
       
@@ -540,33 +567,6 @@
     <category term="学习心得" scheme="http://gaattc.top/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/"/>
     
     <category term="hexo" scheme="http://gaattc.top/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>git在push时出现”fatal: unable to access &#39;https://github.com/...“的解决方案</title>
-    <link href="http://gaattc.top/posts/8135c12a/"/>
-    <id>http://gaattc.top/posts/8135c12a/</id>
-    <published>2021-05-10T06:15:34.000Z</published>
-    <updated>2021-05-16T04:15:15.052Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;git在push时出现”fatal-unable-to-access’-https-github-com-39-“的解决方案&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="bug" scheme="http://gaattc.top/categories/bug/"/>
-    
-    <category term="git" scheme="http://gaattc.top/categories/bug/git/"/>
-    
-    
-    <category term="bug" scheme="http://gaattc.top/tags/bug/"/>
     
   </entry>
   
