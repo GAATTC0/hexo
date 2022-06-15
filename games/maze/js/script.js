@@ -664,7 +664,7 @@ function main(timestamp) {
         ${!hardMode && "<p>Press H for hard mode</p>"}
         <p>
           Follow me
-          <a href="https://gaattc.top" , target="_blank"
+          <a href="https://gaattc.life" , target="_blank"
             >@HunorBorbely</a
           >
         </p>`;

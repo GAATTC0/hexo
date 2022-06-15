@@ -205,7 +205,7 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a target="_blank" rel="noopener" href="http://gaattc.top" class="waves-effect waves-light">
+    <a href="http://gaattc.life" class="waves-effect waves-light">
       
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
@@ -749,7 +749,7 @@
         
         <li class="m-nav-item">
 	  
-		<a target="_blank" rel="noopener" href="http://gaattc.top" class="waves-effect waves-light">
+		<a href="http://gaattc.life" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fas fa-home"></i>
 			
@@ -1572,7 +1572,7 @@ stream<span class="token punctuation">.</span><span class="token function">limit
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Stream</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">distinct</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token operator">::</span><span class="token function">print</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>结果是：12345</p>
-<h3 id="3-filter-Predicate-lt-super-T-gt-predicate"><a href="#3-filter-Predicate-lt-super-T-gt-predicate" class="headerlink" title="3.filter(Predicate<? super T> predicate)"></a>3.filter(Predicate&lt;? super T&gt; predicate)</h3><p>根据传入的predicate参数进行过滤，参考<a target="_blank" rel="noopener" href="http://gaattc.top/posts/b6aaffba/">jdk8特性之Predicate-stream</a></p>
+<h3 id="3-filter-Predicate-lt-super-T-gt-predicate"><a href="#3-filter-Predicate-lt-super-T-gt-predicate" class="headerlink" title="3.filter(Predicate<? super T> predicate)"></a>3.filter(Predicate&lt;? super T&gt; predicate)</h3><p>根据传入的predicate参数进行过滤，参考<a href="http://gaattc.life/posts/b6aaffba/">jdk8特性之Predicate-stream</a></p>
 <h3 id="4-map-Function-lt-super-T-extends-R-gt-mapper"><a href="#4-map-Function-lt-super-T-extends-R-gt-mapper" class="headerlink" title="4.map(Function<? super T, ? extends R> mapper)"></a>4.map(Function&lt;? super T, ? extends R&gt; mapper)</h3><p>可以根据传入的lambda表达式将元素转换为任意类型和数值，并提供了几个方便的方法mapToDouble，mapToInt，mapToLong</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Stream</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">,</span> <span class="token string">"b"</span><span class="token punctuation">,</span> <span class="token string">"c"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token operator">::</span><span class="token function">toUpperCase</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token operator">::</span><span class="token function">print</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -1664,7 +1664,7 @@ stream<span class="token punctuation">.</span><span class="token function">limit
 <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>reduce1<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>结果是：67</p>
-<h2 id="Short-circuiting"><a href="#Short-circuiting" class="headerlink" title="Short-circuiting"></a>Short-circuiting</h2><h3 id="1-anyMatch、-allMatch、-noneMatch"><a href="#1-anyMatch、-allMatch、-noneMatch" class="headerlink" title="1.anyMatch、 allMatch、 noneMatch"></a>1.anyMatch、 allMatch、 noneMatch</h3><p>参考<a target="_blank" rel="noopener" href="http://gaattc.top/posts/b6aaffba/">jdk8特性之Predicate-stream</a></p>
+<h2 id="Short-circuiting"><a href="#Short-circuiting" class="headerlink" title="Short-circuiting"></a>Short-circuiting</h2><h3 id="1-anyMatch、-allMatch、-noneMatch"><a href="#1-anyMatch、-allMatch、-noneMatch" class="headerlink" title="1.anyMatch、 allMatch、 noneMatch"></a>1.anyMatch、 allMatch、 noneMatch</h3><p>参考<a href="http://gaattc.life/posts/b6aaffba/">jdk8特性之Predicate-stream</a></p>
 <h3 id="2-findAny-和findFirst"><a href="#2-findAny-和findFirst" class="headerlink" title="2. findAny()和findFirst()"></a>2. findAny()和findFirst()</h3><p>findAny()返回包含stream中任一元素的Optional，特殊地，空stream会返回一个空的Optional，非并行调用默认返回第一个元素的Optional<br>findFirst()返回stream中的第一个元素，特殊地，空stream会返回一个空的Optional，如果stream没有排序，返回任意一个元素的Optional</p>
 <p>例如：</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Optional</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> any <span class="token operator">=</span> <span class="token class-name">Stream</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">findAny</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -2070,11 +2070,11 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             <span id="year">2020</span>
-            <!--<a href="https://gaattc.top" target="_blank">GAATTC</a>
+            <!--<a href="https://gaattc.life" target="_blank">GAATTC</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/zh-cn/" target="_blank">Hexo</a>
             |&nbsp;Deployed on&nbsp;<a href="https://vercel.com" target="_blank">Vercel</a>
             |&nbsp;CDN by&nbsp;<a href="https://www.jsdelivr.com/" target="_blank">jsDelivr</a>-->
-            <a style="margin-inline:5px" target="_blank" href="https://gaattc.top"><img src="https://img.shields.io/badge/Auth-GAATTC-3790ee?style=flat&logo=Google" title="很高兴遇到你"></a>
+            <a style="margin-inline:5px" target="_blank" href="https://gaattc.life"><img src="https://img.shields.io/badge/Auth-GAATTC-3790ee?style=flat&logo=Google" title="很高兴遇到你"></a>
             <a style="margin-inline:5px" target="_blank" href="https://hexo.io"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="基于Hexo框架"></a>
             <a style="margin-inline:5px" target="_blank" href="https://github.com/blinkfox/hexo-theme-matery"><img src="https://img.shields.io/badge/Theme-Matery-7138b6?style=flat&logo=MEGA" title="主题采用matery"></a>
             <a style="margin-inline:5px" target="_blank" href="https://www.jsdelivr.com"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用JsDelivr为静态资源提供CDN加速"></a>
@@ -2087,7 +2087,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;不知不觉已生产了&nbsp;<span
-                class="white-color">149.3k</span>&nbsp;字!
+                class="white-color">149.4k</span>&nbsp;字!
             
             
             
