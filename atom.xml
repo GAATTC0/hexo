@@ -6,7 +6,7 @@
   <link href="https://gaattc.life/atom.xml" rel="self"/>
   
   <link href="https://gaattc.life/"/>
-  <updated>2022-06-09T11:32:28.856Z</updated>
+  <updated>2022-06-29T10:55:11.719Z</updated>
   <id>https://gaattc.life/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用java清理本地maven仓库无效文件</title>
+    <link href="https://gaattc.life/posts/34e027a/"/>
+    <id>https://gaattc.life/posts/34e027a/</id>
+    <published>2022-06-29T10:41:45.000Z</published>
+    <updated>2022-06-29T10:55:11.719Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;由于maven的jar包频繁更新，随着maven</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://gaattc.life/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="java" scheme="https://gaattc.life/categories/%E5%AD%A6%E4%B9%A0/java/"/>
+    
+    
+    <category term="java" scheme="https://gaattc.life/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>SuppressWarnings注解</title>
@@ -102,7 +129,7 @@
     <link href="https://gaattc.life/posts/2af7e1fb/"/>
     <id>https://gaattc.life/posts/2af7e1fb/</id>
     <published>2022-04-23T12:46:25.000Z</published>
-    <updated>2022-06-15T12:13:04.680Z</updated>
+    <updated>2022-06-29T10:58:30.821Z</updated>
     
     
       
@@ -536,33 +563,6 @@
     
     
     <category term="bug" scheme="https://gaattc.life/tags/bug/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>🔒大学那些拼凑不好的记忆碎片</title>
-    <link href="https://gaattc.life/posts/7106602/"/>
-    <id>https://gaattc.life/posts/7106602/</id>
-    <published>2021-06-24T11:30:00.000Z</published>
-    <updated>2022-06-15T10:30:00.351Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;大学那些拼凑不好的记忆碎片&quot;&gt;&lt;a href=&quot;#大学那些拼凑不好的记忆碎片&quot; class=&quot;headerlink&quot; title=&quot;大学那些拼凑不好的记忆碎片&quot;&gt;&lt;/a&gt;大学那些拼凑不好的记忆碎片&lt;/h1&gt;&lt;iframe frameborder=&quot;no&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="日常" scheme="https://gaattc.life/categories/%E6%97%A5%E5%B8%B8/"/>
-    
-    <category term="记录" scheme="https://gaattc.life/categories/%E6%97%A5%E5%B8%B8/%E8%AE%B0%E5%BD%95/"/>
-    
-    
-    <category term="记录" scheme="https://gaattc.life/tags/%E8%AE%B0%E5%BD%95/"/>
     
   </entry>
   
