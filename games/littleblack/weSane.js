@@ -1,11 +1,11 @@
 let googleAdsID = "3322214054";
 let titleData = { 
-    CN:"大战小黑",   //中文
-    CHT:"大戰小黑",  //繁体
-    EN:"Fighting Ghosts",   //英文
-    KOR:"블랭크",   //韩文
-    JP:"大戦クロ",     //日文
-    TH:"สงครามเล็กสีดำ"       //泰语
+    CN:"GAATTC | 大战小黑",   //中文
+    CHT:"GAATTC | 大戰小黑",  //繁体
+    EN:"GAATTC | Fighting Ghosts",   //英文
+    KOR:"GAATTC | 블랭크",   //韩文
+    JP:"GAATTC | 大戦クロ",     //日文
+    TH:"GAATTC | สงครามเล็กสีดำ"       //泰语
 }
 window.titleData = titleData;
 
@@ -13,7 +13,6 @@ let loadProgre; //假的游戏加载进度
 let loadText; //加载load 文本
 let loadImg;  //loading gif 图片
 let bgColor;  //背景图片
-var adBreak;   //谷歌广告对象
 initWeSane();
 /** 初始化相关内容 */
 function initWeSane(){
@@ -55,30 +54,6 @@ function loadInScene(){
     bgColor.remove();
     loadText.remove();
 };
-/** 初始化 谷歌广告 */
-function initGooleAds(){
-    var googleJs = document.createElement("script");
-    googleJs.setAttribute("async","");
-    googleJs.src = "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
-    document.body.appendChild(googleJs);
-
-    var googleAds = document.createElement("script");
-    googleAds.setAttribute("async","");
-    googleJs.setAttribute("data-ad-client", "ca-pub-3932234672445376" );
-    googleJs.setAttribute("data-ad-channel", googleAdsID );
-    googleJs.setAttribute("data-ad-frequency-hint","15s");
-    document.body.appendChild(googleAds);
-
-    window.adsbygoogle = window.adsbygoogle || [];
-    adBreak = adConfig = function(o) {adsbygoogle.push(o);}
-
-    adBreak({
-        preloadAdBreaks: 'on',
-        onReady: () => {
-          console.log('onReady');
-        },
-    });
-}
 /** 刷新加载进度条  假的  t:多长时间进度+1 */
 function updateLoadText(t){
     setTimeout( () => {
