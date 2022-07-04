@@ -28,9 +28,9 @@
 	<link rel="stylesheet" href="/js/prism/prism.css">
     <script src="/libs/jquery/jquery.min.js"></script>
 	<script src="https://v1.hitokoto.cn/?c=d&encode=js&select=%23hitokoto" defer></script>
-<meta name="generator" content="Hexo 5.2.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="GAATTC的隐藏小窝" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="GAATTC的隐藏小窝" type="application/atom+xml">
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
@@ -720,7 +720,7 @@
           
           <i class="fas fa-dragon fa-spin" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>大战小黑</span>
+          <span>💣大战小黑</span>
         </a>
       </li>
       
@@ -1315,7 +1315,7 @@
 				  
 				   <i class="fa fas fa-dragon fa-spin" style="position: absolute;left:50px" ></i>
 			      
-		          <span>大战小黑</span>
+		          <span>💣大战小黑</span>
                   </a>
                 </li>
               
@@ -1351,7 +1351,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://fastly.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/111git.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/img/111git.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -1537,7 +1537,7 @@
                 <h1 id="git在push时出现”fatal-unable-to-access’-https-github-com-39-“的解决方案"><a href="#git在push时出现”fatal-unable-to-access’-https-github-com-39-“的解决方案" class="headerlink" title="git在push时出现”fatal: unable to access’ https://github.com/...'“的解决方案"></a>git在push时出现”fatal: unable to access’ <a target="_blank" rel="noopener" href="https://github.com/...'%E2%80%9C%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">https://github.com/...'“的解决方案</a></h1><blockquote>
 <p>出现这种问题有许多种情况，根据不同错误提示选择不同解决方式</p>
 </blockquote>
-<p><img src="https://fastly.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210513191817547.png"></p>
+<p><img src="/img/image-20210513191817547.png"></p>
 <h2 id="1-OpenSSL-SSL-read-Connection-was-aborted-errno-10053"><a href="#1-OpenSSL-SSL-read-Connection-was-aborted-errno-10053" class="headerlink" title="1.OpenSSL SSL_read: Connection was aborted, errno 10053"></a>1.OpenSSL SSL_read: Connection was aborted, errno 10053</h2><p>这种情况可能是因为ssh安全验证问题导致的，解决方法：</p>
 <p>打开git bash，执行以下命令。</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ssh-keygen -t rsa -C <span class="token string">"youremail@example.com"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -1550,7 +1550,7 @@
 
 <p>找到<code>id_rsa.pub</code>文件，使用记事本或文本编辑器打开，然后复制内容。</p>
 <p>打开github，在设置里找到并添加SSH key即可.</p>
-<p><img src="https://fastly.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210510143241801.png"></p>
+<p><img src="/img/image-20210510143241801.png"></p>
 <hr>
 
 <p>这个问题也可以通过第二种问题的方式解决。</p>
@@ -1584,7 +1584,7 @@
 
 <p>显示”Hi &lt;yourname&gt;! You’ve successfully authenticated, but GitHub does not provide shell access.”即代表成功。</p>
 <p>最后，在根目录配置中修改仓库地址为ssh协议即可：</p>
-<p><img src="https://fastly.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210516121448458.png"></p>
+<p><img src="/img/image-20210516121448458.png"></p>
 
             </div>
             <hr/>
@@ -1648,7 +1648,7 @@
                 <a href="/posts/289a5094/">
                     <div class="card-image">
                         
-                        <img src="https://fastly.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/wallhaven-z8mq8y.jpg" class="responsive-img" alt="matery自定义banner图片更换频率">
+                        <img src="/img/wallhaven-z8mq8y.jpg" class="responsive-img" alt="matery自定义banner图片更换频率">
                         
                         <span class="card-title">matery自定义banner图片更换频率</span>
                     </div>
@@ -1712,7 +1712,7 @@
                 <a href="/posts/ee92e53c/">
                     <div class="card-image">
                         
-                        <img src="https://fastly.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210509231549298.png" class="responsive-img" alt="在Vercel上部署hexo，再见了gitee">
+                        <img src="/img/image-20210509231549298.png" class="responsive-img" alt="在Vercel上部署hexo，再见了gitee">
                         
                         <span class="card-title">在Vercel上部署hexo，再见了gitee</span>
                     </div>

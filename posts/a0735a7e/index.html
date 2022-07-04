@@ -28,9 +28,9 @@
 	<link rel="stylesheet" href="/js/prism/prism.css">
     <script src="/libs/jquery/jquery.min.js"></script>
 	<script src="https://v1.hitokoto.cn/?c=d&encode=js&select=%23hitokoto" defer></script>
-<meta name="generator" content="Hexo 5.2.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="GAATTC的隐藏小窝" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="GAATTC的隐藏小窝" type="application/atom+xml">
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
@@ -720,7 +720,7 @@
           
           <i class="fas fa-dragon fa-spin" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>大战小黑</span>
+          <span>💣大战小黑</span>
         </a>
       </li>
       
@@ -1315,7 +1315,7 @@
 				  
 				   <i class="fa fas fa-dragon fa-spin" style="position: absolute;left:50px" ></i>
 			      
-		          <span>大战小黑</span>
+		          <span>💣大战小黑</span>
                   </a>
                 </li>
               
@@ -1351,7 +1351,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://fastly.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/mongodb-img.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/img/mongodb-img.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -1549,7 +1549,7 @@ md <span class="token string">"\data\db"</span><span aria-hidden="true" class="l
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">G:<span class="token punctuation">\</span>MongoDB<span class="token punctuation">\</span>bin<span class="token punctuation">\</span>mongod --dbpath g:<span class="token punctuation">\</span>data<span class="token punctuation">\</span>db<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="2-命令行下的使用"><a href="#2-命令行下的使用" class="headerlink" title="2.命令行下的使用"></a>2.命令行下的使用</h3><p>在bin目录下使用命令mongo即可进入命令行客户端，进行增删改查等。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20201231104927831.png"></p>
+<p><img src="/img/image-20201231104927831.png"></p>
 <p>当然也可以将这个目录加入到环境变量方便在任何地方打开。</p>
 <h3 id="3-安装MongoDB服务"><a href="#3-安装MongoDB服务" class="headerlink" title="3.安装MongoDB服务"></a>3.安装MongoDB服务</h3><p>在data文件夹下创建log文件夹，mongodb安装目录下创建配置文件mongod.cfg内容如下：</p>
 <pre class="line-numbers language-yml" data-language="yml"><code class="language-yml">systemLog:
@@ -1566,7 +1566,7 @@ storage:
 <pre class="line-numbers language-mongo" data-language="mongo"><code class="language-mongo">show dbs<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>可以看到admin库：</p>
-<p><img src="https://fastly.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20201231111142370.png"></p>
+<p><img src="/img/image-20201231111142370.png"></p>
 <h3 id="2-进入admin数据库"><a href="#2-进入admin数据库" class="headerlink" title="2.进入admin数据库"></a>2.进入admin数据库</h3><pre class="line-numbers language-mongo" data-language="mongo"><code class="language-mongo">use admin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="3-创建管理员账户"><a href="#3-创建管理员账户" class="headerlink" title="3.创建管理员账户"></a>3.创建管理员账户</h3><pre class="line-numbers language-mongo" data-language="mongo"><code class="language-mongo">db.createUser({ user: "admin", pwd: "password", roles: [{ role: "userAdminAnyDatabase", db: "admin" }] })<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -1587,15 +1587,15 @@ db.auth("admin","password")<span aria-hidden="true" class="line-numbers-rows"><s
 <h3 id="7-使用url连接mongodb"><a href="#7-使用url连接mongodb" class="headerlink" title="7.使用url连接mongodb"></a>7.使用url连接mongodb</h3><pre class="line-numbers language-url" data-language="url"><code class="language-url">mongodb://user:password2@localhost/database<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h2 id="三-使用MongoDB-Compass"><a href="#三-使用MongoDB-Compass" class="headerlink" title="三.使用MongoDB Compass"></a>三.使用MongoDB Compass</h2><h3 id="1-官网下载安装即可。"><a href="#1-官网下载安装即可。" class="headerlink" title="1.官网下载安装即可。"></a>1.官网下载安装即可。</h3><h3 id="2-连接"><a href="#2-连接" class="headerlink" title="2.连接"></a>2.连接</h3><p>按以下格式连接</p>
-<p><img src="https://fastly.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20201231112712882.png"></p>
+<p><img src="/img/image-20201231112712882.png"></p>
 <p>如果没设置密码，也可以直接连接(不过不建议，如果在公网上极其容易被黑然后被勒索比特币😂)：</p>
 <pre class="line-numbers language-url" data-language="url"><code class="language-url">mongodb://127.0.0.1:27017<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="3-手动输入每一项的连接方式"><a href="#3-手动输入每一项的连接方式" class="headerlink" title="3.手动输入每一项的连接方式"></a>3.手动输入每一项的连接方式</h3><p>点击右上角的<code>Fill in connection fields individually</code>，下面选用户名密码即可。</p>
-<img src="https://fastly.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20201231113114765.png" style="zoom:67%;">
+<img src="/img/image-20201231113114765.png" style="zoom:67%;">
 
 <h3 id="4-操作"><a href="#4-操作" class="headerlink" title="4.操作"></a>4.操作</h3><p>图形界面很方便明了。</p>
-<img src="https://fastly.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20201231113242418.png" alt="image-20201231113242418" style="zoom:67%;">
+<img src="/img/image-20201231113242418.png" alt="image-20201231113242418" style="zoom:67%;">
 
 <h2 id="四-MongoDB语法"><a href="#四-MongoDB语法" class="headerlink" title="四.MongoDB语法"></a>四.MongoDB语法</h2><h3 id="1-查看所有数据库"><a href="#1-查看所有数据库" class="headerlink" title="1.查看所有数据库"></a>1.查看所有数据库</h3><pre class="line-numbers language-mongo" data-language="mongo"><code class="language-mongo">show dbs<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -1726,7 +1726,7 @@ filter<span class="token punctuation">.</span><span class="token function">add</
                 <a href="/posts/8526d39f/">
                     <div class="card-image">
                         
-                        <img src="https://fastly.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/5cm_img.jpg" class="responsive-img" alt="《秒速五厘米》">
+                        <img src="/img/5cm_img.jpg" class="responsive-img" alt="《秒速五厘米》">
                         
                         <span class="card-title">《秒速五厘米》</span>
                     </div>
@@ -1781,7 +1781,7 @@ filter<span class="token punctuation">.</span><span class="token function">add</
                 <a href="/posts/80a0aeb/">
                     <div class="card-image">
                         
-                        <img src="https://fastly.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/jprofilter10.0.jpg" class="responsive-img" alt="用JProfiler进行dump分析记">
+                        <img src="/img/jprofilter10.0.jpg" class="responsive-img" alt="用JProfiler进行dump分析记">
                         
                         <span class="card-title">用JProfiler进行dump分析记</span>
                     </div>

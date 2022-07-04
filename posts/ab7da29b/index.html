@@ -28,9 +28,9 @@
 	<link rel="stylesheet" href="/js/prism/prism.css">
     <script src="/libs/jquery/jquery.min.js"></script>
 	<script src="https://v1.hitokoto.cn/?c=d&encode=js&select=%23hitokoto" defer></script>
-<meta name="generator" content="Hexo 5.2.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="GAATTC的隐藏小窝" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="GAATTC的隐藏小窝" type="application/atom+xml">
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
@@ -720,7 +720,7 @@
           
           <i class="fas fa-dragon fa-spin" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>大战小黑</span>
+          <span>💣大战小黑</span>
         </a>
       </li>
       
@@ -1315,7 +1315,7 @@
 				  
 				   <i class="fa fas fa-dragon fa-spin" style="position: absolute;left:50px" ></i>
 			      
-		          <span>大战小黑</span>
+		          <span>💣大战小黑</span>
                   </a>
                 </li>
               
@@ -1351,7 +1351,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://fastly.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210929110713074.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/img/image-20210929110713074.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -1535,9 +1535,9 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="windows查看端口占用的进程"><a href="#windows查看端口占用的进程" class="headerlink" title="windows查看端口占用的进程"></a>windows查看端口占用的进程</h1><h2 id="情景"><a href="#情景" class="headerlink" title="情景"></a>情景</h2><p>在启动tomcat时，默认绑定的JMX port端口是1099，但是有时候这个端口会被其他进程占用，导致启动失败，</p>
-<p><img src="https://fastly.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16328820144688.png"></p>
+<p><img src="/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16328820144688.png"></p>
 <p>看看异常信息：</p>
-<p><img src="https://fastly.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16328820765842.png"></p>
+<p><img src="/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16328820765842.png"></p>
 <p>端口1099被占用，现在的任务就是找出这个占用端口的罪魁祸首，将其消灭。</p>
 <h2 id="查看端口"><a href="#查看端口" class="headerlink" title="查看端口"></a>查看端口</h2><p>首先打开windows的命令行，这个命令可以查看当前的所有端口使用情况以及进程id信息：</p>
 <pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">netstat -ano<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -1545,16 +1545,16 @@
 <p>但是这样还是很不方便，因为太多了，还有一个精准查找的方法：</p>
 <pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">netstat -ano|findstr "&lt;端口号&gt;"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://fastly.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16328824758791.png"></p>
+<p><img src="/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16328824758791.png"></p>
 <p>这样以来，就可以找出占用了1099这个端口的进程id是<code>17180</code>。</p>
 <h2 id="查找进程"><a href="#查找进程" class="headerlink" title="查找进程"></a>查找进程</h2><p>打开windows的资源管理器，详细信息，按进程id排序然后手动查找即可：</p>
-<p><img src="https://fastly.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16328825646822.png"></p>
+<p><img src="/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16328825646822.png"></p>
 <p>这样就找到了进程，<font color="#91501c">雷蛇，原来是你小子</font>😅！</p>
 <h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><h3 id="1-唯我独尊"><a href="#1-唯我独尊" class="headerlink" title="1.唯我独尊"></a>1.唯我独尊</h3><p>接着上一步，直接在任务管理器和中杀掉这个进程即可，为什么要在资源管理器中先看看呢，因为不敢乱杀~</p>
 <h3 id="2-斩草除根"><a href="#2-斩草除根" class="headerlink" title="2.斩草除根"></a>2.斩草除根</h3><p>雷蛇驱动而已，不要也罢，不如直接——：</p>
-<p><img src="https://fastly.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210929105627879.png"></p>
+<p><img src="/img/image-20210929105627879.png"></p>
 <h3 id="3-以退为进"><a href="#3-以退为进" class="headerlink" title="3.以退为进"></a>3.以退为进</h3><p>还有一个友好型的方法，就是修改一下tomcat的启动端口，字啊这里改成一个不会被占用的即可(虽然是这么说，但是还是可能被占用233)：</p>
-<img src="https://fastly.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210929110713074.png" style="zoom:67%;">
+<img src="/img/image-20210929110713074.png" style="zoom:67%;">
             </div>
             <hr/>
 
@@ -1617,7 +1617,7 @@
                 <a href="/posts/eba7cb24/">
                     <div class="card-image">
                         
-                        <img src="https://fastly.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/Snipaste_2021-10-02_20-39-06.png" class="responsive-img" alt="pr做第一个视频小记录">
+                        <img src="/img/Snipaste_2021-10-02_20-39-06.png" class="responsive-img" alt="pr做第一个视频小记录">
                         
                         <span class="card-title">pr做第一个视频小记录</span>
                     </div>
@@ -1671,7 +1671,7 @@
                 <a href="/posts/42dd4c/">
                     <div class="card-image">
                         
-                        <img src="https://fastly.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210928111836920.png" class="responsive-img" alt="IDEA从入门到精通">
+                        <img src="/img/image-20210928111836920.png" class="responsive-img" alt="IDEA从入门到精通">
                         
                         <span class="card-title">IDEA从入门到精通</span>
                     </div>

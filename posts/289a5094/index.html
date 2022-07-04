@@ -28,9 +28,9 @@
 	<link rel="stylesheet" href="/js/prism/prism.css">
     <script src="/libs/jquery/jquery.min.js"></script>
 	<script src="https://v1.hitokoto.cn/?c=d&encode=js&select=%23hitokoto" defer></script>
-<meta name="generator" content="Hexo 5.2.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="GAATTC的隐藏小窝" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="GAATTC的隐藏小窝" type="application/atom+xml">
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
@@ -720,7 +720,7 @@
           
           <i class="fas fa-dragon fa-spin" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>大战小黑</span>
+          <span>💣大战小黑</span>
         </a>
       </li>
       
@@ -1315,7 +1315,7 @@
 				  
 				   <i class="fa fas fa-dragon fa-spin" style="position: absolute;left:50px" ></i>
 			      
-		          <span>大战小黑</span>
+		          <span>💣大战小黑</span>
                   </a>
                 </li>
               
@@ -1351,7 +1351,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://fastly.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/wallhaven-z8mq8y.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/img/wallhaven-z8mq8y.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -1554,7 +1554,7 @@
 <pre class="line-numbers language-dir" data-language="dir"><code class="language-dir">hexo\themes\hexo-theme-matery-master\layout\_partial\bg-cover-content.ejs<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>发现每日更换图片的代码：</p>
-<p><img src="https://fastly.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210511135428447.png"></p>
+<p><img src="/img/image-20210511135428447.png"></p>
 <p>主要逻辑就是利用字符串拼接路径，其中图片名为<code>星期数+".jpg"</code>，</p>
 <p>new Date().getTime()方法就是获取当前星期数。</p>
 <h2 id="3-开始修改"><a href="#3-开始修改" class="headerlink" title="3.开始修改"></a>3.开始修改</h2><p>方便起见还是按照原本的逻辑，稍作修改达到我们的要求即可。</p>
@@ -1565,12 +1565,12 @@
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getMinutes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>然后放10张图片并按顺序重命名好：</p>
-<p><img src="https://fastly.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210511140633083.png"></p>
+<p><img src="/img/image-20210511140633083.png"></p>
 <p>最后，由于是10张，可以通过分钟数对10取余，得到余数作为文件名即可</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getMinutes</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">10</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>如此以来就达到目的了，</p>
-<p><img src="https://fastly.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/image-20210511135320576.png"></p>
+<p><img src="/img/image-20210511135320576.png"></p>
 <h2 id="4-补充"><a href="#4-补充" class="headerlink" title="4.补充"></a>4.补充</h2><p>在原本基础上小改的缺点就是，走不出原本的框架：</p>
 <ul>
 <li><p>比如拼接文件名，最后是”.jpg”，我们放的图片就必须是jpg格式</p>
@@ -1741,7 +1741,7 @@
                 <a href="/posts/a037197e/">
                     <div class="card-image">
                         
-                        <img src="https://fastly.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/20210514211104.png" class="responsive-img" alt="在CloudflarePages上部署hexo，再见了vercel">
+                        <img src="/img/20210514211104.png" class="responsive-img" alt="在CloudflarePages上部署hexo，再见了vercel">
                         
                         <span class="card-title">在CloudflarePages上部署hexo，再见了vercel</span>
                     </div>
@@ -1802,7 +1802,7 @@
                 <a href="/posts/8135c12a/">
                     <div class="card-image">
                         
-                        <img src="https://fastly.jsdelivr.net/gh/GAATTC0/MyPicGoOSS@main/img/111git.jpg" class="responsive-img" alt="git在push时出现”fatal: unable to access &#39;https://github.com/...“的解决方案">
+                        <img src="/img/111git.jpg" class="responsive-img" alt="git在push时出现”fatal: unable to access &#39;https://github.com/...“的解决方案">
                         
                         <span class="card-title">git在push时出现”fatal: unable to access &#39;https://github.com/...“的解决方案</span>
                     </div>
