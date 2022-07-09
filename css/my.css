@@ -56,9 +56,9 @@
         transform: translate(0, 0.5px) rotate(1.5deg);
     }
 }
-body{
-    cursor: url("/medias/Arrow.cur"),auto!important;
-}
-a,button,img{
-    cursor: url("/medias/pointer.cur"),auto!important;
-}
+/*body{*/
+/*    cursor: url("/medias/Arrow.cur"),auto!important;*/
+/*}*/
+/*a,button,img{*/
+/*    cursor: url("/medias/pointer.cur"),auto!important;*/
+/*}*/
