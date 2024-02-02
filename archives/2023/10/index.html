@@ -1,0 +1,1816 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta name="keywords" content="归档: 2023/10, GAATTC的隐藏小窝">
+    <meta name="description" content="A simple blog maintained for recording the ordinary life...">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>归档: 2023/10 | GAATTC的隐藏小窝</title>
+    <link rel="icon" type="image/png" href="/medias/18.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+	<link rel="stylesheet" href="/js/prism/prism.css">
+    <script src="/libs/jquery/jquery.min.js"></script>
+	<script src="https://v1.hitokoto.cn/?c=d&encode=js&select=%23hitokoto" defer></script>
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="GAATTC的隐藏小窝" type="application/atom+xml">
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+
+    <style type="text/css" lang="css">
+    #loading-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        width: 100vw;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #2c3561;
+        text-align: center;
+        /* loader页面消失采用渐隐的方式*/
+        -webkit-transition: opacity 1s ease;
+        -moz-transition: opacity 1s ease;
+        -o-transition: opacity 1s ease;
+        transition: opacity 1s ease;
+    }
+    .loading-image{
+        width: 120px;
+        height: 50px;
+        transform: translate(-50%);
+    }
+
+    .loading-image div:nth-child(2) {
+        -webkit-animation: pacman-balls 1s linear 0s infinite;
+        animation: pacman-balls 1s linear 0s infinite
+    }
+
+    .loading-image div:nth-child(3) {
+        -webkit-animation: pacman-balls 1s linear .33s infinite;
+        animation: pacman-balls 1s linear .33s infinite
+    }
+
+    .loading-image div:nth-child(4) {
+        -webkit-animation: pacman-balls 1s linear .66s infinite;
+        animation: pacman-balls 1s linear .66s infinite
+    }
+
+    .loading-image div:nth-child(5) {
+        -webkit-animation: pacman-balls 1s linear .99s infinite;
+        animation: pacman-balls 1s linear .99s infinite
+    }
+
+   .loading-image div:first-of-type {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
+        animation: rotate_pacman_half_up .5s 0s infinite;
+    }
+    .loading-image div:nth-child(2) {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
+        animation: rotate_pacman_half_down .5s 0s infinite;
+        margin-top: -50px;
+    }
+    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+
+    .loading-image div:nth-child(3),
+    .loading-image div:nth-child(4),
+    .loading-image div:nth-child(5),
+    .loading-image div:nth-child(6){
+        background-color: #49b1f5;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin: 2px;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        transform: translateY(-6.25px);
+        top: 25px;
+        left: 100px;
+    }
+    .loading-text{
+        margin-bottom: 20vh;
+        text-align: center;
+        color: #f8c471;
+        font-size: 2rem;
+        box-sizing: border-box;
+        padding: 0 10px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    @media only screen and (max-width: 500px) {
+         .loading-text{
+            font-size: 1.5rem;
+         }
+    }
+    .fadeout {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    /* logo出现动画 */
+    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
+    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
+ </style>
+ <script>
+(function () {
+    const loaded = function(){
+       setTimeout(function(){
+            const loader = document.getElementById("loading-container");
+            loader.className="fadeout" ;//使用渐隐的方法淡出loading page
+            // document.getElementById("body-wrap").style.display="flex";
+            setTimeout(function(){
+                loader.style.display="none";
+            },2500); 
+        },750);//强制显示loading page 0.75s  
+    };
+    loaded();
+})()
+</script>
+ 
+
+<body>
+	<!-- hexo-inject:begin --><!-- hexo-inject:end --><!--动态背景-->
+	<div id="bg"><canvas></canvas><canvas></canvas><canvas></canvas></div>
+	<script src="/js/canva_moving_effect.js"></script>
+	<!--加载动画-->
+	
+        <div id="loading-container">
+             <p class="loading-text">正在搬运下一页::>_<:: . . . </p>
+             <div class="loading-image">
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div> 
+                 <div></div>
+             </div>
+        </div>
+    
+
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+					<div>
+						
+						<img src="/medias/96212297.png" class="logo-img" alt="LOGO">
+						
+                    <span class="logo-span">GAATTC的隐藏小窝</span>
+					</div>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="http://gaattc.life" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/categories">
+          
+          <i class="fas fa-cubes fa-spin" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>全部分类</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/archives">
+          
+          <i class="fas fa-archive fa-spin" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>文章归档</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E6%97%A5%E5%B8%B8">
+          
+          <i class="fas fa-sun" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>-日常</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E5%AD%A6%E4%B9%A0">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>-学习</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/bug">
+          
+          <i class="fas fa-bug" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>-bug</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E5%B7%A5%E4%BD%9C">
+          
+          <i class="fas fa-swimmer" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>-工作</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E5%85%B4%E8%B6%A3">
+          
+          <i class="fas fa-guitar" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>-兴趣</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-user" style="zoom: 0.6;"></i>
+      
+      <span>关于我</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/about">
+          
+          <i class="fas fa-user-circle fa-spin" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的简介</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://github.com/GAATTC0">
+          
+          <i class="fab fa-github" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的GitHub</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/">
+          
+          <i class="fab fa-steam" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的steam</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://space.bilibili.com/109208828">
+          
+          <i class="fas fa-tv" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的bilibili</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的网抑云</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/">
+          
+          <i class="fab fa-twitter" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的twitter</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/">
+          
+          <i class="fab fa-kickstarter-k" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的KEEP</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/">
+          
+          <i class="fab fa-zhihu" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的知乎</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/">
+          
+          <i class="fab fa-weibo" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的围脖</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/">
+          
+          <i class="fab fa-bootstrap" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的豆瓣</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友人帐</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/friends">
+          
+          <i class="fas fa-users fa-spin" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>全部邻居</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="http://sadc1ty.cn">
+          
+          <i class="fas fa-user" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>sadc1ty</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://nekodeng.gitee.io/">
+          
+          <i class="fas fa-user" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>itsNekoDeng</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://hesifan.top">
+          
+          <i class="fas fa-user" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>凡尘纪</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://www.nesxc.com/">
+          
+          <i class="fas fa-user" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Nescx</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://www.codecheng.com">
+          
+          <i class="fas fa-user" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>CodeCheng</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-wrench" style="zoom: 0.6;"></i>
+      
+      <span>小工具</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://fa5.dashgame.com/#/%E5%9B%BE%E6%A0%87">
+          
+          <i class="fas fa-file-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>fontawesome库</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="http://tool.liumingye.cn/music/">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>无损音乐</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://wallhaven.cc/">
+          
+          <i class="fas fa-images" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>抱图圣地</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://github.com/GAATTC0/Valine-Magic">
+          
+          <i class="fas fa-laugh-wink" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>表情仓库</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://gaattc.lanzoui.com/b015d3vhg">
+          
+          <i class="fas fa-folder" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>软件收藏</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/gaa_navi/cn/index.html">
+          
+          <i class="fas fa-compass" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>精彩导航</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://navi4gaa.pages.dev/">
+          
+          <i class="fas fa-compass" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>另一导航</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://stats.uptimerobot.com/MNQ8Qi5l3B">
+          
+          <i class="fas fa-wifi" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>友链检测</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="http://ping.chinaz.com/">
+          
+          <i class="fas fa-broadcast-tower" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>HOST测速</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://saucenao.com/">
+          
+          <i class="fas fa-eye" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>图片识别</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://z1.m1907.cn?jx=">
+          
+          <i class="fas fa-file-video" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>视频接口</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tools/paper">
+          
+          <i class="fas fa-sticky-note" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>论文降重</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-gamepad" style="zoom: 0.6;"></i>
+      
+      <span>小游戏</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://daxigua.pages.dev">
+          
+          <i class="fab fa-first-order-alt fa-spin" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>🍉合成大西瓜</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/maze/">
+          
+          <i class="fas fa-border-none" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>🏢倾斜迷宫</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/2048/">
+          
+          <i class="fas fa-dice-four" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>⛄2 0 4 8</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/cat/">
+          
+          <i class="fas fa-cat" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>🐱围住猫膜改版</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/adarkroom/">
+          
+          <i class="fas fa-house-damage" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>🔳ADarkRoom</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/color/">
+          
+          <i class="fas fa-eye" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>👀色盲检测器</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/bullshit/">
+          
+          <i class="fas fa-edit" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>🐂论文生成器</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/chess/">
+          
+          <i class="fas fa-chess" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>🎲AI五子棋</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/life/view/">
+          
+          <i class="fas fa-baby" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>👶重开模拟器</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/dragon">
+          
+          <i class="fas fa-dragon" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>🐉召唤神龙</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/littleblack">
+          
+          <i class="fas fa-dragon fa-spin" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>💣大战小黑</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  </i></a></li>
+  <li id="fullscreen_li" class="fullscreen"><a href="javascript:void(0);" class="modal-trigger waves-effect waves-light">
+      <i id="fullscreen" class="fas fa-expand-arrows-alt" title="全屏" style="zoom: 0.65;"></i></a></li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/96212297.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">GAATTC的隐藏小窝</div>
+        <div class="logo-desc">
+            
+            A simple blog maintained for recording the ordinary life...
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="http://gaattc.life" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/categories " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-cubes fa-spin" style="position: absolute;left:50px" ></i>
+			      
+		          <span>全部分类</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/archives " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-archive fa-spin" style="position: absolute;left:50px" ></i>
+			      
+		          <span>文章归档</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E6%97%A5%E5%B8%B8 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-sun" style="position: absolute;left:50px" ></i>
+			      
+		          <span>-日常</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>-学习</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/bug " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-bug" style="position: absolute;left:50px" ></i>
+			      
+		          <span>-bug</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E5%B7%A5%E4%BD%9C " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-swimmer" style="position: absolute;left:50px" ></i>
+			      
+		          <span>-工作</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E5%85%B4%E8%B6%A3 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-guitar" style="position: absolute;left:50px" ></i>
+			      
+		          <span>-兴趣</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-user"></i>
+			
+			关于我
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/about " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-user-circle fa-spin" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的简介</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://github.com/GAATTC0 " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-github" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的GitHub</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/ " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-steam" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的steam</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://space.bilibili.com/109208828 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-tv" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的bilibili</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的网抑云</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/ " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-twitter" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的twitter</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/ " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-kickstarter-k" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的KEEP</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/ " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-zhihu" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的知乎</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/ " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-weibo" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的围脖</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/ " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-bootstrap" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的豆瓣</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-address-book"></i>
+			
+			友人帐
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/friends " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-users fa-spin" style="position: absolute;left:50px" ></i>
+			      
+		          <span>全部邻居</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="http://sadc1ty.cn " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-user" style="position: absolute;left:50px" ></i>
+			      
+		          <span>sadc1ty</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://nekodeng.gitee.io/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-user" style="position: absolute;left:50px" ></i>
+			      
+		          <span>itsNekoDeng</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://hesifan.top " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-user" style="position: absolute;left:50px" ></i>
+			      
+		          <span>凡尘纪</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://www.nesxc.com/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-user" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Nescx</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://www.codecheng.com " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-user" style="position: absolute;left:50px" ></i>
+			      
+		          <span>CodeCheng</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-wrench"></i>
+			
+			小工具
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://fa5.dashgame.com/#/%E5%9B%BE%E6%A0%87 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-file-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>fontawesome库</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="http://tool.liumingye.cn/music/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>无损音乐</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://wallhaven.cc/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-images" style="position: absolute;left:50px" ></i>
+			      
+		          <span>抱图圣地</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://github.com/GAATTC0/Valine-Magic " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-laugh-wink" style="position: absolute;left:50px" ></i>
+			      
+		          <span>表情仓库</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://gaattc.lanzoui.com/b015d3vhg " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-folder" style="position: absolute;left:50px" ></i>
+			      
+		          <span>软件收藏</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/gaa_navi/cn/index.html " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-compass" style="position: absolute;left:50px" ></i>
+			      
+		          <span>精彩导航</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://navi4gaa.pages.dev/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-compass" style="position: absolute;left:50px" ></i>
+			      
+		          <span>另一导航</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://stats.uptimerobot.com/MNQ8Qi5l3B " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-wifi" style="position: absolute;left:50px" ></i>
+			      
+		          <span>友链检测</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="http://ping.chinaz.com/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-broadcast-tower" style="position: absolute;left:50px" ></i>
+			      
+		          <span>HOST测速</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://saucenao.com/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-eye" style="position: absolute;left:50px" ></i>
+			      
+		          <span>图片识别</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://z1.m1907.cn?jx= " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-file-video" style="position: absolute;left:50px" ></i>
+			      
+		          <span>视频接口</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/tools/paper " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-sticky-note" style="position: absolute;left:50px" ></i>
+			      
+		          <span>论文降重</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-gamepad"></i>
+			
+			小游戏
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://daxigua.pages.dev " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-first-order-alt fa-spin" style="position: absolute;left:50px" ></i>
+			      
+		          <span>🍉合成大西瓜</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/maze/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-border-none" style="position: absolute;left:50px" ></i>
+			      
+		          <span>🏢倾斜迷宫</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/2048/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-dice-four" style="position: absolute;left:50px" ></i>
+			      
+		          <span>⛄2 0 4 8</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/cat/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-cat" style="position: absolute;left:50px" ></i>
+			      
+		          <span>🐱围住猫膜改版</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/adarkroom/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-house-damage" style="position: absolute;left:50px" ></i>
+			      
+		          <span>🔳ADarkRoom</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/color/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-eye" style="position: absolute;left:50px" ></i>
+			      
+		          <span>👀色盲检测器</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/bullshit/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-edit" style="position: absolute;left:50px" ></i>
+			      
+		          <span>🐂论文生成器</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/chess/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-chess" style="position: absolute;left:50px" ></i>
+			      
+		          <span>🎲AI五子棋</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/life/view/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-baby" style="position: absolute;left:50px" ></i>
+			      
+		          <span>👶重开模拟器</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/dragon " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-dragon" style="position: absolute;left:50px" ></i>
+			      
+		          <span>🐉召唤神龙</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/littleblack " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-dragon fa-spin" style="position: absolute;left:50px" ></i>
+			      
+		          <span>💣大战小黑</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                做一个无聊生活中发现色彩的记录者~
+                
+            </div>
+
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="https://fastly.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: ['Welcome to my hidden nest!','A simple blog maintained for recording the ordinary life','I&#39;m glad to share some interesting daily things and some simple techs','It&#39;s so lucky to meet you here','Let&#39;s see see what&#39;s new in my nest! XD'],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + Math.round(Math.random()*9) + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+</script>
+
+
+    </div>
+</div>
+
+<main class="content">
+
+    
+    <div class="container archive-calendar">
+    <div class="card">
+        <div id="post-calendar" class="card-content"></div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
+<script type="text/javascript">
+    let myChart = echarts.init(document.getElementById('post-calendar'));
+
+    
+
+    let option = {
+        title: {
+            top: 0,
+            text: '文章日历',
+            left: 'center',
+            textStyle: {
+                color: '#3C4858'
+            }
+        },
+        tooltip: {
+            padding: 10,
+            backgroundColor: '#555',
+            borderColor: '#777',
+            borderWidth: 1,
+            formatter: function (obj) {
+                var value = obj.value;
+                return '<div style="font-size: 14px;">' + value[0] + '：' + value[1] + '</div>';
+            }
+        },
+        visualMap: {
+            show: true,
+            showLabel: true,
+            categories: [0, 1, 2, 3, 4],
+            calculable: true,
+            inRange: {
+                symbol: 'rect',
+                color: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127']
+            },
+            itemWidth: 12,
+            itemHeight: 12,
+            orient: 'horizontal',
+            left: 'center',
+            bottom: 0
+        },
+        calendar: [{
+            left: 'center',
+            range: ["2023-02-02", "2024-02-02"],
+            cellSize: [13, 13],
+            splitLine: {
+                show: false
+            },
+            itemStyle: {
+                color: '#196127',
+                borderColor: '#fff',
+                borderWidth: 2
+            },
+            yearLabel: {
+                show: false
+            },
+            monthLabel: {
+                nameMap: 'cn',
+                fontSize: 11
+            },
+            dayLabel: {
+                formatter: '{start}  1st',
+                nameMap: 'cn',
+                fontSize: 11
+            }
+        }],
+        series: [{
+            type: 'heatmap',
+            coordinateSystem: 'calendar',
+            calendarIndex: 0,
+            data: [["2023-02-02", 0], ["2023-02-03", 0], ["2023-02-04", 0], ["2023-02-05", 0], ["2023-02-06", 0], ["2023-02-07", 0], ["2023-02-08", 0], ["2023-02-09", 0], ["2023-02-10", 0], ["2023-02-11", 0], ["2023-02-12", 0], ["2023-02-13", 0], ["2023-02-14", 0], ["2023-02-15", 0], ["2023-02-16", 0], ["2023-02-17", 0], ["2023-02-18", 0], ["2023-02-19", 0], ["2023-02-20", 0], ["2023-02-21", 0], ["2023-02-22", 0], ["2023-02-23", 0], ["2023-02-24", 0], ["2023-02-25", 0], ["2023-02-26", 0], ["2023-02-27", 0], ["2023-02-28", 0], ["2023-03-01", 0], ["2023-03-02", 0], ["2023-03-03", 0], ["2023-03-04", 0], ["2023-03-05", 0], ["2023-03-06", 0], ["2023-03-07", 0], ["2023-03-08", 0], ["2023-03-09", 0], ["2023-03-10", 0], ["2023-03-11", 0], ["2023-03-12", 0], ["2023-03-13", 0], ["2023-03-14", 0], ["2023-03-15", 0], ["2023-03-16", 0], ["2023-03-17", 0], ["2023-03-18", 0], ["2023-03-19", 0], ["2023-03-20", 0], ["2023-03-21", 0], ["2023-03-22", 0], ["2023-03-23", 0], ["2023-03-24", 0], ["2023-03-25", 0], ["2023-03-26", 0], ["2023-03-27", 0], ["2023-03-28", 0], ["2023-03-29", 0], ["2023-03-30", 0], ["2023-03-31", 0], ["2023-04-01", 0], ["2023-04-02", 0], ["2023-04-03", 0], ["2023-04-04", 0], ["2023-04-05", 0], ["2023-04-06", 0], ["2023-04-07", 0], ["2023-04-08", 0], ["2023-04-09", 0], ["2023-04-10", 0], ["2023-04-11", 0], ["2023-04-12", 0], ["2023-04-13", 0], ["2023-04-14", 0], ["2023-04-15", 0], ["2023-04-16", 0], ["2023-04-17", 0], ["2023-04-18", 0], ["2023-04-19", 0], ["2023-04-20", 0], ["2023-04-21", 0], ["2023-04-22", 0], ["2023-04-23", 1], ["2023-04-24", 0], ["2023-04-25", 0], ["2023-04-26", 0], ["2023-04-27", 0], ["2023-04-28", 0], ["2023-04-29", 0], ["2023-04-30", 0], ["2023-05-01", 0], ["2023-05-02", 0], ["2023-05-03", 0], ["2023-05-04", 0], ["2023-05-05", 0], ["2023-05-06", 0], ["2023-05-07", 0], ["2023-05-08", 0], ["2023-05-09", 0], ["2023-05-10", 0], ["2023-05-11", 0], ["2023-05-12", 0], ["2023-05-13", 0], ["2023-05-14", 0], ["2023-05-15", 0], ["2023-05-16", 0], ["2023-05-17", 0], ["2023-05-18", 0], ["2023-05-19", 0], ["2023-05-20", 0], ["2023-05-21", 0], ["2023-05-22", 0], ["2023-05-23", 0], ["2023-05-24", 0], ["2023-05-25", 0], ["2023-05-26", 0], ["2023-05-27", 0], ["2023-05-28", 0], ["2023-05-29", 0], ["2023-05-30", 0], ["2023-05-31", 0], ["2023-06-01", 0], ["2023-06-02", 0], ["2023-06-03", 0], ["2023-06-04", 0], ["2023-06-05", 0], ["2023-06-06", 0], ["2023-06-07", 0], ["2023-06-08", 0], ["2023-06-09", 0], ["2023-06-10", 0], ["2023-06-11", 0], ["2023-06-12", 0], ["2023-06-13", 0], ["2023-06-14", 0], ["2023-06-15", 0], ["2023-06-16", 0], ["2023-06-17", 0], ["2023-06-18", 0], ["2023-06-19", 0], ["2023-06-20", 0], ["2023-06-21", 0], ["2023-06-22", 0], ["2023-06-23", 0], ["2023-06-24", 0], ["2023-06-25", 0], ["2023-06-26", 0], ["2023-06-27", 0], ["2023-06-28", 0], ["2023-06-29", 0], ["2023-06-30", 0], ["2023-07-01", 0], ["2023-07-02", 0], ["2023-07-03", 0], ["2023-07-04", 0], ["2023-07-05", 0], ["2023-07-06", 0], ["2023-07-07", 0], ["2023-07-08", 0], ["2023-07-09", 0], ["2023-07-10", 0], ["2023-07-11", 0], ["2023-07-12", 0], ["2023-07-13", 0], ["2023-07-14", 0], ["2023-07-15", 0], ["2023-07-16", 0], ["2023-07-17", 0], ["2023-07-18", 0], ["2023-07-19", 0], ["2023-07-20", 0], ["2023-07-21", 0], ["2023-07-22", 0], ["2023-07-23", 0], ["2023-07-24", 0], ["2023-07-25", 0], ["2023-07-26", 0], ["2023-07-27", 0], ["2023-07-28", 0], ["2023-07-29", 0], ["2023-07-30", 0], ["2023-07-31", 0], ["2023-08-01", 0], ["2023-08-02", 0], ["2023-08-03", 0], ["2023-08-04", 0], ["2023-08-05", 0], ["2023-08-06", 0], ["2023-08-07", 0], ["2023-08-08", 0], ["2023-08-09", 0], ["2023-08-10", 0], ["2023-08-11", 0], ["2023-08-12", 0], ["2023-08-13", 0], ["2023-08-14", 0], ["2023-08-15", 0], ["2023-08-16", 0], ["2023-08-17", 0], ["2023-08-18", 0], ["2023-08-19", 0], ["2023-08-20", 0], ["2023-08-21", 0], ["2023-08-22", 0], ["2023-08-23", 0], ["2023-08-24", 0], ["2023-08-25", 0], ["2023-08-26", 0], ["2023-08-27", 0], ["2023-08-28", 0], ["2023-08-29", 0], ["2023-08-30", 0], ["2023-08-31", 0], ["2023-09-01", 0], ["2023-09-02", 0], ["2023-09-03", 0], ["2023-09-04", 0], ["2023-09-05", 0], ["2023-09-06", 0], ["2023-09-07", 0], ["2023-09-08", 0], ["2023-09-09", 0], ["2023-09-10", 0], ["2023-09-11", 0], ["2023-09-12", 0], ["2023-09-13", 0], ["2023-09-14", 0], ["2023-09-15", 0], ["2023-09-16", 0], ["2023-09-17", 0], ["2023-09-18", 0], ["2023-09-19", 0], ["2023-09-20", 0], ["2023-09-21", 0], ["2023-09-22", 0], ["2023-09-23", 0], ["2023-09-24", 0], ["2023-09-25", 0], ["2023-09-26", 0], ["2023-09-27", 0], ["2023-09-28", 0], ["2023-09-29", 0], ["2023-09-30", 0], ["2023-10-01", 0], ["2023-10-02", 0], ["2023-10-03", 0], ["2023-10-04", 0], ["2023-10-05", 0], ["2023-10-06", 0], ["2023-10-07", 0], ["2023-10-08", 0], ["2023-10-09", 0], ["2023-10-10", 0], ["2023-10-11", 0], ["2023-10-12", 0], ["2023-10-13", 0], ["2023-10-14", 0], ["2023-10-15", 0], ["2023-10-16", 0], ["2023-10-17", 0], ["2023-10-18", 0], ["2023-10-19", 0], ["2023-10-20", 0], ["2023-10-21", 0], ["2023-10-22", 0], ["2023-10-23", 0], ["2023-10-24", 0], ["2023-10-25", 0], ["2023-10-26", 0], ["2023-10-27", 1], ["2023-10-28", 0], ["2023-10-29", 0], ["2023-10-30", 0], ["2023-10-31", 0], ["2023-11-01", 0], ["2023-11-02", 0], ["2023-11-03", 0], ["2023-11-04", 0], ["2023-11-05", 0], ["2023-11-06", 0], ["2023-11-07", 0], ["2023-11-08", 0], ["2023-11-09", 0], ["2023-11-10", 0], ["2023-11-11", 0], ["2023-11-12", 0], ["2023-11-13", 0], ["2023-11-14", 0], ["2023-11-15", 0], ["2023-11-16", 0], ["2023-11-17", 0], ["2023-11-18", 0], ["2023-11-19", 0], ["2023-11-20", 0], ["2023-11-21", 0], ["2023-11-22", 0], ["2023-11-23", 0], ["2023-11-24", 0], ["2023-11-25", 0], ["2023-11-26", 0], ["2023-11-27", 0], ["2023-11-28", 0], ["2023-11-29", 0], ["2023-11-30", 0], ["2023-12-01", 0], ["2023-12-02", 0], ["2023-12-03", 0], ["2023-12-04", 0], ["2023-12-05", 0], ["2023-12-06", 0], ["2023-12-07", 0], ["2023-12-08", 0], ["2023-12-09", 0], ["2023-12-10", 0], ["2023-12-11", 0], ["2023-12-12", 0], ["2023-12-13", 0], ["2023-12-14", 0], ["2023-12-15", 0], ["2023-12-16", 0], ["2023-12-17", 0], ["2023-12-18", 0], ["2023-12-19", 0], ["2023-12-20", 0], ["2023-12-21", 0], ["2023-12-22", 0], ["2023-12-23", 0], ["2023-12-24", 0], ["2023-12-25", 0], ["2023-12-26", 0], ["2023-12-27", 0], ["2023-12-28", 0], ["2023-12-29", 0], ["2023-12-30", 0], ["2023-12-31", 0], ["2024-01-01", 0], ["2024-01-02", 0], ["2024-01-03", 0], ["2024-01-04", 0], ["2024-01-05", 0], ["2024-01-06", 0], ["2024-01-07", 0], ["2024-01-08", 0], ["2024-01-09", 0], ["2024-01-10", 0], ["2024-01-11", 0], ["2024-01-12", 0], ["2024-01-13", 0], ["2024-01-14", 0], ["2024-01-15", 1], ["2024-01-16", 0], ["2024-01-17", 0], ["2024-01-18", 0], ["2024-01-19", 0], ["2024-01-20", 0], ["2024-01-21", 0], ["2024-01-22", 0], ["2024-01-23", 0], ["2024-01-24", 0], ["2024-01-25", 0], ["2024-01-26", 0], ["2024-01-27", 0], ["2024-01-28", 0], ["2024-01-29", 0], ["2024-01-30", 0], ["2024-01-31", 0], ["2024-02-01", 0], ["2024-02-02", 1]]
+        }]
+
+    };
+
+    myChart.setOption(option);
+</script>
+
+    
+
+    
+
+    <div id="cd-timeline" class="container">
+        
+        <div class="cd-timeline-block">
+
+            
+            
+            
+            <div class="cd-timeline-img year" data-aos="zoom-in-up">
+                <a href="/archives/2023">2023</a>
+            </div>
+            
+
+            
+            
+            
+            <div class="cd-timeline-img month" data-aos="zoom-in-up">
+                <a href="/archives/2023/10">10</a>
+            </div>
+            
+
+            
+            <div class="cd-timeline-img day" data-aos="zoom-in-up">
+                <span>27</span>
+            </div>
+            <article class="cd-timeline-content" data-aos="fade-up">
+                <div class="article col s12 m6">
+                    <div class="card">
+                        <a href="/posts/74acaa5c/">
+                            <div class="card-image">
+                                
+                                <img src="/img/wallhaven-pkgkkp.jpg" class="responsive-img" alt="零碎的想法2023">
+                                
+                                <span class="card-title">零碎的想法2023</span>
+                            </div>
+                        </a>
+                        <div class="card-content article-content">
+                            <div class="summary block-with-text">
+                                
+                                    零碎的想法2023
+23年前几个月因为懒没有记录，后来一起写在2022的末尾了，这里就从10月开始吧
+
+2023.10
+🍖
+没什么有趣的事情发生，体检出来去年超标的指标正常了，但是也有新的异常，大概是因为练太多了，以及肉吃的多🤔
+
+20
+                                
+                            </div>
+                            <div class="publish-info">
+                                <span class="publish-date">
+                                    <i class="far fa-clock fa-fw icon-date"></i>2023-10-27
+                                </span>
+                                <span class="publish-author">
+                                    
+                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                    
+                                    <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    日常
+                                    </a>
+                                    
+                                    <a href="/categories/%E6%97%A5%E5%B8%B8/%E6%83%B3%E6%B3%95/" class="post-category">
+                                    想法
+                                    </a>
+                                    
+                                    
+                                </span>
+                            </div>
+                        </div>
+
+                        
+                        <div class="card-action article-tags">
+                            
+                            <a href="/tags/%E8%AE%B0%E5%BD%95/"><span class="chip bg-color">记录</span></a>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+    </div>
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #1aa2bf;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="5337749378"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#1aa2bf'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.3'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align"
+        style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <!--<a href="https://gaattc.life" target="_blank">GAATTC</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/zh-cn/" target="_blank">Hexo</a>
+            |&nbsp;Deployed on&nbsp;<a href="https://vercel.com" target="_blank">Vercel</a>
+            |&nbsp;CDN by&nbsp;<a href="https://www.jsdelivr.com/" target="_blank">jsDelivr</a>-->
+            <a style="margin-inline:5px" target="_blank" href="https://gaattc.life"><img src="https://img.shields.io/badge/Auth-GAATTC-3790ee?style=flat&logo=Google" title="很高兴遇到你"></a>
+            <a style="margin-inline:5px" target="_blank" href="https://hexo.io"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="基于Hexo框架"></a>
+            <a style="margin-inline:5px" target="_blank" href="https://github.com/blinkfox/hexo-theme-matery"><img src="https://img.shields.io/badge/Theme-Matery-7138b6?style=flat&logo=MEGA" title="主题采用matery"></a>
+            <a style="margin-inline:5px" target="_blank" href="https://www.jsdelivr.com"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用JsDelivr为静态资源提供CDN加速"></a>
+            <a style="margin-inline:5px" target="_blank" href="https://cloudflare.com"><img src="https://img.shields.io/badge/Hosted-Cloudflare-brightgreen?style=flat&logo=Cloudflare" title="基于Cloudflare Pages托管部署"></a>
+            <a style="margin-inline:5px" target="_blank" href="https://github.com"><img src="https://img.shields.io/badge/Source-Github-67e1fb?style=flat&logo=GitHub" title="静态文件托管于GitHub"></a>
+            <a style="margin-inline:5px" target="_blank" href="http://creativecommons.org/licenses/cc-by/4.0"><img src="https://img.shields.io/badge/Copyright-CC--BY%204.0-ee5b32?style=flat&logo=Chef" title="本站采用cc-by 4.0国际许可协议进行许可"></a>
+            <a style="margin-inline:5px" target="_blank" href="https://space.bilibili.com"><img src="https://img.shields.io/badge/dynamic/json?logo=Bilibili&color=%23fe7499&label=Bilibili&query=%24.data.totalSubs&suffix=%20Followers&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dbilibili%26queryKey%3D383883097" title="这是一个很厉害的UP主"></a>
+            <!--<a style="margin-inline:5px" target="_blank" href="https://weibo.com/u/6574421101"><img src="https://img.shields.io/badge/dynamic/json?color=%23e32428&label=Weibo&query=%24.data.totalSubs&suffix=%20Followers&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dweibo%26queryKey%3D6574421101" title="分享学习、生活动态"></a>-->
+            <br>
+
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;不知不觉已生产了&nbsp;<span
+                class="white-color">159.4k</span>&nbsp;字!
+            
+            
+            
+            
+            
+            <br>
+            
+            <span id="sitetime">正在载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "11";
+                    var startDate = "15";
+                    var startHour = "19";
+                    var startMinute = "30";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "现在是小窝诞生的第" + diffDays + "天" + diffHours +
+                            "小时" + diffMinutes + "分" + diffSeconds + "秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "现在是小窝诞生的第" + diffYears + "年" + diffDays +
+                            "天" + diffHours + "小时" + diffMinutes + "分" + diffSeconds + "秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link ">
+    <a href="https://github.com/GAATTC0" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+
+
+</div>
+    </div>
+</footer>
+<script src="/js/prism/prism.js" async></script>
+<div class="progress-bar"></div>
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!" title="返回顶部">
+        <i class="fas fa-arrow-up" style="zoom: 0.88;"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c77e3d3e2dd5996dc4146c5327d3c0c8";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+	
+	<!--天气
+	<div id="weather-v2-plugin-simple"></div>
+	<script>
+	WIDGET = {
+	CONFIG: {
+    "modules": "01234",
+    "background": 1,
+    "tmpColor": "FFFFFF",
+    "tmpSize": 16,
+    "cityColor": "FFFFFF",
+    "citySize": 16,
+    "aqiSize": 16,
+    "weatherIconSize": 24,
+    "alertIconSize": 18,
+    "padding": "10px 10px 10px 10px",
+    "shadow": "1",
+    "language": "auto",
+    "borderRadius": "3",
+    "fixed": "false",
+    "vertical": "middle",
+    "horizontal": "center",
+    "key": "rbqraTCH2c"
+		}
+	}
+	</script>
+	<script src="https://apip.weatherdt.com/simple/static/js/weather-simple-common.js?v=2.0"></script>-->
+
+    <!--鼠标礼花-->
+    <script src="/js/lihua.js"></script>
+	
+	<!--snow-->
+	<script src="/js/snow.js"></script>
+	
+	<!--动态标题-->
+	<script type="text/javascript">
+    var OriginTitile=document.title,st;
+    document.addEventListener("visibilitychange",function(){
+        document.hidden?(document.title="⇐to be continued♪​",clearTimeout(st)):(document.title="欢迎回来o(^▽^)o~",st=setTimeout(function(){document.title=OriginTitile},3e3))
+    })
+	</script>
+
+    <!--全屏-->
+    <script src="/js/fullscreen.js" type="module"></script>
+    
+    <!--夜晚模式-->
+    <script>
+        if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark');
+        }
+        /*else if (new Date().getHours() >= 22 || new Date().getHours() < 7) {
+        document.body.classList.add('dark');
+        } */
+        else if (matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+        }
+    </script>
+    <a onclick="switchNightMode()" id="sma">
+        <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
+    </a>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-tororo"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+</html>

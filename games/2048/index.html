@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+<title>GAATTC | 2048</title>
+
+<link rel="stylesheet" href="/games/2048/css/reset.min.css">
+<link rel="stylesheet" href="/games/2048/css/style.css">
+
+</head>
+
+<body>
+
+<header>
+	<div class="container">
+		<h1><span>2</span><span>0</span><span>4</span><span>8</span></h1>
+		<p class="inspired">大二时经常上课无聊和室友玩的小游戏,一起来重温一下吧~</p>
+	</div>
+</header>
+
+<div class="container">
+	<div class="directions">
+		<p><strong>如何玩：</strong> 使用方向键或手指滑动移动数字方块。相邻的两个方块数字相同,就可合并成一个!(*^_^*)</p>
+	</div>
+	<div class="scores">
+		<div class="score-container best-score">
+			最佳: 
+			<div class="score">
+				<div id="bestScore">0</div>
+			</div>
+		</div>
+		<div class="score-container">
+			分数: 
+			<div class="score">
+				<div id="score">0</div>
+				<div class="add" id="add"></div>
+			</div>
+		</div>
+	</div>
+	<div class="game">
+		<div id="tile-container" class="tile-container"></div>
+		<div class="end" id="end">游戏结束<div class="monkey">🙈</div><button class="btn not-recommended__item js-restart-btn" id="try-again">再试一次</button></div>
+	</div>
+
+	<div class="not-recommended">
+		<button class="btn not-recommended__item js-restart-btn" id="restart">重新启动游戏</button>
+		<span class="not-recommended__annotation"></span>
+	</div>
+
+</div>
+
+<script src="/games/2048/js/index.js"></script>
+<script>
+	var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c77e3d3e2dd5996dc4146c5327d3c0c8";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<div style="text-align:center;">
+<p><a href="http://gaattc.life" target="_blank">Modified by GAATTC</a></p>
+</div>
+</body>
+</html>

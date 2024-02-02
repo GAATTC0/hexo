@@ -1,0 +1,2893 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta name="keywords" content="分类: 日常, GAATTC的隐藏小窝">
+    <meta name="description" content="A simple blog maintained for recording the ordinary life...">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>分类: 日常 | GAATTC的隐藏小窝</title>
+    <link rel="icon" type="image/png" href="/medias/18.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+	<link rel="stylesheet" href="/js/prism/prism.css">
+    <script src="/libs/jquery/jquery.min.js"></script>
+	<script src="https://v1.hitokoto.cn/?c=d&encode=js&select=%23hitokoto" defer></script>
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="GAATTC的隐藏小窝" type="application/atom+xml">
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+
+    <style type="text/css" lang="css">
+    #loading-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        width: 100vw;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #2c3561;
+        text-align: center;
+        /* loader页面消失采用渐隐的方式*/
+        -webkit-transition: opacity 1s ease;
+        -moz-transition: opacity 1s ease;
+        -o-transition: opacity 1s ease;
+        transition: opacity 1s ease;
+    }
+    .loading-image{
+        width: 120px;
+        height: 50px;
+        transform: translate(-50%);
+    }
+
+    .loading-image div:nth-child(2) {
+        -webkit-animation: pacman-balls 1s linear 0s infinite;
+        animation: pacman-balls 1s linear 0s infinite
+    }
+
+    .loading-image div:nth-child(3) {
+        -webkit-animation: pacman-balls 1s linear .33s infinite;
+        animation: pacman-balls 1s linear .33s infinite
+    }
+
+    .loading-image div:nth-child(4) {
+        -webkit-animation: pacman-balls 1s linear .66s infinite;
+        animation: pacman-balls 1s linear .66s infinite
+    }
+
+    .loading-image div:nth-child(5) {
+        -webkit-animation: pacman-balls 1s linear .99s infinite;
+        animation: pacman-balls 1s linear .99s infinite
+    }
+
+   .loading-image div:first-of-type {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
+        animation: rotate_pacman_half_up .5s 0s infinite;
+    }
+    .loading-image div:nth-child(2) {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
+        animation: rotate_pacman_half_down .5s 0s infinite;
+        margin-top: -50px;
+    }
+    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+
+    .loading-image div:nth-child(3),
+    .loading-image div:nth-child(4),
+    .loading-image div:nth-child(5),
+    .loading-image div:nth-child(6){
+        background-color: #49b1f5;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin: 2px;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        transform: translateY(-6.25px);
+        top: 25px;
+        left: 100px;
+    }
+    .loading-text{
+        margin-bottom: 20vh;
+        text-align: center;
+        color: #f8c471;
+        font-size: 2rem;
+        box-sizing: border-box;
+        padding: 0 10px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    @media only screen and (max-width: 500px) {
+         .loading-text{
+            font-size: 1.5rem;
+         }
+    }
+    .fadeout {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    /* logo出现动画 */
+    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
+    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
+ </style>
+ <script>
+(function () {
+    const loaded = function(){
+       setTimeout(function(){
+            const loader = document.getElementById("loading-container");
+            loader.className="fadeout" ;//使用渐隐的方法淡出loading page
+            // document.getElementById("body-wrap").style.display="flex";
+            setTimeout(function(){
+                loader.style.display="none";
+            },2500); 
+        },750);//强制显示loading page 0.75s  
+    };
+    loaded();
+})()
+</script>
+ 
+
+<body>
+	<!-- hexo-inject:begin --><!-- hexo-inject:end --><!--动态背景-->
+	<div id="bg"><canvas></canvas><canvas></canvas><canvas></canvas></div>
+	<script src="/js/canva_moving_effect.js"></script>
+	<!--加载动画-->
+	
+        <div id="loading-container">
+             <p class="loading-text">正在搬运下一页::>_<:: . . . </p>
+             <div class="loading-image">
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div> 
+                 <div></div>
+             </div>
+        </div>
+    
+
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+					<div>
+						
+						<img src="/medias/96212297.png" class="logo-img" alt="LOGO">
+						
+                    <span class="logo-span">GAATTC的隐藏小窝</span>
+					</div>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="http://gaattc.life" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/categories">
+          
+          <i class="fas fa-cubes fa-spin" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>全部分类</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/archives">
+          
+          <i class="fas fa-archive fa-spin" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>文章归档</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E6%97%A5%E5%B8%B8">
+          
+          <i class="fas fa-sun" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>-日常</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E5%AD%A6%E4%B9%A0">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>-学习</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/bug">
+          
+          <i class="fas fa-bug" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>-bug</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E5%B7%A5%E4%BD%9C">
+          
+          <i class="fas fa-swimmer" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>-工作</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E5%85%B4%E8%B6%A3">
+          
+          <i class="fas fa-guitar" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>-兴趣</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-user" style="zoom: 0.6;"></i>
+      
+      <span>关于我</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/about">
+          
+          <i class="fas fa-user-circle fa-spin" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的简介</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://github.com/GAATTC0">
+          
+          <i class="fab fa-github" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的GitHub</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/">
+          
+          <i class="fab fa-steam" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的steam</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://space.bilibili.com/109208828">
+          
+          <i class="fas fa-tv" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的bilibili</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的网抑云</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/">
+          
+          <i class="fab fa-twitter" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的twitter</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/">
+          
+          <i class="fab fa-kickstarter-k" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的KEEP</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/">
+          
+          <i class="fab fa-zhihu" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的知乎</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/">
+          
+          <i class="fab fa-weibo" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的围脖</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/">
+          
+          <i class="fab fa-bootstrap" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的豆瓣</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友人帐</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/friends">
+          
+          <i class="fas fa-users fa-spin" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>全部邻居</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="http://sadc1ty.cn">
+          
+          <i class="fas fa-user" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>sadc1ty</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://nekodeng.gitee.io/">
+          
+          <i class="fas fa-user" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>itsNekoDeng</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://hesifan.top">
+          
+          <i class="fas fa-user" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>凡尘纪</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://www.nesxc.com/">
+          
+          <i class="fas fa-user" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Nescx</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://www.codecheng.com">
+          
+          <i class="fas fa-user" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>CodeCheng</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-wrench" style="zoom: 0.6;"></i>
+      
+      <span>小工具</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://fa5.dashgame.com/#/%E5%9B%BE%E6%A0%87">
+          
+          <i class="fas fa-file-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>fontawesome库</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="http://tool.liumingye.cn/music/">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>无损音乐</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://wallhaven.cc/">
+          
+          <i class="fas fa-images" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>抱图圣地</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://github.com/GAATTC0/Valine-Magic">
+          
+          <i class="fas fa-laugh-wink" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>表情仓库</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://gaattc.lanzoui.com/b015d3vhg">
+          
+          <i class="fas fa-folder" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>软件收藏</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/gaa_navi/cn/index.html">
+          
+          <i class="fas fa-compass" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>精彩导航</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://navi4gaa.pages.dev/">
+          
+          <i class="fas fa-compass" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>另一导航</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://stats.uptimerobot.com/MNQ8Qi5l3B">
+          
+          <i class="fas fa-wifi" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>友链检测</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="http://ping.chinaz.com/">
+          
+          <i class="fas fa-broadcast-tower" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>HOST测速</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://saucenao.com/">
+          
+          <i class="fas fa-eye" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>图片识别</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://z1.m1907.cn?jx=">
+          
+          <i class="fas fa-file-video" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>视频接口</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tools/paper">
+          
+          <i class="fas fa-sticky-note" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>论文降重</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-gamepad" style="zoom: 0.6;"></i>
+      
+      <span>小游戏</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://daxigua.pages.dev">
+          
+          <i class="fab fa-first-order-alt fa-spin" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>🍉合成大西瓜</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/maze/">
+          
+          <i class="fas fa-border-none" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>🏢倾斜迷宫</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/2048/">
+          
+          <i class="fas fa-dice-four" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>⛄2 0 4 8</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/cat/">
+          
+          <i class="fas fa-cat" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>🐱围住猫膜改版</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/adarkroom/">
+          
+          <i class="fas fa-house-damage" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>🔳ADarkRoom</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/color/">
+          
+          <i class="fas fa-eye" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>👀色盲检测器</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/bullshit/">
+          
+          <i class="fas fa-edit" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>🐂论文生成器</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/chess/">
+          
+          <i class="fas fa-chess" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>🎲AI五子棋</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/life/view/">
+          
+          <i class="fas fa-baby" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>👶重开模拟器</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/dragon">
+          
+          <i class="fas fa-dragon" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>🐉召唤神龙</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/littleblack">
+          
+          <i class="fas fa-dragon fa-spin" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>💣大战小黑</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  </i></a></li>
+  <li id="fullscreen_li" class="fullscreen"><a href="javascript:void(0);" class="modal-trigger waves-effect waves-light">
+      <i id="fullscreen" class="fas fa-expand-arrows-alt" title="全屏" style="zoom: 0.65;"></i></a></li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/96212297.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">GAATTC的隐藏小窝</div>
+        <div class="logo-desc">
+            
+            A simple blog maintained for recording the ordinary life...
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="http://gaattc.life" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/categories " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-cubes fa-spin" style="position: absolute;left:50px" ></i>
+			      
+		          <span>全部分类</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/archives " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-archive fa-spin" style="position: absolute;left:50px" ></i>
+			      
+		          <span>文章归档</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E6%97%A5%E5%B8%B8 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-sun" style="position: absolute;left:50px" ></i>
+			      
+		          <span>-日常</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>-学习</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/bug " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-bug" style="position: absolute;left:50px" ></i>
+			      
+		          <span>-bug</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E5%B7%A5%E4%BD%9C " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-swimmer" style="position: absolute;left:50px" ></i>
+			      
+		          <span>-工作</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E5%85%B4%E8%B6%A3 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-guitar" style="position: absolute;left:50px" ></i>
+			      
+		          <span>-兴趣</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-user"></i>
+			
+			关于我
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/about " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-user-circle fa-spin" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的简介</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://github.com/GAATTC0 " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-github" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的GitHub</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/ " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-steam" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的steam</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://space.bilibili.com/109208828 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-tv" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的bilibili</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的网抑云</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/ " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-twitter" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的twitter</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/ " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-kickstarter-k" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的KEEP</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/ " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-zhihu" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的知乎</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/ " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-weibo" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的围脖</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/ " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-bootstrap" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的豆瓣</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-address-book"></i>
+			
+			友人帐
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/friends " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-users fa-spin" style="position: absolute;left:50px" ></i>
+			      
+		          <span>全部邻居</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="http://sadc1ty.cn " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-user" style="position: absolute;left:50px" ></i>
+			      
+		          <span>sadc1ty</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://nekodeng.gitee.io/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-user" style="position: absolute;left:50px" ></i>
+			      
+		          <span>itsNekoDeng</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://hesifan.top " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-user" style="position: absolute;left:50px" ></i>
+			      
+		          <span>凡尘纪</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://www.nesxc.com/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-user" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Nescx</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://www.codecheng.com " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-user" style="position: absolute;left:50px" ></i>
+			      
+		          <span>CodeCheng</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-wrench"></i>
+			
+			小工具
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://fa5.dashgame.com/#/%E5%9B%BE%E6%A0%87 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-file-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>fontawesome库</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="http://tool.liumingye.cn/music/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>无损音乐</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://wallhaven.cc/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-images" style="position: absolute;left:50px" ></i>
+			      
+		          <span>抱图圣地</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://github.com/GAATTC0/Valine-Magic " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-laugh-wink" style="position: absolute;left:50px" ></i>
+			      
+		          <span>表情仓库</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://gaattc.lanzoui.com/b015d3vhg " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-folder" style="position: absolute;left:50px" ></i>
+			      
+		          <span>软件收藏</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/gaa_navi/cn/index.html " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-compass" style="position: absolute;left:50px" ></i>
+			      
+		          <span>精彩导航</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://navi4gaa.pages.dev/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-compass" style="position: absolute;left:50px" ></i>
+			      
+		          <span>另一导航</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://stats.uptimerobot.com/MNQ8Qi5l3B " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-wifi" style="position: absolute;left:50px" ></i>
+			      
+		          <span>友链检测</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="http://ping.chinaz.com/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-broadcast-tower" style="position: absolute;left:50px" ></i>
+			      
+		          <span>HOST测速</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://saucenao.com/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-eye" style="position: absolute;left:50px" ></i>
+			      
+		          <span>图片识别</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://z1.m1907.cn?jx= " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-file-video" style="position: absolute;left:50px" ></i>
+			      
+		          <span>视频接口</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/tools/paper " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-sticky-note" style="position: absolute;left:50px" ></i>
+			      
+		          <span>论文降重</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-gamepad"></i>
+			
+			小游戏
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://daxigua.pages.dev " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-first-order-alt fa-spin" style="position: absolute;left:50px" ></i>
+			      
+		          <span>🍉合成大西瓜</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/maze/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-border-none" style="position: absolute;left:50px" ></i>
+			      
+		          <span>🏢倾斜迷宫</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/2048/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-dice-four" style="position: absolute;left:50px" ></i>
+			      
+		          <span>⛄2 0 4 8</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/cat/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-cat" style="position: absolute;left:50px" ></i>
+			      
+		          <span>🐱围住猫膜改版</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/adarkroom/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-house-damage" style="position: absolute;left:50px" ></i>
+			      
+		          <span>🔳ADarkRoom</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/color/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-eye" style="position: absolute;left:50px" ></i>
+			      
+		          <span>👀色盲检测器</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/bullshit/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-edit" style="position: absolute;left:50px" ></i>
+			      
+		          <span>🐂论文生成器</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/chess/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-chess" style="position: absolute;left:50px" ></i>
+			      
+		          <span>🎲AI五子棋</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/life/view/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-baby" style="position: absolute;left:50px" ></i>
+			      
+		          <span>👶重开模拟器</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/dragon " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-dragon" style="position: absolute;left:50px" ></i>
+			      
+		          <span>🐉召唤神龙</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/littleblack " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-dragon fa-spin" style="position: absolute;left:50px" ></i>
+			      
+		          <span>💣大战小黑</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                做一个无聊生活中发现色彩的记录者~
+                
+            </div>
+
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="https://fastly.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: ['Welcome to my hidden nest!','A simple blog maintained for recording the ordinary life','I&#39;m glad to share some interesting daily things and some simple techs','It&#39;s so lucky to meet you here','Let&#39;s see see what&#39;s new in my nest! XD'],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + Math.round(Math.random()*9) + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+</script>
+
+
+    </div>
+</div>
+
+<main class="content">
+
+    
+
+<div id="category-cloud" class="container chip-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
+            </div>
+            <div class="tag-chips">
+                
+                
+                
+                <a href="/categories/%E5%B7%A5%E4%BD%9C/" title="工作: 3">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F9EBEA;">工作
+                        <span class="tag-length">3</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E5%AD%A6%E4%B9%A0/" title="学习: 28">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F5EEF8;">学习
+                        <span class="tag-length">28</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E5%B7%A5%E4%BD%9C/%E5%BC%80%E5%8F%91/" title="开发: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #D5F5E3;">开发
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/bug/" title="bug: 4">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #E8F8F5;">bug
+                        <span class="tag-length">4</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E5%BA%93/" title="数据库: 3">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #FEF9E7;">数据库
+                        <span class="tag-length">3</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E5%AD%A6%E4%B9%A0/hexo/" title="hexo: 12">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F8F9F9;">hexo
+                        <span class="tag-length">12</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E5%AD%A6%E4%B9%A0/halo/" title="halo: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #82E0AA;">halo
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E5%AD%A6%E4%B9%A0/java/" title="java: 8">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #D7BDE2;">java
+                        <span class="tag-length">8</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E5%85%B4%E8%B6%A3/" title="兴趣: 8">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #A3E4D7;">兴趣
+                        <span class="tag-length">8</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E6%97%A5%E5%B8%B8/" title="日常: 19">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            style="background-color: #85C1E9;">日常
+                        <span class="tag-length">19</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95/" title="算法: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F8C471;">算法
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/bug/maven/" title="maven: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F9E79F;">maven
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/bug/git/" title="git: 3">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F8F9F9;">git
+                        <span class="tag-length">3</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E5%AD%A6%E4%B9%A0/git/" title="git: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F8F9F9;">git
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E5%AD%A6%E4%B9%A0/markdown/" title="markdown: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #D5F5E3;">markdown
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E5%85%B4%E8%B6%A3/%E5%90%89%E4%BB%96/" title="吉他: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #85C1E9;">吉他
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E5%85%B4%E8%B6%A3/%E8%A7%82%E5%BD%B1/" title="观影: 3">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #FEF9E7;">观影
+                        <span class="tag-length">3</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E6%97%A5%E5%B8%B8/todo/" title="todo: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F9E79F;">todo
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E5%B7%A5%E4%BD%9C/%E5%B8%86%E8%BD%AF/" title="帆软: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #E8F8F5;">帆软
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E6%97%A5%E5%B8%B8/%E6%83%B3%E6%B3%95/" title="想法: 8">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #FFF;">想法
+                        <span class="tag-length">8</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E6%97%A5%E5%B8%B8/%E8%AE%B0%E5%BD%95/" title="记录: 5">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #D5F5E3;">记录
+                        <span class="tag-length">5</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E6%97%A5%E5%B8%B8/%E5%88%86%E4%BA%AB/" title="分享: 5">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #FEF9E7;">分享
+                        <span class="tag-length">5</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E5%85%B4%E8%B6%A3/UP/" title="UP: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F9E79F;">UP
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E5%85%B4%E8%B6%A3/%E5%B9%B2%E9%A5%AD/" title="干饭: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #D7BDE2;">干饭
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/e4b77a0d/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="碎碎念2024">
+                            
+                            <span class="card-title">碎碎念2024</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                2024.01
+打卡解锁新地点：红船厂、盛岸市场
+第一次吃到网上看过多次的潮汕生腌，还被死去的皮皮虾挂到了嘴上，体验到咬钩之鱼的感觉(鱼为了让我们吃也很不容易)
+紧急上线问题第一次加班到凌晨4点，好在有一群人一起(解锁隐藏成就：凌晨四点的无
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-02
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    日常
+                                </a>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/%E6%83%B3%E6%B3%95/" class="post-category">
+                                    想法
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E8%AE%B0%E5%BD%95/">
+                            <span class="chip bg-color">记录</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/74acaa5c/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/img/wallhaven-pkgkkp.jpg" class="responsive-img" alt="零碎的想法2023">
+                            
+                            <span class="card-title">零碎的想法2023</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                零碎的想法2023
+23年前几个月因为懒没有记录，后来一起写在2022的末尾了，这里就从10月开始吧
+
+2023.10
+🍖
+没什么有趣的事情发生，体检出来去年超标的指标正常了，但是也有新的异常，大概是因为练太多了，以及肉吃的多🤔
+
+20
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-27
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    日常
+                                </a>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/%E6%83%B3%E6%B3%95/" class="post-category">
+                                    想法
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E8%AE%B0%E5%BD%95/">
+                            <span class="chip bg-color">记录</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/5fece136/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/img/videos1.jpg" class="responsive-img" alt="喜欢的视频系列">
+                            
+                            <span class="card-title">喜欢的视频系列</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                喜欢的视频系列
+这个列表不包括电影和动漫,且持续更新(回忆)中…
+
+
+老高与小茉：https://www.youtube.com/channel/UCMUnInmOkrWN4gof9KlhNmQ
+守护解放西123：https://www.b
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-05
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    日常
+                                </a>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/%E5%88%86%E4%BA%AB/" class="post-category">
+                                    分享
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E5%88%86%E4%BA%AB/">
+                            <span class="chip bg-color">分享</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/2af7e1fb/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/img/wallhaven-pkgkkp.jpg" class="responsive-img" alt="零碎的想法2022">
+                            
+                            <span class="card-title">零碎的想法2022</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                零碎的想法2022.4:
+转眼间我已经不再是晚上一个人睡觉怕黑的小男孩了，也不是那个怕和生人说话怕和别人对视的腼腆小孩了
+学会接受自己的平凡，但拒绝平庸，改变不了世界，但至少也要多体验人生，少留下点遗憾
+其实我们大多数人一直在和更好的相比，
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-23
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    日常
+                                </a>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/%E6%83%B3%E6%B3%95/" class="post-category">
+                                    想法
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E8%AE%B0%E5%BD%95/">
+                            <span class="chip bg-color">记录</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/55c1fb25/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/img/wallhaven-4gjrml_small.jpg" class="responsive-img" alt="🔒关于长大和成熟">
+                            
+                            <span class="card-title">🔒关于长大和成熟</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                关于长大和成熟
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-05
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    日常
+                                </a>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/%E6%83%B3%E6%B3%95/" class="post-category">
+                                    想法
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E8%AE%B0%E5%BD%95/">
+                            <span class="chip bg-color">记录</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/73e10e1f/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/img/wallhaven-q2l5pq_small.jpg" class="responsive-img" alt="🔒仍然仍然">
+                            
+                            <span class="card-title">🔒仍然仍然</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                仍然仍然
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-04
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    日常
+                                </a>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/%E6%83%B3%E6%B3%95/" class="post-category">
+                                    想法
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E8%AE%B0%E5%BD%95/">
+                            <span class="chip bg-color">记录</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/42dd4c/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/img/image-20210928111836920.png" class="responsive-img" alt="IDEA从入门到精通">
+                            
+                            <span class="card-title">IDEA从入门到精通</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                IDEA从入门到精通
+还在更新中…
+
+一、常规篇1.字体布局①编译器字体Settings -&gt; Appearance&amp;Behavior -&gt; Appearance:
+ 
+
+②代码字体Settings -&gt; Edit
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-28
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    日常
+                                </a>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/%E5%88%86%E4%BA%AB/" class="post-category">
+                                    分享
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E5%88%86%E4%BA%AB/">
+                            <span class="chip bg-color">分享</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/7106602/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/img/thegraduated.jpg" class="responsive-img" alt="🔒大学那些拼凑不好的记忆碎片">
+                            
+                            <span class="card-title">🔒大学那些拼凑不好的记忆碎片</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                不愿公开
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-24
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    日常
+                                </a>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/%E8%AE%B0%E5%BD%95/" class="post-category">
+                                    记录
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E8%AE%B0%E5%BD%95/">
+                            <span class="chip bg-color">记录</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/21eb916f/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/img/image-20210516193249220.png" class="responsive-img" alt="通过shields.io制作好看的网站徽标">
+                            
+                            <span class="card-title">通过shields.io制作好看的网站徽标</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                通过shields.io制作好看的网站徽标本文还在更新中~
+
+细心留意，会发现有很多网站都有这种徽标，在我苦苦寻找之后，终于搞明白啦
+
+传送门：shields.io官网
+1.示例这些徽标本质是图片，但是有：
+
+很丰富的风格、颜色、logo可
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-16
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    日常
+                                </a>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/%E5%88%86%E4%BA%AB/" class="post-category">
+                                    分享
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E5%88%86%E4%BA%AB/">
+                            <span class="chip bg-color">分享</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/d73cfbb1/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/img/Snipaste_2021-05-09_18-40-45.png" class="responsive-img" alt="Teamviewer已达设备数量上限的解决方法">
+                            
+                            <span class="card-title">Teamviewer已达设备数量上限的解决方法</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Teamviewer已达设备数量上限的解决方法
+Teamviewer免费版最多只支持两台设备绑定，如果要在第三台设备上登录账号就会显示”已达最大设备数”
+解决方法有以下几种
+
+法一、每次登录时选择临时登录这个方法是最好的，优点是可以任意更换
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-09
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    日常
+                                </a>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/%E5%88%86%E4%BA%AB/" class="post-category">
+                                    分享
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E5%88%86%E4%BA%AB/">
+                            <span class="chip bg-color">分享</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/11c637ba/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/img/wallhaven-pkkm6p.png" class="responsive-img" alt="🔒仍然">
+                            
+                            <span class="card-title">🔒仍然</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                仍然
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-17
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    日常
+                                </a>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/%E6%83%B3%E6%B3%95/" class="post-category">
+                                    想法
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E8%AE%B0%E5%BD%95/">
+                            <span class="chip bg-color">记录</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/56effdf6/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/img/last_time_NJ.jpg" class="responsive-img" alt="南京最后的时光">
+                            
+                            <span class="card-title">南京最后的时光</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                南京最后的时光
+自从来了明故宫校区，仿佛从花园走到了监狱，周遭的环境、发生的事情都让我开心不起来，明明是大四最后一学期了，压抑了这么久真的想释放出来啊。我发现我呆在同一个地方久了、闲下来了、每天都重复着了，心情就会低迷，所以，在最后的时间里
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-16
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    日常
+                                </a>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/%E8%AE%B0%E5%BD%95/" class="post-category">
+                                    记录
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E8%AE%B0%E5%BD%95/">
+                            <span class="chip bg-color">记录</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/75544e59/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/img/mywish.jpg" class="responsive-img" alt="🔒我的愿望">
+                            
+                            <span class="card-title">🔒我的愿望</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                我的愿望
+我知道人类的悲欢并不轻易相通，就像我那些美好到完美的愿望永远不会实现
+
+
+我只是希望世界上一切都可以简简单单的、有意义的，所以去鸡鸣寺我并没有像大多数人一样求姻缘，而是许下了我内心最诚挚的心愿。
+
+
+以下是我虔诚许下的两个心愿，没
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-16
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    日常
+                                </a>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/%E6%83%B3%E6%B3%95/" class="post-category">
+                                    想法
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E8%AE%B0%E5%BD%95/">
+                            <span class="chip bg-color">记录</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/d905b657/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/img/start1.jpg" class="responsive-img" alt="电脑上的软件们">
+                            
+                            <span class="card-title">电脑上的软件们</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                电脑上的软件们正在更新中。。。
+
+要换电脑了，梳理一下用了3年的电脑上的软件们，这份总结既是备忘，又是分享。
+
+先上图，我五彩斑斓的开始菜单的一部分
+
+1.基本装机必备(建议跳过)
+QQ
+微信
+火绒
+Chrome
+腾讯会议
+企业微信
+
+2.
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-18
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    日常
+                                </a>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/%E5%88%86%E4%BA%AB/" class="post-category">
+                                    分享
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E5%88%86%E4%BA%AB/">
+                            <span class="chip bg-color">分享</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/7824aae9/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/img/20210218190419.png" class="responsive-img" alt="我的电脑换届仪式">
+                            
+                            <span class="card-title">我的电脑换届仪式</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                我的电脑换届仪式
+一点点仪式感吧哈哈
+
+1.回顾2018年3月7日，也就是大一下学期刚开学不久，在处心积虑 深思熟虑和反复比较了很久之后最终选择了性价比最高的之一、神船的兄弟——炫龙kp2。在当时半导体产能缺乏物价居高不下的时候终于还是狠心
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-18
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    日常
+                                </a>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/%E8%AE%B0%E5%BD%95/" class="post-category">
+                                    记录
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E8%AE%B0%E5%BD%95/">
+                            <span class="chip bg-color">记录</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/bfdc8b65/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/img/675e-iteyfwv2157964.jpg" class="responsive-img" alt="英灵殿:从入门到熔化">
+                            
+                            <span class="card-title">英灵殿:从入门到熔化</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                私人定制英灵殿攻略1.资源准备uplay又又又初始化登不上了 -&gt; 连手机热点 -&gt; 登录成功 -&gt; 开始下载
+-&gt; ？？？ -&gt; 加速器启动 -&gt; 下载完成！
+2.错误用法
+好家伙，卡住了，强行让我欣赏
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-18
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    日常
+                                </a>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/%E8%AE%B0%E5%BD%95/" class="post-category">
+                                    记录
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E6%B8%B8%E6%88%8F/">
+                            <span class="chip bg-color">游戏</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/836f02e2/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/img/27.jpg" class="responsive-img" alt="🔒走出宿舍拥抱美好">
+                            
+                            <span class="card-title">🔒走出宿舍拥抱美好</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                走出宿舍拥抱美好​    现在已经来到了11月18日，距离考研就剩三十多天了。​    我们宿舍四个人的道路都各不相同或者说大相径庭：
+
+一位大学认真学习了三年的，现在参加新加坡的留学项目，去苏州上一年“预科”学英语了
+一位准备跨考的，已经
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-18
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    日常
+                                </a>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/%E6%83%B3%E6%B3%95/" class="post-category">
+                                    想法
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E6%84%9F%E6%83%B3/">
+                            <span class="chip bg-color">感想</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/2a470550/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/img/wallhaven-9mxz8k.jpg" class="responsive-img" alt="大三到现在的经历记录">
+                            
+                            <span class="card-title">大三到现在的经历记录</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                记录一下大三到现在的经历从机械到IT，重拾自我之路…
+
+记录我的提桶跑路全过程，希望每个人都能从事自己喜欢的工作🏃
+
+前情提要​    高考后的贪玩和消息闭塞使我误入了机械专业，不过想想主要原因还是因为航空航天的字眼令人景仰，航空报国的情
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-17
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    日常
+                                </a>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/%E8%AE%B0%E5%BD%95/" class="post-category">
+                                    记录
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E7%BB%8F%E5%8E%86/">
+                            <span class="chip bg-color">经历</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/6c9b5b14/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/img/20201116215058.png" class="responsive-img" alt="TODO">
+                            
+                            <span class="card-title">TODO</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                TODO一、hexo相关
+ 【bug】：hexo每日诗词无法显示
+ 【bug】：matery二级分类无效
+ 【bug】：代码高亮无效
+ 【bug】：$ hexo clean 后live2d被删除(不知道怎么就好了)
+ 【bug】文章阅读次数
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-16
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    日常
+                                </a>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8/todo/" class="post-category">
+                                    todo
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/todo/">
+                            <span class="chip bg-color">todo</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </article>
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #1aa2bf;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="5337749378"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#1aa2bf'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.3'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align"
+        style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <!--<a href="https://gaattc.life" target="_blank">GAATTC</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/zh-cn/" target="_blank">Hexo</a>
+            |&nbsp;Deployed on&nbsp;<a href="https://vercel.com" target="_blank">Vercel</a>
+            |&nbsp;CDN by&nbsp;<a href="https://www.jsdelivr.com/" target="_blank">jsDelivr</a>-->
+            <a style="margin-inline:5px" target="_blank" href="https://gaattc.life"><img src="https://img.shields.io/badge/Auth-GAATTC-3790ee?style=flat&logo=Google" title="很高兴遇到你"></a>
+            <a style="margin-inline:5px" target="_blank" href="https://hexo.io"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="基于Hexo框架"></a>
+            <a style="margin-inline:5px" target="_blank" href="https://github.com/blinkfox/hexo-theme-matery"><img src="https://img.shields.io/badge/Theme-Matery-7138b6?style=flat&logo=MEGA" title="主题采用matery"></a>
+            <a style="margin-inline:5px" target="_blank" href="https://www.jsdelivr.com"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用JsDelivr为静态资源提供CDN加速"></a>
+            <a style="margin-inline:5px" target="_blank" href="https://cloudflare.com"><img src="https://img.shields.io/badge/Hosted-Cloudflare-brightgreen?style=flat&logo=Cloudflare" title="基于Cloudflare Pages托管部署"></a>
+            <a style="margin-inline:5px" target="_blank" href="https://github.com"><img src="https://img.shields.io/badge/Source-Github-67e1fb?style=flat&logo=GitHub" title="静态文件托管于GitHub"></a>
+            <a style="margin-inline:5px" target="_blank" href="http://creativecommons.org/licenses/cc-by/4.0"><img src="https://img.shields.io/badge/Copyright-CC--BY%204.0-ee5b32?style=flat&logo=Chef" title="本站采用cc-by 4.0国际许可协议进行许可"></a>
+            <a style="margin-inline:5px" target="_blank" href="https://space.bilibili.com"><img src="https://img.shields.io/badge/dynamic/json?logo=Bilibili&color=%23fe7499&label=Bilibili&query=%24.data.totalSubs&suffix=%20Followers&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dbilibili%26queryKey%3D383883097" title="这是一个很厉害的UP主"></a>
+            <!--<a style="margin-inline:5px" target="_blank" href="https://weibo.com/u/6574421101"><img src="https://img.shields.io/badge/dynamic/json?color=%23e32428&label=Weibo&query=%24.data.totalSubs&suffix=%20Followers&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dweibo%26queryKey%3D6574421101" title="分享学习、生活动态"></a>-->
+            <br>
+
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;不知不觉已生产了&nbsp;<span
+                class="white-color">159.4k</span>&nbsp;字!
+            
+            
+            
+            
+            
+            <br>
+            
+            <span id="sitetime">正在载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "11";
+                    var startDate = "15";
+                    var startHour = "19";
+                    var startMinute = "30";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "现在是小窝诞生的第" + diffDays + "天" + diffHours +
+                            "小时" + diffMinutes + "分" + diffSeconds + "秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "现在是小窝诞生的第" + diffYears + "年" + diffDays +
+                            "天" + diffHours + "小时" + diffMinutes + "分" + diffSeconds + "秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link ">
+    <a href="https://github.com/GAATTC0" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+
+
+</div>
+    </div>
+</footer>
+<script src="/js/prism/prism.js" async></script>
+<div class="progress-bar"></div>
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!" title="返回顶部">
+        <i class="fas fa-arrow-up" style="zoom: 0.88;"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c77e3d3e2dd5996dc4146c5327d3c0c8";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+	
+	<!--天气
+	<div id="weather-v2-plugin-simple"></div>
+	<script>
+	WIDGET = {
+	CONFIG: {
+    "modules": "01234",
+    "background": 1,
+    "tmpColor": "FFFFFF",
+    "tmpSize": 16,
+    "cityColor": "FFFFFF",
+    "citySize": 16,
+    "aqiSize": 16,
+    "weatherIconSize": 24,
+    "alertIconSize": 18,
+    "padding": "10px 10px 10px 10px",
+    "shadow": "1",
+    "language": "auto",
+    "borderRadius": "3",
+    "fixed": "false",
+    "vertical": "middle",
+    "horizontal": "center",
+    "key": "rbqraTCH2c"
+		}
+	}
+	</script>
+	<script src="https://apip.weatherdt.com/simple/static/js/weather-simple-common.js?v=2.0"></script>-->
+
+    <!--鼠标礼花-->
+    <script src="/js/lihua.js"></script>
+	
+	<!--snow-->
+	<script src="/js/snow.js"></script>
+	
+	<!--动态标题-->
+	<script type="text/javascript">
+    var OriginTitile=document.title,st;
+    document.addEventListener("visibilitychange",function(){
+        document.hidden?(document.title="⇐to be continued♪​",clearTimeout(st)):(document.title="欢迎回来o(^▽^)o~",st=setTimeout(function(){document.title=OriginTitile},3e3))
+    })
+	</script>
+
+    <!--全屏-->
+    <script src="/js/fullscreen.js" type="module"></script>
+    
+    <!--夜晚模式-->
+    <script>
+        if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark');
+        }
+        /*else if (new Date().getHours() >= 22 || new Date().getHours() < 7) {
+        document.body.classList.add('dark');
+        } */
+        else if (matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+        }
+    </script>
+    <a onclick="switchNightMode()" id="sma">
+        <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
+    </a>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-tororo"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+</html>

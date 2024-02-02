@@ -1,0 +1,3009 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta name="keywords" content="IDEA从入门到精通, GAATTC的隐藏小窝">
+    <meta name="description" content="A simple blog maintained for recording the ordinary life...">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>IDEA从入门到精通 | GAATTC的隐藏小窝</title>
+    <link rel="icon" type="image/png" href="/medias/18.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+	<link rel="stylesheet" href="/js/prism/prism.css">
+    <script src="/libs/jquery/jquery.min.js"></script>
+	<script src="https://v1.hitokoto.cn/?c=d&encode=js&select=%23hitokoto" defer></script>
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="GAATTC的隐藏小窝" type="application/atom+xml">
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+
+    <style type="text/css" lang="css">
+    #loading-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        width: 100vw;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #2c3561;
+        text-align: center;
+        /* loader页面消失采用渐隐的方式*/
+        -webkit-transition: opacity 1s ease;
+        -moz-transition: opacity 1s ease;
+        -o-transition: opacity 1s ease;
+        transition: opacity 1s ease;
+    }
+    .loading-image{
+        width: 120px;
+        height: 50px;
+        transform: translate(-50%);
+    }
+
+    .loading-image div:nth-child(2) {
+        -webkit-animation: pacman-balls 1s linear 0s infinite;
+        animation: pacman-balls 1s linear 0s infinite
+    }
+
+    .loading-image div:nth-child(3) {
+        -webkit-animation: pacman-balls 1s linear .33s infinite;
+        animation: pacman-balls 1s linear .33s infinite
+    }
+
+    .loading-image div:nth-child(4) {
+        -webkit-animation: pacman-balls 1s linear .66s infinite;
+        animation: pacman-balls 1s linear .66s infinite
+    }
+
+    .loading-image div:nth-child(5) {
+        -webkit-animation: pacman-balls 1s linear .99s infinite;
+        animation: pacman-balls 1s linear .99s infinite
+    }
+
+   .loading-image div:first-of-type {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
+        animation: rotate_pacman_half_up .5s 0s infinite;
+    }
+    .loading-image div:nth-child(2) {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
+        animation: rotate_pacman_half_down .5s 0s infinite;
+        margin-top: -50px;
+    }
+    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+
+    .loading-image div:nth-child(3),
+    .loading-image div:nth-child(4),
+    .loading-image div:nth-child(5),
+    .loading-image div:nth-child(6){
+        background-color: #49b1f5;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin: 2px;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        transform: translateY(-6.25px);
+        top: 25px;
+        left: 100px;
+    }
+    .loading-text{
+        margin-bottom: 20vh;
+        text-align: center;
+        color: #f8c471;
+        font-size: 2rem;
+        box-sizing: border-box;
+        padding: 0 10px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    @media only screen and (max-width: 500px) {
+         .loading-text{
+            font-size: 1.5rem;
+         }
+    }
+    .fadeout {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    /* logo出现动画 */
+    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
+    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
+ </style>
+ <script>
+(function () {
+    const loaded = function(){
+       setTimeout(function(){
+            const loader = document.getElementById("loading-container");
+            loader.className="fadeout" ;//使用渐隐的方法淡出loading page
+            // document.getElementById("body-wrap").style.display="flex";
+            setTimeout(function(){
+                loader.style.display="none";
+            },2500); 
+        },750);//强制显示loading page 0.75s  
+    };
+    loaded();
+})()
+</script>
+ 
+
+<body>
+	<!-- hexo-inject:begin --><!-- hexo-inject:end --><!--动态背景-->
+	<div id="bg"><canvas></canvas><canvas></canvas><canvas></canvas></div>
+	<script src="/js/canva_moving_effect.js"></script>
+	<!--加载动画-->
+	
+        <div id="loading-container">
+             <p class="loading-text">正在搬运下一页::>_<:: . . . </p>
+             <div class="loading-image">
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div> 
+                 <div></div>
+             </div>
+        </div>
+    
+
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+					<div>
+						
+						<img src="/medias/96212297.png" class="logo-img" alt="LOGO">
+						
+                    <span class="logo-span">GAATTC的隐藏小窝</span>
+					</div>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="http://gaattc.life" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/categories">
+          
+          <i class="fas fa-cubes fa-spin" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>全部分类</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/archives">
+          
+          <i class="fas fa-archive fa-spin" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>文章归档</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E6%97%A5%E5%B8%B8">
+          
+          <i class="fas fa-sun" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>-日常</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E5%AD%A6%E4%B9%A0">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>-学习</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/bug">
+          
+          <i class="fas fa-bug" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>-bug</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E5%B7%A5%E4%BD%9C">
+          
+          <i class="fas fa-swimmer" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>-工作</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E5%85%B4%E8%B6%A3">
+          
+          <i class="fas fa-guitar" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>-兴趣</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-user" style="zoom: 0.6;"></i>
+      
+      <span>关于我</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/about">
+          
+          <i class="fas fa-user-circle fa-spin" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的简介</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://github.com/GAATTC0">
+          
+          <i class="fab fa-github" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的GitHub</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/">
+          
+          <i class="fab fa-steam" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的steam</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://space.bilibili.com/109208828">
+          
+          <i class="fas fa-tv" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的bilibili</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的网抑云</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/">
+          
+          <i class="fab fa-twitter" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的twitter</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/">
+          
+          <i class="fab fa-kickstarter-k" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的KEEP</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/">
+          
+          <i class="fab fa-zhihu" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的知乎</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/">
+          
+          <i class="fab fa-weibo" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的围脖</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/">
+          
+          <i class="fab fa-bootstrap" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的豆瓣</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友人帐</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/friends">
+          
+          <i class="fas fa-users fa-spin" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>全部邻居</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="http://sadc1ty.cn">
+          
+          <i class="fas fa-user" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>sadc1ty</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://nekodeng.gitee.io/">
+          
+          <i class="fas fa-user" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>itsNekoDeng</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://hesifan.top">
+          
+          <i class="fas fa-user" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>凡尘纪</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://www.nesxc.com/">
+          
+          <i class="fas fa-user" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Nescx</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://www.codecheng.com">
+          
+          <i class="fas fa-user" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>CodeCheng</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-wrench" style="zoom: 0.6;"></i>
+      
+      <span>小工具</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://fa5.dashgame.com/#/%E5%9B%BE%E6%A0%87">
+          
+          <i class="fas fa-file-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>fontawesome库</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="http://tool.liumingye.cn/music/">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>无损音乐</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://wallhaven.cc/">
+          
+          <i class="fas fa-images" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>抱图圣地</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://github.com/GAATTC0/Valine-Magic">
+          
+          <i class="fas fa-laugh-wink" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>表情仓库</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://gaattc.lanzoui.com/b015d3vhg">
+          
+          <i class="fas fa-folder" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>软件收藏</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/gaa_navi/cn/index.html">
+          
+          <i class="fas fa-compass" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>精彩导航</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://navi4gaa.pages.dev/">
+          
+          <i class="fas fa-compass" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>另一导航</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://stats.uptimerobot.com/MNQ8Qi5l3B">
+          
+          <i class="fas fa-wifi" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>友链检测</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="http://ping.chinaz.com/">
+          
+          <i class="fas fa-broadcast-tower" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>HOST测速</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://saucenao.com/">
+          
+          <i class="fas fa-eye" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>图片识别</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://z1.m1907.cn?jx=">
+          
+          <i class="fas fa-file-video" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>视频接口</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tools/paper">
+          
+          <i class="fas fa-sticky-note" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>论文降重</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-gamepad" style="zoom: 0.6;"></i>
+      
+      <span>小游戏</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://daxigua.pages.dev">
+          
+          <i class="fab fa-first-order-alt fa-spin" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>🍉合成大西瓜</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/maze/">
+          
+          <i class="fas fa-border-none" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>🏢倾斜迷宫</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/2048/">
+          
+          <i class="fas fa-dice-four" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>⛄2 0 4 8</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/cat/">
+          
+          <i class="fas fa-cat" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>🐱围住猫膜改版</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/adarkroom/">
+          
+          <i class="fas fa-house-damage" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>🔳ADarkRoom</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/color/">
+          
+          <i class="fas fa-eye" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>👀色盲检测器</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/bullshit/">
+          
+          <i class="fas fa-edit" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>🐂论文生成器</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/chess/">
+          
+          <i class="fas fa-chess" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>🎲AI五子棋</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/life/view/">
+          
+          <i class="fas fa-baby" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>👶重开模拟器</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/dragon">
+          
+          <i class="fas fa-dragon" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>🐉召唤神龙</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games/littleblack">
+          
+          <i class="fas fa-dragon fa-spin" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>💣大战小黑</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  </i></a></li>
+  <li id="fullscreen_li" class="fullscreen"><a href="javascript:void(0);" class="modal-trigger waves-effect waves-light">
+      <i id="fullscreen" class="fas fa-expand-arrows-alt" title="全屏" style="zoom: 0.65;"></i></a></li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/96212297.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">GAATTC的隐藏小窝</div>
+        <div class="logo-desc">
+            
+            A simple blog maintained for recording the ordinary life...
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="http://gaattc.life" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/categories " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-cubes fa-spin" style="position: absolute;left:50px" ></i>
+			      
+		          <span>全部分类</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/archives " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-archive fa-spin" style="position: absolute;left:50px" ></i>
+			      
+		          <span>文章归档</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E6%97%A5%E5%B8%B8 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-sun" style="position: absolute;left:50px" ></i>
+			      
+		          <span>-日常</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>-学习</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/bug " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-bug" style="position: absolute;left:50px" ></i>
+			      
+		          <span>-bug</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E5%B7%A5%E4%BD%9C " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-swimmer" style="position: absolute;left:50px" ></i>
+			      
+		          <span>-工作</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E5%85%B4%E8%B6%A3 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-guitar" style="position: absolute;left:50px" ></i>
+			      
+		          <span>-兴趣</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-user"></i>
+			
+			关于我
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/about " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-user-circle fa-spin" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的简介</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://github.com/GAATTC0 " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-github" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的GitHub</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/ " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-steam" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的steam</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://space.bilibili.com/109208828 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-tv" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的bilibili</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的网抑云</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/ " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-twitter" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的twitter</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/ " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-kickstarter-k" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的KEEP</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/ " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-zhihu" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的知乎</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/ " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-weibo" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的围脖</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/ " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-bootstrap" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的豆瓣</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-address-book"></i>
+			
+			友人帐
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/friends " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-users fa-spin" style="position: absolute;left:50px" ></i>
+			      
+		          <span>全部邻居</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="http://sadc1ty.cn " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-user" style="position: absolute;left:50px" ></i>
+			      
+		          <span>sadc1ty</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://nekodeng.gitee.io/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-user" style="position: absolute;left:50px" ></i>
+			      
+		          <span>itsNekoDeng</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://hesifan.top " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-user" style="position: absolute;left:50px" ></i>
+			      
+		          <span>凡尘纪</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://www.nesxc.com/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-user" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Nescx</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://www.codecheng.com " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-user" style="position: absolute;left:50px" ></i>
+			      
+		          <span>CodeCheng</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-wrench"></i>
+			
+			小工具
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://fa5.dashgame.com/#/%E5%9B%BE%E6%A0%87 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-file-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>fontawesome库</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="http://tool.liumingye.cn/music/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>无损音乐</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://wallhaven.cc/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-images" style="position: absolute;left:50px" ></i>
+			      
+		          <span>抱图圣地</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://github.com/GAATTC0/Valine-Magic " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-laugh-wink" style="position: absolute;left:50px" ></i>
+			      
+		          <span>表情仓库</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://gaattc.lanzoui.com/b015d3vhg " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-folder" style="position: absolute;left:50px" ></i>
+			      
+		          <span>软件收藏</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/gaa_navi/cn/index.html " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-compass" style="position: absolute;left:50px" ></i>
+			      
+		          <span>精彩导航</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://navi4gaa.pages.dev/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-compass" style="position: absolute;left:50px" ></i>
+			      
+		          <span>另一导航</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://stats.uptimerobot.com/MNQ8Qi5l3B " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-wifi" style="position: absolute;left:50px" ></i>
+			      
+		          <span>友链检测</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="http://ping.chinaz.com/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-broadcast-tower" style="position: absolute;left:50px" ></i>
+			      
+		          <span>HOST测速</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://saucenao.com/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-eye" style="position: absolute;left:50px" ></i>
+			      
+		          <span>图片识别</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://z1.m1907.cn?jx= " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-file-video" style="position: absolute;left:50px" ></i>
+			      
+		          <span>视频接口</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/tools/paper " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-sticky-note" style="position: absolute;left:50px" ></i>
+			      
+		          <span>论文降重</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-gamepad"></i>
+			
+			小游戏
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://daxigua.pages.dev " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-first-order-alt fa-spin" style="position: absolute;left:50px" ></i>
+			      
+		          <span>🍉合成大西瓜</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/maze/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-border-none" style="position: absolute;left:50px" ></i>
+			      
+		          <span>🏢倾斜迷宫</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/2048/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-dice-four" style="position: absolute;left:50px" ></i>
+			      
+		          <span>⛄2 0 4 8</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/cat/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-cat" style="position: absolute;left:50px" ></i>
+			      
+		          <span>🐱围住猫膜改版</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/adarkroom/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-house-damage" style="position: absolute;left:50px" ></i>
+			      
+		          <span>🔳ADarkRoom</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/color/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-eye" style="position: absolute;left:50px" ></i>
+			      
+		          <span>👀色盲检测器</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/bullshit/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-edit" style="position: absolute;left:50px" ></i>
+			      
+		          <span>🐂论文生成器</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/chess/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-chess" style="position: absolute;left:50px" ></i>
+			      
+		          <span>🎲AI五子棋</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/life/view/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-baby" style="position: absolute;left:50px" ></i>
+			      
+		          <span>👶重开模拟器</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/dragon " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-dragon" style="position: absolute;left:50px" ></i>
+			      
+		          <span>🐉召唤神龙</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games/littleblack " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-dragon fa-spin" style="position: absolute;left:50px" ></i>
+			      
+		          <span>💣大战小黑</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('哇哦，你发现了一篇SHA-256加密文章，猜对了密码才能看哦~')).toString(CryptoJS.enc.Hex)) {
+                alert('猜错啦，带你回到主页去~');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/img/image-20210928111836920.png')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">IDEA从入门到精通</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+	.toc-widget {
+        width: 345px;
+        padding-left: 20px;
+        background-color: rgb(255, 255, 255,0.7);
+        border-radius: 10px;
+        box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
+    }
+
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #1aa2bf;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #1aa2bf;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        background: linear-gradient(to bottom right, #a8cbe2 0%, #05c6f1 100%);
+        width: 35px;
+        height: 35px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 35px;
+        position: absolute;
+        right: 0px;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%88%86%E4%BA%AB/">
+                                <span class="chip bg-color">分享</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
+                                日常
+                            </a>
+                        
+                            <a href="/categories/%E6%97%A5%E5%B8%B8/%E5%88%86%E4%BA%AB/" class="post-category">
+                                分享
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-09-28
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    4.5k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    16 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="IDEA从入门到精通"><a href="#IDEA从入门到精通" class="headerlink" title="IDEA从入门到精通"></a>IDEA从入门到精通</h1><blockquote>
+<p>还在更新中…</p>
+</blockquote>
+<h2 id="一、常规篇"><a href="#一、常规篇" class="headerlink" title="一、常规篇"></a>一、常规篇</h2><h3 id="1-字体布局"><a href="#1-字体布局" class="headerlink" title="1.字体布局"></a>1.字体布局</h3><h4 id="①编译器字体"><a href="#①编译器字体" class="headerlink" title="①编译器字体"></a>①编译器字体</h4><p><code>Settings -&gt; Appearance&amp;Behavior -&gt; Appearance</code>:</p>
+<img src="/img/image-20210928102636561.png" style="zoom: 67%;"> 
+
+<h4 id="②代码字体"><a href="#②代码字体" class="headerlink" title="②代码字体"></a>②代码字体</h4><p><code>Settings -&gt; Editor -&gt; Font</code>:</p>
+<img src="/img/image-20210928102941315.png" style="zoom:67%;">
+
+<p>consolas, yyds.</p>
+<h3 id="2-折叠中间包"><a href="#2-折叠中间包" class="headerlink" title="2.折叠中间包"></a>2.折叠中间包</h3><p>当包路径很多时，中间可能会有很多的空包，这样要手动点开每一个就很麻烦，compact可让这些空的包一次性展开为一个包的样子，报名之间用”.”分隔，既方便又美观：</p>
+<img src="/img/image-20210928103454360.png" style="zoom:67%;">
+
+<h3 id="3-Tab数量控制"><a href="#3-Tab数量控制" class="headerlink" title="3.Tab数量控制"></a>3.Tab数量控制</h3><p>idea的默认tab数量是有限制的，一行显示满了再打开新的tab就会折叠，超过数量限制还会关闭旧的tab，这样非常不便于调试和查看，所偶一将其修改为多行显示：</p>
+<p><code>Settings -&gt; Editor -&gt; General -&gt; Editor Tabs</code>:</p>
+<p><img src="/img/image-20210928110635358.png"></p>
+<p>先关闭<code>Show tabs in one row</code>,然后下面有一个关闭策略：</p>
+<p><img src="/img/image-20210928110758987.png"></p>
+<p>把这个Tab limit的数值调大亿点即可，这样以来就可以多行显示了。</p>
+<h3 id="4-防止自动将多个import替换为import"><a href="#4-防止自动将多个import替换为import" class="headerlink" title="4.防止自动将多个import替换为import *"></a>4.防止自动将多个import替换为import *</h3><p>idea在一些情况下会将同一个包中的多个import语句合为一条<code>import *</code>，但是在很多代码规范里这是不允许的，将其设置一下不去自动替换import，</p>
+<p><code>Settings -&gt; Editor -&gt; Code Style -&gt; Java</code>：</p>
+<img src="/img/image-20210928111349638.png" style="zoom:67%;">
+
+<p>将下面这两个替换策略的值调大亿点即可。</p>
+<h3 id="5-自动导包和删除"><a href="#5-自动导包和删除" class="headerlink" title="5.自动导包和删除"></a>5.自动导包和删除</h3><p><code>Settings -&gt; Editor -&gt; General -&gt; Auto Import -&gt; Java</code>：</p>
+<p><img src="/img/image-20211007111153595.png" alt="image-20211007111153595"></p>
+<p>选择自动将粘贴的代码中的类import、自动import类名不冲突的类、自动去掉无效的import。</p>
+<h3 id="6-File-Header"><a href="#6-File-Header" class="headerlink" title="6.File Header"></a>6.File Header</h3><p><code>Settings -&gt; Editor -&gt; File and Code Templates</code>：</p>
+<p>右侧添加一个File Header，这样新建一个类的时候会自动根据配置在类的上方添加注释信息，其中还可以定义一些环境变量，如：</p>
+<p>{DATE}、{TIME}、{USER}、{PACKEGE_NAME}等。</p>
+<img src="/img/image-20210928113902841.png" style="zoom:50%;">
+
+<h3 id="7-比较不同"><a href="#7-比较不同" class="headerlink" title="7.比较不同"></a>7.比较不同</h3><p>这个文档比较功能比word那些的好用多了，可以直接在某个文件的任意位置右键选择<code>Compare With Clipboard</code>，就可以将其和剪贴板中的文字进行比较了，并且非常详细和美观，当然前提时要先复制一份要比较的代码，另外，还可以选中一段代码进行比较，这个也很方便：</p>
+<p><img src="/img/image-20210929141513924.png"></p>
+<p>还有一个是不用复制的比较方法，对整个文件进行对比，在某个文件右键选择<code>Compare With</code>然后选择另一个文件即可。</p>
+<h3 id="8-提示符忽略大小写"><a href="#8-提示符忽略大小写" class="headerlink" title="8.提示符忽略大小写"></a>8.提示符忽略大小写</h3><p>如果觉得大小写来回切换很麻烦，那么可以设置忽略大小写，</p>
+<p><code>File –&gt; settings –&gt; Editor –&gt; General -&gt; Code Completion</code>：</p>
+<p><img src="/img/image-20211007105913688.png"></p>
+<p>将Match case取消勾选即可，若如此做，首字母大小写不同的字符都会被用作提示了，但是感觉也带来一些问题，就是精度会降低，毕竟参与提示的字符会变多，就像打字一样，提示的词汇太多反而不好找了。</p>
+<h3 id="9-背景图"><a href="#9-背景图" class="headerlink" title="9.背景图"></a>9.背景图</h3><p><code>Settings -&gt; Appearance&amp;Behavior -&gt; Appearance -&gt; UI Options -&gt; Background Image</code></p>
+<h3 id="10-ide内存占用"><a href="#10-ide内存占用" class="headerlink" title="10.ide内存占用"></a>10.ide内存占用</h3><p>有时编辑大文件会卡顿和提示”low memory”，默认Xmx时1773M，可以手动设置一下，<code>navi -&gt; Help -&gt; Edit Custom VM Options</code>:</p>
+<img src="/img/image-20220303195925709.png" style="zoom: 50%;">
+
+<p><strong>适当</strong>调整一下，如：</p>
+<p><img src="/img/image-20220303200140504.png"></p>
+<h3 id="11-过长自动换行"><a href="#11-过长自动换行" class="headerlink" title="11.过长自动换行"></a>11.过长自动换行</h3><p><code>Settings -&gt; Editor -&gt; Code Style</code>：</p>
+<img src="/img/image-20220422101315769.png" style="zoom:67%;">
+
+<h3 id="12-import格式"><a href="#12-import格式" class="headerlink" title="12.import格式"></a>12.import格式</h3><p><code>Settings -&gt; Editor -&gt; Code Style -&gt; Java-&gt; imports</code>：</p>
+<p>import layout:</p>
+<p>这里可以自定义import的格式，可以将自定义的包名添加规则格式化时自动移到指定位置，且可以在指定包名之间添加空行，还有静态引用单独一个区域等。</p>
+<h3 id="13-生成serialVersionUID"><a href="#13-生成serialVersionUID" class="headerlink" title="13.生成serialVersionUID"></a>13.生成serialVersionUID</h3><p><code>Settings -&gt; Editor -&gt; Inspections -&gt; Serialiation issues</code>：</p>
+<p>勾选Serializable class without ‘serialVersionUID’，即可使用快捷修复插入。</p>
+<h2 id="二、插件篇"><a href="#二、插件篇" class="headerlink" title="二、插件篇"></a>二、插件篇</h2><h3 id="1-Translation"><a href="#1-Translation" class="headerlink" title="1.Translation"></a>1.Translation</h3><p><img src="/img/image-20210928104018440.png"></p>
+<p>划线翻译、文档翻译、翻译并替换，还是很好用的。支持google、有道、百度翻译，但是综合来看还是google更准确一些，就是时常会有一些网络问题，可以在设置里勾选使用tanslate.google.com，</p>
+<p><code>Settings -&gt; Tools -&gt; Translation</code>：</p>
+<p><img src="/img/image-20210928141415379.png"></p>
+<h3 id="2-Rainbow-Brackets"><a href="#2-Rainbow-Brackets" class="headerlink" title="2.Rainbow  Brackets"></a>2.Rainbow  Brackets</h3><p><img src="/img/image-20210928105851220.png"></p>
+<p>对比了无数主题，发现还是idea自带的darcula主题看着舒服，但是缺点是高亮的太少了，一大堆代码大部分都是灰色的，看起来很费劲，所以包括括号什么的，使用这个彩虹括号插件就可以让界面更美观、代码结构更清晰，就不上图了，体验过的都说好。</p>
+<h3 id="3-Nyan-Progress-Bar"><a href="#3-Nyan-Progress-Bar" class="headerlink" title="3.Nyan Progress Bar"></a>3.Nyan Progress Bar</h3><p><img src="/img/image-20210928105905553.png"></p>
+<p>让进度条变成彩虹猫，本来枯燥缓慢的进度条好像变得更快了呢！</p>
+<h3 id="4-IDE-Eval-Reset"><a href="#4-IDE-Eval-Reset" class="headerlink" title="4.IDE Eval Reset"></a>4.IDE Eval Reset</h3><p><img src="/img/image-20210928105918726.png"></p>
+<p><a target="_blank" rel="noopener" href="https://gaattc.lanzoui.com/iMkxyulpvda">下载传送门</a></p>
+<p>这是一个无限试用idea的破解插件，之前一直是用的lookdiv的激活码，但是现在jetbrains查的严不好用了，建议还是用这个一劳永逸。</p>
+<p><strong>使用方法：</strong></p>
+<ol>
+<li>首先，下载破解插件压缩包，将其放在一个安全的路径，<font color="red">插件安装后不要移动和删除，也不能更新IDEA</font>，否则破解插件会失效；</li>
+<li>新建一个项目，将压缩包直接拖进编译器，然后重启编译器；</li>
+<li>重新启动后在顶部的导航栏<code>help</code>中，最后一行会出现一个<code>Eval Reset</code>选项，打开后右下角有一个<img src="/img/image-20210928140810450.png">选项，勾选之，这样就会在每次重启前自动重置试用期限了。</li>
+</ol>
+<blockquote>
+<p>code with me功能还不能试用，查看会发现没有激活，但是令人惊喜的是没激活也可以直接使用233</p>
+</blockquote>
+<h3 id="5-Code-With-Me"><a href="#5-Code-With-Me" class="headerlink" title="5.Code With Me"></a>5.Code With Me</h3><p>这个应该算是一个官方插件，在2021的新版本是集成在IDE中的，根据第四条，可以直接使用这个强大的功能。</p>
+<p>使用方法：</p>
+<p><img src="/img/image-20211009151210902.png"></p>
+<p>首先点击右上角的code with me图标或者按<code>ctrl+shift+y</code>呼出这个选项界面，</p>
+<p>然后选择第一个<code>enable access and copy invitation link</code>为邀请别人来协同编辑你本地的代码，在这之前可以进行一些权限的设置：</p>
+<img src="/img/image-20211009151449766.png" style="zoom: 67%;">
+
+<p>第二个选项是随时可以配置(有人加入协同编辑或没有时)其他人的权限的配置。</p>
+<p>第三个是输入别人分享的邀请链接来加入别人的代码协同编辑，其实也可以浏览器直接打开链接就行。</p>
+<blockquote>
+<p>这个插件比远程控制的好处在于可以异步编辑代码，并且可以随时看到对方在编辑什么位置，也可以强制让别人的视角跟着你的位置，另外，可以很多个人同事编辑。</p>
+</blockquote>
+<h3 id="6-SequenceDiagram"><a href="#6-SequenceDiagram" class="headerlink" title="6.SequenceDiagram"></a>6.SequenceDiagram</h3><p>一键生成时序图的插件，右键或者点击右上角的图标即可。</p>
+<h2 id="三、VCS篇"><a href="#三、VCS篇" class="headerlink" title="三、VCS篇"></a>三、VCS篇</h2><h3 id="1-IDEA使用git操作缓慢的解决方法"><a href="#1-IDEA使用git操作缓慢的解决方法" class="headerlink" title="1.IDEA使用git操作缓慢的解决方法"></a>1.IDEA使用git操作缓慢的解决方法</h3><p>有时候idea使用git的一些操作变得非常慢，比如Update Project、Annotate with Git Blame、commit、查看本地的change list等。</p>
+<p>但是有时候这不是网络问题，因为此时此刻使用命令行或者其他的客户端都很快，虽然这个问题原因还不明，但是解决方法很简单，</p>
+<p>找到idea的安装目录下的bin目录：</p>
+<pre class="line-numbers language-dir" data-language="dir"><code class="language-dir">%IDEA_HOME%\bin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>有一个<strong>runnerw.exe</strong>文件，将其删除即可。并且对于idea的正常使用没有任何影响。</p>
+<h3 id="2-commit设置"><a href="#2-commit设置" class="headerlink" title="2.commit设置"></a>2.commit设置</h3><p>在idea已经enable VCS后，左侧边栏会有一个commit工具栏，这里是我们经常用来提交代码的地方，在comment输入框的上方有一个commit设置，或者在设置里进入，</p>
+<p><code>Settings -&gt; Version Control-&gt; Commit</code>：</p>
+<img src="/img/image-20210928112721237.png" style="zoom:67%;">
+
+<h4 id="①Reformat-code"><a href="#①Reformat-code" class="headerlink" title="①Reformat code"></a>①Reformat code</h4><p>格式化代码，这个建议勾选上，在提交时自动将代码格式化，防止平时的遗漏。</p>
+<h4 id="②Rearrange-code"><a href="#②Rearrange-code" class="headerlink" title="②Rearrange code"></a>②Rearrange code</h4><p>这个选项的功能是在提交时将代码结构规范，将类中的成员变量定义移动到方法的上方去，当然一般来说是用不到的。</p>
+<h4 id="③Optimize-imports"><a href="#③Optimize-imports" class="headerlink" title="③Optimize imports"></a>③Optimize imports</h4><p>去掉没有用到的import，建议勾选。</p>
+<h4 id="④Analyze-code"><a href="#④Analyze-code" class="headerlink" title="④Analyze code"></a>④Analyze code</h4><p>检查代码中的warning和error，也没啥用，比较费时间，如果有把握提交的代码没有编译问题就可以去掉了(不过我为了保险起见还是打开了这个选项</p>
+<h4 id="⑤Check-TODO"><a href="#⑤Check-TODO" class="headerlink" title="⑤Check TODO"></a>⑤Check TODO</h4><p>检查todo标记。</p>
+<h4 id="⑥Cleanup"><a href="#⑥Cleanup" class="headerlink" title="⑥Cleanup"></a>⑥Cleanup</h4><p>// 未知功能，但是根据一些<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_48910529/article/details/119171822">别人的经验</a>来看，还是别用为好</p>
+<h4 id="⑦Run-Tests"><a href="#⑦Run-Tests" class="headerlink" title="⑦Run Tests"></a>⑦Run Tests</h4><p>运行测试。</p>
+<h4 id="⑧Update-copyright"><a href="#⑧Update-copyright" class="headerlink" title="⑧Update copyright"></a>⑧Update copyright</h4><p>// 暂时还没用过</p>
+<h3 id="3-新建文件自动add"><a href="#3-新建文件自动add" class="headerlink" title="3.新建文件自动add"></a>3.新建文件自动add</h3><p><code>Settings -&gt; Version Control -&gt; Confirmation</code>：</p>
+<p><img src="/img/image-20210928135302888.png"></p>
+<p>选择Add silently即可在新建文件时自动add了。</p>
+<h3 id="4-shelve"><a href="#4-shelve" class="headerlink" title="4.shelve"></a>4.shelve</h3><p>在idea左侧的commit栏中，有一个shelve选项，可以在changelist中选择任意数量的文件，然后选择shelve silently，</p>
+<p>就可以将这些改变储存起来，类似于stash操作，然年在右侧的shelf栏中就会多出来你储存的更改，可以随时选择unshelve进行恢复(这里的恢复相当于stash的apply操作而不是pop，也就是说不会因为恢复而删除这个存储)，也可以重命名和删除等操作，总体来说比stash方便很多。</p>
+<p><img src="/img/image-20210928150918644.png"></p>
+<h3 id="5-Change-List"><a href="#5-Change-List" class="headerlink" title="5.Change List"></a>5.Change List</h3><p>其实有时候使用stash或者使用shelve来贮存更改，还是有时候不够实用，因为没法细腻精确地控制更改，尤其是在同一个文件中需要区分的情况。此时，changelist的功能就显得非常实用了。</p>
+<p>在修改了的地方点击即可看到代码的变化，这里就能看到changelist，可以手动将这处更改添加到一个新的changelist中，所有的修改默认是在一个默认的changelist中的，即Default Changelist。</p>
+<p><img src="/img/image-20210929135603293.png"></p>
+<p>另一个要用到的地方是在左侧导航栏的commit中：</p>
+<p><img src="/img/image-20210929140143223.png"></p>
+<p>这里就可以看到所有的changelist了，还有一个小用处就是可以把不想提交的change隔离掉，比如这里我修改了很多pom配置，但是不能提交它们，就把它们都放到了一个changelist中，改名为ignore，顾名思义，又很方便。</p>
+<p>右键某一个changelist中的文件时，还可以选择将其回滚或者移动到其他的changelist中。</p>
+<p>提交代码的时候直接点击对应的changelist即可全选其中的所有的修改，不会影响其他的changelist，并且提交之后对应的changelist就会消失。</p>
+<blockquote>
+<p>养成使用changelist的习惯，再也不用担心同时做好几个任务会混乱了~</p>
+</blockquote>
+<h3 id="6-Annotate-With-git-Blame"><a href="#6-Annotate-With-git-Blame" class="headerlink" title="6.Annotate With git Blame"></a>6.Annotate With git Blame</h3><p>在文件内右键选择git或者在行号栏右键都可以找到这个选项，打开后，在行号栏会展示每一行最后的修改者，<del>可以用来确认是谁的bug</del>，还有对应的日期，很方便，然后再次勾选可以关闭：</p>
+<p><img src="/img/image-20210929150837634.png"></p>
+<h3 id="7-远端创建新分支本地切换分支时不显示"><a href="#7-远端创建新分支本地切换分支时不显示" class="headerlink" title="7.远端创建新分支本地切换分支时不显示"></a>7.远端创建新分支本地切换分支时不显示</h3><p><a target="_blank" rel="noopener" href="https://blog.51cto.com/u_15345018/3653958">参考</a></p>
+<p>执行一次git fetch即可显示。</p>
+<h2 id="四、MVN篇"><a href="#四、MVN篇" class="headerlink" title="四、MVN篇"></a>四、MVN篇</h2><h3 id="1-maven配置文件和本地仓库配置"><a href="#1-maven配置文件和本地仓库配置" class="headerlink" title="1.maven配置文件和本地仓库配置"></a>1.maven配置文件和本地仓库配置</h3><p><code>Settings -&gt; Build,Execution,Deployment -&gt; Build Tools -&gt; Maven</code>：</p>
+<p><img src="/img/image-20210930162301698.png"></p>
+<p>这里的配置文件虽然看上去是可以覆盖自定义路径的，但是idea有时候有bug，会自己又改回去，所以建议还是直接修改他这个默认的settings.xml文件，然后将其中的本地仓库的配置修改为本地需要的路径，重新打开设置即可看到第二个仓库配置已经更新为了刚刚修改的配置了。</p>
+<h3 id="2-执行maven脚本"><a href="#2-执行maven脚本" class="headerlink" title="2.执行maven脚本"></a>2.执行maven脚本</h3><p>在Run/Debug Configurations中，添加一个maven执行配置，</p>
+<img src="/img/image-20210930161526701.png" style="zoom:67%;">
+
+<p>配置好Working Directory和Command line，这里就是maven的执行脚本，比如一般先执行clean再执行package。</p>
+<p>有时候编译会出问题，可以添加一个只执行clean的，在编译之前先清空class文件，防止出现一些”找不到符号”之类的问题。</p>
+<h3 id="3-maven-reimport后language-level变化"><a href="#3-maven-reimport后language-level变化" class="headerlink" title="3.maven reimport后language level变化"></a>3.maven reimport后language level变化</h3><blockquote>
+<p>Module ‘xxx’ is imported from Maven. Any changes made in its configuration may be lost after reimporting</p>
+</blockquote>
+<p><img src="/img/language_level_mvn.png"></p>
+<p>上述情况，pom中加入如下配置即可：</p>
+<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugins</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!-- ensure jdk 1.8--&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.apache.maven.plugins<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>maven-compiler-plugin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>3.8.1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>source</span><span class="token punctuation">&gt;</span></span>1.8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>source</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>target</span><span class="token punctuation">&gt;</span></span>1.8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>target</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>encoding</span><span class="token punctuation">&gt;</span></span>UTF-8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>encoding</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugins</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="五、调试篇"><a href="#五、调试篇" class="headerlink" title="五、调试篇"></a>五、调试篇</h2><h3 id="1-远程调试"><a href="#1-远程调试" class="headerlink" title="1.远程调试"></a>1.远程调试</h3><p>在Run/Debug Configurations中，添加一个Remote JVM Debug，并填写ip和调试端口：</p>
+<p><img src="/img/image-20211015155455247.png"></p>
+<p>然后在远程的启动参数增加下面生成的命令，启动远程的项目和idea的调试就可以远程调试了。</p>
+<h3 id="2-各种断点"><a href="#2-各种断点" class="headerlink" title="2.各种断点"></a>2.各种断点</h3><p>①普通断点</p>
+<p><img src="/img/image-20211018100708638.png"></p>
+<p>②非启用状态的断点</p>
+<p>右键断点，取消勾选<code>Enabled</code>即可保留断点的位置，但是将其设置为不启用的状态：</p>
+<p><img src="/img/image-20211018100858431.png"></p>
+<p>③不阻塞的断点</p>
+<p>右键取消勾选<code>Suspend</code>,这样经过断点时不会阻塞线程：</p>
+<p><img src="/img/image-20211018101043821.png"></p>
+<p>④带条件的断点</p>
+<p>在3.中详细说明：</p>
+<p><img src="/img/image-20211018101204346.png"></p>
+<p>⑤禁用的断点</p>
+<p>在左侧任务栏中选择<code>Mute Breakpoints</code>,就可以将所有的断点禁用：</p>
+<p><img src="/img/image-20211018101401990.png"></p>
+<p>这样所有的断点位置保留，但是会变成灰色并且不阻塞线程：</p>
+<p><img src="/img/image-20211018101529033.png"></p>
+<p>⑥异常断点</p>
+<p>这个断点的作用是，当进程遇到被设置的特定异常时，会停留在发生异常的那一行。设置方法是ctrl+shift+F8，然后点击添加一个断点，选择<code>Java Exception Breakpoints</code>,然后选择一个异常即可：</p>
+<p><img src="/img/image-20211018135933154.png"></p>
+<h3 id="3-断点条件设置"><a href="#3-断点条件设置" class="headerlink" title="3.断点条件设置"></a>3.断点条件设置</h3><p>断点有时在循环或者递归等情况下，调试到想要的步骤会比较麻烦和费事，可以使用断点的条件功能，在断点上打开设置，比如下面的例子：</p>
+<p>现在想在100次的循环种调试第99次，手动调会很慢，况且这还是最简单的情况，</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">void</span> <span class="token function">example</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">100</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>现在可以在循环内部打上断点，设置一个条件：</p>
+<img src="/img/image-20211015160559840.png" style="zoom:67%;">
+
+<p>这样就可以只在i为99时生效了，一个F9就可以解决很麻烦的问题。当然这是一个很强大的功能，可以写复杂的表达式来灵活运用。</p>
+<h3 id="4-断点线程设置"><a href="#4-断点线程设置" class="headerlink" title="4.断点线程设置"></a>4.断点线程设置</h3><p>断点上右键设置里，有一个Suspend项，后面有两个选项，分别是<code>All</code>、<code>Thread</code>,代表了阻塞所有线程和只阻塞当前线程，这样在多线程环境下可以根据情况避免阻塞所有线程。</p>
+<h3 id="5-watches"><a href="#5-watches" class="headerlink" title="5.watches"></a>5.watches</h3><p>在调试时的variables中选择想要查看的变量右键选择<code>Add to Watches</code>,或者直接拖入右侧的watches框中，可以方便查看。</p>
+<h3 id="6-evaluate计算表达式"><a href="#6-evaluate计算表达式" class="headerlink" title="6.evaluate计算表达式"></a>6.evaluate计算表达式</h3><p>右键选择一段代码，或者alt+F8，或者点击调试界面的计算器图标，可以独立于原本的代码进行一些表达式的计算，用来判断当前的状态或者查看变量或者预判后面的代码等。</p>
+<p>注意：这里能计算的代码必须是当前调试到的位置状态上的(比如当前行之前还没声明的代码时不能计算的)。</p>
+<h3 id="7-stream图形化工具"><a href="#7-stream图形化工具" class="headerlink" title="7.stream图形化工具"></a>7.stream图形化工具</h3><p>在调试stream时，可以对复杂的stream进行一个图形化展示，用来直观的查看stream的过程和结果：</p>
+<p>调试到某个stream时，点击<code>evaluate</code>旁边的<code>Trace Current Stream Chain</code>即可，可以选择分开来看，也可以把所有操作合起来看</p>
+<img src="/img/image-20211018114909599.png" style="zoom:50%;">
+
+<h3 id="8-强制抛异常"><a href="#8-强制抛异常" class="headerlink" title="8.强制抛异常"></a>8.强制抛异常</h3><p>在栈帧上右键可以选择<code>Throw Exception</code>，然后输入异常的表达式比如”new RuntimeException”即可。</p>
+<h3 id="9-强制返回-自定义返回值"><a href="#9-强制返回-自定义返回值" class="headerlink" title="9.强制返回(自定义返回值)"></a>9.强制返回(自定义返回值)</h3><p>和强制抛异常类似，栈帧右键选择<code>Force Return</code>，如果是有返回值的方法，还需要输入一个表达式，即返回值。</p>
+<h2 id="六、标记篇"><a href="#六、标记篇" class="headerlink" title="六、标记篇"></a>六、标记篇</h2><h3 id="1-Favorites"><a href="#1-Favorites" class="headerlink" title="1.Favorites"></a>1.Favorites</h3><p>这个相当于是浏览器的书签栏，使用方法：</p>
+<p>右键tab标签，然后选择<code>add to favorites</code>添加所选的tab到收藏夹或者选择<code>add all tofavorites</code>添加当前打开的所有tab到收藏夹。<br>然后在关闭了想迅速找到收藏的tab时，点击左下角的<code>favorites</code>工具栏即可，并且支持对收藏夹进行改名、批量删除等。<br>另外，下面的<code>bookmark</code>和断点也是在这里都可以找到的。</p>
+<h3 id="2-Bookmark和Mnemonic-Bookmark"><a href="#2-Bookmark和Mnemonic-Bookmark" class="headerlink" title="2.Bookmark和Mnemonic Bookmark"></a>2.Bookmark和Mnemonic Bookmark</h3><p>这个和favorite类似，区别是刚才的收藏夹的目标是tab，其实也就是类，而bookmark则更精细一点，目标是行，类似于断点。使用方法：</p>
+<p>在需要标记的行的行号栏上右键选择<code>add bookmark</code>或者按F11即可添加书签。<br>再次点击可以选择进行编辑描述或者删除或者改为Mnemonic Bookmark：</p>
+<p><img src="/img/image-20211009152846672.png"></p>
+<p>这个书签的描述默认是这行代码，展示的时候是在点击左下角的<code>favorites</code>工具栏时，里面会列举每一个书签的描述，为了方便区分和查找可以编辑一下描述。</p>
+<p>Mnemonic Bookmark是普通书签的一种，即在普通书签的基础上增加了一个可选的26个字符+10个数字的标识，每种不能重复。</p>
+<h2 id="七、快捷键-todo"><a href="#七、快捷键-todo" class="headerlink" title="七、快捷键  // todo"></a>七、快捷键  // todo</h2><p>使用快捷键可以大大提高使用效率。</p>
+<h2 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h2><h2 id="八、其他"><a href="#八、其他" class="headerlink" title="八、其他"></a>八、其他</h2><h3 id="1-tomcat启动日志中文编码错误"><a href="#1-tomcat启动日志中文编码错误" class="headerlink" title="1.tomcat启动日志中文编码错误"></a>1.tomcat启动日志中文编码错误</h3><p>淇℃伅 应该是启动时看到最多的字眼了，可以修改配置来修复中文编码错误的问题，找到<code>logging.properties</code>配置文件：</p>
+<pre class="line-numbers language-dir" data-language="dir"><code class="language-dir">%TOMCAT_HOME%\conf\logging.properties<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>修改以下键的值为GBK即可：</p>
+<pre class="line-numbers language-properties" data-language="properties"><code class="language-properties"><span class="token attr-name">1catalina.org.apache.juli.AsyncFileHandler.encoding</span> <span class="token punctuation">=</span> <span class="token attr-value">GBK</span>
+<span class="token attr-name">java.util.logging.ConsoleHandler.encoding</span> <span class="token punctuation">=</span> <span class="token attr-value">GBK</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="2-修改idea的配置文件路径"><a href="#2-修改idea的配置文件路径" class="headerlink" title="2.修改idea的配置文件路径"></a>2.修改idea的配置文件路径</h3><blockquote>
+<p>参考<a target="_blank" rel="noopener" href="https://intellij-support.jetbrains.com/hc/en-us/articles/207240985-Changing-IDE-default-directories-used-for-config-plugins-and-caches-storage">官方说明</a></p>
+</blockquote>
+<p>idea默认的存储位置在C盘，如：</p>
+<pre class="line-numbers language-dir" data-language="dir"><code class="language-dir">C:\Users\{userName}\AppData\Local\JetBrains\IntelliJIdea2021.2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>像我这种C盘分区分小了的，想要修改以腾出空间，可以对idea的配置进行修改。</p>
+<p>将上面目录中的所有文件复制到想要迁移的新目录中,也可以不复制，直接新建目录：<font color="red">记为{custom_dir}</font>，然后修改对应的<code>IDE_HOME\bin\idea.properties</code>中的配置：</p>
+<pre class="line-numbers language-properties" data-language="properties"><code class="language-properties"><span class="token comment">#---------------------------------------------------------------------</span>
+<span class="token comment"># Uncomment this option if you want to customize a path to the settings directory.</span>
+<span class="token comment">#---------------------------------------------------------------------</span>
+<span class="token attr-name">idea.config.path</span><span class="token punctuation">=</span><span class="token attr-value">{custom_dir}/settings_custom</span>
+<span class="token comment">#---------------------------------------------------------------------</span>
+<span class="token comment"># Uncomment this option if you want to customize a path to the caches directory.</span>
+<span class="token comment">#---------------------------------------------------------------------</span>
+<span class="token attr-name">idea.system.path</span><span class="token punctuation">=</span><span class="token attr-value">{custom_dir}/system_custom</span>
+<span class="token comment">#---------------------------------------------------------------------</span>
+<span class="token comment"># Uncomment this option if you want to customize a path to the user-installed plugins directory.</span>
+<span class="token comment">#---------------------------------------------------------------------</span>
+<span class="token attr-name">idea.plugins.path</span><span class="token punctuation">=</span><span class="token attr-value">{custom_dir}/plugins_custom</span>
+<span class="token comment">#---------------------------------------------------------------------</span>
+<span class="token comment"># Uncomment this option if you want to customize a path to the logs directory.</span>
+<span class="token comment">#---------------------------------------------------------------------</span>
+<span class="token attr-name">idea.log.path</span><span class="token punctuation">=</span><span class="token attr-value">{custom_dir}/log</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>打开idea等待更新缓存即可。</p>
+
+            </div>
+            <hr/>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%88%86%E4%BA%AB/">
+                                    <span class="chip bg-color">分享</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,wechat,weibo,twitter,facebook,google" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/bg.webp") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #1aa2bf;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        /*max-width: 100%;*/
+        height: auto;
+        /*cursor: pointer;*/
+    }
+
+    .v[data-class=v] .vinput {
+        padding: 0px 0px;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #1aa2bf;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling"
+         style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>畅所欲言</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/newValine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'DTaMYIusFNyO7gYlAv1agzrG-MdYXbMMI',
+        appKey: 'A5T3JpETlxljrqOf1R9MFm2O',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'wavatar',
+        metaPlaceholder: {"nick": "(必填)你的QQ号或昵称o(*￣▽￣*)o", "mail": "(必填)你的邮箱( ‵▽′)ψ", "link": "(可选)你的网站url(/▽＼)"},
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '支持markdown格式以及丰富的小表情，快来留下些记忆吧~',
+        master: '5c01f7ad04a6b2ed0246d3c35ca89c9e',
+        friends: ["103fa56afdf5169533b296368ce31d84","674d7cd30cea1f4f0caaa6e0e8a8b653"],
+        enableQQ: true,
+        requiredFields: ['nick', 'mail'],
+        // 设置表情包cdn地址
+        emojiCDN: 'https://fastly.jsdelivr.net/gh/GAATTC0/ValineCDN@master/',
+        // 表情title和图片映射
+        emojiMaps: {
+            "weibo6": "weibo/d_bingbujiandan.png",
+            "weibo14": "weibo/d_ding.png",
+            "weibo15": "weibo/d_doge.png",
+            "weibo40": "weibo/d_miao.png",
+            "box1": "box/1.png",
+            "box2": "box/2.png",
+            "box3": "box/3.png",
+            "box4": "box/4.png",
+            "box5": "box/5.png",
+            "box6": "box/6.png",
+            "box7": "box/7.png",
+            "box8": "box/8.png",
+            "box9": "box/9.png",
+            "box10": "box/10.png",
+            "box11": "box/11.png",
+            "box12": "box/12.png",
+            "box13": "box/13.png",
+            "box14": "box/14.png",
+            "box15": "box/15.png",
+            "box16": "box/16.png",
+            "box17": "box/17.png",
+            "box18": "box/18.png",
+            "box19": "box/19.png",
+            "box20": "box/20.png",
+            "box21": "box/21.png",
+            "box22": "box/22.png",
+            "box23": "box/23.png",
+            "box24": "box/24.png",
+            "box25": "box/25.png",
+            "box26": "box/26.png",
+            "box27": "box/27.png",
+            "box28": "box/28.png",
+            "box29": "box/29.png",
+            "box30": "box/30.png",
+            "box31": "box/31.png",
+            "box32": "box/32.png",
+            "box33": "box/33.png",
+            "box34": "box/34.png",
+            "box35": "box/35.png",
+            "bilibilitv2": "bilibilitv/[tv_doge].png",
+            "bilibilitv3": "bilibilitv/[tv_亲亲].png",
+            "bilibilitv4": "bilibilitv/[tv_偷笑].png",
+            "bilibilitv5": "bilibilitv/[tv_再见].png",
+            "bilibilitv6": "bilibilitv/[tv_冷漠].png",
+            "bilibilitv7": "bilibilitv/[tv_发怒].png",
+            "bilibilitv8": "bilibilitv/[tv_发财].png",
+            "bilibilitv9": "bilibilitv/[tv_可爱].png",
+            "bilibilitv10": "bilibilitv/[tv_吐血].png",
+            "bilibilitv11": "bilibilitv/[tv_呆].png",
+            "bilibilitv12": "bilibilitv/[tv_呕吐].png",
+            "bilibilitv13": "bilibilitv/[tv_困].png",
+            "bilibilitv14": "bilibilitv/[tv_坏笑].png",
+            "bilibilitv15": "bilibilitv/[tv_大佬].png",
+            "bilibilitv16": "bilibilitv/[tv_大哭].png",
+            "bilibilitv17": "bilibilitv/[tv_委屈].png",
+            "bilibilitv18": "bilibilitv/[tv_害羞].png",
+            "bilibilitv19": "bilibilitv/[tv_尴尬].png",
+            "bilibilitv20": "bilibilitv/[tv_微笑].png",
+            "bilibilitv21": "bilibilitv/[tv_思考].png",
+            "bilibilitv22": "bilibilitv/[tv_惊吓].png",
+            "bilibilitv23": "bilibilitv/[tv_打脸].png",
+            "bilibilitv24": "bilibilitv/[tv_抓狂].png",
+            "bilibilitv25": "bilibilitv/[tv_抠鼻].png",
+            "bilibilitv26": "bilibilitv/[tv_斜眼笑].png",
+            "bilibilitv27": "bilibilitv/[tv_无奈].png",
+            "bilibilitv28": "bilibilitv/[tv_晕].png",
+            "bilibilitv29": "bilibilitv/[tv_流汗].png",
+            "bilibilitv30": "bilibilitv/[tv_流泪].png",
+            "bilibilitv31": "bilibilitv/[tv_流鼻血].png",
+            "bilibilitv32": "bilibilitv/[tv_点赞].png",
+            "bilibilitv33": "bilibilitv/[tv_生气].png",
+            "bilibilitv34": "bilibilitv/[tv_生病].png",
+            "bilibilitv35": "bilibilitv/[tv_疑问].png",
+            "bilibilitv36": "bilibilitv/[tv_白眼].png",
+            "bilibilitv37": "bilibilitv/[tv_皱眉].png",
+            "bilibilitv38": "bilibilitv/[tv_目瞪口呆].png",
+            "bilibilitv39": "bilibilitv/[tv_睡着].png",
+            "bilibilitv40": "bilibilitv/[tv_笑哭].png",
+            "bilibilitv41": "bilibilitv/[tv_腼腆].png",
+            "bilibilitv42": "bilibilitv/[tv_色].png",
+            "bilibilitv43": "bilibilitv/[tv_调侃].png",
+            "bilibilitv44": "bilibilitv/[tv_调皮].png",
+            "bilibilitv45": "bilibilitv/[tv_鄙视].png",
+            "bilibilitv46": "bilibilitv/[tv_闭嘴].png",
+            "bilibilitv47": "bilibilitv/[tv_难过].png",
+            "bilibilitv48": "bilibilitv/[tv_馋].png",
+            "bilibilitv49": "bilibilitv/[tv_鬼脸].png",
+            "bilibilitv50": "bilibilitv/[tv_黑人问号].png",
+            "bilibilitv51": "bilibilitv/[tv_鼓掌].png",
+            "bilibiliHotKey1": "bilibiliHotKey/1.jpg",
+            "bilibiliHotKey2": "bilibiliHotKey/10.jpg",
+            "bilibiliHotKey3": "bilibiliHotKey/11.jpg",
+            "bilibiliHotKey4": "bilibiliHotKey/12.jpg",
+            "bilibiliHotKey5": "bilibiliHotKey/13.jpg",
+            "bilibiliHotKey6": "bilibiliHotKey/14.jpg",
+            "bilibiliHotKey7": "bilibiliHotKey/15.jpg",
+            "bilibiliHotKey8": "bilibiliHotKey/16.jpg",
+            "bilibiliHotKey9": "bilibiliHotKey/17.jpg",
+            "bilibiliHotKey10": "bilibiliHotKey/18.jpg",
+            "bilibiliHotKey11": "bilibiliHotKey/19.jpg",
+            "bilibiliHotKey12": "bilibiliHotKey/2.jpg",
+            "bilibiliHotKey13": "bilibiliHotKey/20.jpg",
+            "bilibiliHotKey14": "bilibiliHotKey/21.jpg",
+            "bilibiliHotKey15": "bilibiliHotKey/22.jpg",
+            "bilibiliHotKey16": "bilibiliHotKey/23.jpg",
+            "bilibiliHotKey17": "bilibiliHotKey/24.jpg",
+            "bilibiliHotKey18": "bilibiliHotKey/25.jpg",
+            "bilibiliHotKey19": "bilibiliHotKey/26.jpg",
+            "bilibiliHotKey20": "bilibiliHotKey/27.jpg",
+            "bilibiliHotKey21": "bilibiliHotKey/28.jpg",
+            "bilibiliHotKey22": "bilibiliHotKey/29.jpg",
+            "bilibiliHotKey23": "bilibiliHotKey/3.jpg",
+            "bilibiliHotKey24": "bilibiliHotKey/30.jpg",
+            "bilibiliHotKey25": "bilibiliHotKey/31.jpg",
+            "bilibiliHotKey26": "bilibiliHotKey/32.jpg",
+            "bilibiliHotKey27": "bilibiliHotKey/4.jpg",
+            "bilibiliHotKey28": "bilibiliHotKey/5.jpg",
+            "bilibiliHotKey29": "bilibiliHotKey/6.jpg",
+            "bilibiliHotKey30": "bilibiliHotKey/7.jpg",
+            "bilibiliHotKey31": "bilibiliHotKey/8.jpg",
+            "bilibiliHotKey32": "bilibiliHotKey/9.jpg",
+            "Tieba-New2": "Tieba-New/image_emoticon.png",
+            "Tieba-New3": "Tieba-New/image_emoticon10.png",
+            "Tieba-New4": "Tieba-New/image_emoticon100.png",
+            "Tieba-New14": "Tieba-New/image_emoticon11.png",
+            "Tieba-New25": "Tieba-New/image_emoticon12.png",
+            "Tieba-New31": "Tieba-New/image_emoticon13.png",
+            "Tieba-New32": "Tieba-New/image_emoticon14.png",
+            "Tieba-New33": "Tieba-New/image_emoticon15.png",
+            "Tieba-New34": "Tieba-New/image_emoticon16.png",
+            "Tieba-New35": "Tieba-New/image_emoticon17.png",
+            "Tieba-New36": "Tieba-New/image_emoticon18.png",
+            "Tieba-New37": "Tieba-New/image_emoticon19.png",
+            "Tieba-New38": "Tieba-New/image_emoticon2.png",
+            "Tieba-New39": "Tieba-New/image_emoticon20.png",
+            "Tieba-New40": "Tieba-New/image_emoticon21.png",
+            "Tieba-New41": "Tieba-New/image_emoticon22.png",
+            "Tieba-New42": "Tieba-New/image_emoticon23.png",
+            "Tieba-New43": "Tieba-New/image_emoticon24.png",
+            "Tieba-New44": "Tieba-New/image_emoticon25.png",
+            "Tieba-New45": "Tieba-New/image_emoticon26.png",
+            "Tieba-New46": "Tieba-New/image_emoticon27.png",
+            "Tieba-New47": "Tieba-New/image_emoticon28.png",
+            "Tieba-New48": "Tieba-New/image_emoticon29.png",
+            "Tieba-New49": "Tieba-New/image_emoticon3.png",
+            "Tieba-New50": "Tieba-New/image_emoticon30.png",
+            "Tieba-New51": "Tieba-New/image_emoticon31.png",
+            "Tieba-New52": "Tieba-New/image_emoticon32.png",
+            "Tieba-New53": "Tieba-New/image_emoticon33.png",
+            "Tieba-New54": "Tieba-New/image_emoticon34.png",
+            "Tieba-New55": "Tieba-New/image_emoticon35.png",
+            "Tieba-New56": "Tieba-New/image_emoticon36.png",
+            "Tieba-New57": "Tieba-New/image_emoticon37.png",
+            "Tieba-New58": "Tieba-New/image_emoticon38.png",
+            "Tieba-New59": "Tieba-New/image_emoticon39.png",
+            "Tieba-New60": "Tieba-New/image_emoticon4.png",
+            "Tieba-New61": "Tieba-New/image_emoticon40.png",
+            "Tieba-New62": "Tieba-New/image_emoticon41.png",
+            "Tieba-New63": "Tieba-New/image_emoticon42.png",
+            "Tieba-New64": "Tieba-New/image_emoticon43.png",
+            "Tieba-New65": "Tieba-New/image_emoticon44.png",
+            "Tieba-New66": "Tieba-New/image_emoticon45.png",
+            "Tieba-New67": "Tieba-New/image_emoticon46.png",
+            "Tieba-New68": "Tieba-New/image_emoticon47.png",
+            "Tieba-New69": "Tieba-New/image_emoticon48.png",
+            "Tieba-New70": "Tieba-New/image_emoticon49.png",
+            "Tieba-New71": "Tieba-New/image_emoticon5.png",
+            "Tieba-New72": "Tieba-New/image_emoticon50.png",
+            "Tieba-New73": "Tieba-New/image_emoticon6.png",
+            "Tieba-New74": "Tieba-New/image_emoticon66.png",
+            "Tieba-New75": "Tieba-New/image_emoticon67.png",
+            "Tieba-New76": "Tieba-New/image_emoticon68.png",
+            "Tieba-New77": "Tieba-New/image_emoticon69.png",
+            "Tieba-New78": "Tieba-New/image_emoticon7.png",
+            "Tieba-New79": "Tieba-New/image_emoticon70.png",
+            "Tieba-New80": "Tieba-New/image_emoticon71.png",
+            "Tieba-New81": "Tieba-New/image_emoticon72.png",
+            "Tieba-New82": "Tieba-New/image_emoticon73.png",
+            "Tieba-New83": "Tieba-New/image_emoticon74.png",
+            "Tieba-New84": "Tieba-New/image_emoticon75.png",
+            "Tieba-New85": "Tieba-New/image_emoticon76.png",
+            "Tieba-New86": "Tieba-New/image_emoticon77.png",
+            "Tieba-New95": "Tieba-New/image_emoticon85.png",
+            "Tieba-New96": "Tieba-New/image_emoticon86.png",
+            "Tieba-New97": "Tieba-New/image_emoticon87.png",
+            "Tieba-New98": "Tieba-New/image_emoticon88.png",
+            "Tieba-New99": "Tieba-New/image_emoticon89.png",
+            "Tieba-New100": "Tieba-New/image_emoticon9.png",
+            "Tieba-New101": "Tieba-New/image_emoticon90.png",
+            "Tieba-New102": "Tieba-New/image_emoticon91.png",
+            "Tieba-New103": "Tieba-New/image_emoticon92.png",
+            "Tieba-New104": "Tieba-New/image_emoticon93.png",
+            "Tieba-New105": "Tieba-New/image_emoticon94.png",
+            "Tieba-New106": "Tieba-New/image_emoticon95.png",
+            "Tieba-New107": "Tieba-New/image_emoticon96.png",
+            "Tieba-New108": "Tieba-New/image_emoticon97.png",
+            "Tieba-New109": "Tieba-New/image_emoticon98.png",
+            "Tieba-New110": "Tieba-New/image_emoticon99.png",
+            "aodamiao1": "aodamiao/01.gif",
+            "aodamiao2": "aodamiao/02.gif",
+            "aodamiao3": "aodamiao/03.gif",
+            "aodamiao4": "aodamiao/04.gif",
+            "aodamiao5": "aodamiao/05.gif",
+            "aodamiao6": "aodamiao/06.gif",
+            "aodamiao7": "aodamiao/07.gif",
+            "aodamiao8": "aodamiao/08.gif",
+            "aodamiao9": "aodamiao/09.gif",
+            "aodamiao10": "aodamiao/10.gif",
+            "aodamiao11": "aodamiao/11.gif",
+            "aodamiao12": "aodamiao/12.gif",
+            "aodamiao13": "aodamiao/13.gif",
+            "aodamiao14": "aodamiao/14.gif",
+            "aodamiao15": "aodamiao/15.gif",
+            "aodamiao16": "aodamiao/16.gif",
+            "aodamiao17": "aodamiao/17.gif",
+            "aodamiao18": "aodamiao/18.gif",
+            "aodamiao19": "aodamiao/19.gif",
+            "aodamiao20": "aodamiao/20.gif",
+            "aodamiao21": "aodamiao/21.gif",
+            "aodamiao22": "aodamiao/22.gif",
+            "aodamiao23": "aodamiao/23.gif",
+            "aodamiao24": "aodamiao/24.gif",
+            "aodamiao25": "aodamiao/25.gif",
+            "aodamiao26": "aodamiao/26.gif",
+            "aodamiao27": "aodamiao/27.gif",
+            "aodamiao28": "aodamiao/28.gif",
+            "aodamiao29": "aodamiao/29.gif",
+            "aodamiao30": "aodamiao/30.gif",
+            "aodamiao31": "aodamiao/31.gif",
+            "aodamiao32": "aodamiao/32.gif",
+            "aodamiao33": "aodamiao/33.gif",
+            "aodamiao34": "aodamiao/34.gif",
+            "aodamiao35": "aodamiao/35.gif",
+            "aodamiao36": "aodamiao/36.gif",
+            "aodamiao37": "aodamiao/37.gif",
+            "aodamiao38": "aodamiao/38.gif",
+            "aodamiao39": "aodamiao/39.gif",
+            "aodamiao40": "aodamiao/40.gif",
+            "Menhera-chan1": "Menhera-chan/1.jpg",
+            "Menhera-chan2": "Menhera-chan/10.jpg",
+            "Menhera-chan3": "Menhera-chan/100.jpg",
+            "Menhera-chan4": "Menhera-chan/101.jpg",
+            "Menhera-chan5": "Menhera-chan/102.jpg",
+            "Menhera-chan6": "Menhera-chan/103.jpg",
+            "Menhera-chan7": "Menhera-chan/104.jpg",
+            "Menhera-chan8": "Menhera-chan/105.jpg",
+            "Menhera-chan9": "Menhera-chan/106.jpg",
+            "Menhera-chan10": "Menhera-chan/107.jpg",
+            "Menhera-chan11": "Menhera-chan/108.jpg",
+            "Menhera-chan12": "Menhera-chan/109.jpg",
+            "Menhera-chan13": "Menhera-chan/11.jpg",
+            "Menhera-chan14": "Menhera-chan/110.jpg",
+            "Menhera-chan15": "Menhera-chan/111.jpg",
+            "Menhera-chan16": "Menhera-chan/112.jpg",
+            "Menhera-chan17": "Menhera-chan/113.jpg",
+            "Menhera-chan18": "Menhera-chan/114.jpg",
+            "Menhera-chan19": "Menhera-chan/115.jpg",
+            "Menhera-chan20": "Menhera-chan/116.jpg",
+            "Menhera-chan21": "Menhera-chan/117.jpg",
+            "Menhera-chan22": "Menhera-chan/118.jpg",
+            "Menhera-chan23": "Menhera-chan/119.jpg",
+            "Menhera-chan24": "Menhera-chan/12.jpg",
+            "Menhera-chan25": "Menhera-chan/120.jpg",
+            "Menhera-chan26": "Menhera-chan/13.jpg",
+            "Menhera-chan27": "Menhera-chan/14.jpg",
+            "Menhera-chan28": "Menhera-chan/15.jpg",
+            "Menhera-chan29": "Menhera-chan/16.jpg",
+            "Menhera-chan30": "Menhera-chan/17.jpg",
+            "Menhera-chan31": "Menhera-chan/18.jpg",
+            "Menhera-chan32": "Menhera-chan/19.jpg",
+            "Menhera-chan33": "Menhera-chan/2.jpg",
+            "Menhera-chan34": "Menhera-chan/20.jpg",
+            "Menhera-chan35": "Menhera-chan/21.jpg",
+            "Menhera-chan36": "Menhera-chan/22.jpg",
+            "Menhera-chan37": "Menhera-chan/23.jpg",
+            "Menhera-chan38": "Menhera-chan/24.jpg",
+            "Menhera-chan39": "Menhera-chan/25.jpg",
+            "Menhera-chan40": "Menhera-chan/26.jpg",
+            "Menhera-chan41": "Menhera-chan/27.jpg",
+            "Menhera-chan42": "Menhera-chan/28.jpg",
+            "Menhera-chan43": "Menhera-chan/29.jpg",
+            "Menhera-chan44": "Menhera-chan/3.jpg",
+            "Menhera-chan45": "Menhera-chan/30.jpg",
+            "Menhera-chan46": "Menhera-chan/31.jpg",
+            "Menhera-chan47": "Menhera-chan/32.jpg",
+            "Menhera-chan48": "Menhera-chan/33.jpg",
+            "Menhera-chan49": "Menhera-chan/34.jpg",
+            "Menhera-chan50": "Menhera-chan/35.jpg",
+            "Menhera-chan51": "Menhera-chan/36.jpg",
+            "Menhera-chan52": "Menhera-chan/37.jpg",
+            "Menhera-chan53": "Menhera-chan/38.jpg",
+            "Menhera-chan54": "Menhera-chan/39.jpg",
+            "Menhera-chan55": "Menhera-chan/4.jpg",
+            "Menhera-chan56": "Menhera-chan/40.jpg",
+            "Menhera-chan57": "Menhera-chan/41.jpg",
+            "Menhera-chan58": "Menhera-chan/42.jpg",
+            "Menhera-chan59": "Menhera-chan/43.jpg",
+            "Menhera-chan60": "Menhera-chan/44.jpg",
+            "Menhera-chan61": "Menhera-chan/45.jpg",
+            "Menhera-chan62": "Menhera-chan/46.jpg",
+            "Menhera-chan63": "Menhera-chan/47.jpg",
+            "Menhera-chan64": "Menhera-chan/48.jpg",
+            "Menhera-chan65": "Menhera-chan/49.jpg",
+            "Menhera-chan66": "Menhera-chan/5.jpg",
+            "Menhera-chan67": "Menhera-chan/50.jpg",
+            "Menhera-chan68": "Menhera-chan/51.jpg",
+            "Menhera-chan69": "Menhera-chan/52.jpg",
+            "Menhera-chan70": "Menhera-chan/53(1).jpg",
+            "Menhera-chan71": "Menhera-chan/53.jpg",
+            "Menhera-chan72": "Menhera-chan/54.jpg",
+            "Menhera-chan73": "Menhera-chan/55.jpg",
+            "Menhera-chan74": "Menhera-chan/56.jpg",
+            "Menhera-chan75": "Menhera-chan/57.jpg",
+            "Menhera-chan76": "Menhera-chan/58.jpg",
+            "Menhera-chan77": "Menhera-chan/59.jpg",
+            "Menhera-chan78": "Menhera-chan/6.jpg",
+            "Menhera-chan79": "Menhera-chan/60.jpg",
+            "Menhera-chan80": "Menhera-chan/61.jpg",
+            "Menhera-chan81": "Menhera-chan/62.jpg",
+            "Menhera-chan82": "Menhera-chan/63.jpg",
+            "Menhera-chan83": "Menhera-chan/64.jpg",
+            "Menhera-chan84": "Menhera-chan/65.jpg",
+            "Menhera-chan85": "Menhera-chan/66.jpg",
+            "Menhera-chan86": "Menhera-chan/67.jpg",
+            "Menhera-chan87": "Menhera-chan/68.jpg",
+            "Menhera-chan88": "Menhera-chan/69.jpg",
+            "Menhera-chan89": "Menhera-chan/7.jpg",
+            "Menhera-chan90": "Menhera-chan/70.jpg",
+            "Menhera-chan91": "Menhera-chan/71.jpg",
+            "Menhera-chan92": "Menhera-chan/72.jpg",
+            "Menhera-chan93": "Menhera-chan/73.jpg",
+            "Menhera-chan94": "Menhera-chan/74.jpg",
+            "Menhera-chan95": "Menhera-chan/75.jpg",
+            "Menhera-chan96": "Menhera-chan/76.jpg",
+            "Menhera-chan97": "Menhera-chan/77.jpg",
+            "Menhera-chan98": "Menhera-chan/78.jpg",
+            "Menhera-chan99": "Menhera-chan/79.jpg",
+            "Menhera-chan100": "Menhera-chan/8.jpg",
+            "Menhera-chan105": "Menhera-chan/84.jpg",
+            "Menhera-chan106": "Menhera-chan/85.jpg",
+            "Menhera-chan107": "Menhera-chan/86.jpg",
+            "Menhera-chan108": "Menhera-chan/87.jpg",
+            "Menhera-chan109": "Menhera-chan/88.jpg",
+            "Menhera-chan110": "Menhera-chan/89.jpg",
+            "Menhera-chan111": "Menhera-chan/9.jpg",
+            "Menhera-chan112": "Menhera-chan/90.jpg",
+            "Menhera-chan113": "Menhera-chan/91.jpg",
+            "Menhera-chan114": "Menhera-chan/92.jpg",
+            "Menhera-chan115": "Menhera-chan/93.jpg",
+            "Menhera-chan116": "Menhera-chan/94.jpg",
+            "Menhera-chan117": "Menhera-chan/95.jpg",
+            "Menhera-chan118": "Menhera-chan/96.jpg",
+            "Menhera-chan119": "Menhera-chan/97.jpg",
+            "Menhera-chan120": "Menhera-chan/98.jpg",
+            "Menhera-chan121": "Menhera-chan/99.jpg"
+        }
+    });
+</script>
+<!-- 直达评论 -->
+<div id="to_comment" class="comment-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#vcomments" title="直达评论">
+        <i class="fas fa-comments" style="zoom: 0.88;"></i>
+    </a>
+</div>
+
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/posts/ab7da29b/">
+                    <div class="card-image">
+                        
+                        <img src="/img/image-20210929110713074.png" class="responsive-img" alt="windows查看端口占用的进程">
+                        
+                        <span class="card-title">windows查看端口占用的进程</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            windows查看端口占用的进程情景在启动tomcat时，默认绑定的JMX port端口是1099，但是有时候这个端口会被其他进程占用，导致启动失败，
+
+看看异常信息：
+
+端口1099被占用，现在的任务就是找出这个占用端口的罪魁祸首，将其消
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-29
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/bug/" class="post-category">
+                                    bug
+                                </a>
+                            
+                            <a href="/categories/bug/git/" class="post-category">
+                                    git
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/bug/">
+                        <span class="chip bg-color">bug</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/e9adbdf0/">
+                    <div class="card-image">
+                        
+                        <img src="/img/image-20210901190449899.png" class="responsive-img" alt="IDEA编译找不到符号的常见解决方法">
+                        
+                        <span class="card-title">IDEA编译找不到符号的常见解决方法</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            IDEA编译找不到符号的常见解决方法1.清空target重新编译在Project Structure -&gt; Modules设置中找到编译路径，将其中的class文件都删除掉，再重新编译
+
+2.⭐用maven脚本更方便地清空编译文件在R
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/bug/" class="post-category">
+                                    bug
+                                </a>
+                            
+                            <a href="/categories/bug/git/" class="post-category">
+                                    git
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/bug/">
+                        <span class="chip bg-color">bug</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        //if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        //}
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: GAATTC的隐藏小窝<br />'
+            + '文章作者: GAATTC<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，转载请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down" >
+    <a class="btn-floating btn-large waves-effect waves-light" title="展开/关闭TOC">
+        <i class="fas fa-list-ul" style="zoom: 0.88;"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #1aa2bf;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="5337749378"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#1aa2bf'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.3'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align"
+        style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <!--<a href="https://gaattc.life" target="_blank">GAATTC</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/zh-cn/" target="_blank">Hexo</a>
+            |&nbsp;Deployed on&nbsp;<a href="https://vercel.com" target="_blank">Vercel</a>
+            |&nbsp;CDN by&nbsp;<a href="https://www.jsdelivr.com/" target="_blank">jsDelivr</a>-->
+            <a style="margin-inline:5px" target="_blank" href="https://gaattc.life"><img src="https://img.shields.io/badge/Auth-GAATTC-3790ee?style=flat&logo=Google" title="很高兴遇到你"></a>
+            <a style="margin-inline:5px" target="_blank" href="https://hexo.io"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="基于Hexo框架"></a>
+            <a style="margin-inline:5px" target="_blank" href="https://github.com/blinkfox/hexo-theme-matery"><img src="https://img.shields.io/badge/Theme-Matery-7138b6?style=flat&logo=MEGA" title="主题采用matery"></a>
+            <a style="margin-inline:5px" target="_blank" href="https://www.jsdelivr.com"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用JsDelivr为静态资源提供CDN加速"></a>
+            <a style="margin-inline:5px" target="_blank" href="https://cloudflare.com"><img src="https://img.shields.io/badge/Hosted-Cloudflare-brightgreen?style=flat&logo=Cloudflare" title="基于Cloudflare Pages托管部署"></a>
+            <a style="margin-inline:5px" target="_blank" href="https://github.com"><img src="https://img.shields.io/badge/Source-Github-67e1fb?style=flat&logo=GitHub" title="静态文件托管于GitHub"></a>
+            <a style="margin-inline:5px" target="_blank" href="http://creativecommons.org/licenses/cc-by/4.0"><img src="https://img.shields.io/badge/Copyright-CC--BY%204.0-ee5b32?style=flat&logo=Chef" title="本站采用cc-by 4.0国际许可协议进行许可"></a>
+            <a style="margin-inline:5px" target="_blank" href="https://space.bilibili.com"><img src="https://img.shields.io/badge/dynamic/json?logo=Bilibili&color=%23fe7499&label=Bilibili&query=%24.data.totalSubs&suffix=%20Followers&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dbilibili%26queryKey%3D383883097" title="这是一个很厉害的UP主"></a>
+            <!--<a style="margin-inline:5px" target="_blank" href="https://weibo.com/u/6574421101"><img src="https://img.shields.io/badge/dynamic/json?color=%23e32428&label=Weibo&query=%24.data.totalSubs&suffix=%20Followers&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dweibo%26queryKey%3D6574421101" title="分享学习、生活动态"></a>-->
+            <br>
+
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;不知不觉已生产了&nbsp;<span
+                class="white-color">159.4k</span>&nbsp;字!
+            
+            
+            
+            
+            
+            <br>
+            
+            <span id="sitetime">正在载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "11";
+                    var startDate = "15";
+                    var startHour = "19";
+                    var startMinute = "30";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "现在是小窝诞生的第" + diffDays + "天" + diffHours +
+                            "小时" + diffMinutes + "分" + diffSeconds + "秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "现在是小窝诞生的第" + diffYears + "年" + diffDays +
+                            "天" + diffHours + "小时" + diffMinutes + "分" + diffSeconds + "秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link ">
+    <a href="https://github.com/GAATTC0" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+
+
+</div>
+    </div>
+</footer>
+<script src="/js/prism/prism.js" async></script>
+<div class="progress-bar"></div>
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!" title="返回顶部">
+        <i class="fas fa-arrow-up" style="zoom: 0.88;"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c77e3d3e2dd5996dc4146c5327d3c0c8";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+	
+	<!--天气
+	<div id="weather-v2-plugin-simple"></div>
+	<script>
+	WIDGET = {
+	CONFIG: {
+    "modules": "01234",
+    "background": 1,
+    "tmpColor": "FFFFFF",
+    "tmpSize": 16,
+    "cityColor": "FFFFFF",
+    "citySize": 16,
+    "aqiSize": 16,
+    "weatherIconSize": 24,
+    "alertIconSize": 18,
+    "padding": "10px 10px 10px 10px",
+    "shadow": "1",
+    "language": "auto",
+    "borderRadius": "3",
+    "fixed": "false",
+    "vertical": "middle",
+    "horizontal": "center",
+    "key": "rbqraTCH2c"
+		}
+	}
+	</script>
+	<script src="https://apip.weatherdt.com/simple/static/js/weather-simple-common.js?v=2.0"></script>-->
+
+    <!--鼠标礼花-->
+    <script src="/js/lihua.js"></script>
+	
+	<!--snow-->
+	<script src="/js/snow.js"></script>
+	
+	<!--动态标题-->
+	<script type="text/javascript">
+    var OriginTitile=document.title,st;
+    document.addEventListener("visibilitychange",function(){
+        document.hidden?(document.title="⇐to be continued♪​",clearTimeout(st)):(document.title="欢迎回来o(^▽^)o~",st=setTimeout(function(){document.title=OriginTitile},3e3))
+    })
+	</script>
+
+    <!--全屏-->
+    <script src="/js/fullscreen.js" type="module"></script>
+    
+    <!--夜晚模式-->
+    <script>
+        if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark');
+        }
+        /*else if (new Date().getHours() >= 22 || new Date().getHours() < 7) {
+        document.body.classList.add('dark');
+        } */
+        else if (matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+        }
+    </script>
+    <a onclick="switchNightMode()" id="sma">
+        <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
+    </a>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-tororo"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+</html>

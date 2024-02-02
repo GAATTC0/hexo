@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>GAATTC | cat</title>
+    <link href="/games/cat/css/main.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+	<div id="startImg">
+		<img class="start" src="/games/cat/img/btn_start.png"></img>
+	</div>
+    <div id="game" style="display: none">
+        <canvas id="gameView"></canvas>
+        <img id="cat" src="/games/cat/img/jz.png"></img>
+    </div>
+    <div id="failed" style="display: none" >
+        <img class="dialog" src="/games/cat/img/failed.png"></img>
+        <img id="replay" src="/games/cat/img/replay.png" style="width: 30%"></img>
+        <p id="failedMsg" class="msg"></p>
+    </div>
+    <div id="victory" style="display: none">
+        <img class="dialog" src="/games/cat/img/victory.png"></img>
+        <img id="replay1" src="/games/cat/img/replay.png" style="width: 30%"></img>
+        <p id="victoryMsg" class="msg"></p>
+    </div>
+    <audio id="audio"></audio>
+
+    <script src="/games/cat/js/easeljs-0.7.1.min.js"></script>
+    <script src="/games/cat/js/Circle.js"></script>
+    <script src="/games/cat/js/app.js"></script>
+</body>
+</html>

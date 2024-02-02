@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html itemscope itemtype="https://schema.org/CreativeWork">
+<head>
+	<meta charset="UTF-8"/>
+	<!--  
+		A Dark Room (v1.4)
+		==================
+		
+		A minimalist text adventure by Michael Townsend and all his friends.
+		Inspired by Candy Box (http://candies.aniwey.net/)
+		Contribute on GitHub! (https://github.com/doublespeakgames/adarkroom/)
+	-->
+	<title>GAATTC | A Dark Room</title>
+	<meta itemprop="description" name="description" property="og:description" content="A minimalist text adventure">
+	<meta itemprop="image" property="og:image" content="img/adr.png" />
+	<meta itemprop="name" property="og:title" content="A Dark Room" />
+	<link rel="shortcut icon" href="/games/adarkroom/favicon.ico" />
+	<link rel="image_src" href="/games/adarkroom/img/adr.png" />
+	<script src="/games/adarkroom/lib/jquery.min.js"></script>
+	<!--<script src="https://www.dropbox.com/static/api/dropbox-datastores-1.1-latest.js" type="text/javascript"></script>-->
+	<script>
+		if(!window.jQuery) {
+			document.write('<script src="/games/adarkroom/lib/jquery.min.js"><\/script>')
+		}
+	</script>
+	<script src="/games/adarkroom/lib/jquery.color-2.1.2.min.js"></script>
+	<script src="/games/adarkroom/lib/jquery.event.move.js"></script>
+	<script src="/games/adarkroom/lib/jquery.event.swipe.js"></script>
+	<script src="/games/adarkroom/lib/base64.js"></script>
+	<script src="/games/adarkroom/lib/translate.js"></script>
+	
+	<script src="/games/adarkroom/lang/langs.js"></script>
+	
+	<script>
+		// try to read "lang" param's from url
+		var lang = "zh_cn";
+		// if no language requested, try to read it from local storage
+		if(!lang){
+			try {
+				lang = localStorage.lang;
+			} catch(e) {}
+		}
+		// if a language different than english requested, load all translations
+		if(lang && lang != 'en'){
+			document.write('<script src="/games/adarkroom/lang/'+lang+'/strings.js"><\/script>');
+			document.write('<link rel="stylesheet" type="text/css" href="/games/adarkroom/lang/'+lang+'/main.css" \/>');
+		}
+	</script>
+	
+	<script src="/games/adarkroom/script/Button.js"></script>
+	<script src="/games/adarkroom/script/engine.js"></script>
+	<script src="/games/adarkroom/script/state_manager.js"></script>
+	<script src="/games/adarkroom/script/header.js"></script>
+	<script src="/games/adarkroom/script/notifications.js"></script>
+	<script src="/games/adarkroom/script/events.js"></script>
+	<script src="/games/adarkroom/script/dropbox.js"></script>
+	<script src="/games/adarkroom/script/room.js"></script>
+	<script src="/games/adarkroom/script/outside.js"></script>
+	<script src="/games/adarkroom/script/world.js"></script>
+	<script src="/games/adarkroom/script/path.js"></script>
+	<script src="/games/adarkroom/script/ship.js"></script>
+	<script src="/games/adarkroom/script/space.js"></script>
+	<script src="/games/adarkroom/script/prestige.js"></script>
+	<script src="/games/adarkroom/script/scoring.js"></script>
+	<!-- Event modules -->
+	<script src="/games/adarkroom/script/events/global.js"></script>
+	<script src="/games/adarkroom/script/events/room.js"></script>
+	<script src="/games/adarkroom/script/events/outside.js"></script>
+	<script src="/games/adarkroom/script/events/encounters.js"></script>
+	<script src="/games/adarkroom/script/events/setpieces.js"></script>
+	
+	<script type='text/javascript'>
+		var oldIE = false;
+	</script>
+	<!--[if lt IE 9]> 
+		<script type="text/javascript">oldIE = true;</script> 
+	<![endif]-->
+	
+	<link rel="stylesheet" type="text/css" href="/games/adarkroom/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="/games/adarkroom/css/room.css" />
+	<link rel="stylesheet" type="text/css" href="/games/adarkroom/css/outside.css" />
+	<link rel="stylesheet" type="text/css" href="/games/adarkroom/css/path.css" />
+	<link rel="stylesheet" type="text/css" href="/games/adarkroom/css/world.css" />
+	<link rel="stylesheet" type="text/css" href="/games/adarkroom/css/ship.css" />
+	<link rel="stylesheet" type="text/css" href="/games/adarkroom/css/space.css" />
+	
+	<script src="/games/adarkroom/script/localization.js"></script>
+	
+</head>
+<body>
+	<div id="wrapper">
+		<div id="saveNotify"><script>document.write(_("saved."));</script></div>
+		<div id="content">
+			<div id="outerSlider">
+				<div id="main">
+					<div id="header"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
